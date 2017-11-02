@@ -1,0 +1,3027 @@
+
+WINBASE.O:     file format elf32-i386
+
+/d/c/wrec/suppw95/winbase.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef void VOID;
+typedef void *PVOID;
+typedef long int HANDLE;
+typedef short int SHORT;
+typedef long int *PHANDLE;
+typedef long int *PLONG;
+typedef long int HKEY;
+typedef long int LONG;
+typedef PLONG LPCLONG;
+typedef int *LPCWORD;
+typedef unsigned char CHAR;
+typedef short unsigned int WCHAR;
+typedef short unsigned int *PWCHAR;
+typedef PWCHAR LPWCHAR;
+typedef PWCHAR LPCWCHAR;
+typedef PWCHAR PWSTR;
+typedef PWCHAR LPWSTR;
+typedef PWCHAR LPCWSTR;
+typedef char *LPCBYTE;
+typedef unsigned char *PSTR;
+typedef PSTR LPSTR;
+typedef PSTR LPCSTR;
+typedef long int RTL_CRITICAL_SECTION;
+typedef PLONG PRTL_CRITICAL_SECTION;
+typedef long int RTL_CRITICAL_SECTION_DEBUG;
+typedef PLONG PRTL_CRITICAL_SECTION_DEBUG;
+typedef long int ACCESS_MASK;
+typedef long int *PACCESS_MASK;
+#pragma cconv __stdcall
+long int RtlEqualMemory (void *Source1 /* 0x8 */, void *Source2 /* 0xc */, long int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ w95types.h:
+void RtlCopyMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlCopyMemory32 (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlMoveMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlFillMemory (void *Destination /* 0x8 */, int Length /* 0xc */, int Fill /* 0x10 */)
+{ /* 0x0 */
+  unsigned char Fill /* 0xffffffff */;
+} /* 0x0 */
+void RtlZeroMemory (void *Destination /* 0x8 */, int Length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int ULONG;
+typedef long unsigned int *PULONG;
+typedef short unsigned int USHORT;
+typedef short unsigned int *PUSHORT;
+typedef unsigned char UCHAR;
+typedef unsigned char *PUCHAR;
+typedef LPCBYTE PSZ;
+typedef long unsigned int DWORD;
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef short unsigned int WORD;
+typedef float FLOAT;
+typedef float *PFLOAT;
+typedef int *PBOOL;
+typedef PBOOL LPBOOL;
+typedef unsigned char *PBYTE;
+typedef PBYTE LPBYTE;
+typedef LPCWORD PINT;
+typedef LPCWORD LPINT;
+typedef short unsigned int *PWORD;
+typedef PWORD LPWORD;
+typedef PLONG LPLONG;
+typedef long unsigned int *PDWORD;
+typedef PDWORD LPDWORD;
+typedef PVOID LPVOID;
+typedef PVOID LPCVOID;
+typedef int INT;
+typedef unsigned int UINT;
+typedef unsigned int *PUINT;
+typedef unsigned int WPARAM;
+typedef long int LPARAM;
+typedef long int LRESULT;
+typedef long int HWND;
+typedef long int HHOOK;
+typedef short unsigned int ATOM;
+typedef PHANDLE SPHANDLE;
+typedef PHANDLE LPHANDLE;
+typedef long int HGLOBAL;
+typedef long int HLOCAL;
+typedef long int GLOBALHANDLE;
+typedef long int LOCALHANDLE;
+typedef int (*FARPROC) (/* unknown */);
+typedef FARPROC NEARPROC;
+typedef FARPROC PROC;
+typedef long int HGDIOBJ;
+typedef long int HACCEL;
+typedef long int HBITMAP;
+typedef long int HBRUSH;
+typedef long int HCOLORSPACE;
+typedef long int HDC;
+typedef long int HGLRC;
+typedef long int HDESK;
+typedef long int HENHMETAFILE;
+typedef long int HFONT;
+typedef long int HICON;
+typedef long int HMENU;
+typedef long int HMETAFILE;
+typedef long int HINSTANCE;
+typedef long int HMODULE;
+typedef long int HPALETTE;
+typedef long int HPEN;
+typedef long int HRGN;
+typedef long int HRSRC;
+typedef long int HSTR;
+typedef long int HTASK;
+typedef long int HWINSTA;
+typedef long int HKL;
+typedef int HFILE;
+typedef long int HCURSOR;
+typedef long unsigned int COLORREF;
+typedef PDWORD LPCOLORREF;
+struct tagRECT { /* size 16 id 2 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagRECT /* id 2 */ RECT;
+typedef struct tagRECT /* id 2 */ *PRECT;
+typedef PRECT NPRECT;
+typedef PRECT LPRECT;
+typedef struct tagRECT /* id 2 */ *LPCRECT;
+struct _RECTL { /* size 16 id 3 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct _RECTL /* id 3 */ RECTL;
+typedef struct _RECTL /* id 3 */ *PRECTL;
+typedef PRECTL LPRECTL;
+typedef struct _RECTL /* id 3 */ *LPCRECTL;
+struct tagPOINT { /* size 8 id 4 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINT /* id 4 */ POINT;
+typedef struct tagPOINT /* id 4 */ *PPOINT;
+typedef PPOINT NPPOINT;
+typedef PPOINT LPPOINT;
+struct _POINTL { /* size 8 id 5 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTL /* id 5 */ POINTL;
+typedef struct _POINTL /* id 5 */ *PPOINTL;
+struct tagSIZE { /* size 8 id 6 */
+  long int cx; /* bitsize 32, bitpos 0 */
+  long int cy; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSIZE /* id 6 */ SIZE;
+typedef struct tagSIZE /* id 6 */ *PSIZE;
+typedef PSIZE LPSIZE;
+typedef struct tagSIZE /* id 6 */ SIZEL;
+typedef struct tagSIZE /* id 6 */ *PSIZEL;
+typedef PSIZEL LPSIZEL;
+struct tagPOINTS { /* size 4 id 7 */
+  short int x; /* bitsize 16, bitpos 0 */
+  short int y; /* bitsize 16, bitpos 16 */
+};
+typedef struct tagPOINTS /* id 7 */ POINTS;
+typedef struct tagPOINTS /* id 7 */ *PPOINTS;
+typedef PPOINTS LPPOINTS;
+struct _OVERLAPPED { /* size 20 id 8 */
+  long unsigned int Internal; /* bitsize 32, bitpos 0 */
+  long unsigned int InternalHigh; /* bitsize 32, bitpos 32 */
+  long unsigned int Offset; /* bitsize 32, bitpos 64 */
+  long unsigned int OffsetHigh; /* bitsize 32, bitpos 96 */
+  long int hEvent; /* bitsize 32, bitpos 128 */
+};
+typedef struct _OVERLAPPED /* id 8 */ OVERLAPPED;
+typedef struct _OVERLAPPED /* id 8 */ *LPOVERLAPPED;
+struct _SECURITY_ATTRIBUTES { /* size 12 id 9 */
+  long unsigned int nLength; /* bitsize 32, bitpos 0 */
+  PVOID lpSecurityDescriptor; /* bitsize 32, bitpos 32 */
+  int bInheritHandle; /* bitsize 32, bitpos 64 */
+};
+typedef struct _SECURITY_ATTRIBUTES /* id 9 */ SECURITY_ATTRIBUTES;
+typedef struct _SECURITY_ATTRIBUTES /* id 9 */ *PSECURITY_ATTRIBUTES;
+typedef PSECURITY_ATTRIBUTES LPSECURITY_ATTRIBUTES;
+struct _PROCESS_INFORMATION { /* size 16 id 10 */
+  long int hProcess; /* bitsize 32, bitpos 0 */
+  long int hThread; /* bitsize 32, bitpos 32 */
+  long unsigned int dwProcessId; /* bitsize 32, bitpos 64 */
+  long unsigned int dwThreadId; /* bitsize 32, bitpos 96 */
+};
+typedef struct _PROCESS_INFORMATION /* id 10 */ PROCESS_INFORMATION;
+typedef struct _PROCESS_INFORMATION /* id 10 */ *PPROCESS_INFORMATION;
+typedef PPROCESS_INFORMATION LPPROCESS_INFORMATION;
+struct _FILETIME { /* size 8 id 11 */
+  long unsigned int dwLowDateTime; /* bitsize 32, bitpos 0 */
+  long unsigned int dwHighDateTime; /* bitsize 32, bitpos 32 */
+};
+typedef struct _FILETIME /* id 11 */ FILETIME;
+typedef struct _FILETIME /* id 11 */ *PFILETIME;
+typedef PFILETIME LPFILETIME;
+struct _SYSTEMTIME { /* size 16 id 12 */
+  short unsigned int wYear; /* bitsize 16, bitpos 0 */
+  short unsigned int wMonth; /* bitsize 16, bitpos 16 */
+  short unsigned int wDayOfWeek; /* bitsize 16, bitpos 32 */
+  short unsigned int wDay; /* bitsize 16, bitpos 48 */
+  short unsigned int wHour; /* bitsize 16, bitpos 64 */
+  short unsigned int wMinute; /* bitsize 16, bitpos 80 */
+  short unsigned int wSecond; /* bitsize 16, bitpos 96 */
+  short unsigned int wMilliseconds; /* bitsize 16, bitpos 112 */
+};
+typedef struct _SYSTEMTIME /* id 12 */ SYSTEMTIME;
+typedef struct _SYSTEMTIME /* id 12 */ *PSYSTEMTIME;
+typedef PSYSTEMTIME LPSYSTEMTIME;
+typedef long unsigned int (*PTHREAD_START_ROUTINE) (/* unknown */);
+typedef PTHREAD_START_ROUTINE LPTHREAD_START_ROUTINE;
+typedef long int CRITICAL_SECTION;
+typedef PLONG PCRITICAL_SECTION;
+typedef PLONG LPCRITICAL_SECTION;
+typedef long int CRITICAL_SECTION_DEBUG;
+typedef PLONG PCRITICAL_SECTION_DEBUG;
+typedef PLONG LPCRITICAL_SECTION_DEBUG;
+typedef PVOID LPLDT_ENTRY;
+struct _COMMPROP { /* size 64 id 13 */
+  short unsigned int wPacketLength; /* bitsize 16, bitpos 0 */
+  short unsigned int wPacketVersion; /* bitsize 16, bitpos 16 */
+  long unsigned int dwServiceMask; /* bitsize 32, bitpos 32 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 64 */
+  long unsigned int dwMaxTxQueue; /* bitsize 32, bitpos 96 */
+  long unsigned int dwMaxRxQueue; /* bitsize 32, bitpos 128 */
+  long unsigned int dwMaxBaud; /* bitsize 32, bitpos 160 */
+  long unsigned int dwProvSubType; /* bitsize 32, bitpos 192 */
+  long unsigned int dwProvCapabilities; /* bitsize 32, bitpos 224 */
+  long unsigned int dwSettableParams; /* bitsize 32, bitpos 256 */
+  long unsigned int dwSettableBaud; /* bitsize 32, bitpos 288 */
+  short unsigned int wSettableData; /* bitsize 16, bitpos 320 */
+  short unsigned int wSettableStopParity; /* bitsize 16, bitpos 336 */
+  long unsigned int dwCurrentTxQueue; /* bitsize 32, bitpos 352 */
+  long unsigned int dwCurrentRxQueue; /* bitsize 32, bitpos 384 */
+  long unsigned int dwProvSpec1; /* bitsize 32, bitpos 416 */
+  long unsigned int dwProvSpec2; /* bitsize 32, bitpos 448 */
+  short unsigned int wcProvChar[1]; /* bitsize 16, bitpos 480 */
+};
+typedef struct _COMMPROP /* id 13 */ COMMPROP;
+typedef struct _COMMPROP /* id 13 */ *LPCOMMPROP;
+struct _COMSTAT { /* size 12 id 14 */
+  long unsigned int fCtsHold; /* bitsize 1, bitpos 0 */
+  long unsigned int fDsrHold; /* bitsize 1, bitpos 1 */
+  long unsigned int fRlsdHold; /* bitsize 1, bitpos 2 */
+  long unsigned int fXoffHold; /* bitsize 1, bitpos 3 */
+  long unsigned int fXoffSent; /* bitsize 1, bitpos 4 */
+  long unsigned int fEof; /* bitsize 1, bitpos 5 */
+  long unsigned int fTxim; /* bitsize 1, bitpos 6 */
+  long unsigned int fReserved; /* bitsize 25, bitpos 7 */
+  long unsigned int cbInQue; /* bitsize 32, bitpos 32 */
+  long unsigned int cbOutQue; /* bitsize 32, bitpos 64 */
+};
+typedef struct _COMSTAT /* id 14 */ COMSTAT;
+typedef struct _COMSTAT /* id 14 */ *LPCOMSTAT;
+struct _DCB { /* size 28 id 15 */
+  long unsigned int DCBlength; /* bitsize 32, bitpos 0 */
+  long unsigned int BaudRate; /* bitsize 32, bitpos 32 */
+  long unsigned int fBinary; /* bitsize 1, bitpos 64 */
+  long unsigned int fParity; /* bitsize 1, bitpos 65 */
+  long unsigned int fOutxCtsFlow; /* bitsize 1, bitpos 66 */
+  long unsigned int fOutxDsrFlow; /* bitsize 1, bitpos 67 */
+  long unsigned int fDtrControl; /* bitsize 2, bitpos 68 */
+  long unsigned int fDsrSensitivity; /* bitsize 1, bitpos 70 */
+  long unsigned int fTXContinueOnXoff; /* bitsize 1, bitpos 71 */
+  long unsigned int fOutX; /* bitsize 1, bitpos 72 */
+  long unsigned int fInX; /* bitsize 1, bitpos 73 */
+  long unsigned int fErrorChar; /* bitsize 1, bitpos 74 */
+  long unsigned int fNull; /* bitsize 1, bitpos 75 */
+  long unsigned int fRtsControl; /* bitsize 2, bitpos 76 */
+  long unsigned int fAbortOnError; /* bitsize 1, bitpos 78 */
+  long unsigned int fDummy2; /* bitsize 17, bitpos 79 */
+  short unsigned int wReserved; /* bitsize 16, bitpos 96 */
+  short unsigned int XonLim; /* bitsize 16, bitpos 112 */
+  short unsigned int XoffLim; /* bitsize 16, bitpos 128 */
+  unsigned char ByteSize; /* bitsize 8, bitpos 144 */
+  unsigned char Parity; /* bitsize 8, bitpos 152 */
+  unsigned char StopBits; /* bitsize 8, bitpos 160 */
+  char XonChar; /* bitsize 8, bitpos 168 */
+  char XoffChar; /* bitsize 8, bitpos 176 */
+  char ErrorChar; /* bitsize 8, bitpos 184 */
+  char EofChar; /* bitsize 8, bitpos 192 */
+  char EvtChar; /* bitsize 8, bitpos 200 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 208 */
+};
+typedef struct _DCB /* id 15 */ DCB;
+typedef struct _DCB /* id 15 */ *LPDCB;
+struct _COMMTIMEOUTS { /* size 20 id 16 */
+  long unsigned int ReadIntervalTimeout; /* bitsize 32, bitpos 0 */
+  long unsigned int ReadTotalTimeoutMultiplier; /* bitsize 32, bitpos 32 */
+  long unsigned int ReadTotalTimeoutConstant; /* bitsize 32, bitpos 64 */
+  long unsigned int WriteTotalTimeoutMultiplier; /* bitsize 32, bitpos 96 */
+  long unsigned int WriteTotalTimeoutConstant; /* bitsize 32, bitpos 128 */
+};
+typedef struct _COMMTIMEOUTS /* id 16 */ COMMTIMEOUTS;
+typedef struct _COMMTIMEOUTS /* id 16 */ *LPCOMMTIMEOUTS;
+struct _COMMCONFIG { /* size 52 id 17 */
+  long unsigned int dwSize; /* bitsize 32, bitpos 0 */
+  short unsigned int wVersion; /* bitsize 16, bitpos 32 */
+  short unsigned int wReserved; /* bitsize 16, bitpos 48 */
+  struct _DCB /* id 15 */ dcb; /* bitsize 224, bitpos 64 */
+  long unsigned int dwProviderSubType; /* bitsize 32, bitpos 288 */
+  long unsigned int dwProviderOffset; /* bitsize 32, bitpos 320 */
+  long unsigned int dwProviderSize; /* bitsize 32, bitpos 352 */
+  short unsigned int wcProviderData[1]; /* bitsize 16, bitpos 384 */
+};
+typedef struct _COMMCONFIG /* id 17 */ COMMCONFIG;
+typedef struct _COMMCONFIG /* id 17 */ *LPCOMMCONFIG;
+struct _SYSTEM_INFO { /* size 32 id 18 */
+  long unsigned int dwPageSize; /* bitsize 32, bitpos 0 */
+  PVOID lpMinimumApplicationAddress; /* bitsize 32, bitpos 32 */
+  PVOID lpMaximumApplicationAddress; /* bitsize 32, bitpos 64 */
+  long unsigned int dwActiveProcessorMask; /* bitsize 32, bitpos 96 */
+  long unsigned int dwNumberOfProcessors; /* bitsize 32, bitpos 128 */
+  long unsigned int dwProcessorType; /* bitsize 32, bitpos 160 */
+  long unsigned int dwAllocationGranularity; /* bitsize 32, bitpos 192 */
+  short unsigned int wProcessorLevel; /* bitsize 16, bitpos 224 */
+  short unsigned int wProcessorRevision; /* bitsize 16, bitpos 240 */
+};
+typedef struct _SYSTEM_INFO /* id 18 */ SYSTEM_INFO;
+typedef struct _SYSTEM_INFO /* id 18 */ *LPSYSTEM_INFO;
+struct _MEMORYSTATUS { /* size 32 id 19 */
+  long unsigned int dwLength; /* bitsize 32, bitpos 0 */
+  long unsigned int dwMemoryLoad; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTotalPhys; /* bitsize 32, bitpos 64 */
+  long unsigned int dwAvailPhys; /* bitsize 32, bitpos 96 */
+  long unsigned int dwTotalPageFile; /* bitsize 32, bitpos 128 */
+  long unsigned int dwAvailPageFile; /* bitsize 32, bitpos 160 */
+  long unsigned int dwTotalVirtual; /* bitsize 32, bitpos 192 */
+  long unsigned int dwAvailVirtual; /* bitsize 32, bitpos 224 */
+};
+typedef struct _MEMORYSTATUS /* id 19 */ MEMORYSTATUS;
+typedef struct _MEMORYSTATUS /* id 19 */ *LPMEMORYSTATUS;
+struct _MEMORYSTATUSEX { /* size 36 id 199 */
+	unsigned int dwLength; /* bitsize 32, bitpos 0 */
+	unsigned int dwMemoryLoad; /* bitsize 32, bitpos 32 */
+	long unsigned int ullTotalPhys; /* bitsize 32, bitpos 64 */
+	long unsigned int ullAvailPhys; /* bitsize 32, bitpos 96 */
+	long unsigned int ullTotalPageFile; /* bitsize 32, bitpos 128 */
+	long unsigned int ullAvailPageFile; /* bitsize 32, bitpos 160 */
+	long unsigned int ullTotalVirtual; /* bitsize 32, bitpos 192 */
+	long unsigned int ullAvailVirtual; /* bitsize 32, bitpos 224 */
+	long unsigned int ullAvailExtendedVirtual; /* bitsize 32, bitpos 256 */
+};
+typedef struct _MEMORYSTATUSEX /* id 199 */ MEMORYSTATUSEX;
+typedef struct _MEMORYSTATUSEX /* id 199 */ *LPMEMORYSTATUSEX;
+struct _OFSTRUCT { /* size 136 id 20 */
+  unsigned char cBytes; /* bitsize 8, bitpos 0 */
+  unsigned char fFixedDisk; /* bitsize 8, bitpos 8 */
+  short unsigned int nErrCode; /* bitsize 16, bitpos 16 */
+  short unsigned int Reserved1; /* bitsize 16, bitpos 32 */
+  short unsigned int Reserved2; /* bitsize 16, bitpos 48 */
+  unsigned char szPathName[128]; /* bitsize 1024, bitpos 64 */
+};
+typedef struct _OFSTRUCT /* id 20 */ OFSTRUCT;
+typedef struct _OFSTRUCT /* id 20 */ *LPOFSTRUCT;
+typedef LPOFSTRUCT POFSTRUCT;
+long int InterlockedIncrement (PLONG lpAddend /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ winbase.c:
+long int InterlockedDecrement (PLONG lpAddend /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int InterlockedExchange (PLONG Target /* 0x8 */, long int Value /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int InterlockedExchangeAdd (PLONG Addend /* 0x8 */, long int Value /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID InterlockedCompareExchange (PVOID *Destination /* 0x8 */, PVOID Exchange /* 0xc */, PVOID Comperand /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FreeResource (long int hResData /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID LockResource (long int hResData /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WinMain (long int hInstance /* 0x8 */, long int hPrevInstance /* 0xc */, PSTR lpCmdLine /* 0x10 */, int nShowCmd /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FreeLibrary (long int hLibModule /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void FreeLibraryAndExitThread (long int hLibModule /* 0x8 */, long unsigned int dwExitCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DisableThreadLibraryCalls (long int hLibModule /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+FARPROC GetProcAddress (long int hModule /* 0x8 */, PSTR lpProcName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetVersion ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GlobalAlloc (unsigned int uFlags /* 0x8 */, long unsigned int dwBytes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GlobalReAlloc (long int hMem /* 0x8 */, long unsigned int dwBytes /* 0xc */, unsigned int uFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GlobalSize (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GlobalFlags (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID GlobalLock (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GlobalHandle (PVOID pMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GlobalUnlock (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GlobalFree (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GlobalCompact (long unsigned int dwMinFree /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GlobalFix (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GlobalUnfix (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID GlobalWire (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GlobalUnWire (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GlobalMemoryStatus (LPMEMORYSTATUS lpBuffer /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GlobalMemoryStatusEx (LPMEMORYSTATUSEX lpBuffer /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LocalAlloc (unsigned int uFlags /* 0x8 */, unsigned int uBytes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LocalReAlloc (long int hMem /* 0x8 */, unsigned int uBytes /* 0xc */, unsigned int uFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID LocalLock (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LocalHandle (PVOID pMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LocalUnlock (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int LocalSize (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int LocalFlags (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LocalFree (long int hMem /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int LocalShrink (long int hMem /* 0x8 */, unsigned int cbNewSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int LocalCompact (unsigned int uMinFree /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FlushInstructionCache (long int hProcess /* 0x8 */, PVOID lpBaseAddress /* 0xc */, long unsigned int dwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID VirtualAlloc (PVOID lpAddress /* 0x8 */, long unsigned int dwSize /* 0xc */, long unsigned int flAllocationType /* 0x10 */, long unsigned int flProtect /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualFree (PVOID lpAddress /* 0x8 */, long unsigned int dwSize /* 0xc */, long unsigned int dwFreeType /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualProtect (PVOID lpAddress /* 0x8 */, long unsigned int dwSize /* 0xc */, long unsigned int flNewProtect /* 0x10 */, PDWORD lpflOldProtect /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID VirtualAllocEx (long int hProcess /* 0x8 */, PVOID lpAddress /* 0xc */, long unsigned int dwSize /* 0x10 */, long unsigned int flAllocationType /* 0x14 */, long unsigned int flProtect /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualFreeEx (long int hProcess /* 0x8 */, PVOID lpAddress /* 0xc */, long unsigned int dwSize /* 0x10 */, long unsigned int dwFreeType /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualProtectEx (long int hProcess /* 0x8 */, PVOID lpAddress /* 0xc */, long unsigned int dwSize /* 0x10 */, long unsigned int flNewProtect /* 0x14 */, PDWORD lpflOldProtect /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int HeapCreate (long unsigned int flOptions /* 0x8 */, long unsigned int dwInitialSize /* 0xc */, long unsigned int dwMaximumSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HeapDestroy (long int hHeap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID HeapAlloc (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */, long unsigned int dwBytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID HeapReAlloc (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */, PVOID lpMem /* 0x10 */, long unsigned int dwBytes /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HeapFree (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */, PVOID lpMem /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int HeapSize (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */, PVOID lpMem /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HeapValidate (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */, PVOID lpMem /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int HeapCompact (long int hHeap /* 0x8 */, long unsigned int dwFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetProcessHeap ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProcessHeaps (long unsigned int NumberOfHeaps /* 0x8 */, PHANDLE ProcessHeaps /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _PROCESS_HEAP_ENTRY { /* size 12 id 21 */
+  PVOID lpData; /* bitsize 32, bitpos 0 */
+  long unsigned int cbData; /* bitsize 32, bitpos 32 */
+  unsigned char cbOverhead; /* bitsize 8, bitpos 64 */
+  unsigned char iRegionIndex; /* bitsize 8, bitpos 72 */
+  short unsigned int wFlags; /* bitsize 16, bitpos 80 */
+};
+typedef struct _PROCESS_HEAP_ENTRY /* id 21 */ PROCESS_HEAP_ENTRY;
+typedef struct _PROCESS_HEAP_ENTRY /* id 21 */ *LPPROCESS_HEAP_ENTRY;
+typedef LPPROCESS_HEAP_ENTRY PPROCESS_HEAP_ENTRY;
+int HeapLock (long int hHeap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HeapUnlock (long int hHeap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HeapWalk (long int hHeap /* 0x8 */, LPPROCESS_HEAP_ENTRY lpEntry /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetBinaryTypeA (PSTR lpApplicationName /* 0x8 */, PDWORD lpBinaryType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetBinaryTypeW (PWCHAR lpApplicationName /* 0x8 */, PDWORD lpBinaryType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetShortPathNameA (PSTR lpszLongPath /* 0x8 */, PSTR lpszShortPath /* 0xc */, long unsigned int cchBuffer /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetShortPathNameW (PWCHAR lpszLongPath /* 0x8 */, PWCHAR lpszShortPath /* 0xc */, long unsigned int cchBuffer /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetProcessAffinityMask (long int hProcess /* 0x8 */, PDWORD lpProcessAffinityMask /* 0xc */, PDWORD lpSystemAffinityMask /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetProcessAffinityMask (long int hProcess /* 0x8 */, long unsigned int dwProcessAffinityMask /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetProcessTimes (long int hProcess /* 0x8 */, PFILETIME lpCreationTime /* 0xc */, PFILETIME lpExitTime /* 0x10 */, PFILETIME lpKernelTime /* 0x14 */, PFILETIME lpUserTime /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetProcessWorkingSetSize (long int hProcess /* 0x8 */, PDWORD lpMinimumWorkingSetSize /* 0xc */, PDWORD lpMaximumWorkingSetSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetProcessWorkingSetSize (long int hProcess /* 0x8 */, long unsigned int dwMinimumWorkingSetSize /* 0xc */, long unsigned int dwMaximumWorkingSetSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenProcess (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, long unsigned int dwProcessId /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetCurrentProcess ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCurrentProcessId ()
+{ /* 0x0 */
+} /* 0x0 */
+void ExitProcess (unsigned int uExitCode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TerminateProcess (long int hProcess /* 0x8 */, unsigned int uExitCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetExitCodeProcess (long int hProcess /* 0x8 */, PDWORD lpExitCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void FatalExit (int ExitCode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR GetEnvironmentStrings ()
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR GetEnvironmentStringsW ()
+{ /* 0x0 */
+} /* 0x0 */
+int FreeEnvironmentStringsA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FreeEnvironmentStringsW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RaiseException (long unsigned int dwExceptionCode /* 0x8 */, long unsigned int dwExceptionFlags /* 0xc */, long unsigned int nNumberOfArguments /* 0x10 */, PDWORD lpArguments /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int UnhandledExceptionFilter (struct _EXCEPTION_POINTERS /* id 0 */ *ExceptionInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long int (*PTOP_LEVEL_EXCEPTION_FILTER) (/* unknown */);
+typedef PTOP_LEVEL_EXCEPTION_FILTER LPTOP_LEVEL_EXCEPTION_FILTER;
+PTOP_LEVEL_EXCEPTION_FILTER SetUnhandledExceptionFilter (PTOP_LEVEL_EXCEPTION_FILTER lpTopLevelExceptionFilter /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateThread (PSECURITY_ATTRIBUTES lpThreadAttributes /* 0x8 */, long unsigned int dwStackSize /* 0xc */, PTHREAD_START_ROUTINE lpStartAddress /* 0x10 */, PVOID lpParameter /* 0x14 */, long unsigned int dwCreationFlags /* 0x18 */, PDWORD lpThreadId /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateRemoteThread (long int hProcess /* 0x8 */, PSECURITY_ATTRIBUTES lpThreadAttributes /* 0xc */, long unsigned int dwStackSize /* 0x10 */, PTHREAD_START_ROUTINE lpStartAddress /* 0x14 */, PVOID lpParameter /* 0x18 */, long unsigned int dwCreationFlags /* 0x1c */, PDWORD lpThreadId /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetCurrentThread ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCurrentThreadId ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetThreadAffinityMask (long int hThread /* 0x8 */, long unsigned int dwThreadAffinityMask /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetProcessPriorityBoost (long int hProcess /* 0x8 */, int bDisablePriorityBoost /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetProcessPriorityBoost (long int hProcess /* 0x8 */, PBOOL pDisablePriorityBoost /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetThreadPriority (long int hThread /* 0x8 */, int nPriority /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetThreadPriorityBoost (long int hThread /* 0x8 */, int bDisablePriorityBoost /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetThreadPriorityBoost (long int hThread /* 0x8 */, PBOOL pDisablePriorityBoost /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetThreadPriority (long int hThread /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetThreadTimes (long int hThread /* 0x8 */, PFILETIME lpCreationTime /* 0xc */, PFILETIME lpExitTime /* 0x10 */, PFILETIME lpKernelTime /* 0x14 */, PFILETIME lpUserTime /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+void ExitThread (long unsigned int dwExitCode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TerminateThread (long int hThread /* 0x8 */, long unsigned int dwExitCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetExitCodeThread (long int hThread /* 0x8 */, PDWORD lpExitCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetThreadSelectorEntry (long int hThread /* 0x8 */, long unsigned int dwSelector /* 0xc */, PVOID lpSelectorEntry /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetLastError ()
+{ /* 0x0 */
+} /* 0x0 */
+void SetLastError (long unsigned int dwErrCode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetOverlappedResult (long int hFile /* 0x8 */, LPOVERLAPPED lpOverlapped /* 0xc */, PDWORD lpNumberOfBytesTransferred /* 0x10 */, int bWait /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateIoCompletionPort (long int FileHandle /* 0x8 */, long int ExistingCompletionPort /* 0xc */, long unsigned int CompletionKey /* 0x10 */, long unsigned int NumberOfConcurrentThreads /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetQueuedCompletionStatus (long int CompletionPort /* 0x8 */, PDWORD lpNumberOfBytesTransferred /* 0xc */, PDWORD lpCompletionKey /* 0x10 */, LPOVERLAPPED *lpOverlapped /* 0x14 */, long unsigned int dwMilliseconds /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PostQueuedCompletionStatus (long int CompletionPort /* 0x8 */, long unsigned int dwNumberOfBytesTransferred /* 0xc */, long unsigned int dwCompletionKey /* 0x10 */, LPOVERLAPPED lpOverlapped /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetErrorMode (unsigned int uMode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReadProcessMemory (long int hProcess /* 0x8 */, PVOID lpBaseAddress /* 0xc */, PVOID lpBuffer /* 0x10 */, long unsigned int nSize /* 0x14 */, PDWORD lpNumberOfBytesRead /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteProcessMemory (long int hProcess /* 0x8 */, PVOID lpBaseAddress /* 0xc */, PVOID lpBuffer /* 0x10 */, long unsigned int nSize /* 0x14 */, PDWORD lpNumberOfBytesWritten /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SuspendThread (long int hThread /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int ResumeThread (long int hThread /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void DebugBreak ()
+{ /* 0x0 */
+} /* 0x0 */
+int ContinueDebugEvent (long unsigned int dwProcessId /* 0x8 */, long unsigned int dwThreadId /* 0xc */, long unsigned int dwContinueStatus /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DebugActiveProcess (long unsigned int dwProcessId /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void InitializeCriticalSection (PLONG lpCriticalSection /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void EnterCriticalSection (PLONG lpCriticalSection /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void LeaveCriticalSection (PLONG lpCriticalSection /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void DeleteCriticalSection (PLONG lpCriticalSection /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetEvent (long int hEvent /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ResetEvent (long int hEvent /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PulseEvent (long int hEvent /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReleaseSemaphore (long int hSemaphore /* 0x8 */, long int lReleaseCount /* 0xc */, PLONG lpPreviousCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReleaseMutex (long int hMutex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WaitForSingleObject (long int hHandle /* 0x8 */, long unsigned int dwMilliseconds /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WaitForMultipleObjects (long unsigned int nCount /* 0x8 */, PHANDLE lpHandles /* 0xc */, int bWaitAll /* 0x10 */, long unsigned int dwMilliseconds /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+void Sleep (long unsigned int dwMilliseconds /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadResource (long int hModule /* 0x8 */, long int hResInfo /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SizeofResource (long int hModule /* 0x8 */, long int hResInfo /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GlobalDeleteAtom (int nAtom /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+int InitAtomTable (long unsigned int nSize /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int DeleteAtom (int nAtom /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+unsigned int SetHandleCount (unsigned int uNumber /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetLogicalDrives ()
+{ /* 0x0 */
+} /* 0x0 */
+int LockFile (long int hFile /* 0x8 */, long unsigned int dwFileOffsetLow /* 0xc */, long unsigned int dwFileOffsetHigh /* 0x10 */, long unsigned int nNumberOfBytesToLockLow /* 0x14 */, long unsigned int nNumberOfBytesToLockHigh /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnlockFile (long int hFile /* 0x8 */, long unsigned int dwFileOffsetLow /* 0xc */, long unsigned int dwFileOffsetHigh /* 0x10 */, long unsigned int nNumberOfBytesToUnlockLow /* 0x14 */, long unsigned int nNumberOfBytesToUnlockHigh /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LockFileEx (long int hFile /* 0x8 */, long unsigned int dwFlags /* 0xc */, long unsigned int dwReserved /* 0x10 */, long unsigned int nNumberOfBytesToLockLow /* 0x14 */, long unsigned int nNumberOfBytesToLockHigh /* 0x18 */, LPOVERLAPPED lpOverlapped /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnlockFileEx (long int hFile /* 0x8 */, long unsigned int dwReserved /* 0xc */, long unsigned int nNumberOfBytesToUnlockLow /* 0x10 */, long unsigned int nNumberOfBytesToUnlockHigh /* 0x14 */, LPOVERLAPPED lpOverlapped /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _BY_HANDLE_FILE_INFORMATION { /* size 52 id 22 */
+  long unsigned int dwFileAttributes; /* bitsize 32, bitpos 0 */
+  struct _FILETIME /* id 11 */ ftCreationTime; /* bitsize 64, bitpos 32 */
+  struct _FILETIME /* id 11 */ ftLastAccessTime; /* bitsize 64, bitpos 96 */
+  struct _FILETIME /* id 11 */ ftLastWriteTime; /* bitsize 64, bitpos 160 */
+  long unsigned int dwVolumeSerialNumber; /* bitsize 32, bitpos 224 */
+  long unsigned int nFileSizeHigh; /* bitsize 32, bitpos 256 */
+  long unsigned int nFileSizeLow; /* bitsize 32, bitpos 288 */
+  long unsigned int nNumberOfLinks; /* bitsize 32, bitpos 320 */
+  long unsigned int nFileIndexHigh; /* bitsize 32, bitpos 352 */
+  long unsigned int nFileIndexLow; /* bitsize 32, bitpos 384 */
+};
+typedef struct _BY_HANDLE_FILE_INFORMATION /* id 22 */ BY_HANDLE_FILE_INFORMATION;
+typedef struct _BY_HANDLE_FILE_INFORMATION /* id 22 */ *PBY_HANDLE_FILE_INFORMATION;
+typedef PBY_HANDLE_FILE_INFORMATION LPBY_HANDLE_FILE_INFORMATION;
+int GetFileInformationByHandle (long int hFile /* 0x8 */, PBY_HANDLE_FILE_INFORMATION lpFileInformation /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFileType (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFileSize (long int hFile /* 0x8 */, PDWORD lpFileSizeHigh /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetFileSizeEx(long int hFile /* 0x8 */, long long *b /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetStdHandle (long unsigned int nStdHandle /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetStdHandle (long unsigned int nStdHandle /* 0x8 */, long int hHandle /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteFile (long int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToWrite /* 0x10 */, PDWORD lpNumberOfBytesWritten /* 0x14 */, LPOVERLAPPED lpOverlapped /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReadFile (long int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToRead /* 0x10 */, PDWORD lpNumberOfBytesRead /* 0x14 */, LPOVERLAPPED lpOverlapped /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FlushFileBuffers (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeviceIoControl (long int hDevice /* 0x8 */, long unsigned int dwIoControlCode /* 0xc */, PVOID lpInBuffer /* 0x10 */, long unsigned int nInBufferSize /* 0x14 */, PVOID lpOutBuffer /* 0x18 */, long unsigned int nOutBufferSize /* 0x1c */, PDWORD lpBytesReturned /* 0x20 */, LPOVERLAPPED lpOverlapped /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetEndOfFile (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetFilePointer (long int hFile /* 0x8 */, long int lDistanceToMove /* 0xc */, PLONG lpDistanceToMoveHigh /* 0x10 */, long unsigned int dwMoveMethod /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FindClose (long int hFindFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetFileTime (long int hFile /* 0x8 */, PFILETIME lpCreationTime /* 0xc */, PFILETIME lpLastAccessTime /* 0x10 */, PFILETIME lpLastWriteTime /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetFileTime (long int hFile /* 0x8 */, struct _FILETIME /* id 11 */ *lpCreationTime /* 0xc */, struct _FILETIME /* id 11 */ *lpLastAccessTime /* 0x10 */, struct _FILETIME /* id 11 */ *lpLastWriteTime /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseHandle (long int hObject /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DuplicateHandle (long int hSourceProcessHandle /* 0x8 */, long int hSourceHandle /* 0xc */, long int hTargetProcessHandle /* 0x10 */, PHANDLE lpTargetHandle /* 0x14 */, long unsigned int dwDesiredAccess /* 0x18 */, int bInheritHandle /* 0x1c */, long unsigned int dwOptions /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetHandleInformation (long int hObject /* 0x8 */, PDWORD lpdwFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetHandleInformation (long int hObject /* 0x8 */, long unsigned int dwMask /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int LoadModule (PSTR lpModuleName /* 0x8 */, PVOID lpParameterBlock /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int WinExec (PSTR lpCmdLine /* 0x8 */, unsigned int uCmdShow /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClearCommBreak (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClearCommError (long int hFile /* 0x8 */, PDWORD lpErrors /* 0xc */, LPCOMSTAT lpStat /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetupComm (long int hFile /* 0x8 */, long unsigned int dwInQueue /* 0xc */, long unsigned int dwOutQueue /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EscapeCommFunction (long int hFile /* 0x8 */, long unsigned int dwFunc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommConfig (long int hCommDev /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, PDWORD lpdwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommMask (long int hFile /* 0x8 */, PDWORD lpEvtMask /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommProperties (long int hFile /* 0x8 */, LPCOMMPROP lpCommProp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommModemStatus (long int hFile /* 0x8 */, PDWORD lpModemStat /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommState (long int hFile /* 0x8 */, LPDCB lpDCB /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCommTimeouts (long int hFile /* 0x8 */, LPCOMMTIMEOUTS lpCommTimeouts /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int PurgeComm (long int hFile /* 0x8 */, long unsigned int dwFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCommBreak (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCommConfig (long int hCommDev /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, long unsigned int dwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCommMask (long int hFile /* 0x8 */, long unsigned int dwEvtMask /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCommState (long int hFile /* 0x8 */, LPDCB lpDCB /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCommTimeouts (long int hFile /* 0x8 */, LPCOMMTIMEOUTS lpCommTimeouts /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int TransmitCommChar (long int hFile /* 0x8 */, int cChar /* 0xc */)
+{ /* 0x0 */
+  char cChar /* 0xffffffff */;
+} /* 0x0 */
+int WaitCommEvent (long int hFile /* 0x8 */, PDWORD lpEvtMask /* 0xc */, LPOVERLAPPED lpOverlapped /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetTapePosition (long int hDevice /* 0x8 */, long unsigned int dwPositionMethod /* 0xc */, long unsigned int dwPartition /* 0x10 */, long unsigned int dwOffsetLow /* 0x14 */, long unsigned int dwOffsetHigh /* 0x18 */, int bImmediate /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTapePosition (long int hDevice /* 0x8 */, long unsigned int dwPositionType /* 0xc */, PDWORD lpdwPartition /* 0x10 */, PDWORD lpdwOffsetLow /* 0x14 */, PDWORD lpdwOffsetHigh /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int PrepareTape (long int hDevice /* 0x8 */, long unsigned int dwOperation /* 0xc */, int bImmediate /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int EraseTape (long int hDevice /* 0x8 */, long unsigned int dwEraseType /* 0xc */, int bImmediate /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CreateTapePartition (long int hDevice /* 0x8 */, long unsigned int dwPartitionMethod /* 0xc */, long unsigned int dwCount /* 0x10 */, long unsigned int dwSize /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WriteTapemark (long int hDevice /* 0x8 */, long unsigned int dwTapemarkType /* 0xc */, long unsigned int dwTapemarkCount /* 0x10 */, int bImmediate /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTapeStatus (long int hDevice /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTapeParameters (long int hDevice /* 0x8 */, long unsigned int dwOperation /* 0xc */, PDWORD lpdwSize /* 0x10 */, PVOID lpTapeInformation /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetTapeParameters (long int hDevice /* 0x8 */, long unsigned int dwOperation /* 0xc */, PVOID lpTapeInformation /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Beep (long unsigned int dwFreq /* 0x8 */, long unsigned int dwDuration /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int MulDiv (int nNumber /* 0x8 */, int nNumerator /* 0xc */, int nDenominator /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetSystemTime (PSYSTEMTIME lpSystemTime /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetSystemTimeAsFileTime (PFILETIME lpSystemTimeAsFileTime /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetSystemTime (struct _SYSTEMTIME /* id 12 */ *lpSystemTime /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetLocalTime (PSYSTEMTIME lpSystemTime /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetLocalTime (struct _SYSTEMTIME /* id 12 */ *lpSystemTime /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetSystemInfo (LPSYSTEM_INFO lpSystemInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsProcessorFeaturePresent (long unsigned int ProcessorFeature /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _TIME_ZONE_INFORMATION { /* size 172 id 23 */
+  long int Bias; /* bitsize 32, bitpos 0 */
+  short unsigned int StandardName[32]; /* bitsize 512, bitpos 32 */
+  struct _SYSTEMTIME /* id 12 */ StandardDate; /* bitsize 128, bitpos 544 */
+  long int StandardBias; /* bitsize 32, bitpos 672 */
+  short unsigned int DaylightName[32]; /* bitsize 512, bitpos 704 */
+  struct _SYSTEMTIME /* id 12 */ DaylightDate; /* bitsize 128, bitpos 1216 */
+  long int DaylightBias; /* bitsize 32, bitpos 1344 */
+};
+typedef struct _TIME_ZONE_INFORMATION /* id 23 */ TIME_ZONE_INFORMATION;
+typedef struct _TIME_ZONE_INFORMATION /* id 23 */ *PTIME_ZONE_INFORMATION;
+typedef PTIME_ZONE_INFORMATION LPTIME_ZONE_INFORMATION;
+int SystemTimeToTzSpecificLocalTime (PTIME_ZONE_INFORMATION lpTimeZoneInformation /* 0x8 */, PSYSTEMTIME lpUniversalTime /* 0xc */, PSYSTEMTIME lpLocalTime /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTimeZoneInformation (PTIME_ZONE_INFORMATION lpTimeZoneInformation /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetTimeZoneInformation (struct _TIME_ZONE_INFORMATION /* id 23 */ *lpTimeZoneInformation /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SystemTimeToFileTime (struct _SYSTEMTIME /* id 12 */ *lpSystemTime /* 0x8 */, PFILETIME lpFileTime /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FileTimeToLocalFileTime (struct _FILETIME /* id 11 */ *lpFileTime /* 0x8 */, PFILETIME lpLocalFileTime /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int LocalFileTimeToFileTime (struct _FILETIME /* id 11 */ *lpLocalFileTime /* 0x8 */, PFILETIME lpFileTime /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FileTimeToSystemTime (struct _FILETIME /* id 11 */ *lpFileTime /* 0x8 */, PSYSTEMTIME lpSystemTime /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CompareFileTime (struct _FILETIME /* id 11 */ *lpFileTime1 /* 0x8 */, struct _FILETIME /* id 11 */ *lpFileTime2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FileTimeToDosDateTime (struct _FILETIME /* id 11 */ *lpFileTime /* 0x8 */, PWORD lpFatDate /* 0xc */, PWORD lpFatTime /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DosDateTimeToFileTime (int wFatDate /* 0x8 */, int wFatTime /* 0xc */, PFILETIME lpFileTime /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int wFatTime /* 0xfffffffc */;
+  short unsigned int wFatDate /* 0xfffffffe */;
+} /* 0x0 */
+long unsigned int GetTickCount ()
+{ /* 0x0 */
+} /* 0x0 */
+int SetSystemTimeAdjustment (long unsigned int dwTimeAdjustment /* 0x8 */, int bTimeAdjustmentDisabled /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetSystemTimeAdjustment (PDWORD lpTimeAdjustment /* 0x8 */, PDWORD lpTimeIncrement /* 0xc */, PBOOL lpTimeAdjustmentDisabled /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreatePipe (PHANDLE hReadPipe /* 0x8 */, PHANDLE hWritePipe /* 0xc */, PSECURITY_ATTRIBUTES lpPipeAttributes /* 0x10 */, long unsigned int nSize /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ConnectNamedPipe (long int hNamedPipe /* 0x8 */, LPOVERLAPPED lpOverlapped /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DisconnectNamedPipe (long int hNamedPipe /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetNamedPipeHandleState (long int hNamedPipe /* 0x8 */, PDWORD lpMode /* 0xc */, PDWORD lpMaxCollectionCount /* 0x10 */, PDWORD lpCollectDataTimeout /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetNamedPipeInfo (long int hNamedPipe /* 0x8 */, PDWORD lpFlags /* 0xc */, PDWORD lpOutBufferSize /* 0x10 */, PDWORD lpInBufferSize /* 0x14 */, PDWORD lpMaxInstances /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PeekNamedPipe (long int hNamedPipe /* 0x8 */, PVOID lpBuffer /* 0xc */, long unsigned int nBufferSize /* 0x10 */, PDWORD lpBytesRead /* 0x14 */, PDWORD lpTotalBytesAvail /* 0x18 */, PDWORD lpBytesLeftThisMessage /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int TransactNamedPipe (long int hNamedPipe /* 0x8 */, PVOID lpInBuffer /* 0xc */, long unsigned int nInBufferSize /* 0x10 */, PVOID lpOutBuffer /* 0x14 */, long unsigned int nOutBufferSize /* 0x18 */, PDWORD lpBytesRead /* 0x1c */, LPOVERLAPPED lpOverlapped /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMailslotA (PSTR lpName /* 0x8 */, long unsigned int nMaxMessageSize /* 0xc */, long unsigned int lReadTimeout /* 0x10 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMailslotW (PWCHAR lpName /* 0x8 */, long unsigned int nMaxMessageSize /* 0xc */, long unsigned int lReadTimeout /* 0x10 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMailslotInfo (long int hMailslot /* 0x8 */, PDWORD lpMaxMessageSize /* 0xc */, PDWORD lpNextSize /* 0x10 */, PDWORD lpMessageCount /* 0x14 */, PDWORD lpReadTimeout /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMailslotInfo (long int hMailslot /* 0x8 */, long unsigned int lReadTimeout /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID MapViewOfFile (long int hFileMappingObject /* 0x8 */, long unsigned int dwDesiredAccess /* 0xc */, long unsigned int dwFileOffsetHigh /* 0x10 */, long unsigned int dwFileOffsetLow /* 0x14 */, long unsigned int dwNumberOfBytesToMap /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FlushViewOfFile (PVOID lpBaseAddress /* 0x8 */, long unsigned int dwNumberOfBytesToFlush /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnmapViewOfFile (PVOID lpBaseAddress /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrcmpA (PSTR lpString1 /* 0x8 */, PSTR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrcmpW (PWCHAR lpString1 /* 0x8 */, PWCHAR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrcmpiA (PSTR lpString1 /* 0x8 */, PSTR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrcmpiW (PWCHAR lpString1 /* 0x8 */, PWCHAR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR lstrcpynA (PSTR lpString1 /* 0x8 */, PSTR lpString2 /* 0xc */, int iMaxLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR lstrcpynW (PWCHAR lpString1 /* 0x8 */, PWCHAR lpString2 /* 0xc */, int iMaxLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR lstrcpyA (PSTR lpString1 /* 0x8 */, PSTR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR lstrcpyW (PWCHAR lpString1 /* 0x8 */, PWCHAR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR lstrcatA (PSTR lpString1 /* 0x8 */, PSTR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR lstrcatW (PWCHAR lpString1 /* 0x8 */, PWCHAR lpString2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrlenA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int lstrlenW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OpenFile (PSTR lpFileName /* 0x8 */, LPOFSTRUCT lpReOpenBuff /* 0xc */, unsigned int uStyle /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _lopen (PSTR lpPathName /* 0x8 */, int iReadWrite /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _lcreat (PSTR lpPathName /* 0x8 */, int iAttribute /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _lread (int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, unsigned int uBytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _lwrite (int hFile /* 0x8 */, PSTR lpBuffer /* 0xc */, unsigned int uBytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _hread (int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, long int lBytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _hwrite (int hFile /* 0x8 */, PSTR lpBuffer /* 0xc */, long int lBytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _lclose (int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _llseek (int hFile /* 0x8 */, long int lOffset /* 0xc */, int iOrigin /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsTextUnicode (PVOID lpBuffer /* 0x8 */, int cb /* 0xc */, LPCWORD lpi /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int TlsAlloc ()
+{ /* 0x0 */
+} /* 0x0 */
+PVOID TlsGetValue (long unsigned int dwTlsIndex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TlsSetValue (long unsigned int dwTlsIndex /* 0x8 */, PVOID lpTlsValue /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int TlsFree (long unsigned int dwTlsIndex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef void (*LPOVERLAPPED_COMPLETION_ROUTINE) (/* unknown */);
+long unsigned int SleepEx (long unsigned int dwMilliseconds /* 0x8 */, int bAlertable /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WaitForSingleObjectEx (long int hHandle /* 0x8 */, long unsigned int dwMilliseconds /* 0xc */, int bAlertable /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WaitForMultipleObjectsEx (long unsigned int nCount /* 0x8 */, PHANDLE lpHandles /* 0xc */, int bWaitAll /* 0x10 */, long unsigned int dwMilliseconds /* 0x14 */, int bAlertable /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReadFileEx (long int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToRead /* 0x10 */, LPOVERLAPPED lpOverlapped /* 0x14 */, LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteFileEx (long int hFile /* 0x8 */, PVOID lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToWrite /* 0x10 */, LPOVERLAPPED lpOverlapped /* 0x14 */, LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int BackupRead (long int hFile /* 0x8 */, PBYTE lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToRead /* 0x10 */, PDWORD lpNumberOfBytesRead /* 0x14 */, int bAbort /* 0x18 */, int bProcessSecurity /* 0x1c */, PVOID *lpContext /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int BackupSeek (long int hFile /* 0x8 */, long unsigned int dwLowBytesToSeek /* 0xc */, long unsigned int dwHighBytesToSeek /* 0x10 */, PDWORD lpdwLowByteSeeked /* 0x14 */, PDWORD lpdwHighByteSeeked /* 0x18 */, PVOID *lpContext /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int BackupWrite (long int hFile /* 0x8 */, PBYTE lpBuffer /* 0xc */, long unsigned int nNumberOfBytesToWrite /* 0x10 */, PDWORD lpNumberOfBytesWritten /* 0x14 */, int bAbort /* 0x18 */, int bProcessSecurity /* 0x1c */, PVOID *lpContext /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _STARTUPINFOA { /* size 68 id 24 */
+  long unsigned int cb; /* bitsize 32, bitpos 0 */
+  PSTR lpReserved; /* bitsize 32, bitpos 32 */
+  PSTR lpDesktop; /* bitsize 32, bitpos 64 */
+  PSTR lpTitle; /* bitsize 32, bitpos 96 */
+  long unsigned int dwX; /* bitsize 32, bitpos 128 */
+  long unsigned int dwY; /* bitsize 32, bitpos 160 */
+  long unsigned int dwXSize; /* bitsize 32, bitpos 192 */
+  long unsigned int dwYSize; /* bitsize 32, bitpos 224 */
+  long unsigned int dwXCountChars; /* bitsize 32, bitpos 256 */
+  long unsigned int dwYCountChars; /* bitsize 32, bitpos 288 */
+  long unsigned int dwFillAttribute; /* bitsize 32, bitpos 320 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 352 */
+  short unsigned int wShowWindow; /* bitsize 16, bitpos 384 */
+  short unsigned int cbReserved2; /* bitsize 16, bitpos 400 */
+  PBYTE lpReserved2; /* bitsize 32, bitpos 416 */
+  long int hStdInput; /* bitsize 32, bitpos 448 */
+  long int hStdOutput; /* bitsize 32, bitpos 480 */
+  long int hStdError; /* bitsize 32, bitpos 512 */
+};
+typedef struct _STARTUPINFOA /* id 24 */ STARTUPINFOA;
+typedef struct _STARTUPINFOA /* id 24 */ *LPSTARTUPINFOA;
+struct _STARTUPINFOW { /* size 68 id 25 */
+  long unsigned int cb; /* bitsize 32, bitpos 0 */
+  PWCHAR lpReserved; /* bitsize 32, bitpos 32 */
+  PWCHAR lpDesktop; /* bitsize 32, bitpos 64 */
+  PWCHAR lpTitle; /* bitsize 32, bitpos 96 */
+  long unsigned int dwX; /* bitsize 32, bitpos 128 */
+  long unsigned int dwY; /* bitsize 32, bitpos 160 */
+  long unsigned int dwXSize; /* bitsize 32, bitpos 192 */
+  long unsigned int dwYSize; /* bitsize 32, bitpos 224 */
+  long unsigned int dwXCountChars; /* bitsize 32, bitpos 256 */
+  long unsigned int dwYCountChars; /* bitsize 32, bitpos 288 */
+  long unsigned int dwFillAttribute; /* bitsize 32, bitpos 320 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 352 */
+  short unsigned int wShowWindow; /* bitsize 16, bitpos 384 */
+  short unsigned int cbReserved2; /* bitsize 16, bitpos 400 */
+  PBYTE lpReserved2; /* bitsize 32, bitpos 416 */
+  long int hStdInput; /* bitsize 32, bitpos 448 */
+  long int hStdOutput; /* bitsize 32, bitpos 480 */
+  long int hStdError; /* bitsize 32, bitpos 512 */
+};
+typedef struct _STARTUPINFOW /* id 25 */ STARTUPINFOW;
+typedef struct _STARTUPINFOW /* id 25 */ *LPSTARTUPINFOW;
+typedef struct _STARTUPINFOA /* id 24 */ STARTUPINFO;
+typedef LPSTARTUPINFOA LPSTARTUPINFO;
+struct _WIN32_FIND_DATAA { /* size 320 id 26 */
+  long unsigned int dwFileAttributes; /* bitsize 32, bitpos 0 */
+  struct _FILETIME /* id 11 */ ftCreationTime; /* bitsize 64, bitpos 32 */
+  struct _FILETIME /* id 11 */ ftLastAccessTime; /* bitsize 64, bitpos 96 */
+  struct _FILETIME /* id 11 */ ftLastWriteTime; /* bitsize 64, bitpos 160 */
+  long unsigned int nFileSizeHigh; /* bitsize 32, bitpos 224 */
+  long unsigned int nFileSizeLow; /* bitsize 32, bitpos 256 */
+  long unsigned int dwReserved0; /* bitsize 32, bitpos 288 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 320 */
+  unsigned char cFileName[260]; /* bitsize 2080, bitpos 352 */
+  unsigned char cAlternateFileName[14]; /* bitsize 112, bitpos 2432 */
+};
+typedef struct _WIN32_FIND_DATAA /* id 26 */ WIN32_FIND_DATAA;
+typedef struct _WIN32_FIND_DATAA /* id 26 */ *PWIN32_FIND_DATAA;
+typedef PWIN32_FIND_DATAA LPWIN32_FIND_DATAA;
+struct _WIN32_FIND_DATAW { /* size 592 id 27 */
+  long unsigned int dwFileAttributes; /* bitsize 32, bitpos 0 */
+  struct _FILETIME /* id 11 */ ftCreationTime; /* bitsize 64, bitpos 32 */
+  struct _FILETIME /* id 11 */ ftLastAccessTime; /* bitsize 64, bitpos 96 */
+  struct _FILETIME /* id 11 */ ftLastWriteTime; /* bitsize 64, bitpos 160 */
+  long unsigned int nFileSizeHigh; /* bitsize 32, bitpos 224 */
+  long unsigned int nFileSizeLow; /* bitsize 32, bitpos 256 */
+  long unsigned int dwReserved0; /* bitsize 32, bitpos 288 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 320 */
+  short unsigned int cFileName[260]; /* bitsize 4160, bitpos 352 */
+  short unsigned int cAlternateFileName[14]; /* bitsize 224, bitpos 4512 */
+};
+typedef struct _WIN32_FIND_DATAW /* id 27 */ WIN32_FIND_DATAW;
+typedef struct _WIN32_FIND_DATAW /* id 27 */ *PWIN32_FIND_DATAW;
+typedef PWIN32_FIND_DATAW LPWIN32_FIND_DATAW;
+typedef struct _WIN32_FIND_DATAA /* id 26 */ WIN32_FIND_DATA;
+typedef PWIN32_FIND_DATAA PWIN32_FIND_DATA;
+typedef PWIN32_FIND_DATAA LPWIN32_FIND_DATA;
+struct _WIN32_FILE_ATTRIBUTE_DATA { /* size 36 id 28 */
+  long unsigned int dwFileAttributes; /* bitsize 32, bitpos 0 */
+  struct _FILETIME /* id 11 */ ftCreationTime; /* bitsize 64, bitpos 32 */
+  struct _FILETIME /* id 11 */ ftLastAccessTime; /* bitsize 64, bitpos 96 */
+  struct _FILETIME /* id 11 */ ftLastWriteTime; /* bitsize 64, bitpos 160 */
+  long unsigned int nFileSizeHigh; /* bitsize 32, bitpos 224 */
+  long unsigned int nFileSizeLow; /* bitsize 32, bitpos 256 */
+};
+typedef struct _WIN32_FILE_ATTRIBUTE_DATA /* id 28 */ WIN32_FILE_ATTRIBUTE_DATA;
+typedef struct _WIN32_FILE_ATTRIBUTE_DATA /* id 28 */ *LPWIN32_FILE_ATTRIBUTE_DATA;
+long int CreateMutexA (PSECURITY_ATTRIBUTES lpMutexAttributes /* 0x8 */, int bInitialOwner /* 0xc */, PSTR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMutexW (PSECURITY_ATTRIBUTES lpMutexAttributes /* 0x8 */, int bInitialOwner /* 0xc */, PWCHAR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenMutexA (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PSTR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenMutexW (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PWCHAR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEventA (PSECURITY_ATTRIBUTES lpEventAttributes /* 0x8 */, int bManualReset /* 0xc */, int bInitialState /* 0x10 */, PSTR lpName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEventW (PSECURITY_ATTRIBUTES lpEventAttributes /* 0x8 */, int bManualReset /* 0xc */, int bInitialState /* 0x10 */, PWCHAR lpName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenEventA (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PSTR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenEventW (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PWCHAR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateSemaphoreA (PSECURITY_ATTRIBUTES lpSemaphoreAttributes /* 0x8 */, long int lInitialCount /* 0xc */, long int lMaximumCount /* 0x10 */, PSTR lpName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateSemaphoreW (PSECURITY_ATTRIBUTES lpSemaphoreAttributes /* 0x8 */, long int lInitialCount /* 0xc */, long int lMaximumCount /* 0x10 */, PWCHAR lpName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenSemaphoreA (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PSTR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenSemaphoreW (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PWCHAR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFileMappingA (long int hFile /* 0x8 */, PSECURITY_ATTRIBUTES lpFileMappingAttributes /* 0xc */, long unsigned int flProtect /* 0x10 */, long unsigned int dwMaximumSizeHigh /* 0x14 */, long unsigned int dwMaximumSizeLow /* 0x18 */, PSTR lpName /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFileMappingW (long int hFile /* 0x8 */, PSECURITY_ATTRIBUTES lpFileMappingAttributes /* 0xc */, long unsigned int flProtect /* 0x10 */, long unsigned int dwMaximumSizeHigh /* 0x14 */, long unsigned int dwMaximumSizeLow /* 0x18 */, PWCHAR lpName /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenFileMappingA (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PSTR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenFileMappingW (long unsigned int dwDesiredAccess /* 0x8 */, int bInheritHandle /* 0xc */, PWCHAR lpName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetLogicalDriveStringsA (long unsigned int nBufferLength /* 0x8 */, PSTR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetLogicalDriveStringsW (long unsigned int nBufferLength /* 0x8 */, PWCHAR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadLibraryA (PSTR lpLibFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadLibraryW (PWCHAR lpLibFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadLibraryExA (PSTR lpLibFileName /* 0x8 */, long int hFile /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadLibraryExW (PWCHAR lpLibFileName /* 0x8 */, long int hFile /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetModuleFileNameA (long int hModule /* 0x8 */, PSTR lpFilename /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetModuleFileNameW (long int hModule /* 0x8 */, PWCHAR lpFilename /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetModuleHandleA (PSTR lpModuleName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetModuleHandleW (PWCHAR lpModuleName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateProcessA (PSTR lpApplicationName /* 0x8 */, PSTR lpCommandLine /* 0xc */, PSECURITY_ATTRIBUTES lpProcessAttributes /* 0x10 */, PSECURITY_ATTRIBUTES lpThreadAttributes /* 0x14 */, int bInheritHandles /* 0x18 */, long unsigned int dwCreationFlags /* 0x1c */, PVOID lpEnvironment /* 0x20 */, PSTR lpCurrentDirectory /* 0x24 */, LPSTARTUPINFOA lpStartupInfo /* 0x28 */, PPROCESS_INFORMATION lpProcessInformation /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateProcessW (PWCHAR lpApplicationName /* 0x8 */, PWCHAR lpCommandLine /* 0xc */, PSECURITY_ATTRIBUTES lpProcessAttributes /* 0x10 */, PSECURITY_ATTRIBUTES lpThreadAttributes /* 0x14 */, int bInheritHandles /* 0x18 */, long unsigned int dwCreationFlags /* 0x1c */, PVOID lpEnvironment /* 0x20 */, PWCHAR lpCurrentDirectory /* 0x24 */, LPSTARTUPINFOW lpStartupInfo /* 0x28 */, PPROCESS_INFORMATION lpProcessInformation /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetProcessShutdownParameters (long unsigned int dwLevel /* 0x8 */, long unsigned int dwFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetProcessShutdownParameters (PDWORD lpdwLevel /* 0x8 */, PDWORD lpdwFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProcessVersion (long unsigned int ProcessId /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void FatalAppExitA (unsigned int uAction /* 0x8 */, PSTR lpMessageText /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void FatalAppExitW (unsigned int uAction /* 0x8 */, PWCHAR lpMessageText /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetStartupInfoA (LPSTARTUPINFOA lpStartupInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void GetStartupInfoW (LPSTARTUPINFOW lpStartupInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR GetCommandLineA ()
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR GetCommandLineW ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetEnvironmentVariableA (PSTR lpName /* 0x8 */, PSTR lpBuffer /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetEnvironmentVariableW (PWCHAR lpName /* 0x8 */, PWCHAR lpBuffer /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetEnvironmentVariableA (PSTR lpName /* 0x8 */, PSTR lpValue /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetEnvironmentVariableW (PWCHAR lpName /* 0x8 */, PWCHAR lpValue /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int ExpandEnvironmentStringsA (PSTR lpSrc /* 0x8 */, PSTR lpDst /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int ExpandEnvironmentStringsW (PWCHAR lpSrc /* 0x8 */, PWCHAR lpDst /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void OutputDebugStringA (PSTR lpOutputString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void OutputDebugStringW (PWCHAR lpOutputString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindResourceA (long int hModule /* 0x8 */, PSTR lpName /* 0xc */, PSTR lpType /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindResourceW (long int hModule /* 0x8 */, PWCHAR lpName /* 0xc */, PWCHAR lpType /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindResourceExA (long int hModule /* 0x8 */, PSTR lpType /* 0xc */, PSTR lpName /* 0x10 */, int wLanguage /* 0x14 */)
+{ /* 0x0 */
+  short unsigned int wLanguage /* 0xfffffffe */;
+} /* 0x0 */
+long int FindResourceExW (long int hModule /* 0x8 */, PWCHAR lpType /* 0xc */, PWCHAR lpName /* 0x10 */, int wLanguage /* 0x14 */)
+{ /* 0x0 */
+  short unsigned int wLanguage /* 0xfffffffe */;
+} /* 0x0 */
+typedef FARPROC ENUMRESTYPEPROC;
+typedef FARPROC ENUMRESNAMEPROC;
+typedef FARPROC ENUMRESLANGPROC;
+int EnumResourceTypesA (long int hModule /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumResourceTypesW (long int hModule /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumResourceNamesA (long int hModule /* 0x8 */, PSTR lpType /* 0xc */, FARPROC lpEnumFunc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumResourceNamesW (long int hModule /* 0x8 */, PWCHAR lpType /* 0xc */, FARPROC lpEnumFunc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumResourceLanguagesA (long int hModule /* 0x8 */, PSTR lpType /* 0xc */, PSTR lpName /* 0x10 */, FARPROC lpEnumFunc /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumResourceLanguagesW (long int hModule /* 0x8 */, PWCHAR lpType /* 0xc */, PWCHAR lpName /* 0x10 */, FARPROC lpEnumFunc /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BeginUpdateResourceA (PSTR pFileName /* 0x8 */, int bDeleteExistingResources /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BeginUpdateResourceW (PWCHAR pFileName /* 0x8 */, int bDeleteExistingResources /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int UpdateResourceA (long int hUpdate /* 0x8 */, PSTR lpType /* 0xc */, PSTR lpName /* 0x10 */, int wLanguage /* 0x14 */, PVOID lpData /* 0x18 */, long unsigned int cbData /* 0x1c */)
+{ /* 0x0 */
+  short unsigned int wLanguage /* 0xfffffffe */;
+} /* 0x0 */
+int UpdateResourceW (long int hUpdate /* 0x8 */, PWCHAR lpType /* 0xc */, PWCHAR lpName /* 0x10 */, int wLanguage /* 0x14 */, PVOID lpData /* 0x18 */, long unsigned int cbData /* 0x1c */)
+{ /* 0x0 */
+  short unsigned int wLanguage /* 0xfffffffe */;
+} /* 0x0 */
+int EndUpdateResourceA (long int hUpdate /* 0x8 */, int fDiscard /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndUpdateResourceW (long int hUpdate /* 0x8 */, int fDiscard /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GlobalAddAtomA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GlobalAddAtomW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GlobalFindAtomA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GlobalFindAtomW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GlobalGetAtomNameA (int nAtom /* 0x8 */, PSTR lpBuffer /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+unsigned int GlobalGetAtomNameW (int nAtom /* 0x8 */, PWCHAR lpBuffer /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+short unsigned int AddAtomA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int AddAtomW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int FindAtomA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int FindAtomW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetAtomNameA (int nAtom /* 0x8 */, PSTR lpBuffer /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+unsigned int GetAtomNameW (int nAtom /* 0x8 */, PWCHAR lpBuffer /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int nAtom /* 0xfffffffe */;
+} /* 0x0 */
+unsigned int GetProfileIntA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, int nDefault /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetProfileIntW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, int nDefault /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProfileStringA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, PSTR lpDefault /* 0x10 */, PSTR lpReturnedString /* 0x14 */, long unsigned int nSize /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProfileStringW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, PWCHAR lpDefault /* 0x10 */, PWCHAR lpReturnedString /* 0x14 */, long unsigned int nSize /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteProfileStringA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, PSTR lpString /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteProfileStringW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, PWCHAR lpString /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProfileSectionA (PSTR lpAppName /* 0x8 */, PSTR lpReturnedString /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetProfileSectionW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpReturnedString /* 0xc */, long unsigned int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteProfileSectionA (PSTR lpAppName /* 0x8 */, PSTR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int WriteProfileSectionW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetPrivateProfileIntA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, int nDefault /* 0x10 */, PSTR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetPrivateProfileIntW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, int nDefault /* 0x10 */, PWCHAR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileStringA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, PSTR lpDefault /* 0x10 */, PSTR lpReturnedString /* 0x14 */, long unsigned int nSize /* 0x18 */, PSTR lpFileName /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileStringW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, PWCHAR lpDefault /* 0x10 */, PWCHAR lpReturnedString /* 0x14 */, long unsigned int nSize /* 0x18 */, PWCHAR lpFileName /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileStringA (PSTR lpAppName /* 0x8 */, PSTR lpKeyName /* 0xc */, PSTR lpString /* 0x10 */, PSTR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileStringW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpKeyName /* 0xc */, PWCHAR lpString /* 0x10 */, PWCHAR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileSectionA (PSTR lpAppName /* 0x8 */, PSTR lpReturnedString /* 0xc */, long unsigned int nSize /* 0x10 */, PSTR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileSectionW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpReturnedString /* 0xc */, long unsigned int nSize /* 0x10 */, PWCHAR lpFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileSectionA (PSTR lpAppName /* 0x8 */, PSTR lpString /* 0xc */, PSTR lpFileName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileSectionW (PWCHAR lpAppName /* 0x8 */, PWCHAR lpString /* 0xc */, PWCHAR lpFileName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileSectionNamesA (PSTR lpszReturnBuffer /* 0x8 */, long unsigned int nSize /* 0xc */, PSTR lpFileName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPrivateProfileSectionNamesW (PWCHAR lpszReturnBuffer /* 0x8 */, long unsigned int nSize /* 0xc */, PWCHAR lpFileName /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPrivateProfileStructA (PSTR lpszSection /* 0x8 */, PSTR lpszKey /* 0xc */, PVOID lpStruct /* 0x10 */, unsigned int uSizeStruct /* 0x14 */, PSTR szFile /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPrivateProfileStructW (PWCHAR lpszSection /* 0x8 */, PWCHAR lpszKey /* 0xc */, PVOID lpStruct /* 0x10 */, unsigned int uSizeStruct /* 0x14 */, PWCHAR szFile /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileStructA (PSTR lpszSection /* 0x8 */, PSTR lpszKey /* 0xc */, PVOID lpStruct /* 0x10 */, unsigned int uSizeStruct /* 0x14 */, PSTR szFile /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WritePrivateProfileStructW (PWCHAR lpszSection /* 0x8 */, PWCHAR lpszKey /* 0xc */, PVOID lpStruct /* 0x10 */, unsigned int uSizeStruct /* 0x14 */, PWCHAR szFile /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDriveTypeA (PSTR lpRootPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDriveTypeW (PWCHAR lpRootPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetSystemDirectoryA (PSTR lpBuffer /* 0x8 */, unsigned int uSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetSystemDirectoryW (PWCHAR lpBuffer /* 0x8 */, unsigned int uSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTempPathA (long unsigned int nBufferLength /* 0x8 */, PSTR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTempPathW (long unsigned int nBufferLength /* 0x8 */, PWCHAR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetTempFileNameA (PSTR lpPathName /* 0x8 */, PSTR lpPrefixString /* 0xc */, unsigned int uUnique /* 0x10 */, PSTR lpTempFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetTempFileNameW (PWCHAR lpPathName /* 0x8 */, PWCHAR lpPrefixString /* 0xc */, unsigned int uUnique /* 0x10 */, PWCHAR lpTempFileName /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetWindowsDirectoryA (PSTR lpBuffer /* 0x8 */, unsigned int uSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetWindowsDirectoryW (PWCHAR lpBuffer /* 0x8 */, unsigned int uSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCurrentDirectoryA (PSTR lpPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCurrentDirectoryW (PWCHAR lpPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCurrentDirectoryA (long unsigned int nBufferLength /* 0x8 */, PSTR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCurrentDirectoryW (long unsigned int nBufferLength /* 0x8 */, PWCHAR lpBuffer /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDiskFreeSpaceA (PSTR lpRootPathName /* 0x8 */, PDWORD lpSectorsPerCluster /* 0xc */, PDWORD lpBytesPerSector /* 0x10 */, PDWORD lpNumberOfFreeClusters /* 0x14 */, PDWORD lpTotalNumberOfClusters /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDiskFreeSpaceW (PWCHAR lpRootPathName /* 0x8 */, PDWORD lpSectorsPerCluster /* 0xc */, PDWORD lpBytesPerSector /* 0x10 */, PDWORD lpNumberOfFreeClusters /* 0x14 */, PDWORD lpTotalNumberOfClusters /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateDirectoryA (PSTR lpPathName /* 0x8 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateDirectoryW (PWCHAR lpPathName /* 0x8 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateDirectoryExA (PSTR lpTemplateDirectory /* 0x8 */, PSTR lpNewDirectory /* 0xc */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateDirectoryExW (PWCHAR lpTemplateDirectory /* 0x8 */, PWCHAR lpNewDirectory /* 0xc */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RemoveDirectoryA (PSTR lpPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RemoveDirectoryW (PWCHAR lpPathName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFullPathNameA (PSTR lpFileName /* 0x8 */, long unsigned int nBufferLength /* 0xc */, PSTR lpBuffer /* 0x10 */, PSTR *lpFilePart /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFullPathNameW (PWCHAR lpFileName /* 0x8 */, long unsigned int nBufferLength /* 0xc */, PWCHAR lpBuffer /* 0x10 */, PWCHAR *lpFilePart /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DefineDosDeviceA (long unsigned int dwFlags /* 0x8 */, PSTR lpDeviceName /* 0xc */, PSTR lpTargetPath /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DefineDosDeviceW (long unsigned int dwFlags /* 0x8 */, PWCHAR lpDeviceName /* 0xc */, PWCHAR lpTargetPath /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int QueryDosDeviceA (PSTR lpDeviceName /* 0x8 */, PSTR lpTargetPath /* 0xc */, long unsigned int ucchMax /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int QueryDosDeviceW (PWCHAR lpDeviceName /* 0x8 */, PWCHAR lpTargetPath /* 0xc */, long unsigned int ucchMax /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFileA (PSTR lpFileName /* 0x8 */, long unsigned int dwDesiredAccess /* 0xc */, long unsigned int dwShareMode /* 0x10 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x14 */, long unsigned int dwCreationDisposition /* 0x18 */, long unsigned int dwFlagsAndAttributes /* 0x1c */, long int hTemplateFile /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFileW (PWCHAR lpFileName /* 0x8 */, long unsigned int dwDesiredAccess /* 0xc */, long unsigned int dwShareMode /* 0x10 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x14 */, long unsigned int dwCreationDisposition /* 0x18 */, long unsigned int dwFlagsAndAttributes /* 0x1c */, long int hTemplateFile /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetFileAttributesA (PSTR lpFileName /* 0x8 */, long unsigned int dwFileAttributes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetFileAttributesW (PWCHAR lpFileName /* 0x8 */, long unsigned int dwFileAttributes /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFileAttributesA (PSTR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFileAttributesW (PWCHAR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+enum _GET_FILEEX_INFO_LEVELS { GetFileExInfoStandard, GetFileExMaxInfoLevel };
+typedef enum _GET_FILEEX_INFO_LEVELS GET_FILEEX_INFO_LEVELS;
+int GetFileAttributesExA (PSTR lpFileName /* 0x8 */, enum _GET_FILEEX_INFO_LEVELS fInfoLevelId /* 0xc */, PVOID lpFileInformation /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetFileAttributesExW (PWCHAR lpFileName /* 0x8 */, enum _GET_FILEEX_INFO_LEVELS fInfoLevelId /* 0xc */, PVOID lpFileInformation /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCompressedFileSizeA (PSTR lpFileName /* 0x8 */, PDWORD lpFileSizeHigh /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCompressedFileSizeW (PWCHAR lpFileName /* 0x8 */, PDWORD lpFileSizeHigh /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteFileA (PSTR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteFileW (PWCHAR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindFirstFileA (PSTR lpFileName /* 0x8 */, PWIN32_FIND_DATAA lpFindFileData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindFirstFileW (PWCHAR lpFileName /* 0x8 */, PWIN32_FIND_DATAW lpFindFileData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FindNextFileA (long int hFindFile /* 0x8 */, PWIN32_FIND_DATAA lpFindFileData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FindNextFileW (long int hFindFile /* 0x8 */, PWIN32_FIND_DATAW lpFindFileData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SearchPathA (PSTR lpPath /* 0x8 */, PSTR lpFileName /* 0xc */, PSTR lpExtension /* 0x10 */, long unsigned int nBufferLength /* 0x14 */, PSTR lpBuffer /* 0x18 */, PSTR *lpFilePart /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SearchPathW (PWCHAR lpPath /* 0x8 */, PWCHAR lpFileName /* 0xc */, PWCHAR lpExtension /* 0x10 */, long unsigned int nBufferLength /* 0x14 */, PWCHAR lpBuffer /* 0x18 */, PWCHAR *lpFilePart /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int CopyFileA (PSTR lpExistingFileName /* 0x8 */, PSTR lpNewFileName /* 0xc */, int bFailIfExists /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CopyFileW (PWCHAR lpExistingFileName /* 0x8 */, PWCHAR lpNewFileName /* 0xc */, int bFailIfExists /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveFileA (PSTR lpExistingFileName /* 0x8 */, PSTR lpNewFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveFileW (PWCHAR lpExistingFileName /* 0x8 */, PWCHAR lpNewFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveFileExA (PSTR lpExistingFileName /* 0x8 */, PSTR lpNewFileName /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveFileExW (PWCHAR lpExistingFileName /* 0x8 */, PWCHAR lpNewFileName /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateNamedPipeA (PSTR lpName /* 0x8 */, long unsigned int dwOpenMode /* 0xc */, long unsigned int dwPipeMode /* 0x10 */, long unsigned int nMaxInstances /* 0x14 */, long unsigned int nOutBufferSize /* 0x18 */, long unsigned int nInBufferSize /* 0x1c */, long unsigned int nDefaultTimeOut /* 0x20 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateNamedPipeW (PWCHAR lpName /* 0x8 */, long unsigned int dwOpenMode /* 0xc */, long unsigned int dwPipeMode /* 0x10 */, long unsigned int nMaxInstances /* 0x14 */, long unsigned int nOutBufferSize /* 0x18 */, long unsigned int nInBufferSize /* 0x1c */, long unsigned int nDefaultTimeOut /* 0x20 */, PSECURITY_ATTRIBUTES lpSecurityAttributes /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetNamedPipeHandleStateA (long int hNamedPipe /* 0x8 */, PDWORD lpState /* 0xc */, PDWORD lpCurInstances /* 0x10 */, PDWORD lpMaxCollectionCount /* 0x14 */, PDWORD lpCollectDataTimeout /* 0x18 */, PSTR lpUserName /* 0x1c */, long unsigned int nMaxUserNameSize /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetNamedPipeHandleStateW (long int hNamedPipe /* 0x8 */, PDWORD lpState /* 0xc */, PDWORD lpCurInstances /* 0x10 */, PDWORD lpMaxCollectionCount /* 0x14 */, PDWORD lpCollectDataTimeout /* 0x18 */, PWCHAR lpUserName /* 0x1c */, long unsigned int nMaxUserNameSize /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CallNamedPipeA (PSTR lpNamedPipeName /* 0x8 */, PVOID lpInBuffer /* 0xc */, long unsigned int nInBufferSize /* 0x10 */, PVOID lpOutBuffer /* 0x14 */, long unsigned int nOutBufferSize /* 0x18 */, PDWORD lpBytesRead /* 0x1c */, long unsigned int nTimeOut /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CallNamedPipeW (PWCHAR lpNamedPipeName /* 0x8 */, PVOID lpInBuffer /* 0xc */, long unsigned int nInBufferSize /* 0x10 */, PVOID lpOutBuffer /* 0x14 */, long unsigned int nOutBufferSize /* 0x18 */, PDWORD lpBytesRead /* 0x1c */, long unsigned int nTimeOut /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WaitNamedPipeA (PSTR lpNamedPipeName /* 0x8 */, long unsigned int nTimeOut /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int WaitNamedPipeW (PWCHAR lpNamedPipeName /* 0x8 */, long unsigned int nTimeOut /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetVolumeLabelA (PSTR lpRootPathName /* 0x8 */, PSTR lpVolumeName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetVolumeLabelW (PWCHAR lpRootPathName /* 0x8 */, PWCHAR lpVolumeName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void SetFileApisToOEM ()
+{ /* 0x0 */
+} /* 0x0 */
+void SetFileApisToANSI ()
+{ /* 0x0 */
+} /* 0x0 */
+int AreFileApisANSI ()
+{ /* 0x0 */
+} /* 0x0 */
+int GetVolumeInformationA (PSTR lpRootPathName /* 0x8 */, PSTR lpVolumeNameBuffer /* 0xc */, long unsigned int nVolumeNameSize /* 0x10 */, PDWORD lpVolumeSerialNumber /* 0x14 */, PDWORD lpMaximumComponentLength /* 0x18 */, PDWORD lpFileSystemFlags /* 0x1c */, PSTR lpFileSystemNameBuffer /* 0x20 */, long unsigned int nFileSystemNameSize /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetVolumeInformationW (PWCHAR lpRootPathName /* 0x8 */, PWCHAR lpVolumeNameBuffer /* 0xc */, long unsigned int nVolumeNameSize /* 0x10 */, PDWORD lpVolumeSerialNumber /* 0x14 */, PDWORD lpMaximumComponentLength /* 0x18 */, PDWORD lpFileSystemFlags /* 0x1c */, PWCHAR lpFileSystemNameBuffer /* 0x20 */, long unsigned int nFileSystemNameSize /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CancelIo (long int hFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClearEventLogA (long int hEventLog /* 0x8 */, PSTR lpBackupFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClearEventLogW (long int hEventLog /* 0x8 */, PWCHAR lpBackupFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int BackupEventLogA (long int hEventLog /* 0x8 */, PSTR lpBackupFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int BackupEventLogW (long int hEventLog /* 0x8 */, PWCHAR lpBackupFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseEventLog (long int hEventLog /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeregisterEventSource (long int hEventLog /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int NotifyChangeEventLog (long int hEventLog /* 0x8 */, long int hEvent /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetNumberOfEventLogRecords (long int hEventLog /* 0x8 */, PDWORD NumberOfRecords /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetOldestEventLogRecord (long int hEventLog /* 0x8 */, PDWORD OldestRecord /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenEventLogA (PSTR lpUNCServerName /* 0x8 */, PSTR lpSourceName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenEventLogW (PWCHAR lpUNCServerName /* 0x8 */, PWCHAR lpSourceName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int RegisterEventSourceA (PSTR lpUNCServerName /* 0x8 */, PSTR lpSourceName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int RegisterEventSourceW (PWCHAR lpUNCServerName /* 0x8 */, PWCHAR lpSourceName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenBackupEventLogA (PSTR lpUNCServerName /* 0x8 */, PSTR lpFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenBackupEventLogW (PWCHAR lpUNCServerName /* 0x8 */, PWCHAR lpFileName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReadEventLogA (long int hEventLog /* 0x8 */, long unsigned int dwReadFlags /* 0xc */, long unsigned int dwRecordOffset /* 0x10 */, PVOID lpBuffer /* 0x14 */, long unsigned int nNumberOfBytesToRead /* 0x18 */, PDWORD pnBytesRead /* 0x1c */, PDWORD pnMinNumberOfBytesNeeded /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReadEventLogW (long int hEventLog /* 0x8 */, long unsigned int dwReadFlags /* 0xc */, long unsigned int dwRecordOffset /* 0x10 */, PVOID lpBuffer /* 0x14 */, long unsigned int nNumberOfBytesToRead /* 0x18 */, PDWORD pnBytesRead /* 0x1c */, PDWORD pnMinNumberOfBytesNeeded /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindFirstChangeNotificationA (PSTR lpPathName /* 0x8 */, int bWatchSubtree /* 0xc */, long unsigned int dwNotifyFilter /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindFirstChangeNotificationW (PWCHAR lpPathName /* 0x8 */, int bWatchSubtree /* 0xc */, long unsigned int dwNotifyFilter /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FindNextChangeNotification (long int hChangeHandle /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FindCloseChangeNotification (long int hChangeHandle /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualLock (PVOID lpAddress /* 0x8 */, long unsigned int dwSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int VirtualUnlock (PVOID lpAddress /* 0x8 */, long unsigned int dwSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PVOID MapViewOfFileEx (long int hFileMappingObject /* 0x8 */, long unsigned int dwDesiredAccess /* 0xc */, long unsigned int dwFileOffsetHigh /* 0x10 */, long unsigned int dwFileOffsetLow /* 0x14 */, long unsigned int dwNumberOfBytesToMap /* 0x18 */, PVOID lpBaseAddress /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPriorityClass (long int hProcess /* 0x8 */, long unsigned int dwPriorityClass /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPriorityClass (long int hProcess /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadReadPtr (void *lp /* 0x8 */, unsigned int ucb /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadWritePtr (PVOID lp /* 0x8 */, unsigned int ucb /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadHugeReadPtr (void *lp /* 0x8 */, unsigned int ucb /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadHugeWritePtr (PVOID lp /* 0x8 */, unsigned int ucb /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadCodePtr (FARPROC lpfn /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadStringPtrA (PSTR lpsz /* 0x8 */, unsigned int ucchMax /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsBadStringPtrW (PWCHAR lpsz /* 0x8 */, unsigned int ucchMax /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int BuildCommDCBA (PSTR lpDef /* 0x8 */, LPDCB lpDCB /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int BuildCommDCBW (PWCHAR lpDef /* 0x8 */, LPDCB lpDCB /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int BuildCommDCBAndTimeoutsA (PSTR lpDef /* 0x8 */, LPDCB lpDCB /* 0xc */, LPCOMMTIMEOUTS lpCommTimeouts /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int BuildCommDCBAndTimeoutsW (PWCHAR lpDef /* 0x8 */, LPDCB lpDCB /* 0xc */, LPCOMMTIMEOUTS lpCommTimeouts /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CommConfigDialogA (PSTR lpszName /* 0x8 */, long int hWnd /* 0xc */, LPCOMMCONFIG lpCC /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CommConfigDialogW (PWCHAR lpszName /* 0x8 */, long int hWnd /* 0xc */, LPCOMMCONFIG lpCC /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDefaultCommConfigA (PSTR lpszName /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, PDWORD lpdwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDefaultCommConfigW (PWCHAR lpszName /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, PDWORD lpdwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDefaultCommConfigA (PSTR lpszName /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, long unsigned int dwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDefaultCommConfigW (PWCHAR lpszName /* 0x8 */, LPCOMMCONFIG lpCC /* 0xc */, long unsigned int dwSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetComputerNameA (PSTR lpBuffer /* 0x8 */, PDWORD nSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetComputerNameW (PWCHAR lpBuffer /* 0x8 */, PDWORD nSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetComputerNameA (PSTR lpComputerName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetComputerNameW (PWCHAR lpComputerName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetUserNameA (PSTR lpBuffer /* 0x8 */, PDWORD nSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetUserNameW (PWCHAR lpBuffer /* 0x8 */, PDWORD nSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int LogonUserA (PSTR lpszUsername /* 0x8 */, PSTR lpszDomain /* 0xc */, PSTR lpszPassword /* 0x10 */, long unsigned int dwLogonType /* 0x14 */, long unsigned int dwLogonProvider /* 0x18 */, PHANDLE phToken /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int LogonUserW (PWCHAR lpszUsername /* 0x8 */, PWCHAR lpszDomain /* 0xc */, PWCHAR lpszPassword /* 0x10 */, long unsigned int dwLogonType /* 0x14 */, long unsigned int dwLogonProvider /* 0x18 */, PHANDLE phToken /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int ImpersonateLoggedOnUser (long int hToken /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateProcessAsUserA (long int hToken /* 0x8 */, PSTR lpApplicationName /* 0xc */, PSTR lpCommandLine /* 0x10 */, PSECURITY_ATTRIBUTES lpProcessAttributes /* 0x14 */, PSECURITY_ATTRIBUTES lpThreadAttributes /* 0x18 */, int bInheritHandles /* 0x1c */, long unsigned int dwCreationFlags /* 0x20 */, PVOID lpEnvironment /* 0x24 */, PSTR lpCurrentDirectory /* 0x28 */, LPSTARTUPINFOA lpStartupInfo /* 0x2c */, PPROCESS_INFORMATION lpProcessInformation /* 0x30 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateProcessAsUserW (long int hToken /* 0x8 */, PWCHAR lpApplicationName /* 0xc */, PWCHAR lpCommandLine /* 0x10 */, PSECURITY_ATTRIBUTES lpProcessAttributes /* 0x14 */, PSECURITY_ATTRIBUTES lpThreadAttributes /* 0x18 */, int bInheritHandles /* 0x1c */, long unsigned int dwCreationFlags /* 0x20 */, PVOID lpEnvironment /* 0x24 */, PWCHAR lpCurrentDirectory /* 0x28 */, LPSTARTUPINFOW lpStartupInfo /* 0x2c */, PPROCESS_INFORMATION lpProcessInformation /* 0x30 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _OSVERSIONINFOA { /* size 148 id 29 */
+  long unsigned int dwOSVersionInfoSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwMajorVersion; /* bitsize 32, bitpos 32 */
+  long unsigned int dwMinorVersion; /* bitsize 32, bitpos 64 */
+  long unsigned int dwBuildNumber; /* bitsize 32, bitpos 96 */
+  long unsigned int dwPlatformId; /* bitsize 32, bitpos 128 */
+  unsigned char szCSDVersion[128]; /* bitsize 1024, bitpos 160 */
+};
+typedef struct _OSVERSIONINFOA /* id 29 */ OSVERSIONINFOA;
+typedef struct _OSVERSIONINFOA /* id 29 */ *POSVERSIONINFOA;
+typedef POSVERSIONINFOA LPOSVERSIONINFOA;
+struct _OSVERSIONINFOW { /* size 276 id 30 */
+  long unsigned int dwOSVersionInfoSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwMajorVersion; /* bitsize 32, bitpos 32 */
+  long unsigned int dwMinorVersion; /* bitsize 32, bitpos 64 */
+  long unsigned int dwBuildNumber; /* bitsize 32, bitpos 96 */
+  long unsigned int dwPlatformId; /* bitsize 32, bitpos 128 */
+  short unsigned int szCSDVersion[128]; /* bitsize 2048, bitpos 160 */
+};
+typedef struct _OSVERSIONINFOW /* id 30 */ OSVERSIONINFOW;
+typedef struct _OSVERSIONINFOW /* id 30 */ *POSVERSIONINFOW;
+typedef POSVERSIONINFOW LPOSVERSIONINFOW;
+typedef struct _OSVERSIONINFOA /* id 29 */ OSVERSIONINFO;
+typedef POSVERSIONINFOA POSVERSIONINFO;
+typedef POSVERSIONINFOA LPOSVERSIONINFO;
+int GetVersionExA (POSVERSIONINFOA lpVersionInformation /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetVersionExW (POSVERSIONINFOW lpVersionInformation /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _SYSTEM_POWER_STATUS { /* size 12 id 31 */
+  unsigned char ACLineStatus; /* bitsize 8, bitpos 0 */
+  unsigned char BatteryFlag; /* bitsize 8, bitpos 8 */
+  unsigned char BatteryLifePercent; /* bitsize 8, bitpos 16 */
+  unsigned char Reserved1; /* bitsize 8, bitpos 24 */
+  long unsigned int BatteryLifeTime; /* bitsize 32, bitpos 32 */
+  long unsigned int BatteryFullLifeTime; /* bitsize 32, bitpos 64 */
+};
+typedef struct _SYSTEM_POWER_STATUS /* id 31 */ SYSTEM_POWER_STATUS;
+typedef struct _SYSTEM_POWER_STATUS /* id 31 */ *LPSYSTEM_POWER_STATUS;
+int GetSystemPowerStatus (LPSYSTEM_POWER_STATUS lpSystemPowerStatus /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetSystemPowerState (int fSuspend /* 0x8 */, int fForce /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _WIN_CERTIFICATE { /* size 12 id 32 */
+  long unsigned int dwLength; /* bitsize 32, bitpos 0 */
+  short unsigned int wRevision; /* bitsize 16, bitpos 32 */
+  short unsigned int wCertificateType; /* bitsize 16, bitpos 48 */
+  unsigned char bCertificate[1]; /* bitsize 8, bitpos 64 */
+};
+typedef struct _WIN_CERTIFICATE /* id 32 */ WIN_CERTIFICATE;
+typedef struct _WIN_CERTIFICATE /* id 32 */ *LPWIN_CERTIFICATE;
+int WinSubmitCertificate (LPWIN_CERTIFICATE lpCertificate /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int WinVerifyTrust (long int hwnd /* 0x8 */, struct _GUID /* id 0 */ *ActionID /* 0xc */, PVOID ActionData /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WinLoadTrustProvider (struct _GUID /* id 0 */ *ActionID /* 0x8 */)
+{ /* 0x0 */
+  /* file w95types.h line 94 addr 0x0 */
+  /* file w95types.h line 94 addr 0x3 */
+  /* file w95types.h line 103 addr 0x0 */
+  /* file w95types.h line 103 addr 0x3 */
+  /* file w95types.h line 112 addr 0x0 */
+  /* file w95types.h line 112 addr 0x3 */
+  /* file w95types.h line 121 addr 0x0 */
+  /* file w95types.h line 121 addr 0x3 */
+  /* file w95types.h line 130 addr 0x0 */
+  /* file w95types.h line 130 addr 0xc */
+  /* file w95types.h line 138 addr 0x0 */
+  /* file w95types.h line 138 addr 0x3 */
+  /* file winbase.c line 991 addr 0x0 */
+  /* file winbase.c line 991 addr 0x3 */
+  /* file winbase.c line 998 addr 0x0 */
+  /* file winbase.c line 998 addr 0x3 */
+  /* file winbase.c line 1006 addr 0x0 */
+  /* file winbase.c line 1006 addr 0x3 */
+  /* file winbase.c line 1014 addr 0x0 */
+  /* file winbase.c line 1014 addr 0x3 */
+  /* file winbase.c line 1023 addr 0x0 */
+  /* file winbase.c line 1023 addr 0x3 */
+  /* file winbase.c line 1034 addr 0x0 */
+  /* file winbase.c line 1034 addr 0x3 */
+  /* file winbase.c line 1041 addr 0x0 */
+  /* file winbase.c line 1041 addr 0x3 */
+  /* file winbase.c line 1055 addr 0x0 */
+  /* file winbase.c line 1055 addr 0x3 */
+  /* file winbase.c line 1062 addr 0x0 */
+  /* file winbase.c line 1062 addr 0x3 */
+  /* file winbase.c line 1071 addr 0x0 */
+  /* file winbase.c line 1071 addr 0x3 */
+  /* file winbase.c line 1078 addr 0x0 */
+  /* file winbase.c line 1078 addr 0x3 */
+  /* file winbase.c line 1086 addr 0x0 */
+  /* file winbase.c line 1086 addr 0x3 */
+  /* file winbase.c line 1091 addr 0x0 */
+  /* file winbase.c line 1091 addr 0x3 */
+  /* file winbase.c line 1099 addr 0x0 */
+  /* file winbase.c line 1099 addr 0x3 */
+  /* file winbase.c line 1108 addr 0x0 */
+  /* file winbase.c line 1108 addr 0x3 */
+  /* file winbase.c line 1115 addr 0x0 */
+  /* file winbase.c line 1115 addr 0x3 */
+  /* file winbase.c line 1122 addr 0x0 */
+  /* file winbase.c line 1122 addr 0x3 */
+  /* file winbase.c line 1130 addr 0x0 */
+  /* file winbase.c line 1130 addr 0x3 */
+  /* file winbase.c line 1138 addr 0x0 */
+  /* file winbase.c line 1138 addr 0x3 */
+  /* file winbase.c line 1146 addr 0x0 */
+  /* file winbase.c line 1146 addr 0x3 */
+  /* file winbase.c line 1154 addr 0x0 */
+  /* file winbase.c line 1154 addr 0x3 */
+  /* file winbase.c line 1161 addr 0x0 */
+  /* file winbase.c line 1161 addr 0x3 */
+  /* file winbase.c line 1168 addr 0x0 */
+  /* file winbase.c line 1168 addr 0x3 */
+  /* file winbase.c line 1175 addr 0x0 */
+  /* file winbase.c line 1175 addr 0x3 */
+  /* file winbase.c line 1182 addr 0x0 */
+  /* file winbase.c line 1182 addr 0x3 */
+  /* file winbase.c line 1189 addr 0x0 */
+  /* file winbase.c line 1189 addr 0x3 */
+  /* file winbase.c line 1196 addr 0x0 */
+  /* file winbase.c line 1196 addr 0x3 */
+  /* file winbase.c line 1204 addr 0x0 */
+  /* file winbase.c line 1204 addr 0x3 */
+  /* file winbase.c line 1213 addr 0x0 */
+  /* file winbase.c line 1213 addr 0x3 */
+  /* file winbase.c line 1220 addr 0x0 */
+  /* file winbase.c line 1220 addr 0x3 */
+  /* file winbase.c line 1227 addr 0x0 */
+  /* file winbase.c line 1227 addr 0x3 */
+  /* file winbase.c line 1234 addr 0x0 */
+  /* file winbase.c line 1234 addr 0x3 */
+  /* file winbase.c line 1241 addr 0x0 */
+  /* file winbase.c line 1241 addr 0x3 */
+  /* file winbase.c line 1248 addr 0x0 */
+  /* file winbase.c line 1248 addr 0x3 */
+  /* file winbase.c line 1255 addr 0x0 */
+  /* file winbase.c line 1255 addr 0x3 */
+  /* file winbase.c line 1263 addr 0x0 */
+  /* file winbase.c line 1263 addr 0x3 */
+  /* file winbase.c line 1270 addr 0x0 */
+  /* file winbase.c line 1270 addr 0x3 */
+  /* file winbase.c line 1279 addr 0x0 */
+  /* file winbase.c line 1279 addr 0x3 */
+  /* file winbase.c line 1289 addr 0x0 */
+  /* file winbase.c line 1289 addr 0x3 */
+  /* file winbase.c line 1298 addr 0x0 */
+  /* file winbase.c line 1298 addr 0x3 */
+  /* file winbase.c line 1308 addr 0x0 */
+  /* file winbase.c line 1308 addr 0x3 */
+  /* file winbase.c line 1332 addr 0x0 */
+  /* file winbase.c line 1332 addr 0x3 */
+  /* file winbase.c line 1342 addr 0x0 */
+  /* file winbase.c line 1342 addr 0x3 */
+  /* file winbase.c line 1353 addr 0x0 */
+  /* file winbase.c line 1353 addr 0x3 */
+  /* file winbase.c line 1374 addr 0x0 */
+  /* file winbase.c line 1374 addr 0x3 */
+  /* file winbase.c line 1381 addr 0x0 */
+  /* file winbase.c line 1381 addr 0x3 */
+  /* file winbase.c line 1391 addr 0x0 */
+  /* file winbase.c line 1391 addr 0x3 */
+  /* file winbase.c line 1401 addr 0x0 */
+  /* file winbase.c line 1401 addr 0x3 */
+  /* file winbase.c line 1410 addr 0x0 */
+  /* file winbase.c line 1410 addr 0x3 */
+  /* file winbase.c line 1419 addr 0x0 */
+  /* file winbase.c line 1419 addr 0x3 */
+  /* file winbase.c line 1428 addr 0x0 */
+  /* file winbase.c line 1428 addr 0x3 */
+  /* file winbase.c line 1436 addr 0x0 */
+  /* file winbase.c line 1436 addr 0x3 */
+  /* file winbase.c line 1441 addr 0x0 */
+  /* file winbase.c line 1441 addr 0x3 */
+  /* file winbase.c line 1449 addr 0x0 */
+  /* file winbase.c line 1449 addr 0x3 */
+  /* file winbase.c line 1482 addr 0x0 */
+  /* file winbase.c line 1482 addr 0x3 */
+  /* file winbase.c line 1489 addr 0x0 */
+  /* file winbase.c line 1489 addr 0x3 */
+  /* file winbase.c line 1498 addr 0x0 */
+  /* file winbase.c line 1498 addr 0x3 */
+  /* file winbase.c line 1515 addr 0x0 */
+  /* file winbase.c line 1515 addr 0x3 */
+  /* file winbase.c line 1522 addr 0x0 */
+  /* file winbase.c line 1522 addr 0x3 */
+  /* file winbase.c line 1536 addr 0x0 */
+  /* file winbase.c line 1536 addr 0x3 */
+  /* file winbase.c line 1544 addr 0x0 */
+  /* file winbase.c line 1544 addr 0x3 */
+  /* file winbase.c line 1558 addr 0x0 */
+  /* file winbase.c line 1558 addr 0x3 */
+  /* file winbase.c line 1566 addr 0x0 */
+  /* file winbase.c line 1566 addr 0x3 */
+  /* file winbase.c line 1578 addr 0x0 */
+  /* file winbase.c line 1578 addr 0x3 */
+  /* file winbase.c line 1587 addr 0x0 */
+  /* file winbase.c line 1587 addr 0x3 */
+  /* file winbase.c line 1596 addr 0x0 */
+  /* file winbase.c line 1596 addr 0x3 */
+  /* file winbase.c line 1605 addr 0x0 */
+  /* file winbase.c line 1605 addr 0x3 */
+  /* file winbase.c line 1612 addr 0x0 */
+  /* file winbase.c line 1612 addr 0x3 */
+  /* file winbase.c line 1619 addr 0x0 */
+  /* file winbase.c line 1619 addr 0x3 */
+  /* file winbase.c line 1626 addr 0x0 */
+  /* file winbase.c line 1626 addr 0x3 */
+  /* file winbase.c line 1634 addr 0x0 */
+  /* file winbase.c line 1634 addr 0x3 */
+  /* file winbase.c line 1642 addr 0x0 */
+  /* file winbase.c line 1642 addr 0x3 */
+  /* file winbase.c line 1650 addr 0x0 */
+  /* file winbase.c line 1650 addr 0x3 */
+  /* file winbase.c line 1657 addr 0x0 */
+  /* file winbase.c line 1657 addr 0x3 */
+  /* file winbase.c line 1664 addr 0x0 */
+  /* file winbase.c line 1664 addr 0x3 */
+  /* file winbase.c line 1677 addr 0x0 */
+  /* file winbase.c line 1677 addr 0x3 */
+  /* file winbase.c line 1683 addr 0x0 */
+  /* file winbase.c line 1683 addr 0x3 */
+  /* file winbase.c line 1698 addr 0x0 */
+  /* file winbase.c line 1698 addr 0x3 */
+  /* file winbase.c line 1705 addr 0x0 */
+  /* file winbase.c line 1705 addr 0x3 */
+  /* file winbase.c line 1717 addr 0x0 */
+  /* file winbase.c line 1717 addr 0x3 */
+  /* file winbase.c line 1768 addr 0x0 */
+  /* file winbase.c line 1768 addr 0x3 */
+  /* file winbase.c line 1781 addr 0x0 */
+  /* file winbase.c line 1781 addr 0x3 */
+  /* file winbase.c line 1788 addr 0x0 */
+  /* file winbase.c line 1788 addr 0x3 */
+  /* file winbase.c line 1795 addr 0x0 */
+  /* file winbase.c line 1795 addr 0x3 */
+  /* file winbase.c line 1803 addr 0x0 */
+  /* file winbase.c line 1803 addr 0x3 */
+  /* file winbase.c line 1821 addr 0x0 */
+  /* file winbase.c line 1821 addr 0x3 */
+  /* file winbase.c line 1829 addr 0x0 */
+  /* file winbase.c line 1829 addr 0x3 */
+  /* file winbase.c line 1838 addr 0x0 */
+  /* file winbase.c line 1838 addr 0x3 */
+  /* file winbase.c line 1846 addr 0x0 */
+  /* file winbase.c line 1846 addr 0x3 */
+  /* file winbase.c line 1854 addr 0x0 */
+  /* file winbase.c line 1854 addr 0x3 */
+  /* file winbase.c line 1861 addr 0x0 */
+  /* file winbase.c line 1861 addr 0x3 */
+  /* file winbase.c line 1872 addr 0x0 */
+  /* file winbase.c line 1872 addr 0x3 */
+  /* file winbase.c line 1879 addr 0x0 */
+  /* file winbase.c line 1879 addr 0x3 */
+  /* file winbase.c line 1887 addr 0x0 */
+  /* file winbase.c line 1887 addr 0x3 */
+  /* file winbase.c line 1895 addr 0x0 */
+  /* file winbase.c line 1895 addr 0x3 */
+  /* file winbase.c line 1904 addr 0x0 */
+  /* file winbase.c line 1904 addr 0x3 */
+  /* file winbase.c line 1911 addr 0x0 */
+  /* file winbase.c line 1911 addr 0x3 */
+  /* file winbase.c line 1918 addr 0x0 */
+  /* file winbase.c line 1918 addr 0x3 */
+  /* file winbase.c line 1930 addr 0x0 */
+  /* file winbase.c line 1930 addr 0x3 */
+  /* file winbase.c line 1940 addr 0x0 */
+  /* file winbase.c line 1940 addr 0x3 */
+  /* file winbase.c line 1951 addr 0x0 */
+  /* file winbase.c line 1951 addr 0x3 */
+  /* file winbase.c line 1961 addr 0x0 */
+  /* file winbase.c line 1961 addr 0x3 */
+  /* file winbase.c line 1973 addr 0x0 */
+  /* file winbase.c line 1973 addr 0x3 */
+  /* file winbase.c line 1984 addr 0x0 */
+  /* file winbase.c line 1984 addr 0x3 */
+  /* file winbase.c line 1995 addr 0x0 */
+  /* file winbase.c line 1995 addr 0x3 */
+  /* file winbase.c line 2023 addr 0x0 */
+  /* file winbase.c line 2023 addr 0x3 */
+  /* file winbase.c line 2030 addr 0x0 */
+  /* file winbase.c line 2030 addr 0x3 */
+  /* file winbase.c line 2055 addr 0x0 */
+  /* file winbase.c line 2055 addr 0x3 */
+  /* file winbase.c line 2074 addr 0x0 */
+  /* file winbase.c line 2074 addr 0x3 */
+  /* file winbase.c line 2081 addr 0x0 */
+  /* file winbase.c line 2081 addr 0x3 */
+  /* file winbase.c line 2088 addr 0x0 */
+  /* file winbase.c line 2088 addr 0x3 */
+  /* file winbase.c line 2095 addr 0x0 */
+  /* file winbase.c line 2095 addr 0x3 */
+  /* file winbase.c line 2102 addr 0x0 */
+  /* file winbase.c line 2102 addr 0x3 */
+  /* file winbase.c line 2118 addr 0x0 */
+  /* file winbase.c line 2118 addr 0x3 */
+  /* file winbase.c line 2125 addr 0x0 */
+  /* file winbase.c line 2125 addr 0x3 */
+  /* file winbase.c line 2132 addr 0x0 */
+  /* file winbase.c line 2132 addr 0x3 */
+  /* file winbase.c line 2139 addr 0x0 */
+  /* file winbase.c line 2139 addr 0x3 */
+  /* file winbase.c line 2148 addr 0x0 */
+  /* file winbase.c line 2148 addr 0x3 */
+  /* file winbase.c line 2155 addr 0x0 */
+  /* file winbase.c line 2155 addr 0x3 */
+  /* file winbase.c line 2163 addr 0x0 */
+  /* file winbase.c line 2163 addr 0x3 */
+  /* file winbase.c line 2173 addr 0x0 */
+  /* file winbase.c line 2173 addr 0x3 */
+  /* file winbase.c line 2180 addr 0x0 */
+  /* file winbase.c line 2180 addr 0x3 */
+  /* file winbase.c line 2188 addr 0x0 */
+  /* file winbase.c line 2188 addr 0x3 */
+  /* file winbase.c line 2196 addr 0x0 */
+  /* file winbase.c line 2196 addr 0x3 */
+  /* file winbase.c line 2204 addr 0x0 */
+  /* file winbase.c line 2204 addr 0xd */
+  /* file winbase.c line 2211 addr 0x0 */
+  /* file winbase.c line 2211 addr 0x3 */
+  /* file winbase.c line 2218 addr 0x0 */
+  /* file winbase.c line 2218 addr 0xd */
+  /* file winbase.c line 2225 addr 0x0 */
+  /* file winbase.c line 2225 addr 0x3 */
+  /* file winbase.c line 2232 addr 0x0 */
+  /* file winbase.c line 2232 addr 0x3 */
+  /* file winbase.c line 2243 addr 0x0 */
+  /* file winbase.c line 2243 addr 0x3 */
+  /* file winbase.c line 2254 addr 0x0 */
+  /* file winbase.c line 2254 addr 0x3 */
+  /* file winbase.c line 2266 addr 0x0 */
+  /* file winbase.c line 2266 addr 0x3 */
+  /* file winbase.c line 2280 addr 0x0 */
+  /* file winbase.c line 2280 addr 0x3 */
+  /* file winbase.c line 2301 addr 0x0 */
+  /* file winbase.c line 2301 addr 0x3 */
+  /* file winbase.c line 2308 addr 0x0 */
+  /* file winbase.c line 2308 addr 0x3 */
+  /* file winbase.c line 2316 addr 0x0 */
+  /* file winbase.c line 2316 addr 0x3 */
+  /* file winbase.c line 2323 addr 0x0 */
+  /* file winbase.c line 2323 addr 0x3 */
+  /* file winbase.c line 2331 addr 0x0 */
+  /* file winbase.c line 2331 addr 0x3 */
+  /* file winbase.c line 2342 addr 0x0 */
+  /* file winbase.c line 2342 addr 0x3 */
+  /* file winbase.c line 2353 addr 0x0 */
+  /* file winbase.c line 2353 addr 0x3 */
+  /* file winbase.c line 2360 addr 0x0 */
+  /* file winbase.c line 2360 addr 0x3 */
+  /* file winbase.c line 2374 addr 0x0 */
+  /* file winbase.c line 2374 addr 0x3 */
+  /* file winbase.c line 2381 addr 0x0 */
+  /* file winbase.c line 2381 addr 0x3 */
+  /* file winbase.c line 2391 addr 0x0 */
+  /* file winbase.c line 2391 addr 0x3 */
+  /* file winbase.c line 2398 addr 0x0 */
+  /* file winbase.c line 2398 addr 0x3 */
+  /* file winbase.c line 2408 addr 0x0 */
+  /* file winbase.c line 2408 addr 0x3 */
+  /* file winbase.c line 2418 addr 0x0 */
+  /* file winbase.c line 2418 addr 0x3 */
+  /* file winbase.c line 2425 addr 0x0 */
+  /* file winbase.c line 2425 addr 0x3 */
+  /* file winbase.c line 2438 addr 0x0 */
+  /* file winbase.c line 2438 addr 0x3 */
+  /* file winbase.c line 2446 addr 0x0 */
+  /* file winbase.c line 2446 addr 0x3 */
+  /* file winbase.c line 2455 addr 0x0 */
+  /* file winbase.c line 2455 addr 0x3 */
+  /* file winbase.c line 2468 addr 0x0 */
+  /* file winbase.c line 2468 addr 0x3 */
+  /* file winbase.c line 2476 addr 0x0 */
+  /* file winbase.c line 2476 addr 0x3 */
+  /* file winbase.c line 2483 addr 0x0 */
+  /* file winbase.c line 2483 addr 0x3 */
+  /* file winbase.c line 2492 addr 0x0 */
+  /* file winbase.c line 2492 addr 0x3 */
+  /* file winbase.c line 2501 addr 0x0 */
+  /* file winbase.c line 2501 addr 0x3 */
+  /* file winbase.c line 2509 addr 0x0 */
+  /* file winbase.c line 2509 addr 0x3 */
+  /* file winbase.c line 2518 addr 0x0 */
+  /* file winbase.c line 2518 addr 0x3 */
+  /* file winbase.c line 2526 addr 0x0 */
+  /* file winbase.c line 2526 addr 0x3 */
+  /* file winbase.c line 2534 addr 0x0 */
+  /* file winbase.c line 2534 addr 0x3 */
+  /* file winbase.c line 2542 addr 0x0 */
+  /* file winbase.c line 2542 addr 0x3 */
+  /* file winbase.c line 2550 addr 0x0 */
+  /* file winbase.c line 2550 addr 0x3 */
+  /* file winbase.c line 2558 addr 0x0 */
+  /* file winbase.c line 2558 addr 0x3 */
+  /* file winbase.c line 2566 addr 0x0 */
+  /* file winbase.c line 2566 addr 0x3 */
+  /* file winbase.c line 2573 addr 0x0 */
+  /* file winbase.c line 2573 addr 0x3 */
+  /* file winbase.c line 2582 addr 0x0 */
+  /* file winbase.c line 2582 addr 0x3 */
+  /* file winbase.c line 2590 addr 0x0 */
+  /* file winbase.c line 2590 addr 0x3 */
+  /* file winbase.c line 2598 addr 0x0 */
+  /* file winbase.c line 2598 addr 0x3 */
+  /* file winbase.c line 2606 addr 0x0 */
+  /* file winbase.c line 2606 addr 0x3 */
+  /* file winbase.c line 2614 addr 0x0 */
+  /* file winbase.c line 2614 addr 0xc */
+  /* file winbase.c line 2623 addr 0x0 */
+  /* file winbase.c line 2623 addr 0x3 */
+  /* file winbase.c line 2636 addr 0x0 */
+  /* file winbase.c line 2636 addr 0x3 */
+  /* file winbase.c line 2647 addr 0x0 */
+  /* file winbase.c line 2647 addr 0x3 */
+  /* file winbase.c line 2656 addr 0x0 */
+  /* file winbase.c line 2656 addr 0x3 */
+  /* file winbase.c line 2665 addr 0x0 */
+  /* file winbase.c line 2665 addr 0x3 */
+  /* file winbase.c line 2675 addr 0x0 */
+  /* file winbase.c line 2675 addr 0x3 */
+  /* file winbase.c line 2685 addr 0x0 */
+  /* file winbase.c line 2685 addr 0x3 */
+  /* file winbase.c line 2692 addr 0x0 */
+  /* file winbase.c line 2692 addr 0x3 */
+  /* file winbase.c line 2702 addr 0x0 */
+  /* file winbase.c line 2702 addr 0x3 */
+  /* file winbase.c line 2714 addr 0x0 */
+  /* file winbase.c line 2714 addr 0x3 */
+  /* file winbase.c line 2725 addr 0x0 */
+  /* file winbase.c line 2725 addr 0x3 */
+  /* file winbase.c line 2734 addr 0x0 */
+  /* file winbase.c line 2734 addr 0x3 */
+  /* file winbase.c line 2741 addr 0x0 */
+  /* file winbase.c line 2741 addr 0x3 */
+  /* file winbase.c line 2748 addr 0x0 */
+  /* file winbase.c line 2748 addr 0x3 */
+  /* file winbase.c line 2755 addr 0x0 */
+  /* file winbase.c line 2755 addr 0x3 */
+  /* file winbase.c line 2762 addr 0x0 */
+  /* file winbase.c line 2762 addr 0x3 */
+  /* file winbase.c line 2769 addr 0x0 */
+  /* file winbase.c line 2769 addr 0x3 */
+  /* file winbase.c line 2776 addr 0x0 */
+  /* file winbase.c line 2776 addr 0x3 */
+  /* file winbase.c line 2783 addr 0x0 */
+  /* file winbase.c line 2783 addr 0x3 */
+  /* file winbase.c line 2802 addr 0x0 */
+  /* file winbase.c line 2802 addr 0x3 */
+  /* file winbase.c line 2809 addr 0x0 */
+  /* file winbase.c line 2809 addr 0x3 */
+  /* file winbase.c line 2816 addr 0x0 */
+  /* file winbase.c line 2816 addr 0x3 */
+  /* file winbase.c line 2829 addr 0x0 */
+  /* file winbase.c line 2829 addr 0x3 */
+  /* file winbase.c line 2837 addr 0x0 */
+  /* file winbase.c line 2837 addr 0x3 */
+  /* file winbase.c line 2845 addr 0x0 */
+  /* file winbase.c line 2845 addr 0x3 */
+  /* file winbase.c line 2853 addr 0x0 */
+  /* file winbase.c line 2853 addr 0x3 */
+  /* file winbase.c line 2861 addr 0x0 */
+  /* file winbase.c line 2861 addr 0x3 */
+  /* file winbase.c line 2870 addr 0x0 */
+  /* file winbase.c line 2870 addr 0x3 */
+  /* file winbase.c line 2879 addr 0x0 */
+  /* file winbase.c line 2879 addr 0x14 */
+  /* file winbase.c line 2886 addr 0x0 */
+  /* file winbase.c line 2886 addr 0x3 */
+  /* file winbase.c line 2894 addr 0x0 */
+  /* file winbase.c line 2894 addr 0x3 */
+  /* file winbase.c line 2903 addr 0x0 */
+  /* file winbase.c line 2903 addr 0x3 */
+  /* file winbase.c line 2956 addr 0x0 */
+  /* file winbase.c line 2956 addr 0x3 */
+  /* file winbase.c line 2964 addr 0x0 */
+  /* file winbase.c line 2964 addr 0x3 */
+  /* file winbase.c line 2971 addr 0x0 */
+  /* file winbase.c line 2971 addr 0x3 */
+  /* file winbase.c line 2981 addr 0x0 */
+  /* file winbase.c line 2981 addr 0x3 */
+  /* file winbase.c line 2992 addr 0x0 */
+  /* file winbase.c line 2992 addr 0x3 */
+  /* file winbase.c line 3004 addr 0x0 */
+  /* file winbase.c line 3004 addr 0x3 */
+  /* file winbase.c line 3017 addr 0x0 */
+  /* file winbase.c line 3017 addr 0x3 */
+  /* file winbase.c line 3027 addr 0x0 */
+  /* file winbase.c line 3027 addr 0x3 */
+  /* file winbase.c line 3036 addr 0x0 */
+  /* file winbase.c line 3036 addr 0x3 */
+  /* file winbase.c line 3052 addr 0x0 */
+  /* file winbase.c line 3052 addr 0x3 */
+  /* file winbase.c line 3060 addr 0x0 */
+  /* file winbase.c line 3060 addr 0x3 */
+  /* file winbase.c line 3071 addr 0x0 */
+  /* file winbase.c line 3071 addr 0x3 */
+  /* file winbase.c line 3079 addr 0x0 */
+  /* file winbase.c line 3079 addr 0x3 */
+  /* file winbase.c line 3086 addr 0x0 */
+  /* file winbase.c line 3086 addr 0x3 */
+  /* file winbase.c line 3099 addr 0x0 */
+  /* file winbase.c line 3099 addr 0x3 */
+  /* file winbase.c line 3106 addr 0x0 */
+  /* file winbase.c line 3106 addr 0x3 */
+  /* file winbase.c line 3119 addr 0x0 */
+  /* file winbase.c line 3119 addr 0x3 */
+  /* file winbase.c line 3126 addr 0x0 */
+  /* file winbase.c line 3126 addr 0x3 */
+  /* file winbase.c line 3140 addr 0x0 */
+  /* file winbase.c line 3140 addr 0x3 */
+  /* file winbase.c line 3148 addr 0x0 */
+  /* file winbase.c line 3148 addr 0x3 */
+  /* file winbase.c line 3161 addr 0x0 */
+  /* file winbase.c line 3161 addr 0x3 */
+  /* file winbase.c line 3168 addr 0x0 */
+  /* file winbase.c line 3168 addr 0x3 */
+  /* file winbase.c line 3181 addr 0x0 */
+  /* file winbase.c line 3181 addr 0x3 */
+  /* file winbase.c line 3188 addr 0x0 */
+  /* file winbase.c line 3188 addr 0x3 */
+  /* file winbase.c line 3200 addr 0x0 */
+  /* file winbase.c line 3200 addr 0x3 */
+  /* file winbase.c line 3206 addr 0x0 */
+  /* file winbase.c line 3206 addr 0x3 */
+  /* file winbase.c line 3220 addr 0x0 */
+  /* file winbase.c line 3220 addr 0x3 */
+  /* file winbase.c line 3228 addr 0x0 */
+  /* file winbase.c line 3228 addr 0x3 */
+  /* file winbase.c line 3236 addr 0x0 */
+  /* file winbase.c line 3236 addr 0x3 */
+  /* file winbase.c line 3245 addr 0x0 */
+  /* file winbase.c line 3245 addr 0x3 */
+  /* file winbase.c line 3254 addr 0x0 */
+  /* file winbase.c line 3254 addr 0x3 */
+  /* file winbase.c line 3263 addr 0x0 */
+  /* file winbase.c line 3263 addr 0x3 */
+  /* file winbase.c line 3272 addr 0x0 */
+  /* file winbase.c line 3272 addr 0x3 */
+  /* file winbase.c line 3279 addr 0x0 */
+  /* file winbase.c line 3279 addr 0x3 */
+  /* file winbase.c line 3288 addr 0x0 */
+  /* file winbase.c line 3288 addr 0x3 */
+  /* file winbase.c line 3297 addr 0x0 */
+  /* file winbase.c line 3297 addr 0x3 */
+  /* file winbase.c line 3304 addr 0x0 */
+  /* file winbase.c line 3304 addr 0x3 */
+  /* file winbase.c line 3313 addr 0x0 */
+  /* file winbase.c line 3313 addr 0x3 */
+  /* file winbase.c line 3321 addr 0x0 */
+  /* file winbase.c line 3321 addr 0x3 */
+  /* file winbase.c line 3328 addr 0x0 */
+  /* file winbase.c line 3328 addr 0x3 */
+  /* file winbase.c line 3344 addr 0x0 */
+  /* file winbase.c line 3344 addr 0x3 */
+  /* file winbase.c line 3353 addr 0x0 */
+  /* file winbase.c line 3353 addr 0x3 */
+  /* file winbase.c line 3364 addr 0x0 */
+  /* file winbase.c line 3364 addr 0x3 */
+  /* file winbase.c line 3387 addr 0x0 */
+  /* file winbase.c line 3387 addr 0x3 */
+  /* file winbase.c line 3398 addr 0x0 */
+  /* file winbase.c line 3398 addr 0x3 */
+  /* file winbase.c line 3411 addr 0x0 */
+  /* file winbase.c line 3411 addr 0x3 */
+  /* file winbase.c line 3423 addr 0x0 */
+  /* file winbase.c line 3423 addr 0x3 */
+  /* file winbase.c line 3436 addr 0x0 */
+  /* file winbase.c line 3436 addr 0x3 */
+  /* file winbase.c line 3589 addr 0x0 */
+  /* file winbase.c line 3589 addr 0x3 */
+  /* file winbase.c line 3597 addr 0x0 */
+  /* file winbase.c line 3597 addr 0x3 */
+  /* file winbase.c line 3611 addr 0x0 */
+  /* file winbase.c line 3611 addr 0x3 */
+  /* file winbase.c line 3619 addr 0x0 */
+  /* file winbase.c line 3619 addr 0x3 */
+  /* file winbase.c line 3634 addr 0x0 */
+  /* file winbase.c line 3634 addr 0x3 */
+  /* file winbase.c line 3643 addr 0x0 */
+  /* file winbase.c line 3643 addr 0x3 */
+  /* file winbase.c line 3657 addr 0x0 */
+  /* file winbase.c line 3657 addr 0x3 */
+  /* file winbase.c line 3665 addr 0x0 */
+  /* file winbase.c line 3665 addr 0x3 */
+  /* file winbase.c line 3680 addr 0x0 */
+  /* file winbase.c line 3680 addr 0x3 */
+  /* file winbase.c line 3689 addr 0x0 */
+  /* file winbase.c line 3689 addr 0x3 */
+  /* file winbase.c line 3703 addr 0x0 */
+  /* file winbase.c line 3703 addr 0x3 */
+  /* file winbase.c line 3711 addr 0x0 */
+  /* file winbase.c line 3711 addr 0x3 */
+  /* file winbase.c line 3801 addr 0x0 */
+  /* file winbase.c line 3801 addr 0x3 */
+  /* file winbase.c line 3812 addr 0x0 */
+  /* file winbase.c line 3812 addr 0x3 */
+  /* file winbase.c line 3826 addr 0x0 */
+  /* file winbase.c line 3826 addr 0x3 */
+  /* file winbase.c line 3834 addr 0x0 */
+  /* file winbase.c line 3834 addr 0x3 */
+  /* file winbase.c line 3847 addr 0x0 */
+  /* file winbase.c line 3847 addr 0x3 */
+  /* file winbase.c line 3854 addr 0x0 */
+  /* file winbase.c line 3854 addr 0x3 */
+  /* file winbase.c line 3866 addr 0x0 */
+  /* file winbase.c line 3866 addr 0x3 */
+  /* file winbase.c line 3872 addr 0x0 */
+  /* file winbase.c line 3872 addr 0x3 */
+  /* file winbase.c line 3886 addr 0x0 */
+  /* file winbase.c line 3886 addr 0x3 */
+  /* file winbase.c line 3894 addr 0x0 */
+  /* file winbase.c line 3894 addr 0x3 */
+  /* file winbase.c line 3914 addr 0x0 */
+  /* file winbase.c line 3914 addr 0x3 */
+  /* file winbase.c line 3922 addr 0x0 */
+  /* file winbase.c line 3922 addr 0x3 */
+  /* file winbase.c line 3934 addr 0x0 */
+  /* file winbase.c line 3934 addr 0x3 */
+  /* file winbase.c line 3940 addr 0x0 */
+  /* file winbase.c line 3940 addr 0x3 */
+  /* file winbase.c line 3961 addr 0x0 */
+  /* file winbase.c line 3961 addr 0x3 */
+  /* file winbase.c line 3976 addr 0x0 */
+  /* file winbase.c line 3976 addr 0x3 */
+  /* file winbase.c line 3989 addr 0x0 */
+  /* file winbase.c line 3989 addr 0x3 */
+  /* file winbase.c line 3997 addr 0x0 */
+  /* file winbase.c line 3997 addr 0x3 */
+  /* file winbase.c line 4004 addr 0x0 */
+  /* file winbase.c line 4004 addr 0x3 */
+  /* file winbase.c line 4012 addr 0x0 */
+  /* file winbase.c line 4012 addr 0x3 */
+  /* file winbase.c line 4019 addr 0x0 */
+  /* file winbase.c line 4019 addr 0x3 */
+  /* file winbase.c line 4031 addr 0x0 */
+  /* file winbase.c line 4031 addr 0x3 */
+  /* file winbase.c line 4037 addr 0x0 */
+  /* file winbase.c line 4037 addr 0x3 */
+  /* file winbase.c line 4049 addr 0x0 */
+  /* file winbase.c line 4049 addr 0x3 */
+  /* file winbase.c line 4055 addr 0x0 */
+  /* file winbase.c line 4055 addr 0x3 */
+  /* file winbase.c line 4069 addr 0x0 */
+  /* file winbase.c line 4069 addr 0x3 */
+  /* file winbase.c line 4077 addr 0x0 */
+  /* file winbase.c line 4077 addr 0x3 */
+  /* file winbase.c line 4090 addr 0x0 */
+  /* file winbase.c line 4090 addr 0x3 */
+  /* file winbase.c line 4097 addr 0x0 */
+  /* file winbase.c line 4097 addr 0x3 */
+  /* file winbase.c line 4111 addr 0x0 */
+  /* file winbase.c line 4111 addr 0x3 */
+  /* file winbase.c line 4119 addr 0x0 */
+  /* file winbase.c line 4119 addr 0x3 */
+  /* file winbase.c line 4131 addr 0x0 */
+  /* file winbase.c line 4131 addr 0x3 */
+  /* file winbase.c line 4137 addr 0x0 */
+  /* file winbase.c line 4137 addr 0x3 */
+  /* file winbase.c line 4151 addr 0x0 */
+  /* file winbase.c line 4151 addr 0x3 */
+  /* file winbase.c line 4159 addr 0x0 */
+  /* file winbase.c line 4159 addr 0x3 */
+  /* file winbase.c line 4174 addr 0x0 */
+  /* file winbase.c line 4174 addr 0xd */
+  /* file winbase.c line 4183 addr 0x0 */
+  /* file winbase.c line 4183 addr 0xd */
+  /* file winbase.c line 4210 addr 0x0 */
+  /* file winbase.c line 4210 addr 0x3 */
+  /* file winbase.c line 4218 addr 0x0 */
+  /* file winbase.c line 4218 addr 0x3 */
+  /* file winbase.c line 4234 addr 0x0 */
+  /* file winbase.c line 4234 addr 0x3 */
+  /* file winbase.c line 4243 addr 0x0 */
+  /* file winbase.c line 4243 addr 0x3 */
+  /* file winbase.c line 4259 addr 0x0 */
+  /* file winbase.c line 4259 addr 0x3 */
+  /* file winbase.c line 4269 addr 0x0 */
+  /* file winbase.c line 4269 addr 0x3 */
+  /* file winbase.c line 4282 addr 0x0 */
+  /* file winbase.c line 4282 addr 0x3 */
+  /* file winbase.c line 4289 addr 0x0 */
+  /* file winbase.c line 4289 addr 0x3 */
+  /* file winbase.c line 4306 addr 0x0 */
+  /* file winbase.c line 4306 addr 0xd */
+  /* file winbase.c line 4317 addr 0x0 */
+  /* file winbase.c line 4317 addr 0xd */
+  /* file winbase.c line 4330 addr 0x0 */
+  /* file winbase.c line 4330 addr 0x3 */
+  /* file winbase.c line 4337 addr 0x0 */
+  /* file winbase.c line 4337 addr 0x3 */
+  /* file winbase.c line 4349 addr 0x0 */
+  /* file winbase.c line 4349 addr 0x3 */
+  /* file winbase.c line 4355 addr 0x0 */
+  /* file winbase.c line 4355 addr 0x3 */
+  /* file winbase.c line 4367 addr 0x0 */
+  /* file winbase.c line 4367 addr 0x3 */
+  /* file winbase.c line 4373 addr 0x0 */
+  /* file winbase.c line 4373 addr 0x3 */
+  /* file winbase.c line 4387 addr 0x0 */
+  /* file winbase.c line 4387 addr 0xd */
+  /* file winbase.c line 4395 addr 0x0 */
+  /* file winbase.c line 4395 addr 0xd */
+  /* file winbase.c line 4407 addr 0x0 */
+  /* file winbase.c line 4407 addr 0x3 */
+  /* file winbase.c line 4413 addr 0x0 */
+  /* file winbase.c line 4413 addr 0x3 */
+  /* file winbase.c line 4425 addr 0x0 */
+  /* file winbase.c line 4425 addr 0x3 */
+  /* file winbase.c line 4431 addr 0x0 */
+  /* file winbase.c line 4431 addr 0x3 */
+  /* file winbase.c line 4445 addr 0x0 */
+  /* file winbase.c line 4445 addr 0xd */
+  /* file winbase.c line 4453 addr 0x0 */
+  /* file winbase.c line 4453 addr 0xd */
+  /* file winbase.c line 4467 addr 0x0 */
+  /* file winbase.c line 4467 addr 0x3 */
+  /* file winbase.c line 4475 addr 0x0 */
+  /* file winbase.c line 4475 addr 0x3 */
+  /* file winbase.c line 4491 addr 0x0 */
+  /* file winbase.c line 4491 addr 0x3 */
+  /* file winbase.c line 4501 addr 0x0 */
+  /* file winbase.c line 4501 addr 0x3 */
+  /* file winbase.c line 4515 addr 0x0 */
+  /* file winbase.c line 4515 addr 0x3 */
+  /* file winbase.c line 4523 addr 0x0 */
+  /* file winbase.c line 4523 addr 0x3 */
+  /* file winbase.c line 4537 addr 0x0 */
+  /* file winbase.c line 4537 addr 0x3 */
+  /* file winbase.c line 4545 addr 0x0 */
+  /* file winbase.c line 4545 addr 0x3 */
+  /* file winbase.c line 4558 addr 0x0 */
+  /* file winbase.c line 4558 addr 0x3 */
+  /* file winbase.c line 4565 addr 0x0 */
+  /* file winbase.c line 4565 addr 0x3 */
+  /* file winbase.c line 4580 addr 0x0 */
+  /* file winbase.c line 4580 addr 0x3 */
+  /* file winbase.c line 4589 addr 0x0 */
+  /* file winbase.c line 4589 addr 0x3 */
+  /* file winbase.c line 4606 addr 0x0 */
+  /* file winbase.c line 4606 addr 0x3 */
+  /* file winbase.c line 4617 addr 0x0 */
+  /* file winbase.c line 4617 addr 0x3 */
+  /* file winbase.c line 4632 addr 0x0 */
+  /* file winbase.c line 4632 addr 0x3 */
+  /* file winbase.c line 4641 addr 0x0 */
+  /* file winbase.c line 4641 addr 0x3 */
+  /* file winbase.c line 4656 addr 0x0 */
+  /* file winbase.c line 4656 addr 0x3 */
+  /* file winbase.c line 4665 addr 0x0 */
+  /* file winbase.c line 4665 addr 0x3 */
+  /* file winbase.c line 4679 addr 0x0 */
+  /* file winbase.c line 4679 addr 0x3 */
+  /* file winbase.c line 4687 addr 0x0 */
+  /* file winbase.c line 4687 addr 0x3 */
+  /* file winbase.c line 4702 addr 0x0 */
+  /* file winbase.c line 4702 addr 0x3 */
+  /* file winbase.c line 4710 addr 0x0 */
+  /* file winbase.c line 4710 addr 0x3 */
+  /* file winbase.c line 4726 addr 0x0 */
+  /* file winbase.c line 4726 addr 0x3 */
+  /* file winbase.c line 4736 addr 0x0 */
+  /* file winbase.c line 4736 addr 0x3 */
+  /* file winbase.c line 4752 addr 0x0 */
+  /* file winbase.c line 4752 addr 0x3 */
+  /* file winbase.c line 4762 addr 0x0 */
+  /* file winbase.c line 4762 addr 0x3 */
+  /* file winbase.c line 4775 addr 0x0 */
+  /* file winbase.c line 4775 addr 0x3 */
+  /* file winbase.c line 4781 addr 0x0 */
+  /* file winbase.c line 4781 addr 0x3 */
+  /* file winbase.c line 4794 addr 0x0 */
+  /* file winbase.c line 4794 addr 0x3 */
+  /* file winbase.c line 4801 addr 0x0 */
+  /* file winbase.c line 4801 addr 0x3 */
+  /* file winbase.c line 4814 addr 0x0 */
+  /* file winbase.c line 4814 addr 0x3 */
+  /* file winbase.c line 4821 addr 0x0 */
+  /* file winbase.c line 4821 addr 0x3 */
+  /* file winbase.c line 4836 addr 0x0 */
+  /* file winbase.c line 4836 addr 0x3 */
+  /* file winbase.c line 4845 addr 0x0 */
+  /* file winbase.c line 4845 addr 0x3 */
+  /* file winbase.c line 4858 addr 0x0 */
+  /* file winbase.c line 4858 addr 0x3 */
+  /* file winbase.c line 4865 addr 0x0 */
+  /* file winbase.c line 4865 addr 0x3 */
+  /* file winbase.c line 4877 addr 0x0 */
+  /* file winbase.c line 4877 addr 0x3 */
+  /* file winbase.c line 4883 addr 0x0 */
+  /* file winbase.c line 4883 addr 0x3 */
+  /* file winbase.c line 4896 addr 0x0 */
+  /* file winbase.c line 4896 addr 0x3 */
+  /* file winbase.c line 4903 addr 0x0 */
+  /* file winbase.c line 4903 addr 0x3 */
+  /* file winbase.c line 4919 addr 0x0 */
+  /* file winbase.c line 4919 addr 0x3 */
+  /* file winbase.c line 4929 addr 0x0 */
+  /* file winbase.c line 4929 addr 0x3 */
+  /* file winbase.c line 4968 addr 0x0 */
+  /* file winbase.c line 4968 addr 0x3 */
+  /* file winbase.c line 4975 addr 0x0 */
+  /* file winbase.c line 4975 addr 0x3 */
+  /* file winbase.c line 4989 addr 0x0 */
+  /* file winbase.c line 4989 addr 0x3 */
+  /* file winbase.c line 4997 addr 0x0 */
+  /* file winbase.c line 4997 addr 0x3 */
+  /* file winbase.c line 5009 addr 0x0 */
+  /* file winbase.c line 5009 addr 0x3 */
+  /* file winbase.c line 5015 addr 0x0 */
+  /* file winbase.c line 5015 addr 0x3 */
+  /* file winbase.c line 5030 addr 0x0 */
+  /* file winbase.c line 5030 addr 0x3 */
+  /* file winbase.c line 5039 addr 0x0 */
+  /* file winbase.c line 5039 addr 0x3 */
+  /* file winbase.c line 5059 addr 0x0 */
+  /* file winbase.c line 5059 addr 0x3 */
+  /* file winbase.c line 5067 addr 0x0 */
+  /* file winbase.c line 5067 addr 0x3 */
+  /* file winbase.c line 5081 addr 0x0 */
+  /* file winbase.c line 5081 addr 0x3 */
+  /* file winbase.c line 5089 addr 0x0 */
+  /* file winbase.c line 5089 addr 0x3 */
+  /* file winbase.c line 5109 addr 0x0 */
+  /* file winbase.c line 5109 addr 0x3 */
+  /* file winbase.c line 5121 addr 0x0 */
+  /* file winbase.c line 5121 addr 0x3 */
+  /* file winbase.c line 5134 addr 0x0 */
+  /* file winbase.c line 5134 addr 0x3 */
+  /* file winbase.c line 5141 addr 0x0 */
+  /* file winbase.c line 5141 addr 0x3 */
+  /* file winbase.c line 5153 addr 0x0 */
+  /* file winbase.c line 5153 addr 0x3 */
+  /* file winbase.c line 5159 addr 0x0 */
+  /* file winbase.c line 5159 addr 0x3 */
+  /* file winbase.c line 5178 addr 0x0 */
+  /* file winbase.c line 5178 addr 0x3 */
+  /* file winbase.c line 5186 addr 0x0 */
+  /* file winbase.c line 5186 addr 0x3 */
+  /* file winbase.c line 5199 addr 0x0 */
+  /* file winbase.c line 5199 addr 0x3 */
+  /* file winbase.c line 5206 addr 0x0 */
+  /* file winbase.c line 5206 addr 0x3 */
+  /* file winbase.c line 5218 addr 0x0 */
+  /* file winbase.c line 5218 addr 0x3 */
+  /* file winbase.c line 5224 addr 0x0 */
+  /* file winbase.c line 5224 addr 0x3 */
+  /* file winbase.c line 5281 addr 0x0 */
+  /* file winbase.c line 5281 addr 0x3 */
+  /* file winbase.c line 5288 addr 0x0 */
+  /* file winbase.c line 5288 addr 0x3 */
+  /* file winbase.c line 5301 addr 0x0 */
+  /* file winbase.c line 5301 addr 0x3 */
+  /* file winbase.c line 5308 addr 0x0 */
+  /* file winbase.c line 5308 addr 0x3 */
+  /* file winbase.c line 5325 addr 0x0 */
+  /* file winbase.c line 5325 addr 0x3 */
+  /* file winbase.c line 5336 addr 0x0 */
+  /* file winbase.c line 5336 addr 0x3 */
+  /* file winbase.c line 5350 addr 0x0 */
+  /* file winbase.c line 5350 addr 0x3 */
+  /* file winbase.c line 5358 addr 0x0 */
+  /* file winbase.c line 5358 addr 0x3 */
+  /* file winbase.c line 5415 addr 0x0 */
+  /* file winbase.c line 5415 addr 0x3 */
+  /* file winbase.c line 5422 addr 0x0 */
+  /* file winbase.c line 5422 addr 0x3 */
+  /* file winbase.c line 5436 addr 0x0 */
+  /* file winbase.c line 5436 addr 0x3 */
+  /* file winbase.c line 5444 addr 0x0 */
+  /* file winbase.c line 5444 addr 0x3 */
+  /* file winbase.c line 5468 addr 0x0 */
+  /* file winbase.c line 5468 addr 0x3 */
+  /* file winbase.c line 5481 addr 0x0 */
+  /* file winbase.c line 5481 addr 0x3 */
+  /* file winbase.c line 5499 addr 0x0 */
+  /* file winbase.c line 5499 addr 0x3 */
+  /* file winbase.c line 5511 addr 0x0 */
+  /* file winbase.c line 5511 addr 0x3 */
+  /* file winbase.c line 5529 addr 0x0 */
+  /* file winbase.c line 5529 addr 0x3 */
+  /* file winbase.c line 5541 addr 0x0 */
+  /* file winbase.c line 5541 addr 0x3 */
+  /* file winbase.c line 5554 addr 0x0 */
+  /* file winbase.c line 5554 addr 0x3 */
+  /* file winbase.c line 5561 addr 0x0 */
+  /* file winbase.c line 5561 addr 0x3 */
+  /* file winbase.c line 5574 addr 0x0 */
+  /* file winbase.c line 5574 addr 0x3 */
+  /* file winbase.c line 5581 addr 0x0 */
+  /* file winbase.c line 5581 addr 0x3 */
+  /* file winbase.c line 5591 addr 0x0 */
+  /* file winbase.c line 5591 addr 0x3 */
+  /* file winbase.c line 5596 addr 0x0 */
+  /* file winbase.c line 5596 addr 0x3 */
+  /* file winbase.c line 5601 addr 0x0 */
+  /* file winbase.c line 5601 addr 0x3 */
+  /* file winbase.c line 5615 addr 0x0 */
+  /* file winbase.c line 5615 addr 0x3 */
+  /* file winbase.c line 5628 addr 0x0 */
+  /* file winbase.c line 5628 addr 0x3 */
+  /* file winbase.c line 5640 addr 0x0 */
+  /* file winbase.c line 5640 addr 0x3 */
+  /* file winbase.c line 5652 addr 0x0 */
+  /* file winbase.c line 5652 addr 0x3 */
+  /* file winbase.c line 5659 addr 0x0 */
+  /* file winbase.c line 5659 addr 0x3 */
+  /* file winbase.c line 5672 addr 0x0 */
+  /* file winbase.c line 5672 addr 0x3 */
+  /* file winbase.c line 5679 addr 0x0 */
+  /* file winbase.c line 5679 addr 0x3 */
+  /* file winbase.c line 5691 addr 0x0 */
+  /* file winbase.c line 5691 addr 0x3 */
+  /* file winbase.c line 5698 addr 0x0 */
+  /* file winbase.c line 5698 addr 0x3 */
+  /* file winbase.c line 5706 addr 0x0 */
+  /* file winbase.c line 5706 addr 0x3 */
+  /* file winbase.c line 5714 addr 0x0 */
+  /* file winbase.c line 5714 addr 0x3 */
+  /* file winbase.c line 5722 addr 0x0 */
+  /* file winbase.c line 5722 addr 0x3 */
+  /* file winbase.c line 5730 addr 0x0 */
+  /* file winbase.c line 5730 addr 0x3 */
+  /* file winbase.c line 5737 addr 0x0 */
+  /* file winbase.c line 5737 addr 0x3 */
+  /* file winbase.c line 5750 addr 0x0 */
+  /* file winbase.c line 5750 addr 0x3 */
+  /* file winbase.c line 5757 addr 0x0 */
+  /* file winbase.c line 5757 addr 0x3 */
+  /* file winbase.c line 5770 addr 0x0 */
+  /* file winbase.c line 5770 addr 0x3 */
+  /* file winbase.c line 5777 addr 0x0 */
+  /* file winbase.c line 5777 addr 0x3 */
+  /* file winbase.c line 5795 addr 0x0 */
+  /* file winbase.c line 5795 addr 0x3 */
+  /* file winbase.c line 5807 addr 0x0 */
+  /* file winbase.c line 5807 addr 0x3 */
+  /* file winbase.c line 6696 addr 0x0 */
+  /* file winbase.c line 6696 addr 0x3 */
+  /* file winbase.c line 6704 addr 0x0 */
+  /* file winbase.c line 6704 addr 0x3 */
+  /* file winbase.c line 6716 addr 0x0 */
+  /* file winbase.c line 6716 addr 0x3 */
+  /* file winbase.c line 6723 addr 0x0 */
+  /* file winbase.c line 6723 addr 0x3 */
+  /* file winbase.c line 6747 addr 0x0 */
+  /* file winbase.c line 6747 addr 0x3 */
+  /* file winbase.c line 6755 addr 0x0 */
+  /* file winbase.c line 6755 addr 0x3 */
+  /* file winbase.c line 6767 addr 0x0 */
+  /* file winbase.c line 6767 addr 0x3 */
+  /* file winbase.c line 6775 addr 0x0 */
+  /* file winbase.c line 6775 addr 0x3 */
+  /* file winbase.c line 6782 addr 0x0 */
+  /* file winbase.c line 6782 addr 0x3 */
+  /* file winbase.c line 6790 addr 0x0 */
+  /* file winbase.c line 6790 addr 0x3 */
+  /* file winbase.c line 6798 addr 0x0 */
+  /* file winbase.c line 6798 addr 0x3 */
+  /* file winbase.c line 6806 addr 0x0 */
+  /* file winbase.c line 6806 addr 0x3 */
+  /* file winbase.c line 6814 addr 0x0 */
+  /* file winbase.c line 6814 addr 0x3 */
+  /* file winbase.c line 6821 addr 0x0 */
+  /* file winbase.c line 6821 addr 0x3 */
+  /* file winbase.c line 6829 addr 0x0 */
+  /* file winbase.c line 6829 addr 0x3 */
+  /* file winbase.c line 6836 addr 0x0 */
+  /* file winbase.c line 6836 addr 0x3 */
+  /* file winbase.c line 6990 addr 0x0 */
+  /* file winbase.c line 6990 addr 0x3 */
+  /* file winbase.c line 6997 addr 0x0 */
+  /* file winbase.c line 6997 addr 0x3 */
+  /* file winbase.c line 7011 addr 0x0 */
+  /* file winbase.c line 7011 addr 0x3 */
+  /* file winbase.c line 7019 addr 0x0 */
+  /* file winbase.c line 7019 addr 0x3 */
+  /* file winbase.c line 7033 addr 0x0 */
+  /* file winbase.c line 7033 addr 0x3 */
+  /* file winbase.c line 7041 addr 0x0 */
+  /* file winbase.c line 7041 addr 0x3 */
+  /* file winbase.c line 7055 addr 0x0 */
+  /* file winbase.c line 7055 addr 0x3 */
+  /* file winbase.c line 7063 addr 0x0 */
+  /* file winbase.c line 7063 addr 0x3 */
+  /* file winbase.c line 7077 addr 0x0 */
+  /* file winbase.c line 7077 addr 0x3 */
+  /* file winbase.c line 7085 addr 0x0 */
+  /* file winbase.c line 7085 addr 0x3 */
+  /* file winbase.c line 7100 addr 0x0 */
+  /* file winbase.c line 7100 addr 0x3 */
+  /* file winbase.c line 7107 addr 0x0 */
+  /* file winbase.c line 7107 addr 0x3 */
+  /* file winbase.c line 7119 addr 0x0 */
+  /* file winbase.c line 7119 addr 0x3 */
+  /* file winbase.c line 7125 addr 0x0 */
+  /* file winbase.c line 7125 addr 0x3 */
+  /* file winbase.c line 7138 addr 0x0 */
+  /* file winbase.c line 7138 addr 0x3 */
+  /* file winbase.c line 7145 addr 0x0 */
+  /* file winbase.c line 7145 addr 0x3 */
+  /* file winbase.c line 7179 addr 0x0 */
+  /* file winbase.c line 7179 addr 0x3 */
+  /* file winbase.c line 7190 addr 0x0 */
+  /* file winbase.c line 7190 addr 0x3 */
+  /* file winbase.c line 7202 addr 0x0 */
+  /* file winbase.c line 7202 addr 0x3 */
+  /* file winbase.c line 7219 addr 0x0 */
+  /* file winbase.c line 7219 addr 0x3 */
+  /* file winbase.c line 7235 addr 0x0 */
+  /* file winbase.c line 7235 addr 0x3 */
+  /* file winbase.c line 7367 addr 0x0 */
+  /* file winbase.c line 7367 addr 0x3 */
+  /* file winbase.c line 7373 addr 0x0 */
+  /* file winbase.c line 7373 addr 0x3 */
+  /* file winbase.c line 7428 addr 0x0 */
+  /* file winbase.c line 7428 addr 0x3 */
+  /* file winbase.c line 7435 addr 0x0 */
+  /* file winbase.c line 7435 addr 0x3 */
+  /* file winbase.c line 7484 addr 0x0 */
+  /* file winbase.c line 7484 addr 0x3 */
+  /* file winbase.c line 7500 addr 0x0 */
+  /* file winbase.c line 7500 addr 0x3 */
+  /* file winbase.c line 7507 addr 0x0 */
+  /* file winbase.c line 7507 addr 0x3 */
+} /* 0x1ee7 */
+typedef PVOID WIN_TRUST_SUBJECT;
+struct _WIN_TRUST_ACTDATA_CONTEXT_WITH_SUBJECT { /* size 12 id 33 */
+  long int hClientToken; /* bitsize 32, bitpos 0 */
+  struct _GUID /* id 0 */ *SubjectType; /* bitsize 32, bitpos 32 */
+  PVOID Subject; /* bitsize 32, bitpos 64 */
+};
+typedef struct _WIN_TRUST_ACTDATA_CONTEXT_WITH_SUBJECT /* id 33 */ WIN_TRUST_ACTDATA_CONTEXT_WITH_SUBJECT;
+typedef struct _WIN_TRUST_ACTDATA_CONTEXT_WITH_SUBJECT /* id 33 */ *LPWIN_TRUST_ACTDATA_CONTEXT_WITH_SUBJECT;
+struct _WIN_TRUST_ACTDATA_SUBJECT_ONLY { /* size 8 id 34 */
+  struct _GUID /* id 0 */ *SubjectType; /* bitsize 32, bitpos 0 */
+  PVOID Subject; /* bitsize 32, bitpos 32 */
+};
+typedef struct _WIN_TRUST_ACTDATA_SUBJECT_ONLY /* id 34 */ WIN_TRUST_ACTDATA_SUBJECT_ONLY;
+typedef struct _WIN_TRUST_ACTDATA_SUBJECT_ONLY /* id 34 */ *LPWIN_TRUST_ACTDATA_SUBJECT_ONLY;
+struct _WIN_TRUST_SUBJECT_FILE { /* size 8 id 35 */
+  long int hFile; /* bitsize 32, bitpos 0 */
+  PWCHAR lpPath; /* bitsize 32, bitpos 32 */
+};
+typedef struct _WIN_TRUST_SUBJECT_FILE /* id 35 */ WIN_TRUST_SUBJECT_FILE;
+typedef struct _WIN_TRUST_SUBJECT_FILE /* id 35 */ *LPWIN_TRUST_SUBJECT_FILE;
+struct _WIN_TRUST_SUBJECT_FILE_AND_DISPLAY { /* size 12 id 36 */
+  long int hFile; /* bitsize 32, bitpos 0 */
+  PWCHAR lpPath; /* bitsize 32, bitpos 32 */
+  PWCHAR lpDisplayName; /* bitsize 32, bitpos 64 */
+};
+typedef struct _WIN_TRUST_SUBJECT_FILE_AND_DISPLAY /* id 36 */ WIN_TRUST_SUBJECT_FILE_AND_DISPLAY;
+typedef struct _WIN_TRUST_SUBJECT_FILE_AND_DISPLAY /* id 36 */ *LPWIN_TRUST_SUBJECT_FILE_AND_DISPLAY;
+struct _WIN_SPUB_TRUSTED_PUBLISHER_DATA { /* size 8 id 37 */
+  long int hClientToken; /* bitsize 32, bitpos 0 */
+  LPWIN_CERTIFICATE lpCertificate; /* bitsize 32, bitpos 32 */
+};
+typedef struct _WIN_SPUB_TRUSTED_PUBLISHER_DATA /* id 37 */ WIN_SPUB_TRUSTED_PUBLISHER_DATA;
+typedef struct _WIN_SPUB_TRUSTED_PUBLISHER_DATA /* id 37 */ *LPWIN_SPUB_TRUSTED_PUBLISHER_DATA;
+struct _GUID { /* id 0 */
+};
+struct _EXCEPTION_POINTERS { /* id 0 */
+};

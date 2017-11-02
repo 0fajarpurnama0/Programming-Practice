@@ -1,0 +1,488 @@
+
+SHELLAPI.O:     file format elf32-i386
+
+/d/c/wrec/suppw95/shellapi.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef void VOID;
+typedef void *PVOID;
+typedef long int HANDLE;
+typedef short int SHORT;
+typedef long int *PHANDLE;
+typedef long int *PLONG;
+typedef long int HKEY;
+typedef long int LONG;
+typedef PLONG LPCLONG;
+typedef int *LPCWORD;
+typedef unsigned char CHAR;
+typedef short unsigned int WCHAR;
+typedef short unsigned int *PWCHAR;
+typedef PWCHAR LPWCHAR;
+typedef PWCHAR LPCWCHAR;
+typedef PWCHAR PWSTR;
+typedef PWCHAR LPWSTR;
+typedef PWCHAR LPCWSTR;
+typedef char *LPCBYTE;
+typedef unsigned char *PSTR;
+typedef PSTR LPSTR;
+typedef PSTR LPCSTR;
+typedef long int RTL_CRITICAL_SECTION;
+typedef PLONG PRTL_CRITICAL_SECTION;
+typedef long int RTL_CRITICAL_SECTION_DEBUG;
+typedef PLONG PRTL_CRITICAL_SECTION_DEBUG;
+typedef long int ACCESS_MASK;
+typedef long int *PACCESS_MASK;
+long int RtlEqualMemory (void *Source1 /* 0x8 */, void *Source2 /* 0xc */, long int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ w95types.h:
+void RtlCopyMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlCopyMemory32 (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlMoveMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlFillMemory (void *Destination /* 0x8 */, int Length /* 0xc */, int Fill /* 0x10 */)
+{ /* 0x0 */
+  unsigned char Fill /* 0xffffffff */;
+} /* 0x0 */
+void RtlZeroMemory (void *Destination /* 0x8 */, int Length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int ULONG;
+typedef long unsigned int *PULONG;
+typedef short unsigned int USHORT;
+typedef short unsigned int *PUSHORT;
+typedef unsigned char UCHAR;
+typedef unsigned char *PUCHAR;
+typedef LPCBYTE PSZ;
+typedef long unsigned int DWORD;
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef short unsigned int WORD;
+typedef float FLOAT;
+typedef float *PFLOAT;
+typedef int *PBOOL;
+typedef PBOOL LPBOOL;
+typedef unsigned char *PBYTE;
+typedef PBYTE LPBYTE;
+typedef LPCWORD PINT;
+typedef LPCWORD LPINT;
+typedef short unsigned int *PWORD;
+typedef PWORD LPWORD;
+typedef PLONG LPLONG;
+typedef long unsigned int *PDWORD;
+typedef PDWORD LPDWORD;
+typedef PVOID LPVOID;
+typedef PVOID LPCVOID;
+typedef int INT;
+typedef unsigned int UINT;
+typedef unsigned int *PUINT;
+typedef unsigned int WPARAM;
+typedef long int LPARAM;
+typedef long int LRESULT;
+typedef long int HWND;
+typedef long int HHOOK;
+typedef short unsigned int ATOM;
+typedef PHANDLE SPHANDLE;
+typedef PHANDLE LPHANDLE;
+typedef long int HGLOBAL;
+typedef long int HLOCAL;
+typedef long int GLOBALHANDLE;
+typedef long int LOCALHANDLE;
+typedef int (*FARPROC) (/* unknown */);
+typedef FARPROC NEARPROC;
+typedef FARPROC PROC;
+typedef long int HGDIOBJ;
+typedef long int HACCEL;
+typedef long int HBITMAP;
+typedef long int HBRUSH;
+typedef long int HCOLORSPACE;
+typedef long int HDC;
+typedef long int HGLRC;
+typedef long int HDESK;
+typedef long int HENHMETAFILE;
+typedef long int HFONT;
+typedef long int HICON;
+typedef long int HMENU;
+typedef long int HMETAFILE;
+typedef long int HINSTANCE;
+typedef long int HMODULE;
+typedef long int HPALETTE;
+typedef long int HPEN;
+typedef long int HRGN;
+typedef long int HRSRC;
+typedef long int HSTR;
+typedef long int HTASK;
+typedef long int HWINSTA;
+typedef long int HKL;
+typedef int HFILE;
+typedef long int HCURSOR;
+typedef long unsigned int COLORREF;
+typedef PDWORD LPCOLORREF;
+struct tagRECT { /* size 16 id 2 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagRECT /* id 2 */ RECT;
+typedef struct tagRECT /* id 2 */ *PRECT;
+typedef PRECT NPRECT;
+typedef PRECT LPRECT;
+typedef struct tagRECT /* id 2 */ *LPCRECT;
+struct _RECTL { /* size 16 id 3 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct _RECTL /* id 3 */ RECTL;
+typedef struct _RECTL /* id 3 */ *PRECTL;
+typedef PRECTL LPRECTL;
+typedef struct _RECTL /* id 3 */ *LPCRECTL;
+struct tagPOINT { /* size 8 id 4 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINT /* id 4 */ POINT;
+typedef struct tagPOINT /* id 4 */ *PPOINT;
+typedef PPOINT NPPOINT;
+typedef PPOINT LPPOINT;
+struct _POINTL { /* size 8 id 5 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTL /* id 5 */ POINTL;
+typedef struct _POINTL /* id 5 */ *PPOINTL;
+struct tagSIZE { /* size 8 id 6 */
+  long int cx; /* bitsize 32, bitpos 0 */
+  long int cy; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSIZE /* id 6 */ SIZE;
+typedef struct tagSIZE /* id 6 */ *PSIZE;
+typedef PSIZE LPSIZE;
+typedef struct tagSIZE /* id 6 */ SIZEL;
+typedef struct tagSIZE /* id 6 */ *PSIZEL;
+typedef PSIZEL LPSIZEL;
+struct tagPOINTS { /* size 4 id 7 */
+  short int x; /* bitsize 16, bitpos 0 */
+  short int y; /* bitsize 16, bitpos 16 */
+};
+typedef struct tagPOINTS /* id 7 */ POINTS;
+typedef struct tagPOINTS /* id 7 */ *PPOINTS;
+typedef PPOINTS LPPOINTS;
+typedef long int HDROP;
+unsigned int DragQueryFileA (long int hDrop /* 0x8 */, unsigned int v1 /* 0xc */, PSTR str /* 0x10 */, unsigned int v2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+ shellapi.c:
+unsigned int DragQueryFileW (long int hDrop /* 0x8 */, unsigned int v1 /* 0xc */, PWCHAR str /* 0x10 */, unsigned int v2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DragQueryPoint (long int hDrop /* 0x8 */, PPOINT pt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void DragFinish (long int hDrop /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void DragAcceptFiles (long int hWnd /* 0x8 */, int flag /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ShellExecuteA (long int hwnd /* 0x8 */, PSTR lpOperation /* 0xc */, PSTR lpFile /* 0x10 */, PSTR lpParameters /* 0x14 */, PSTR lpDirectory /* 0x18 */, int nShowCmd /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ShellExecuteW (long int hwnd /* 0x8 */, PWCHAR lpOperation /* 0xc */, PWCHAR lpFile /* 0x10 */, PWCHAR lpParameters /* 0x14 */, PWCHAR lpDirectory /* 0x18 */, int nShowCmd /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindExecutableA (PSTR lpFile /* 0x8 */, PSTR lpDirectory /* 0xc */, PSTR lpResult /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindExecutableW (PWCHAR lpFile /* 0x8 */, PWCHAR lpDirectory /* 0xc */, PWCHAR lpResult /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR *CommandLineToArgvW (PWCHAR lpCmdLine /* 0x8 */, LPCWORD pNumArgs /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShellAboutA (long int hWnd /* 0x8 */, PSTR szApp /* 0xc */, PSTR szOtherStuff /* 0x10 */, long int hIcon /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShellAboutW (long int hWnd /* 0x8 */, PWCHAR szApp /* 0xc */, PWCHAR szOtherStuff /* 0x10 */, long int hIcon /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtractAssociatedIconA (long int hInst /* 0x8 */, PSTR lpIconPath /* 0xc */, PWORD lpiIcon /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtractAssociatedIconW (long int hInst /* 0x8 */, PWCHAR lpIconPath /* 0xc */, PWORD lpiIcon /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtractIconA (long int hInst /* 0x8 */, PSTR lpszExeFileName /* 0xc */, unsigned int nIconIndex /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtractIconW (long int hInst /* 0x8 */, PWCHAR lpszExeFileName /* 0xc */, unsigned int nIconIndex /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _AppBarData { /* size 36 id 8 */
+  long unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int uCallbackMessage; /* bitsize 32, bitpos 64 */
+  unsigned int uEdge; /* bitsize 32, bitpos 96 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 128 */
+  long int lParam; /* bitsize 32, bitpos 256 */
+};
+typedef struct _AppBarData /* id 8 */ APPBARDATA;
+typedef struct _AppBarData /* id 8 */ *PAPPBARDATA;
+unsigned int SHAppBarMessage (long unsigned int dwMessage /* 0x8 */, PAPPBARDATA pData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int ExtractIconExA (PSTR lpszFile /* 0x8 */, int nIconIndex /* 0xc */, long int *phiconLarge /* 0x10 */, long int *phiconSmall /* 0x14 */, unsigned int nIcons /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int ExtractIconExW (PWCHAR lpszFile /* 0x8 */, int nIconIndex /* 0xc */, long int *phiconLarge /* 0x10 */, long int *phiconSmall /* 0x14 */, unsigned int nIcons /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef short unsigned int FILEOP_FLAGS;
+typedef short unsigned int PRINTEROP_FLAGS;
+struct _SHFILEOPSTRUCTA { /* size 32 id 9 */
+  long int hwnd; /* bitsize 32, bitpos 0 */
+  unsigned int wFunc; /* bitsize 32, bitpos 32 */
+  PSTR pFrom; /* bitsize 32, bitpos 64 */
+  PSTR pTo; /* bitsize 32, bitpos 96 */
+  short unsigned int fFlags; /* bitsize 16, bitpos 128 */
+  int fAnyOperationsAborted; /* bitsize 32, bitpos 160 */
+  PVOID hNameMappings; /* bitsize 32, bitpos 192 */
+  PSTR lpszProgressTitle; /* bitsize 32, bitpos 224 */
+};
+typedef struct _SHFILEOPSTRUCTA /* id 9 */ SHFILEOPSTRUCTA;
+typedef struct _SHFILEOPSTRUCTA /* id 9 */ *LPSHFILEOPSTRUCTA;
+struct _SHFILEOPSTRUCTW { /* size 32 id 10 */
+  long int hwnd; /* bitsize 32, bitpos 0 */
+  unsigned int wFunc; /* bitsize 32, bitpos 32 */
+  PWCHAR pFrom; /* bitsize 32, bitpos 64 */
+  PWCHAR pTo; /* bitsize 32, bitpos 96 */
+  short unsigned int fFlags; /* bitsize 16, bitpos 128 */
+  int fAnyOperationsAborted; /* bitsize 32, bitpos 160 */
+  PVOID hNameMappings; /* bitsize 32, bitpos 192 */
+  PWCHAR lpszProgressTitle; /* bitsize 32, bitpos 224 */
+};
+typedef struct _SHFILEOPSTRUCTW /* id 10 */ SHFILEOPSTRUCTW;
+typedef struct _SHFILEOPSTRUCTW /* id 10 */ *LPSHFILEOPSTRUCTW;
+typedef struct _SHFILEOPSTRUCTA /* id 9 */ SHFILEOPSTRUCT;
+typedef LPSHFILEOPSTRUCTA LPSHFILEOPSTRUCT;
+int SHFileOperationA (LPSHFILEOPSTRUCTA lpFileOp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SHFileOperationW (LPSHFILEOPSTRUCTW lpFileOp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void SHFreeNameMappings (long int hNameMappings /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _SHNAMEMAPPINGA { /* size 16 id 11 */
+  PSTR pszOldPath; /* bitsize 32, bitpos 0 */
+  PSTR pszNewPath; /* bitsize 32, bitpos 32 */
+  int cchOldPath; /* bitsize 32, bitpos 64 */
+  int cchNewPath; /* bitsize 32, bitpos 96 */
+};
+typedef struct _SHNAMEMAPPINGA /* id 11 */ SHNAMEMAPPINGA;
+typedef struct _SHNAMEMAPPINGA /* id 11 */ *LPSHNAMEMAPPINGA;
+struct _SHNAMEMAPPINGW { /* size 16 id 12 */
+  PWCHAR pszOldPath; /* bitsize 32, bitpos 0 */
+  PWCHAR pszNewPath; /* bitsize 32, bitpos 32 */
+  int cchOldPath; /* bitsize 32, bitpos 64 */
+  int cchNewPath; /* bitsize 32, bitpos 96 */
+};
+typedef struct _SHNAMEMAPPINGW /* id 12 */ SHNAMEMAPPINGW;
+typedef struct _SHNAMEMAPPINGW /* id 12 */ *LPSHNAMEMAPPINGW;
+typedef struct _SHNAMEMAPPINGA /* id 11 */ SHNAMEMAPPING;
+typedef LPSHNAMEMAPPINGA LPSHNAMEMAPPING;
+struct _SHELLEXECUTEINFOA { /* size 60 id 13 */
+  long unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int fMask; /* bitsize 32, bitpos 32 */
+  long int hwnd; /* bitsize 32, bitpos 64 */
+  PSTR lpVerb; /* bitsize 32, bitpos 96 */
+  PSTR lpFile; /* bitsize 32, bitpos 128 */
+  PSTR lpParameters; /* bitsize 32, bitpos 160 */
+  PSTR lpDirectory; /* bitsize 32, bitpos 192 */
+  int nShow; /* bitsize 32, bitpos 224 */
+  long int hInstApp; /* bitsize 32, bitpos 256 */
+  PVOID lpIDList; /* bitsize 32, bitpos 288 */
+  PSTR lpClass; /* bitsize 32, bitpos 320 */
+  long int hkeyClass; /* bitsize 32, bitpos 352 */
+  long unsigned int dwHotKey; /* bitsize 32, bitpos 384 */
+  long int hIcon; /* bitsize 32, bitpos 416 */
+  long int hProcess; /* bitsize 32, bitpos 448 */
+};
+typedef struct _SHELLEXECUTEINFOA /* id 13 */ SHELLEXECUTEINFOA;
+typedef struct _SHELLEXECUTEINFOA /* id 13 */ *LPSHELLEXECUTEINFOA;
+struct _SHELLEXECUTEINFOW { /* size 60 id 14 */
+  long unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int fMask; /* bitsize 32, bitpos 32 */
+  long int hwnd; /* bitsize 32, bitpos 64 */
+  PWCHAR lpVerb; /* bitsize 32, bitpos 96 */
+  PWCHAR lpFile; /* bitsize 32, bitpos 128 */
+  PWCHAR lpParameters; /* bitsize 32, bitpos 160 */
+  PWCHAR lpDirectory; /* bitsize 32, bitpos 192 */
+  int nShow; /* bitsize 32, bitpos 224 */
+  long int hInstApp; /* bitsize 32, bitpos 256 */
+  PVOID lpIDList; /* bitsize 32, bitpos 288 */
+  PWCHAR lpClass; /* bitsize 32, bitpos 320 */
+  long int hkeyClass; /* bitsize 32, bitpos 352 */
+  long unsigned int dwHotKey; /* bitsize 32, bitpos 384 */
+  long int hIcon; /* bitsize 32, bitpos 416 */
+  long int hProcess; /* bitsize 32, bitpos 448 */
+};
+typedef struct _SHELLEXECUTEINFOW /* id 14 */ SHELLEXECUTEINFOW;
+typedef struct _SHELLEXECUTEINFOW /* id 14 */ *LPSHELLEXECUTEINFOW;
+typedef struct _SHELLEXECUTEINFOA /* id 13 */ SHELLEXECUTEINFO;
+typedef LPSHELLEXECUTEINFOA LPSHELLEXECUTEINFO;
+int ShellExecuteExA (LPSHELLEXECUTEINFOA lpExecInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShellExecuteExW (LPSHELLEXECUTEINFOW lpExecInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _NOTIFYICONDATAA { /* size 88 id 15 */
+  long unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int uID; /* bitsize 32, bitpos 64 */
+  unsigned int uFlags; /* bitsize 32, bitpos 96 */
+  unsigned int uCallbackMessage; /* bitsize 32, bitpos 128 */
+  long int hIcon; /* bitsize 32, bitpos 160 */
+  unsigned char szTip[64]; /* bitsize 512, bitpos 192 */
+};
+typedef struct _NOTIFYICONDATAA /* id 15 */ NOTIFYICONDATAA;
+typedef struct _NOTIFYICONDATAA /* id 15 */ *PNOTIFYICONDATAA;
+struct _NOTIFYICONDATAW { /* size 152 id 16 */
+  long unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int uID; /* bitsize 32, bitpos 64 */
+  unsigned int uFlags; /* bitsize 32, bitpos 96 */
+  unsigned int uCallbackMessage; /* bitsize 32, bitpos 128 */
+  long int hIcon; /* bitsize 32, bitpos 160 */
+  short unsigned int szTip[64]; /* bitsize 1024, bitpos 192 */
+};
+typedef struct _NOTIFYICONDATAW /* id 16 */ NOTIFYICONDATAW;
+typedef struct _NOTIFYICONDATAW /* id 16 */ *PNOTIFYICONDATAW;
+typedef struct _NOTIFYICONDATAA /* id 15 */ NOTIFYICONDATA;
+typedef PNOTIFYICONDATAA PNOTIFYICONDATA;
+int Shell_NotifyIconA (long unsigned int dwMessage /* 0x8 */, PNOTIFYICONDATAA lpData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int Shell_NotifyIconW (long unsigned int dwMessage /* 0x8 */, PNOTIFYICONDATAW lpData /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _SHFILEINFOA { /* size 352 id 17 */
+  long int hIcon; /* bitsize 32, bitpos 0 */
+  int iIcon; /* bitsize 32, bitpos 32 */
+  long unsigned int dwAttributes; /* bitsize 32, bitpos 64 */
+  unsigned char szDisplayName[260]; /* bitsize 2080, bitpos 96 */
+  unsigned char szTypeName[80]; /* bitsize 640, bitpos 2176 */
+};
+typedef struct _SHFILEINFOA /* id 17 */ SHFILEINFOA;
+struct _SHFILEINFOW { /* size 692 id 18 */
+  long int hIcon; /* bitsize 32, bitpos 0 */
+  int iIcon; /* bitsize 32, bitpos 32 */
+  long unsigned int dwAttributes; /* bitsize 32, bitpos 64 */
+  short unsigned int szDisplayName[260]; /* bitsize 4160, bitpos 96 */
+  short unsigned int szTypeName[80]; /* bitsize 1280, bitpos 4256 */
+};
+typedef struct _SHFILEINFOW /* id 18 */ SHFILEINFOW;
+typedef struct _SHFILEINFOA /* id 17 */ SHFILEINFO;
+long unsigned int SHGetFileInfoA (PSTR pszPath /* 0x8 */, long unsigned int dwFileAttributes /* 0xc */, struct _SHFILEINFOA /* id 17 */ *psfi /* 0x10 */, unsigned int cbFileInfo /* 0x14 */, unsigned int uFlags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SHGetFileInfoW (PWCHAR pszPath /* 0x8 */, long unsigned int dwFileAttributes /* 0xc */, struct _SHFILEINFOW /* id 18 */ *psfi /* 0x10 */, unsigned int cbFileInfo /* 0x14 */, unsigned int uFlags /* 0x18 */)
+{ /* 0x0 */
+  /* file w95types.h line 94 addr 0x0 */
+  /* file w95types.h line 94 addr 0x3 */
+  /* file w95types.h line 103 addr 0x0 */
+  /* file w95types.h line 103 addr 0x3 */
+  /* file w95types.h line 112 addr 0x0 */
+  /* file w95types.h line 112 addr 0x3 */
+  /* file w95types.h line 121 addr 0x0 */
+  /* file w95types.h line 121 addr 0x3 */
+  /* file w95types.h line 130 addr 0x0 */
+  /* file w95types.h line 130 addr 0xc */
+  /* file w95types.h line 138 addr 0x0 */
+  /* file w95types.h line 138 addr 0x3 */
+  /* file shellapi.c line 38 addr 0x0 */
+  /* file shellapi.c line 38 addr 0x3 */
+  /* file shellapi.c line 39 addr 0x0 */
+  /* file shellapi.c line 39 addr 0x3 */
+  /* file shellapi.c line 45 addr 0x0 */
+  /* file shellapi.c line 45 addr 0x3 */
+  /* file shellapi.c line 46 addr 0x0 */
+  /* file shellapi.c line 46 addr 0x3 */
+  /* file shellapi.c line 47 addr 0x0 */
+  /* file shellapi.c line 47 addr 0x3 */
+  /* file shellapi.c line 49 addr 0x0 */
+  /* file shellapi.c line 49 addr 0x3 */
+  /* file shellapi.c line 50 addr 0x0 */
+  /* file shellapi.c line 50 addr 0x3 */
+  /* file shellapi.c line 56 addr 0x0 */
+  /* file shellapi.c line 56 addr 0x3 */
+  /* file shellapi.c line 57 addr 0x0 */
+  /* file shellapi.c line 57 addr 0x3 */
+  /* file shellapi.c line 63 addr 0x0 */
+  /* file shellapi.c line 63 addr 0x3 */
+  /* file shellapi.c line 65 addr 0x0 */
+  /* file shellapi.c line 65 addr 0x3 */
+  /* file shellapi.c line 66 addr 0x0 */
+  /* file shellapi.c line 66 addr 0x3 */
+  /* file shellapi.c line 72 addr 0x0 */
+  /* file shellapi.c line 72 addr 0x3 */
+  /* file shellapi.c line 73 addr 0x0 */
+  /* file shellapi.c line 73 addr 0x3 */
+  /* file shellapi.c line 80 addr 0x0 */
+  /* file shellapi.c line 80 addr 0x3 */
+  /* file shellapi.c line 81 addr 0x0 */
+  /* file shellapi.c line 81 addr 0x3 */
+  /* file shellapi.c line 132 addr 0x0 */
+  /* file shellapi.c line 132 addr 0x3 */
+  /* file shellapi.c line 142 addr 0x0 */
+  /* file shellapi.c line 142 addr 0x3 */
+  /* file shellapi.c line 143 addr 0x0 */
+  /* file shellapi.c line 143 addr 0x3 */
+  /* file shellapi.c line 229 addr 0x0 */
+  /* file shellapi.c line 229 addr 0x3 */
+  /* file shellapi.c line 230 addr 0x0 */
+  /* file shellapi.c line 230 addr 0x3 */
+  /* file shellapi.c line 237 addr 0x0 */
+  /* file shellapi.c line 237 addr 0x3 */
+  /* file shellapi.c line 364 addr 0x0 */
+  /* file shellapi.c line 364 addr 0x3 */
+  /* file shellapi.c line 365 addr 0x0 */
+  /* file shellapi.c line 365 addr 0x3 */
+  /* file shellapi.c line 416 addr 0x0 */
+  /* file shellapi.c line 416 addr 0x3 */
+  /* file shellapi.c line 417 addr 0x0 */
+  /* file shellapi.c line 417 addr 0x3 */
+  /* file shellapi.c line 488 addr 0x0 */
+  /* file shellapi.c line 488 addr 0x3 */
+  /* file shellapi.c line 489 addr 0x0 */
+  /* file shellapi.c line 489 addr 0x3 */
+} /* 0x217 */

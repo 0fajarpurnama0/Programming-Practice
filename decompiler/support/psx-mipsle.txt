@@ -1,0 +1,79 @@
+#ps1-mipsle.txt
+DeliverEvent(unsigned long, unsigned long):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+07 00 09 24                          addiu t1,zero,#0x00000007
+00 00 00 00                          sll zero,zero,#0
+;
+StartPad(void):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+13 00 09 24                          addiu t1,zero,#0x00000013
+00 00 00 00                          sll zero,zero,#0
+;
+ChangeClearPad(int val):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+5B 00 09 24                          addiu t1,zero,#0x0000005B
+00 00 00 00                          sll zero,zero,#0
+;
+nextfile():
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+43 00 09 24                          addiu t1,zero,#0x00000043
+00 00 00 00                          sll zero,zero,#0
+;
+OpenEvent(long eventClass, long eventSpec, long eventMode, int *addr):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+08 00 09 24                          addiu t1,zero,#0x00000008
+00 00 00 00                          sll zero,zero,#0
+;
+UnDeliverEvent(unsigned long, unsigned long):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+20 00 09 24                          addiu t1,zero,#0x00000020
+00 00 00 00                          sll zero,zero,#0
+;
+read(int fd, char *ptr, int len):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+34 00 09 24                          addiu t1,zero,#0x00000034
+00 00 00 00                          sll zero,zero,#0
+;
+WaitEvent(long event):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+0A 00 09 24                          addiu t1,zero,#0x0000000A
+00 00 00 00                          sll zero,zero,#0
+;
+TestEvent(long event):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+0B 00 09 24                          addiu t1,zero,#0x0000000B
+00 00 00 00                          sll zero,zero,#0
+;
+#02 00 04 24                          addiu a0,zero,#0x00000002
+#0C 00 00 00                          syscall
+#08 00 E0 03                          jr ra
+#00 00 00 00                          sll zero,zero,#0
+;
+open(char *name, int mode):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+32 00 09 24                          addiu t1,zero,#0x00000032
+00 00 00 00                          sll zero,zero,#0
+;
+_96_remove:
+A0 00 0A 24                          addiu t2,zero,#0x000000A0
+08 00 40 01                          jr t2
+72 00 09 24                          addiu t1,zero,#0x00000072
+00 00 00 00                          sll zero,zero,#0
+;
+firstfile(char *name, struct dirent *entry):
+B0 00 0A 24                          addiu t2,zero,#0x000000B0
+08 00 40 01                          jr t2
+42 00 09 24                          addiu t1,zero,#0x00000042
+00 00 00 00                          sll zero,zero,#0
+;
+

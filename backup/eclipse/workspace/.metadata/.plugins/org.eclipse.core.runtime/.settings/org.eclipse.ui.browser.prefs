@@ -1,0 +1,3 @@
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/jsonRestSample01/sample01.html|*|http\://localhost\:8080/cae-mvc01/index.html|*|http\://localhost\:8080/CAE-WEEK-4/cae-webapi01/WebConten|*|http\://localhost\:8080/CAE-WEEK-4/cae-webapi01/|*|http\://localhost\:8080/CAE-WEEK-4/|*|

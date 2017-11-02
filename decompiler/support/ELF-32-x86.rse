@@ -1,0 +1,19 @@
+Name: ELF-32-x86
+Cpu: x86
+OS: ELF
+Signature: linux-x86-32.txt
+Type: ../Prototypes/fcntl.dmp
+Type: ../Prototypes/stdio.dmp
+Type: ../Prototypes/stdlib.dmp
+Type: ../Prototypes/string.dmp
+Type: ../Prototypes/unistd.dmp
+Type: ../Prototypes/libintl.dmp
+Type: ../Prototypes/locale.dmp
+Type: ../Prototypes/error.dmp
+Type: ../Prototypes/getopt.dmp
+Type: ../Prototypes/gcc_eh.c
+Type: ../Linux/time.o
+Type: ../Linux/pthread.o
+Type: ../Linux/socket.o
+Type: ../Linux/inet.o
+

@@ -1,0 +1,40 @@
+<!-- Sample program: cae-webapi01 Copyright 2015 Hiroshi Nakano nakano@cc.kumamoto-u.ac.jp -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <title>WebAPI sample vs. view sample</title>
+  <script type="text/javascript">
+  //The following process will be done after loading whole page
+  $(function() {
+  })
+  
+  function submit() {
+    $.getJSON(
+    		"open/api.json", 
+    	  { sender: $("#sender").val(), content: $("#content").val()},
+    		function(data) {
+//        alert(JSON.stringify(data));
+        $("#history").empty();
+        for(var i = 0; i < data.length; i++) {
+         $("#history").append("<div>sender:<b>"+data[i].sender+"</b> ");
+         $("#history").append("(date:"+(new Date(data[i].date))+", from:"+data[i].from+")<br />\n");
+         $("#history").append(data[i].content+"</div>\n");
+        }
+    });
+  }
+  </script>
+</head>
+<body>
+  <h1>Sample program for WebAPI model</h1>
+  <div align="right">version 2015-05-07 by 
+  <a href="mailto:nakano@cc.kumamoto-u.ac.jp?subject=WebAPI20150507">nakano@cc.kumamoto-u.ac.jp</a></div>
+  Your name:<input id="sender" type="text" size="20" /><br>
+  Comment:<textarea id="content" rows="2" cols="40"></textarea>
+  <input type="submit" value="send" onclick="submit()" />
+  <hr />logs:<br />
+  <dvi id="history"></dvi>
+</body>
+</html>

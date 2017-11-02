@@ -1,0 +1,158 @@
+
+evntrace.o:     file format pe-i386
+
+evntrace.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef void void;
+typedef int DWORD;
+typedef long int LONG;
+typedef long long unsigned int ULONGLONG;
+typedef long long unsigned int LARGE_INTEGER;
+typedef long unsigned int ULONG;
+typedef long long int LONGLONG;
+typedef unsigned int UINT;
+typedef int INT;
+typedef short int WORD;
+typedef short unsigned int USHORT;
+typedef unsigned char UCHAR;
+typedef short int WCHAR;
+typedef unsigned char BOOL;
+typedef char *LPSTR;
+typedef short int *LPWSTR;
+typedef char *LPCSTR;
+typedef short int *LPCWSTR;
+typedef void *HANDLE;
+typedef HANDLE HKEY;
+typedef DWORD *LPDWORD;
+typedef void *LPVOID;
+typedef void *PVOID;
+typedef void *LPCVOID;
+typedef char *LPBYTE;
+typedef void *HWND;
+typedef void *HDC;
+typedef void *CLSID;
+typedef void (*LPTHREAD_START_ROUTINE) (/* unknown */);
+typedef int REGSAM;
+typedef int COLORREF;
+typedef int IID;
+typedef struct IStream /* id 0 */ strIStream;
+typedef HANDLE HINSTANCE;
+typedef HANDLE HUSKEY;
+typedef HANDLE HRESULT;
+typedef HANDLE HPALETTE;
+typedef HANDLE TRACEHANDLE;
+typedef TRACEHANDLE *PTRACEHANDLE;
+typedef HUSKEY *PHUSKEY;
+typedef void *WMIDPREQUEST;
+typedef int GUID;
+typedef GUID *LPGUID;
+typedef GUID *LPCGUID;
+struct _TRACE_GUID_REGISTRATION { /* size 8 id 1 */
+  LPCGUID Guid; /* bitsize 32, bitpos 0 */
+  HANDLE RegHandle; /* bitsize 32, bitpos 32 */
+};
+typedef struct _TRACE_GUID_REGISTRATION /* id 1 */ TRACE_GUID_REGISTRATION;
+typedef struct _TRACE_GUID_REGISTRATION /* id 1 */ *PTRACE_GUID_REGISTRATION;
+struct _WNODE_HEADER { /* size 40 id 2 */
+  ULONG BufferSize; /* bitsize 32, bitpos 0 */
+  ULONG ProviderId; /* bitsize 32, bitpos 32 */
+  union %anon3 { /* size 8 */
+    ULONGLONG HistoricalContext; /* bitsize 64, bitpos 0 */
+    struct %anon4 { /* size 8 */
+      ULONG Version; /* bitsize 32, bitpos 0 */
+      ULONG Linkage; /* bitsize 32, bitpos 32 */
+    }; /* bitsize 64, bitpos 0 */
+  }; /* bitsize 64, bitpos 64 */
+  union %anon5 { /* size 8 */
+    HANDLE KernelHandle; /* bitsize 32, bitpos 0 */
+    LARGE_INTEGER TimeStamp; /* bitsize 64, bitpos 0 */
+  }; /* bitsize 64, bitpos 128 */
+  GUID Guid; /* bitsize 32, bitpos 192 */
+  ULONG ClientContext; /* bitsize 32, bitpos 224 */
+  ULONG Flags; /* bitsize 32, bitpos 256 */
+};
+typedef struct _WNODE_HEADER /* id 2 */ WNODE_HEADER;
+typedef struct _WNODE_HEADER /* id 2 */ *PWNODE_HEADER;
+struct _EVENT_TRACE_PROPERTIES { /* size 112 id 6 */
+  WNODE_HEADER Wnode; /* bitsize 320, bitpos 0 */
+  ULONG BufferSize; /* bitsize 32, bitpos 320 */
+  ULONG MinimumBuffers; /* bitsize 32, bitpos 352 */
+  ULONG MaximumBuffers; /* bitsize 32, bitpos 384 */
+  ULONG MaximumFileSize; /* bitsize 32, bitpos 416 */
+  ULONG LogFileMode; /* bitsize 32, bitpos 448 */
+  ULONG FlushTimer; /* bitsize 32, bitpos 480 */
+  ULONG EnableFlags; /* bitsize 32, bitpos 512 */
+  LONG AgeLimit; /* bitsize 32, bitpos 544 */
+  ULONG NumberOfBuffers; /* bitsize 32, bitpos 576 */
+  ULONG FreeBuffers; /* bitsize 32, bitpos 608 */
+  ULONG EventsLost; /* bitsize 32, bitpos 640 */
+  ULONG BuffersWritten; /* bitsize 32, bitpos 672 */
+  ULONG LogBuffersLost; /* bitsize 32, bitpos 704 */
+  ULONG RealTimeBuffersLost; /* bitsize 32, bitpos 736 */
+  HANDLE LoggerThreadId; /* bitsize 32, bitpos 768 */
+  ULONG LogFileNameOffset; /* bitsize 32, bitpos 800 */
+  ULONG LoggerNameOffset; /* bitsize 32, bitpos 832 */
+};
+typedef struct _EVENT_TRACE_PROPERTIES /* id 6 */ EVENT_TRACE_PROPERTIES;
+typedef struct _EVENT_TRACE_PROPERTIES /* id 6 */ *PEVENT_TRACE_PROPERTIES;
+UCHAR GetTraceEnableLevel (TRACEHANDLE SessionHandle /* 0x8 */)
+{ /* 0x0 */
+  /* file evntrace.c line 91 addr 0x0 */
+  /* file evntrace.c line 91 addr 0x3 */
+} /* 0x5 */
+ULONG CloseTrace (TRACEHANDLE TraceHandle /* 0x8 */)
+{ /* 0x5 */
+  /* file evntrace.c line 94 addr 0x5 */
+  /* file evntrace.c line 94 addr 0x8 */
+} /* 0xa */
+ULONG ControlTrace (TRACEHANDLE SessionHandle /* 0x8 */, LPCSTR SessionName /* 0xc */, PEVENT_TRACE_PROPERTIES Properties /* 0x10 */, ULONG ControlCode /* 0x14 */)
+{ /* 0xa */
+  /* file evntrace.c line 100 addr 0xa */
+  /* file evntrace.c line 100 addr 0xd */
+} /* 0xf */
+TRACEHANDLE GetTraceLoggerHandle (PVOID Buffer /* 0x8 */)
+{ /* 0xf */
+  /* file evntrace.c line 103 addr 0xf */
+  /* file evntrace.c line 103 addr 0x12 */
+} /* 0x14 */
+ULONG GetTraceEnableFlags (TRACEHANDLE SessionHandle /* 0x8 */)
+{ /* 0x14 */
+  /* file evntrace.c line 106 addr 0x14 */
+  /* file evntrace.c line 106 addr 0x17 */
+} /* 0x19 */
+ULONG RegisterTraceGuids (WMIDPREQUEST RequestAddress /* 0x8 */, PVOID RequestContext /* 0xc */, LPCGUID ControlGuid /* 0x10 */, ULONG GuidCount /* 0x14 */, PTRACE_GUID_REGISTRATION TraceGuidReg /* 0x18 */, LPCSTR MofImagePath /* 0x1c */, LPCSTR MofResourceName /* 0x20 */, PTRACEHANDLE RegistrationHandle /* 0x24 */)
+{ /* 0x19 */
+  /* file evntrace.c line 116 addr 0x19 */
+  /* file evntrace.c line 116 addr 0x1c */
+} /* 0x1e */
+ULONG ControlTraceA (TRACEHANDLE SessionHandle /* 0x8 */, LPCSTR SessionName /* 0xc */, PEVENT_TRACE_PROPERTIES Properties /* 0x10 */, ULONG ControlCode /* 0x14 */)
+{ /* 0x1e */
+  /* file evntrace.c line 122 addr 0x1e */
+  /* file evntrace.c line 122 addr 0x21 */
+} /* 0x23 */
+ULONG ControlTraceW (TRACEHANDLE SessionHandle /* 0x8 */, LPCWSTR SessionName /* 0xc */, PEVENT_TRACE_PROPERTIES Properties /* 0x10 */, ULONG ControlCode /* 0x14 */)
+{ /* 0x23 */
+  /* file evntrace.c line 129 addr 0x23 */
+  /* file evntrace.c line 129 addr 0x26 */
+} /* 0x28 */
+ULONG TraceMessage (TRACEHANDLE SessionHandle /* 0x8 */, ULONG MessageFlags /* 0xc */, LPGUID MessageGuid /* 0x10 */, int MessageNumber /* 0x14 */)
+{ /* 0x28 */
+  USHORT MessageNumber /* 0xfffffffc */;
+  /* file evntrace.c line 137 addr 0x28 */
+  /* file evntrace.c line 137 addr 0x35 */
+} /* 0x37 */
+struct IStream { /* id 0 */
+};

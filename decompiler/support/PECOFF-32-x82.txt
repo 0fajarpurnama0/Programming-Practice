@@ -1,0 +1,86 @@
+#msvc6-x86-32
+mainCRTStartup:
+55                                                 push ebp
+8B EC                                              mov ebp, esp
+6A FF                                              push 0xff
+68 ?? ?? ?? ??                                     push dword M420138
+68 ** ** ** **                                     push dword L403E24 {*=__except_handler3}
+64 A1 00 00 00 00                                  mov eax, [fs:0x0]
+50                                                 push eax
+64 89 25 00 00 00 00                               mov [fs:0x0], esp
+83 C4 F0                                           add esp, 0xf0
+53                                                 push ebx
+56                                                 push esi
+57                                                 push edi
+89 65 E8                                           mov [ebp-0x18], esp
+FF 15 ** ** ** **                                  call dword near [M42513C] {*=__imp__GetVersion@0}
+A3 ** ** ** **                                     mov [M4235E4], eax {*=__osver}
+A1 ?? ?? ?? ??                                     mov eax, [M4235E4]
+C1 E8 08                                           shr eax, 0x8
+25 FF 00 00 00                                     and eax, 0xff
+A3 ** ** ** **                                     mov [M4235F0], eax {*=__winminor}
+8B 0D ?? ?? ?? ??                                  mov ecx, [M4235E4]
+81 E1 FF 00 00 00                                  and ecx, 0xff
+89 0D ** ** ** **                                  mov [M4235EC], ecx {*=__winmajor}
+8B 15 ?? ?? ?? ??                                  mov edx, [M4235EC]
+C1 E2 08                                           shl edx, 0x8
+03 15 ?? ?? ?? ??                                  add edx, [M4235F0]
+89 15 ** ** ** **                                  mov [M4235E8], edx {*=__winver}
+A1 ?? ?? ?? ??                                     mov eax, [M4235E4]
+C1 E8 10                                           shr eax, 0x10
+25 FF FF 00 00                                     and eax, 0xffff
+A3 ?? ?? ?? ??                                     mov [M4235E4], eax
+6A 00                                              push 0x0
+E8 ** ** ** **                                     call L403C40  {*=(pcrel)_heap_init}
+83 C4 04                                           add esp, 0x4
+85 C0                                              test eax, eax
+75 0A                                              jnz L4011B4
+6A 1C                                              push 0x1c
+E8 ** ** ** **                                     call L401280 {*=(pcrel)fast_error_exit}
+83 C4 04                                           add esp, 0x4
+C7 45 FC 00 00 00 00                               mov dword [ebp-0x4], 0x0
+E8 10 27 00 00                                     call L4038D0  {*=(pcrel)_ioinit}
+FF 15 ** ** ** **                                  call dword near [M425138] {*=__imp__GetCommandLineA@0}
+A3 ** ** ** **                                     mov [0x424f44], eax {*=__acmdln}
+E8 ** ** ** **                                     call L4036B0  {*=(pcrel)__crtGetEnvironmentStringsA}
+A3 ** ** ** **                                     mov [M4235BC], eax {*=__aenvptr}
+E8 ** ** ** **                                     call L4031A0  {*=(pcrel)_setargv}
+E8 ** ** ** **                                     call L403050  {*=(pcrel)_setenvp}
+E8 ** ** ** **                                     call L402C70  {*=(pcrel)_cinit}
+8B 0D ** ** ** **                                  mov ecx, [M423600] {*=__environ}
+89 0D ** ** ** **                                  mov [M423604], ecx {*=___initenv}
+8B 15 ?? ?? ?? ??                                  mov edx, [M423600]
+52                                                 push edx
+A1 ** ** ** **                                     mov eax, [M4235F8] {*=___argv}
+50                                                 push eax
+8B 0D ** ** ** **                                  mov ecx, [M4235F4] {*=___argc}
+51                                                 push ecx
+E8 ** ** ** **                                     call L401005 {*=(pcrel)_main}
+83 C4 0C                                           add esp, 0xc
+89 45 E4                                           mov [ebp-0x1c], eax
+8B 55 E4                                           mov edx, [ebp-0x1c]
+52                                                 push edx
+E8 ** ** ** **                                     call L402CB0  {*=(pcrel)exit}
+8B 45 EC                                           mov eax, [ebp-0x14]
+8B 08                                              mov ecx, [eax]
+8B 11                                              mov edx, [ecx]
+89 55 E0                                           mov [ebp-0x20], edx
+8B 45 EC                                           mov eax, [ebp-0x14]
+50                                                 push eax
+8B 4D E0                                           mov ecx, [ebp-0x20]
+51                                                 push ecx
+E8 ** ** ** **                                     call L402E40  {*=(pcrel)_XcptFilter}
+83 C4 08                                           add esp, 0x8
+C3                                                 ret 
+8B 65 E8                                           mov esp, [ebp-0x18]
+8B 55 E0                                           mov edx, [ebp-0x20]
+52                                                 push edx
+E8 ** ** ** **                                     call L402CD0  {*=(pcrel)_exit}
+8B 4D F0                                           mov ecx, [ebp-0x10]
+64 89 0D 00 00 00 00                               mov [fs:0x0], ecx
+5F                                                 pop edi
+5E                                                 pop esi
+5B                                                 pop ebx
+8B E5                                              mov esp, ebp
+5D                                                 pop ebp
+C3                                                 ret 

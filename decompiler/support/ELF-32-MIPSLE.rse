@@ -1,0 +1,9 @@
+Name: ELF-32-MIPSLE
+Cpu: MIPS
+Type: ../Prototypes/asciifun.dmp
+Type: ../Prototypes/fcntl.dmp
+Type: ../Prototypes/stdio.dmp
+Type: ../Prototypes/stdlib.dmp
+Type: ../Prototypes/string.dmp
+Type: ../Prototypes/unistd.dmp
+

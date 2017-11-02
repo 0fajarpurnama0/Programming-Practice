@@ -1,0 +1,95 @@
+
+winstring.o:     file format pe-i386
+
+winstring.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef void void;
+typedef int errno_t;
+typedef long int size_t;
+typedef char *_locale_t;
+typedef char *locale_t;
+typedef short int wchar_t;
+typedef int wint_t;
+errno_t strncpy_s (char *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, char *strSource /* 0x10 */, size_t count /* 0x14 */)
+{ /* 0x0 */
+  /* file winstring.c line 13 addr 0x0 */
+  /* file winstring.c line 13 addr 0x3 */
+} /* 0x5 */
+errno_t _strncpy_s_l (char *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, char *strSource /* 0x10 */, size_t count /* 0x14 */, _locale_t locale /* 0x18 */)
+{ /* 0x5 */
+  /* file winstring.c line 20 addr 0x5 */
+  /* file winstring.c line 20 addr 0x8 */
+} /* 0xa */
+errno_t wcsncpy_s (wchar_t *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, wchar_t *strSource /* 0x10 */, size_t count /* 0x14 */)
+{ /* 0xa */
+  /* file winstring.c line 26 addr 0xa */
+  /* file winstring.c line 26 addr 0xd */
+} /* 0xf */
+errno_t _wcsncpy_s_l (wchar_t *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, wchar_t *strSource /* 0x10 */, size_t count /* 0x14 */, _locale_t locale /* 0x18 */)
+{ /* 0xf */
+  /* file winstring.c line 33 addr 0xf */
+  /* file winstring.c line 33 addr 0x12 */
+} /* 0x14 */
+errno_t _mbsncpy_s (unsigned char *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, unsigned char *strSource /* 0x10 */, size_t count /* 0x14 */)
+{ /* 0x14 */
+  /* file winstring.c line 39 addr 0x14 */
+  /* file winstring.c line 39 addr 0x17 */
+} /* 0x19 */
+errno_t _mbsncpy_s_l (unsigned char *strDest /* 0x8 */, size_t numberOfElements /* 0xc */, unsigned char *strSource /* 0x10 */, size_t count /* 0x14 */, locale_t locale /* 0x18 */)
+{ /* 0x19 */
+  /* file winstring.c line 46 addr 0x19 */
+  /* file winstring.c line 46 addr 0x1c */
+} /* 0x1e */
+errno_t strcpy_s (char *strDestination /* 0x8 */, size_t numberOfElements /* 0xc */, char *strSource /* 0x10 */)
+{ /* 0x1e */
+  /* file winstring.c line 52 addr 0x1e */
+  /* file winstring.c line 52 addr 0x21 */
+} /* 0x23 */
+errno_t wcscpy_s (wchar_t *strDestination /* 0x8 */, size_t numberOfElements /* 0xc */, wchar_t *strSource /* 0x10 */)
+{ /* 0x23 */
+  /* file winstring.c line 57 addr 0x23 */
+  /* file winstring.c line 57 addr 0x26 */
+} /* 0x28 */
+size_t wcslen (wchar_t *str /* 0x8 */)
+{ /* 0x28 */
+  /* file winstring.c line 60 addr 0x28 */
+  /* file winstring.c line 60 addr 0x2b */
+} /* 0x2d */
+wchar_t *wcsstr (wchar_t *str /* 0x8 */, wchar_t *strSearch /* 0xc */)
+{ /* 0x2d */
+  /* file winstring.c line 64 addr 0x2d */
+  /* file winstring.c line 64 addr 0x30 */
+} /* 0x32 */
+int isxdigit (int c /* 0x8 */)
+{ /* 0x32 */
+  /* file winstring.c line 67 addr 0x32 */
+  /* file winstring.c line 67 addr 0x35 */
+} /* 0x37 */
+int iswxdigit (wint_t c /* 0x8 */)
+{ /* 0x37 */
+  /* file winstring.c line 70 addr 0x37 */
+  /* file winstring.c line 70 addr 0x3a */
+} /* 0x3c */
+int _isxdigit_l (int c /* 0x8 */, _locale_t locale /* 0xc */)
+{ /* 0x3c */
+  /* file winstring.c line 74 addr 0x3c */
+  /* file winstring.c line 74 addr 0x3f */
+} /* 0x41 */
+int _iswxdigit_l (wint_t c /* 0x8 */, _locale_t locale /* 0xc */)
+{ /* 0x41 */
+  /* file winstring.c line 78 addr 0x41 */
+  /* file winstring.c line 78 addr 0x44 */
+} /* 0x46 */

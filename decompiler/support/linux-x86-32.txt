@@ -1,0 +1,20 @@
+#recStudio:signatures x86-linux-32
+_start:
+31 ED                                              xor ebp, ebp
+5E                                                 pop esi
+89 E1                                              mov ecx, esp
+83 E4 F0                                           and esp, 0xf0
+50                                                 push eax
+54                                                 push esp
+52                                                 push edx
+68 ** ** ** **                                     push dword L80483B4  {*=__libc_csu_fini}
+68 ** ** ** **                                     push dword L804836C  {*=__libc_csu_init}
+51                                                 push ecx
+56                                                 push esi
+68 ** ** ** **                                     push dword L8048344  {*=main}
+E8 ** ** ** **                                     call L8048278  {*=(pcrel)__libc_start_main@@GLIBC_2.0}
+F4                                                 hlt 
+90                                                 nop 
+90                                                 nop
+;
+

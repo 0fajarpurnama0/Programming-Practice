@@ -1,0 +1,2101 @@
+
+MMSYSTEM.O:     file format elf32-i386
+
+/d/c/wrec/suppw95/mmsystem.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef void VOID;
+typedef void *PVOID;
+typedef long int HANDLE;
+typedef short int SHORT;
+typedef long int *PHANDLE;
+typedef long int *PLONG;
+typedef long int HKEY;
+typedef long int LONG;
+typedef PLONG LPCLONG;
+typedef int *LPCWORD;
+typedef unsigned char CHAR;
+typedef short unsigned int WCHAR;
+typedef short unsigned int *PWCHAR;
+typedef PWCHAR LPWCHAR;
+typedef PWCHAR LPCWCHAR;
+typedef PWCHAR PWSTR;
+typedef PWCHAR LPWSTR;
+typedef PWCHAR LPCWSTR;
+typedef char *LPCBYTE;
+typedef unsigned char *PSTR;
+typedef PSTR LPSTR;
+typedef PSTR LPCSTR;
+typedef long int RTL_CRITICAL_SECTION;
+typedef PLONG PRTL_CRITICAL_SECTION;
+typedef long int RTL_CRITICAL_SECTION_DEBUG;
+typedef PLONG PRTL_CRITICAL_SECTION_DEBUG;
+typedef long int ACCESS_MASK;
+typedef long int *PACCESS_MASK;
+long int RtlEqualMemory (void *Source1 /* 0x8 */, void *Source2 /* 0xc */, long int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ w95types.h:
+void RtlCopyMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlCopyMemory32 (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlMoveMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlFillMemory (void *Destination /* 0x8 */, int Length /* 0xc */, int Fill /* 0x10 */)
+{ /* 0x0 */
+  unsigned char Fill /* 0xffffffff */;
+} /* 0x0 */
+void RtlZeroMemory (void *Destination /* 0x8 */, int Length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int ULONG;
+typedef long unsigned int *PULONG;
+typedef short unsigned int USHORT;
+typedef short unsigned int *PUSHORT;
+typedef unsigned char UCHAR;
+typedef unsigned char *PUCHAR;
+typedef LPCBYTE PSZ;
+typedef long unsigned int DWORD;
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef short unsigned int WORD;
+typedef float FLOAT;
+typedef float *PFLOAT;
+typedef int *PBOOL;
+typedef PBOOL LPBOOL;
+typedef unsigned char *PBYTE;
+typedef PBYTE LPBYTE;
+typedef LPCWORD PINT;
+typedef LPCWORD LPINT;
+typedef short unsigned int *PWORD;
+typedef PWORD LPWORD;
+typedef PLONG LPLONG;
+typedef long unsigned int *PDWORD;
+typedef PDWORD LPDWORD;
+typedef PVOID LPVOID;
+typedef PVOID LPCVOID;
+typedef int INT;
+typedef unsigned int UINT;
+typedef unsigned int *PUINT;
+typedef unsigned int WPARAM;
+typedef long int LPARAM;
+typedef long int LRESULT;
+typedef long int HWND;
+typedef long int HHOOK;
+typedef short unsigned int ATOM;
+typedef PHANDLE SPHANDLE;
+typedef PHANDLE LPHANDLE;
+typedef long int HGLOBAL;
+typedef long int HLOCAL;
+typedef long int GLOBALHANDLE;
+typedef long int LOCALHANDLE;
+typedef int (*FARPROC) (/* unknown */);
+typedef FARPROC NEARPROC;
+typedef FARPROC PROC;
+typedef long int HGDIOBJ;
+typedef long int HACCEL;
+typedef long int HBITMAP;
+typedef long int HBRUSH;
+typedef long int HCOLORSPACE;
+typedef long int HDC;
+typedef long int HGLRC;
+typedef long int HDESK;
+typedef long int HENHMETAFILE;
+typedef long int HFONT;
+typedef long int HICON;
+typedef long int HMENU;
+typedef long int HMETAFILE;
+typedef long int HINSTANCE;
+typedef long int HMODULE;
+typedef long int HPALETTE;
+typedef long int HPEN;
+typedef long int HRGN;
+typedef long int HRSRC;
+typedef long int HSTR;
+typedef long int HTASK;
+typedef long int HWINSTA;
+typedef long int HKL;
+typedef int HFILE;
+typedef long int HCURSOR;
+typedef long unsigned int COLORREF;
+typedef PDWORD LPCOLORREF;
+struct tagRECT { /* size 16 id 2 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagRECT /* id 2 */ RECT;
+typedef struct tagRECT /* id 2 */ *PRECT;
+typedef PRECT NPRECT;
+typedef PRECT LPRECT;
+typedef struct tagRECT /* id 2 */ *LPCRECT;
+struct _RECTL { /* size 16 id 3 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct _RECTL /* id 3 */ RECTL;
+typedef struct _RECTL /* id 3 */ *PRECTL;
+typedef PRECTL LPRECTL;
+typedef struct _RECTL /* id 3 */ *LPCRECTL;
+struct tagPOINT { /* size 8 id 4 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINT /* id 4 */ POINT;
+typedef struct tagPOINT /* id 4 */ *PPOINT;
+typedef PPOINT NPPOINT;
+typedef PPOINT LPPOINT;
+struct _POINTL { /* size 8 id 5 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTL /* id 5 */ POINTL;
+typedef struct _POINTL /* id 5 */ *PPOINTL;
+struct tagSIZE { /* size 8 id 6 */
+  long int cx; /* bitsize 32, bitpos 0 */
+  long int cy; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSIZE /* id 6 */ SIZE;
+typedef struct tagSIZE /* id 6 */ *PSIZE;
+typedef PSIZE LPSIZE;
+typedef struct tagSIZE /* id 6 */ SIZEL;
+typedef struct tagSIZE /* id 6 */ *PSIZEL;
+typedef PSIZEL LPSIZEL;
+struct tagPOINTS { /* size 4 id 7 */
+  short int x; /* bitsize 16, bitpos 0 */
+  short int y; /* bitsize 16, bitpos 16 */
+};
+typedef struct tagPOINTS /* id 7 */ POINTS;
+typedef struct tagPOINTS /* id 7 */ *PPOINTS;
+typedef PPOINTS LPPOINTS;
+typedef unsigned int MMVERSION;
+typedef unsigned int MMRESULT;
+typedef unsigned int *LPUINT;
+struct mmtime_tag { /* size 12 id 8 */
+  unsigned int wType; /* bitsize 32, bitpos 0 */
+  union %anon9 { /* size 8 */
+    long unsigned int ms; /* bitsize 32, bitpos 0 */
+    long unsigned int sample; /* bitsize 32, bitpos 0 */
+    long unsigned int cb; /* bitsize 32, bitpos 0 */
+    long unsigned int ticks; /* bitsize 32, bitpos 0 */
+    struct %anon10 { /* size 8 */
+      unsigned char hour; /* bitsize 8, bitpos 0 */
+      unsigned char min; /* bitsize 8, bitpos 8 */
+      unsigned char sec; /* bitsize 8, bitpos 16 */
+      unsigned char frame; /* bitsize 8, bitpos 24 */
+      unsigned char fps; /* bitsize 8, bitpos 32 */
+      unsigned char dummy; /* bitsize 8, bitpos 40 */
+      unsigned char pad[2]; /* bitsize 16, bitpos 48 */
+    } smpte; /* bitsize 64, bitpos 0 */
+    struct %anon11 { /* size 4 */
+      long unsigned int songptrpos; /* bitsize 32, bitpos 0 */
+    } midi; /* bitsize 32, bitpos 0 */
+  } u; /* bitsize 64, bitpos 32 */
+};
+typedef struct mmtime_tag /* id 8 */ MMTIME;
+typedef struct mmtime_tag /* id 8 */ *PMMTIME;
+typedef PMMTIME NPMMTIME;
+typedef PMMTIME LPMMTIME;
+typedef long int HDRVR;
+struct DRVCONFIGINFOEX { /* size 16 id 12 */
+  long unsigned int dwDCISize; /* bitsize 32, bitpos 0 */
+  PWCHAR lpszDCISectionName; /* bitsize 32, bitpos 32 */
+  PWCHAR lpszDCIAliasName; /* bitsize 32, bitpos 64 */
+  long unsigned int dnDevNode; /* bitsize 32, bitpos 96 */
+};
+typedef struct DRVCONFIGINFOEX /* id 12 */ DRVCONFIGINFOEX;
+typedef struct DRVCONFIGINFOEX /* id 12 */ *PDRVCONFIGINFOEX;
+typedef PDRVCONFIGINFOEX NPDRVCONFIGINFOEX;
+typedef PDRVCONFIGINFOEX LPDRVCONFIGINFOEX;
+struct tagDRVCONFIGINFO { /* size 12 id 13 */
+  long unsigned int dwDCISize; /* bitsize 32, bitpos 0 */
+  PWCHAR lpszDCISectionName; /* bitsize 32, bitpos 32 */
+  PWCHAR lpszDCIAliasName; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagDRVCONFIGINFO /* id 13 */ DRVCONFIGINFO;
+typedef struct tagDRVCONFIGINFO /* id 13 */ *PDRVCONFIGINFO;
+typedef PDRVCONFIGINFO NPDRVCONFIGINFO;
+typedef PDRVCONFIGINFO LPDRVCONFIGINFO;
+typedef long int (*DRIVERPROC) (/* unknown */);
+long int CloseDriver (long int hDriver /* 0x8 */, long int lParam1 /* 0xc */, long int lParam2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ mmsystem.c:
+long int OpenDriver (PWCHAR szDriverName /* 0x8 */, PWCHAR szSectionName /* 0xc */, long int lParam2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendDriverMessage (long int hDriver /* 0x8 */, unsigned int message /* 0xc */, long int lParam1 /* 0x10 */, long int lParam2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DrvGetModuleHandle (long int hDriver /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDriverModuleHandle (long int hDriver /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefDriverProc (long unsigned int dwDriverIdentifier /* 0x8 */, long int hdrvr /* 0xc */, unsigned int uMsg /* 0x10 */, long int lParam1 /* 0x14 */, long int lParam2 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef void (DRVCALLBACK) (/* unknown */);
+typedef DRVCALLBACK *LPDRVCALLBACK;
+typedef LPDRVCALLBACK PDRVCALLBACK;
+int sndPlaySoundA (PSTR pszSound /* 0x8 */, unsigned int fuSound /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int sndPlaySoundW (PWCHAR pszSound /* 0x8 */, unsigned int fuSound /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlaySoundA (PSTR pszSound /* 0x8 */, long int hmod /* 0xc */, long unsigned int fdwSound /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlaySoundW (PWCHAR pszSound /* 0x8 */, long int hmod /* 0xc */, long unsigned int fdwSound /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long int HWAVE;
+typedef long int HWAVEIN;
+typedef long int HWAVEOUT;
+typedef long int *LPHWAVEIN;
+typedef long int *LPHWAVEOUT;
+typedef DRVCALLBACK WAVECALLBACK;
+typedef DRVCALLBACK *LPWAVECALLBACK;
+struct wavehdr_tag { /* size 32 id 14 */
+  PSTR lpData; /* bitsize 32, bitpos 0 */
+  long unsigned int dwBufferLength; /* bitsize 32, bitpos 32 */
+  long unsigned int dwBytesRecorded; /* bitsize 32, bitpos 64 */
+  long unsigned int dwUser; /* bitsize 32, bitpos 96 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 128 */
+  long unsigned int dwLoops; /* bitsize 32, bitpos 160 */
+  struct wavehdr_tag /* id 14 */ *lpNext; /* bitsize 32, bitpos 192 */
+  long unsigned int reserved; /* bitsize 32, bitpos 224 */
+};
+typedef struct wavehdr_tag /* id 14 */ WAVEHDR;
+typedef struct wavehdr_tag /* id 14 */ *PWAVEHDR;
+typedef struct wavehdr_tag /* id 14 */ *NPWAVEHDR;
+typedef struct wavehdr_tag /* id 14 */ *LPWAVEHDR;
+struct tagWAVEOUTCAPSA { /* size 52 id 15 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  long unsigned int dwFormats; /* bitsize 32, bitpos 320 */
+  short unsigned int wChannels; /* bitsize 16, bitpos 352 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 368 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 384 */
+};
+typedef struct tagWAVEOUTCAPSA /* id 15 */ WAVEOUTCAPSA;
+typedef struct tagWAVEOUTCAPSA /* id 15 */ *PWAVEOUTCAPSA;
+typedef PWAVEOUTCAPSA NPWAVEOUTCAPSA;
+typedef PWAVEOUTCAPSA LPWAVEOUTCAPSA;
+struct tagWAVEOUTCAPSW { /* size 84 id 16 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  long unsigned int dwFormats; /* bitsize 32, bitpos 576 */
+  short unsigned int wChannels; /* bitsize 16, bitpos 608 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 624 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 640 */
+};
+typedef struct tagWAVEOUTCAPSW /* id 16 */ WAVEOUTCAPSW;
+typedef struct tagWAVEOUTCAPSW /* id 16 */ *PWAVEOUTCAPSW;
+typedef PWAVEOUTCAPSW NPWAVEOUTCAPSW;
+typedef PWAVEOUTCAPSW LPWAVEOUTCAPSW;
+typedef struct tagWAVEOUTCAPSA /* id 15 */ WAVEOUTCAPS;
+typedef PWAVEOUTCAPSA PWAVEOUTCAPS;
+typedef PWAVEOUTCAPSA NPWAVEOUTCAPS;
+typedef PWAVEOUTCAPSA LPWAVEOUTCAPS;
+struct tagWAVEINCAPSA { /* size 48 id 17 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  long unsigned int dwFormats; /* bitsize 32, bitpos 320 */
+  short unsigned int wChannels; /* bitsize 16, bitpos 352 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 368 */
+};
+typedef struct tagWAVEINCAPSA /* id 17 */ WAVEINCAPSA;
+typedef struct tagWAVEINCAPSA /* id 17 */ *PWAVEINCAPSA;
+typedef PWAVEINCAPSA NPWAVEINCAPSA;
+typedef PWAVEINCAPSA LPWAVEINCAPSA;
+struct tagWAVEINCAPSW { /* size 80 id 18 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  long unsigned int dwFormats; /* bitsize 32, bitpos 576 */
+  short unsigned int wChannels; /* bitsize 16, bitpos 608 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 624 */
+};
+typedef struct tagWAVEINCAPSW /* id 18 */ WAVEINCAPSW;
+typedef struct tagWAVEINCAPSW /* id 18 */ *PWAVEINCAPSW;
+typedef PWAVEINCAPSW NPWAVEINCAPSW;
+typedef PWAVEINCAPSW LPWAVEINCAPSW;
+typedef struct tagWAVEINCAPSA /* id 17 */ WAVEINCAPS;
+typedef PWAVEINCAPSA PWAVEINCAPS;
+typedef PWAVEINCAPSA NPWAVEINCAPS;
+typedef PWAVEINCAPSA LPWAVEINCAPS;
+struct waveformat_tag { /* size 16 id 19 */
+  short unsigned int wFormatTag; /* bitsize 16, bitpos 0 */
+  short unsigned int nChannels; /* bitsize 16, bitpos 16 */
+  long unsigned int nSamplesPerSec; /* bitsize 32, bitpos 32 */
+  long unsigned int nAvgBytesPerSec; /* bitsize 32, bitpos 64 */
+  short unsigned int nBlockAlign; /* bitsize 16, bitpos 96 */
+};
+typedef struct waveformat_tag /* id 19 */ WAVEFORMAT;
+typedef struct waveformat_tag /* id 19 */ *PWAVEFORMAT;
+typedef PWAVEFORMAT NPWAVEFORMAT;
+typedef PWAVEFORMAT LPWAVEFORMAT;
+struct pcmwaveformat_tag { /* size 20 id 20 */
+  struct waveformat_tag /* id 19 */ wf; /* bitsize 128, bitpos 0 */
+  short unsigned int wBitsPerSample; /* bitsize 16, bitpos 128 */
+};
+typedef struct pcmwaveformat_tag /* id 20 */ PCMWAVEFORMAT;
+typedef struct pcmwaveformat_tag /* id 20 */ *PPCMWAVEFORMAT;
+typedef PPCMWAVEFORMAT NPPCMWAVEFORMAT;
+typedef PPCMWAVEFORMAT LPPCMWAVEFORMAT;
+struct tWAVEFORMATEX { /* size 20 id 21 */
+  short unsigned int wFormatTag; /* bitsize 16, bitpos 0 */
+  short unsigned int nChannels; /* bitsize 16, bitpos 16 */
+  long unsigned int nSamplesPerSec; /* bitsize 32, bitpos 32 */
+  long unsigned int nAvgBytesPerSec; /* bitsize 32, bitpos 64 */
+  short unsigned int nBlockAlign; /* bitsize 16, bitpos 96 */
+  short unsigned int wBitsPerSample; /* bitsize 16, bitpos 112 */
+  short unsigned int cbSize; /* bitsize 16, bitpos 128 */
+};
+typedef struct tWAVEFORMATEX /* id 21 */ WAVEFORMATEX;
+typedef struct tWAVEFORMATEX /* id 21 */ *PWAVEFORMATEX;
+typedef PWAVEFORMATEX NPWAVEFORMATEX;
+typedef PWAVEFORMATEX LPWAVEFORMATEX;
+typedef struct tWAVEFORMATEX /* id 21 */ *LPCWAVEFORMATEX;
+unsigned int waveOutGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetDevCapsA (unsigned int uDeviceID /* 0x8 */, PWAVEOUTCAPSA pwoc /* 0xc */, unsigned int cbwoc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetDevCapsW (unsigned int uDeviceID /* 0x8 */, PWAVEOUTCAPSW pwoc /* 0xc */, unsigned int cbwoc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetVolume (long int hwo /* 0x8 */, PDWORD pdwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutSetVolume (long int hwo /* 0x8 */, long unsigned int dwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetErrorTextA (unsigned int mmrError /* 0x8 */, PSTR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetErrorTextW (unsigned int mmrError /* 0x8 */, PWCHAR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutOpen (LPHWAVEOUT phwo /* 0x8 */, unsigned int uDeviceID /* 0xc */, LPCWAVEFORMATEX pwfx /* 0x10 */, long unsigned int dwCallback /* 0x14 */, long unsigned int dwInstance /* 0x18 */, long unsigned int fdwOpen /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutClose (long int hwo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutPrepareHeader (long int hwo /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutUnprepareHeader (long int hwo /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutWrite (long int hwo /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutPause (long int hwo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutRestart (long int hwo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutReset (long int hwo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutBreakLoop (long int hwo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetPosition (long int hwo /* 0x8 */, PMMTIME pmmt /* 0xc */, unsigned int cbmmt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetPitch (long int hwo /* 0x8 */, PDWORD pdwPitch /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutSetPitch (long int hwo /* 0x8 */, long unsigned int dwPitch /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetPlaybackRate (long int hwo /* 0x8 */, PDWORD pdwRate /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutSetPlaybackRate (long int hwo /* 0x8 */, long unsigned int dwRate /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutGetID (long int hwo /* 0x8 */, LPUINT puDeviceID /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveOutMessage (long int hwo /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dw1 /* 0x10 */, long unsigned int dw2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetDevCapsA (unsigned int uDeviceID /* 0x8 */, PWAVEINCAPSA pwic /* 0xc */, unsigned int cbwic /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetDevCapsW (unsigned int uDeviceID /* 0x8 */, PWAVEINCAPSW pwic /* 0xc */, unsigned int cbwic /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetErrorTextA (unsigned int mmrError /* 0x8 */, PSTR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetErrorTextW (unsigned int mmrError /* 0x8 */, PWCHAR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInOpen (LPHWAVEIN phwi /* 0x8 */, unsigned int uDeviceID /* 0xc */, LPCWAVEFORMATEX pwfx /* 0x10 */, long unsigned int dwCallback /* 0x14 */, long unsigned int dwInstance /* 0x18 */, long unsigned int fdwOpen /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInClose (long int hwi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInPrepareHeader (long int hwi /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInUnprepareHeader (long int hwi /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInAddBuffer (long int hwi /* 0x8 */, struct wavehdr_tag /* id 14 */ *pwh /* 0xc */, unsigned int cbwh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInStart (long int hwi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInStop (long int hwi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInReset (long int hwi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetPosition (long int hwi /* 0x8 */, PMMTIME pmmt /* 0xc */, unsigned int cbmmt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInGetID (long int hwi /* 0x8 */, LPUINT puDeviceID /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int waveInMessage (long int hwi /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dw1 /* 0x10 */, long unsigned int dw2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long int HMIDI;
+typedef long int HMIDIIN;
+typedef long int HMIDIOUT;
+typedef long int HMIDISTRM;
+typedef long int *LPHMIDI;
+typedef long int *LPHMIDIIN;
+typedef long int *LPHMIDIOUT;
+typedef long int *LPHMIDISTRM;
+typedef DRVCALLBACK MIDICALLBACK;
+typedef DRVCALLBACK *LPMIDICALLBACK;
+typedef short unsigned int PATCHARRAY[128];
+typedef PWORD LPPATCHARRAY;
+typedef PATCHARRAY KEYARRAY;
+typedef PWORD LPKEYARRAY;
+struct tagMIDIOUTCAPSA { /* size 52 id 22 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  short unsigned int wTechnology; /* bitsize 16, bitpos 320 */
+  short unsigned int wVoices; /* bitsize 16, bitpos 336 */
+  short unsigned int wNotes; /* bitsize 16, bitpos 352 */
+  short unsigned int wChannelMask; /* bitsize 16, bitpos 368 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 384 */
+};
+typedef struct tagMIDIOUTCAPSA /* id 22 */ MIDIOUTCAPSA;
+typedef struct tagMIDIOUTCAPSA /* id 22 */ *PMIDIOUTCAPSA;
+typedef PMIDIOUTCAPSA NPMIDIOUTCAPSA;
+typedef PMIDIOUTCAPSA LPMIDIOUTCAPSA;
+struct tagMIDIOUTCAPSW { /* size 84 id 23 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  short unsigned int wTechnology; /* bitsize 16, bitpos 576 */
+  short unsigned int wVoices; /* bitsize 16, bitpos 592 */
+  short unsigned int wNotes; /* bitsize 16, bitpos 608 */
+  short unsigned int wChannelMask; /* bitsize 16, bitpos 624 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 640 */
+};
+typedef struct tagMIDIOUTCAPSW /* id 23 */ MIDIOUTCAPSW;
+typedef struct tagMIDIOUTCAPSW /* id 23 */ *PMIDIOUTCAPSW;
+typedef PMIDIOUTCAPSW NPMIDIOUTCAPSW;
+typedef PMIDIOUTCAPSW LPMIDIOUTCAPSW;
+typedef struct tagMIDIOUTCAPSA /* id 22 */ MIDIOUTCAPS;
+typedef PMIDIOUTCAPSA PMIDIOUTCAPS;
+typedef PMIDIOUTCAPSA NPMIDIOUTCAPS;
+typedef PMIDIOUTCAPSA LPMIDIOUTCAPS;
+struct tagMIDIINCAPSA { /* size 44 id 24 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 320 */
+};
+typedef struct tagMIDIINCAPSA /* id 24 */ MIDIINCAPSA;
+typedef struct tagMIDIINCAPSA /* id 24 */ *PMIDIINCAPSA;
+typedef PMIDIINCAPSA NPMIDIINCAPSA;
+typedef PMIDIINCAPSA LPMIDIINCAPSA;
+struct tagMIDIINCAPSW { /* size 76 id 25 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 576 */
+};
+typedef struct tagMIDIINCAPSW /* id 25 */ MIDIINCAPSW;
+typedef struct tagMIDIINCAPSW /* id 25 */ *PMIDIINCAPSW;
+typedef PMIDIINCAPSW NPMIDIINCAPSW;
+typedef PMIDIINCAPSW LPMIDIINCAPSW;
+typedef struct tagMIDIINCAPSA /* id 24 */ MIDIINCAPS;
+typedef PMIDIINCAPSA PMIDIINCAPS;
+typedef PMIDIINCAPSA NPMIDIINCAPS;
+typedef PMIDIINCAPSA LPMIDIINCAPS;
+struct midihdr_tag { /* size 64 id 26 */
+  PSTR lpData; /* bitsize 32, bitpos 0 */
+  long unsigned int dwBufferLength; /* bitsize 32, bitpos 32 */
+  long unsigned int dwBytesRecorded; /* bitsize 32, bitpos 64 */
+  long unsigned int dwUser; /* bitsize 32, bitpos 96 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 128 */
+  struct midihdr_tag /* id 26 */ *lpNext; /* bitsize 32, bitpos 160 */
+  long unsigned int reserved; /* bitsize 32, bitpos 192 */
+  long unsigned int dwOffset; /* bitsize 32, bitpos 224 */
+  long unsigned int dwReserved[8]; /* bitsize 256, bitpos 256 */
+};
+typedef struct midihdr_tag /* id 26 */ MIDIHDR;
+typedef struct midihdr_tag /* id 26 */ *PMIDIHDR;
+typedef struct midihdr_tag /* id 26 */ *NPMIDIHDR;
+typedef struct midihdr_tag /* id 26 */ *LPMIDIHDR;
+struct midievent_tag { /* size 16 id 27 */
+  long unsigned int dwDeltaTime; /* bitsize 32, bitpos 0 */
+  long unsigned int dwStreamID; /* bitsize 32, bitpos 32 */
+  long unsigned int dwEvent; /* bitsize 32, bitpos 64 */
+  long unsigned int dwParms[1]; /* bitsize 32, bitpos 96 */
+};
+typedef struct midievent_tag /* id 27 */ MIDIEVENT;
+struct midistrmbuffver_tag { /* size 12 id 28 */
+  long unsigned int dwVersion; /* bitsize 32, bitpos 0 */
+  long unsigned int dwMid; /* bitsize 32, bitpos 32 */
+  long unsigned int dwOEMVersion; /* bitsize 32, bitpos 64 */
+};
+typedef struct midistrmbuffver_tag /* id 28 */ MIDISTRMBUFFVER;
+struct midiproptimediv_tag { /* size 8 id 29 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTimeDiv; /* bitsize 32, bitpos 32 */
+};
+typedef struct midiproptimediv_tag /* id 29 */ MIDIPROPTIMEDIV;
+typedef struct midiproptimediv_tag /* id 29 */ *LPMIDIPROPTIMEDIV;
+struct midiproptempo_tag { /* size 8 id 30 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTempo; /* bitsize 32, bitpos 32 */
+};
+typedef struct midiproptempo_tag /* id 30 */ MIDIPROPTEMPO;
+typedef struct midiproptempo_tag /* id 30 */ *LPMIDIPROPTEMPO;
+unsigned int midiOutGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamOpen (LPHMIDISTRM phms /* 0x8 */, LPUINT puDeviceID /* 0xc */, long unsigned int cMidi /* 0x10 */, long unsigned int dwCallback /* 0x14 */, long unsigned int dwInstance /* 0x18 */, long unsigned int fdwOpen /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamClose (long int hms /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamProperty (long int hms /* 0x8 */, PBYTE lppropdata /* 0xc */, long unsigned int dwProperty /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamPosition (long int hms /* 0x8 */, PMMTIME lpmmt /* 0xc */, unsigned int cbmmt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamOut (long int hms /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamPause (long int hms /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamRestart (long int hms /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiStreamStop (long int hms /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiConnect (long int hmi /* 0x8 */, long int hmo /* 0xc */, PVOID pReserved /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiDisconnect (long int hmi /* 0x8 */, long int hmo /* 0xc */, PVOID pReserved /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetDevCapsA (unsigned int uDeviceID /* 0x8 */, PMIDIOUTCAPSA pmoc /* 0xc */, unsigned int cbmoc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetDevCapsW (unsigned int uDeviceID /* 0x8 */, PMIDIOUTCAPSW pmoc /* 0xc */, unsigned int cbmoc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetVolume (long int hmo /* 0x8 */, PDWORD pdwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutSetVolume (long int hmo /* 0x8 */, long unsigned int dwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetErrorTextA (unsigned int mmrError /* 0x8 */, PSTR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetErrorTextW (unsigned int mmrError /* 0x8 */, PWCHAR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutOpen (LPHMIDIOUT phmo /* 0x8 */, unsigned int uDeviceID /* 0xc */, long unsigned int dwCallback /* 0x10 */, long unsigned int dwInstance /* 0x14 */, long unsigned int fdwOpen /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutClose (long int hmo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutPrepareHeader (long int hmo /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutUnprepareHeader (long int hmo /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutShortMsg (long int hmo /* 0x8 */, long unsigned int dwMsg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutLongMsg (long int hmo /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutReset (long int hmo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutCachePatches (long int hmo /* 0x8 */, unsigned int uBank /* 0xc */, PWORD pwpa /* 0x10 */, unsigned int fuCache /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutCacheDrumPatches (long int hmo /* 0x8 */, unsigned int uPatch /* 0xc */, PWORD pwkya /* 0x10 */, unsigned int fuCache /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutGetID (long int hmo /* 0x8 */, LPUINT puDeviceID /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiOutMessage (long int hmo /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dw1 /* 0x10 */, long unsigned int dw2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetDevCapsA (unsigned int uDeviceID /* 0x8 */, PMIDIINCAPSA pmic /* 0xc */, unsigned int cbmic /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetDevCapsW (unsigned int uDeviceID /* 0x8 */, PMIDIINCAPSW pmic /* 0xc */, unsigned int cbmic /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetErrorTextA (unsigned int mmrError /* 0x8 */, PSTR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetErrorTextW (unsigned int mmrError /* 0x8 */, PWCHAR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInOpen (LPHMIDIIN phmi /* 0x8 */, unsigned int uDeviceID /* 0xc */, long unsigned int dwCallback /* 0x10 */, long unsigned int dwInstance /* 0x14 */, long unsigned int fdwOpen /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInClose (long int hmi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInPrepareHeader (long int hmi /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInUnprepareHeader (long int hmi /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInAddBuffer (long int hmi /* 0x8 */, struct midihdr_tag /* id 26 */ *pmh /* 0xc */, unsigned int cbmh /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInStart (long int hmi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInStop (long int hmi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInReset (long int hmi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInGetID (long int hmi /* 0x8 */, LPUINT puDeviceID /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int midiInMessage (long int hmi /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dw1 /* 0x10 */, long unsigned int dw2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagAUXCAPSA { /* size 48 id 31 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  short unsigned int wTechnology; /* bitsize 16, bitpos 320 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 336 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagAUXCAPSA /* id 31 */ AUXCAPSA;
+typedef struct tagAUXCAPSA /* id 31 */ *PAUXCAPSA;
+typedef PAUXCAPSA NPAUXCAPSA;
+typedef PAUXCAPSA LPAUXCAPSA;
+struct tagAUXCAPSW { /* size 80 id 32 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  short unsigned int wTechnology; /* bitsize 16, bitpos 576 */
+  short unsigned int wReserved1; /* bitsize 16, bitpos 592 */
+  long unsigned int dwSupport; /* bitsize 32, bitpos 608 */
+};
+typedef struct tagAUXCAPSW /* id 32 */ AUXCAPSW;
+typedef struct tagAUXCAPSW /* id 32 */ *PAUXCAPSW;
+typedef PAUXCAPSW NPAUXCAPSW;
+typedef PAUXCAPSW LPAUXCAPSW;
+typedef struct tagAUXCAPSA /* id 31 */ AUXCAPS;
+typedef PAUXCAPSA PAUXCAPS;
+typedef PAUXCAPSA NPAUXCAPS;
+typedef PAUXCAPSA LPAUXCAPS;
+unsigned int auxGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int auxGetDevCapsA (unsigned int uDeviceID /* 0x8 */, PAUXCAPSA pac /* 0xc */, unsigned int cbac /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int auxGetDevCapsW (unsigned int uDeviceID /* 0x8 */, PAUXCAPSW pac /* 0xc */, unsigned int cbac /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int auxSetVolume (unsigned int uDeviceID /* 0x8 */, long unsigned int dwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int auxGetVolume (unsigned int uDeviceID /* 0x8 */, PDWORD pdwVolume /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int auxOutMessage (unsigned int uDeviceID /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dw1 /* 0x10 */, long unsigned int dw2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long int HMIXEROBJ;
+typedef long int *LPHMIXEROBJ;
+typedef long int HMIXER;
+typedef long int *LPHMIXER;
+unsigned int mixerGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMIXERCAPSA { /* size 48 id 33 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 64 */
+  long unsigned int fdwSupport; /* bitsize 32, bitpos 320 */
+  long unsigned int cDestinations; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagMIXERCAPSA /* id 33 */ MIXERCAPSA;
+typedef struct tagMIXERCAPSA /* id 33 */ *PMIXERCAPSA;
+typedef PMIXERCAPSA LPMIXERCAPSA;
+struct tagMIXERCAPSW { /* size 80 id 34 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned int vDriverVersion; /* bitsize 32, bitpos 32 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 64 */
+  long unsigned int fdwSupport; /* bitsize 32, bitpos 576 */
+  long unsigned int cDestinations; /* bitsize 32, bitpos 608 */
+};
+typedef struct tagMIXERCAPSW /* id 34 */ MIXERCAPSW;
+typedef struct tagMIXERCAPSW /* id 34 */ *PMIXERCAPSW;
+typedef PMIXERCAPSW LPMIXERCAPSW;
+typedef struct tagMIXERCAPSA /* id 33 */ MIXERCAPS;
+typedef PMIXERCAPSA PMIXERCAPS;
+typedef PMIXERCAPSA LPMIXERCAPS;
+unsigned int mixerGetDevCapsA (unsigned int uMxId /* 0x8 */, PMIXERCAPSA pmxcaps /* 0xc */, unsigned int cbmxcaps /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerGetDevCapsW (unsigned int uMxId /* 0x8 */, PMIXERCAPSW pmxcaps /* 0xc */, unsigned int cbmxcaps /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerOpen (LPHMIXER phmx /* 0x8 */, unsigned int uMxId /* 0xc */, long unsigned int dwCallback /* 0x10 */, long unsigned int dwInstance /* 0x14 */, long unsigned int fdwOpen /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerClose (long int hmx /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int mixerMessage (long int hmx /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dwParam1 /* 0x10 */, long unsigned int dwParam2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMIXERLINEA { /* size 168 id 35 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwDestination; /* bitsize 32, bitpos 32 */
+  long unsigned int dwSource; /* bitsize 32, bitpos 64 */
+  long unsigned int dwLineID; /* bitsize 32, bitpos 96 */
+  long unsigned int fdwLine; /* bitsize 32, bitpos 128 */
+  long unsigned int dwUser; /* bitsize 32, bitpos 160 */
+  long unsigned int dwComponentType; /* bitsize 32, bitpos 192 */
+  long unsigned int cChannels; /* bitsize 32, bitpos 224 */
+  long unsigned int cConnections; /* bitsize 32, bitpos 256 */
+  long unsigned int cControls; /* bitsize 32, bitpos 288 */
+  unsigned char szShortName[16]; /* bitsize 128, bitpos 320 */
+  unsigned char szName[64]; /* bitsize 512, bitpos 448 */
+  struct %anon36 { /* size 48 */
+    long unsigned int dwType; /* bitsize 32, bitpos 0 */
+    long unsigned int dwDeviceID; /* bitsize 32, bitpos 32 */
+    short unsigned int wMid; /* bitsize 16, bitpos 64 */
+    short unsigned int wPid; /* bitsize 16, bitpos 80 */
+    unsigned int vDriverVersion; /* bitsize 32, bitpos 96 */
+    unsigned char szPname[32]; /* bitsize 256, bitpos 128 */
+  } Target; /* bitsize 384, bitpos 960 */
+};
+typedef struct tagMIXERLINEA /* id 35 */ MIXERLINEA;
+typedef struct tagMIXERLINEA /* id 35 */ *PMIXERLINEA;
+typedef PMIXERLINEA LPMIXERLINEA;
+struct tagMIXERLINEW { /* size 280 id 37 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwDestination; /* bitsize 32, bitpos 32 */
+  long unsigned int dwSource; /* bitsize 32, bitpos 64 */
+  long unsigned int dwLineID; /* bitsize 32, bitpos 96 */
+  long unsigned int fdwLine; /* bitsize 32, bitpos 128 */
+  long unsigned int dwUser; /* bitsize 32, bitpos 160 */
+  long unsigned int dwComponentType; /* bitsize 32, bitpos 192 */
+  long unsigned int cChannels; /* bitsize 32, bitpos 224 */
+  long unsigned int cConnections; /* bitsize 32, bitpos 256 */
+  long unsigned int cControls; /* bitsize 32, bitpos 288 */
+  short unsigned int szShortName[16]; /* bitsize 256, bitpos 320 */
+  short unsigned int szName[64]; /* bitsize 1024, bitpos 576 */
+  struct %anon38 { /* size 80 */
+    long unsigned int dwType; /* bitsize 32, bitpos 0 */
+    long unsigned int dwDeviceID; /* bitsize 32, bitpos 32 */
+    short unsigned int wMid; /* bitsize 16, bitpos 64 */
+    short unsigned int wPid; /* bitsize 16, bitpos 80 */
+    unsigned int vDriverVersion; /* bitsize 32, bitpos 96 */
+    short unsigned int szPname[32]; /* bitsize 512, bitpos 128 */
+  } Target; /* bitsize 640, bitpos 1600 */
+};
+typedef struct tagMIXERLINEW /* id 37 */ MIXERLINEW;
+typedef struct tagMIXERLINEW /* id 37 */ *PMIXERLINEW;
+typedef PMIXERLINEW LPMIXERLINEW;
+typedef struct tagMIXERLINEA /* id 35 */ MIXERLINE;
+typedef PMIXERLINEA PMIXERLINE;
+typedef PMIXERLINEA LPMIXERLINE;
+unsigned int mixerGetLineInfoA (long int hmxobj /* 0x8 */, PMIXERLINEA pmxl /* 0xc */, long unsigned int fdwInfo /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerGetLineInfoW (long int hmxobj /* 0x8 */, PMIXERLINEW pmxl /* 0xc */, long unsigned int fdwInfo /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerGetID (long int hmxobj /* 0x8 */, LPUINT puMxId /* 0xc */, long unsigned int fdwId /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMIXERCONTROLA { /* size 148 id 39 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwControlID; /* bitsize 32, bitpos 32 */
+  long unsigned int dwControlType; /* bitsize 32, bitpos 64 */
+  long unsigned int fdwControl; /* bitsize 32, bitpos 96 */
+  long unsigned int cMultipleItems; /* bitsize 32, bitpos 128 */
+  unsigned char szShortName[16]; /* bitsize 128, bitpos 160 */
+  unsigned char szName[64]; /* bitsize 512, bitpos 288 */
+  union %anon40 { /* size 24 */
+    long unsigned int dwReserved[6]; /* bitsize 192, bitpos 0 */
+  } Bounds; /* bitsize 192, bitpos 800 */
+  union %anon41 { /* size 24 */
+    long unsigned int cSteps; /* bitsize 32, bitpos 0 */
+    long unsigned int cbCustomData; /* bitsize 32, bitpos 0 */
+    long unsigned int dwReserved[6]; /* bitsize 192, bitpos 0 */
+  } Metrics; /* bitsize 192, bitpos 992 */
+};
+typedef struct tagMIXERCONTROLA /* id 39 */ MIXERCONTROLA;
+typedef struct tagMIXERCONTROLA /* id 39 */ *PMIXERCONTROLA;
+typedef PMIXERCONTROLA LPMIXERCONTROLA;
+struct tagMIXERCONTROLW { /* size 228 id 42 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwControlID; /* bitsize 32, bitpos 32 */
+  long unsigned int dwControlType; /* bitsize 32, bitpos 64 */
+  long unsigned int fdwControl; /* bitsize 32, bitpos 96 */
+  long unsigned int cMultipleItems; /* bitsize 32, bitpos 128 */
+  short unsigned int szShortName[16]; /* bitsize 256, bitpos 160 */
+  short unsigned int szName[64]; /* bitsize 1024, bitpos 416 */
+  union %anon40 { /* size 24 */
+    long unsigned int dwReserved[6]; /* bitsize 192, bitpos 0 */
+  } Bounds; /* bitsize 192, bitpos 1440 */
+  union %anon41 { /* size 24 */
+    long unsigned int cSteps; /* bitsize 32, bitpos 0 */
+    long unsigned int cbCustomData; /* bitsize 32, bitpos 0 */
+    long unsigned int dwReserved[6]; /* bitsize 192, bitpos 0 */
+  } Metrics; /* bitsize 192, bitpos 1632 */
+};
+typedef struct tagMIXERCONTROLW /* id 42 */ MIXERCONTROLW;
+typedef struct tagMIXERCONTROLW /* id 42 */ *PMIXERCONTROLW;
+typedef PMIXERCONTROLW LPMIXERCONTROLW;
+typedef struct tagMIXERCONTROLA /* id 39 */ MIXERCONTROL;
+typedef PMIXERCONTROLA PMIXERCONTROL;
+typedef PMIXERCONTROLA LPMIXERCONTROL;
+struct tagMIXERLINECONTROLSA { /* size 20 id 43 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwLineID; /* bitsize 32, bitpos 32 */
+  long unsigned int cControls; /* bitsize 32, bitpos 64 */
+  long unsigned int cbmxctrl; /* bitsize 32, bitpos 96 */
+  PMIXERCONTROLA pamxctrl; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMIXERLINECONTROLSA /* id 43 */ MIXERLINECONTROLSA;
+typedef struct tagMIXERLINECONTROLSA /* id 43 */ *PMIXERLINECONTROLSA;
+typedef PMIXERLINECONTROLSA LPMIXERLINECONTROLSA;
+struct tagMIXERLINECONTROLSW { /* size 20 id 44 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwLineID; /* bitsize 32, bitpos 32 */
+  long unsigned int cControls; /* bitsize 32, bitpos 64 */
+  long unsigned int cbmxctrl; /* bitsize 32, bitpos 96 */
+  PMIXERCONTROLW pamxctrl; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMIXERLINECONTROLSW /* id 44 */ MIXERLINECONTROLSW;
+typedef struct tagMIXERLINECONTROLSW /* id 44 */ *PMIXERLINECONTROLSW;
+typedef PMIXERLINECONTROLSW LPMIXERLINECONTROLSW;
+typedef struct tagMIXERLINECONTROLSA /* id 43 */ MIXERLINECONTROLS;
+typedef PMIXERLINECONTROLSA PMIXERLINECONTROLS;
+typedef PMIXERLINECONTROLSA LPMIXERLINECONTROLS;
+unsigned int mixerGetLineControlsA (long int hmxobj /* 0x8 */, PMIXERLINECONTROLSA pmxlc /* 0xc */, long unsigned int fdwControls /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerGetLineControlsW (long int hmxobj /* 0x8 */, PMIXERLINECONTROLSW pmxlc /* 0xc */, long unsigned int fdwControls /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tMIXERCONTROLDETAILS { /* size 20 id 45 */
+  long unsigned int cbStruct; /* bitsize 32, bitpos 0 */
+  long unsigned int dwControlID; /* bitsize 32, bitpos 32 */
+  long unsigned int cChannels; /* bitsize 32, bitpos 64 */
+  long unsigned int cbDetails; /* bitsize 32, bitpos 96 */
+  PVOID paDetails; /* bitsize 32, bitpos 128 */
+};
+typedef struct tMIXERCONTROLDETAILS /* id 45 */ MIXERCONTROLDETAILS;
+typedef struct tMIXERCONTROLDETAILS /* id 45 */ *PMIXERCONTROLDETAILS;
+typedef PMIXERCONTROLDETAILS LPMIXERCONTROLDETAILS;
+struct tagMIXERCONTROLDETAILS_LISTTEXTA { /* size 72 id 46 */
+  long unsigned int dwParam1; /* bitsize 32, bitpos 0 */
+  long unsigned int dwParam2; /* bitsize 32, bitpos 32 */
+  unsigned char szName[64]; /* bitsize 512, bitpos 64 */
+};
+typedef struct tagMIXERCONTROLDETAILS_LISTTEXTA /* id 46 */ MIXERCONTROLDETAILS_LISTTEXTA;
+typedef struct tagMIXERCONTROLDETAILS_LISTTEXTA /* id 46 */ *PMIXERCONTROLDETAILS_LISTTEXTA;
+typedef PMIXERCONTROLDETAILS_LISTTEXTA LPMIXERCONTROLDETAILS_LISTTEXTA;
+struct tagMIXERCONTROLDETAILS_LISTTEXTW { /* size 136 id 47 */
+  long unsigned int dwParam1; /* bitsize 32, bitpos 0 */
+  long unsigned int dwParam2; /* bitsize 32, bitpos 32 */
+  short unsigned int szName[64]; /* bitsize 1024, bitpos 64 */
+};
+typedef struct tagMIXERCONTROLDETAILS_LISTTEXTW /* id 47 */ MIXERCONTROLDETAILS_LISTTEXTW;
+typedef struct tagMIXERCONTROLDETAILS_LISTTEXTW /* id 47 */ *PMIXERCONTROLDETAILS_LISTTEXTW;
+typedef PMIXERCONTROLDETAILS_LISTTEXTW LPMIXERCONTROLDETAILS_LISTTEXTW;
+typedef struct tagMIXERCONTROLDETAILS_LISTTEXTA /* id 46 */ MIXERCONTROLDETAILS_LISTTEXT;
+typedef PMIXERCONTROLDETAILS_LISTTEXTA PMIXERCONTROLDETAILS_LISTTEXT;
+typedef PMIXERCONTROLDETAILS_LISTTEXTA LPMIXERCONTROLDETAILS_LISTTEXT;
+struct tMIXERCONTROLDETAILS_BOOLEAN { /* size 4 id 48 */
+  long int fValue; /* bitsize 32, bitpos 0 */
+};
+typedef struct tMIXERCONTROLDETAILS_BOOLEAN /* id 48 */ MIXERCONTROLDETAILS_BOOLEAN;
+typedef struct tMIXERCONTROLDETAILS_BOOLEAN /* id 48 */ *PMIXERCONTROLDETAILS_BOOLEAN;
+typedef PMIXERCONTROLDETAILS_BOOLEAN LPMIXERCONTROLDETAILS_BOOLEAN;
+struct tMIXERCONTROLDETAILS_SIGNED { /* size 4 id 49 */
+  long int lValue; /* bitsize 32, bitpos 0 */
+};
+typedef struct tMIXERCONTROLDETAILS_SIGNED /* id 49 */ MIXERCONTROLDETAILS_SIGNED;
+typedef struct tMIXERCONTROLDETAILS_SIGNED /* id 49 */ *PMIXERCONTROLDETAILS_SIGNED;
+typedef PMIXERCONTROLDETAILS_SIGNED LPMIXERCONTROLDETAILS_SIGNED;
+struct tMIXERCONTROLDETAILS_UNSIGNED { /* size 4 id 50 */
+  long unsigned int dwValue; /* bitsize 32, bitpos 0 */
+};
+typedef struct tMIXERCONTROLDETAILS_UNSIGNED /* id 50 */ MIXERCONTROLDETAILS_UNSIGNED;
+typedef struct tMIXERCONTROLDETAILS_UNSIGNED /* id 50 */ *PMIXERCONTROLDETAILS_UNSIGNED;
+typedef PMIXERCONTROLDETAILS_UNSIGNED LPMIXERCONTROLDETAILS_UNSIGNED;
+unsigned int mixerGetControlDetailsA (long int hmxobj /* 0x8 */, PMIXERCONTROLDETAILS pmxcd /* 0xc */, long unsigned int fdwDetails /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerGetControlDetailsW (long int hmxobj /* 0x8 */, PMIXERCONTROLDETAILS pmxcd /* 0xc */, long unsigned int fdwDetails /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mixerSetControlDetails (long int hmxobj /* 0x8 */, PMIXERCONTROLDETAILS pmxcd /* 0xc */, long unsigned int fdwDetails /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef void (TIMECALLBACK) (/* unknown */);
+typedef TIMECALLBACK *LPTIMECALLBACK;
+struct timecaps_tag { /* size 8 id 51 */
+  unsigned int wPeriodMin; /* bitsize 32, bitpos 0 */
+  unsigned int wPeriodMax; /* bitsize 32, bitpos 32 */
+};
+typedef struct timecaps_tag /* id 51 */ TIMECAPS;
+typedef struct timecaps_tag /* id 51 */ *PTIMECAPS;
+typedef PTIMECAPS NPTIMECAPS;
+typedef PTIMECAPS LPTIMECAPS;
+unsigned int timeGetSystemTime (PMMTIME pmmt /* 0x8 */, unsigned int cbmmt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int timeGetTime ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int timeSetEvent (unsigned int uDelay /* 0x8 */, unsigned int uResolution /* 0xc */, LPTIMECALLBACK fptc /* 0x10 */, long unsigned int dwUser /* 0x14 */, unsigned int fuEvent /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int timeKillEvent (unsigned int uTimerID /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int timeGetDevCaps (PTIMECAPS ptc /* 0x8 */, unsigned int cbtc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int timeBeginPeriod (unsigned int uPeriod /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int timeEndPeriod (unsigned int uPeriod /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagJOYCAPSA { /* size 404 id 52 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  unsigned char szPname[32]; /* bitsize 256, bitpos 32 */
+  unsigned int wXmin; /* bitsize 32, bitpos 288 */
+  unsigned int wXmax; /* bitsize 32, bitpos 320 */
+  unsigned int wYmin; /* bitsize 32, bitpos 352 */
+  unsigned int wYmax; /* bitsize 32, bitpos 384 */
+  unsigned int wZmin; /* bitsize 32, bitpos 416 */
+  unsigned int wZmax; /* bitsize 32, bitpos 448 */
+  unsigned int wNumButtons; /* bitsize 32, bitpos 480 */
+  unsigned int wPeriodMin; /* bitsize 32, bitpos 512 */
+  unsigned int wPeriodMax; /* bitsize 32, bitpos 544 */
+  unsigned int wRmin; /* bitsize 32, bitpos 576 */
+  unsigned int wRmax; /* bitsize 32, bitpos 608 */
+  unsigned int wUmin; /* bitsize 32, bitpos 640 */
+  unsigned int wUmax; /* bitsize 32, bitpos 672 */
+  unsigned int wVmin; /* bitsize 32, bitpos 704 */
+  unsigned int wVmax; /* bitsize 32, bitpos 736 */
+  unsigned int wCaps; /* bitsize 32, bitpos 768 */
+  unsigned int wMaxAxes; /* bitsize 32, bitpos 800 */
+  unsigned int wNumAxes; /* bitsize 32, bitpos 832 */
+  unsigned int wMaxButtons; /* bitsize 32, bitpos 864 */
+  unsigned char szRegKey[32]; /* bitsize 256, bitpos 896 */
+  unsigned char szOEMVxD[260]; /* bitsize 2080, bitpos 1152 */
+};
+typedef struct tagJOYCAPSA /* id 52 */ JOYCAPSA;
+typedef struct tagJOYCAPSA /* id 52 */ *PJOYCAPSA;
+typedef PJOYCAPSA NPJOYCAPSA;
+typedef PJOYCAPSA LPJOYCAPSA;
+struct tagJOYCAPSW { /* size 728 id 53 */
+  short unsigned int wMid; /* bitsize 16, bitpos 0 */
+  short unsigned int wPid; /* bitsize 16, bitpos 16 */
+  short unsigned int szPname[32]; /* bitsize 512, bitpos 32 */
+  unsigned int wXmin; /* bitsize 32, bitpos 544 */
+  unsigned int wXmax; /* bitsize 32, bitpos 576 */
+  unsigned int wYmin; /* bitsize 32, bitpos 608 */
+  unsigned int wYmax; /* bitsize 32, bitpos 640 */
+  unsigned int wZmin; /* bitsize 32, bitpos 672 */
+  unsigned int wZmax; /* bitsize 32, bitpos 704 */
+  unsigned int wNumButtons; /* bitsize 32, bitpos 736 */
+  unsigned int wPeriodMin; /* bitsize 32, bitpos 768 */
+  unsigned int wPeriodMax; /* bitsize 32, bitpos 800 */
+  unsigned int wRmin; /* bitsize 32, bitpos 832 */
+  unsigned int wRmax; /* bitsize 32, bitpos 864 */
+  unsigned int wUmin; /* bitsize 32, bitpos 896 */
+  unsigned int wUmax; /* bitsize 32, bitpos 928 */
+  unsigned int wVmin; /* bitsize 32, bitpos 960 */
+  unsigned int wVmax; /* bitsize 32, bitpos 992 */
+  unsigned int wCaps; /* bitsize 32, bitpos 1024 */
+  unsigned int wMaxAxes; /* bitsize 32, bitpos 1056 */
+  unsigned int wNumAxes; /* bitsize 32, bitpos 1088 */
+  unsigned int wMaxButtons; /* bitsize 32, bitpos 1120 */
+  short unsigned int szRegKey[32]; /* bitsize 512, bitpos 1152 */
+  short unsigned int szOEMVxD[260]; /* bitsize 4160, bitpos 1664 */
+};
+typedef struct tagJOYCAPSW /* id 53 */ JOYCAPSW;
+typedef struct tagJOYCAPSW /* id 53 */ *PJOYCAPSW;
+typedef PJOYCAPSW NPJOYCAPSW;
+typedef PJOYCAPSW LPJOYCAPSW;
+typedef struct tagJOYCAPSA /* id 52 */ JOYCAPS;
+typedef PJOYCAPSA PJOYCAPS;
+typedef PJOYCAPSA NPJOYCAPS;
+typedef PJOYCAPSA LPJOYCAPS;
+struct joyinfo_tag { /* size 16 id 54 */
+  unsigned int wXpos; /* bitsize 32, bitpos 0 */
+  unsigned int wYpos; /* bitsize 32, bitpos 32 */
+  unsigned int wZpos; /* bitsize 32, bitpos 64 */
+  unsigned int wButtons; /* bitsize 32, bitpos 96 */
+};
+typedef struct joyinfo_tag /* id 54 */ JOYINFO;
+typedef struct joyinfo_tag /* id 54 */ *PJOYINFO;
+typedef PJOYINFO NPJOYINFO;
+typedef PJOYINFO LPJOYINFO;
+struct joyinfoex_tag { /* size 52 id 55 */
+  long unsigned int dwSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int dwXpos; /* bitsize 32, bitpos 64 */
+  long unsigned int dwYpos; /* bitsize 32, bitpos 96 */
+  long unsigned int dwZpos; /* bitsize 32, bitpos 128 */
+  long unsigned int dwRpos; /* bitsize 32, bitpos 160 */
+  long unsigned int dwUpos; /* bitsize 32, bitpos 192 */
+  long unsigned int dwVpos; /* bitsize 32, bitpos 224 */
+  long unsigned int dwButtons; /* bitsize 32, bitpos 256 */
+  long unsigned int dwButtonNumber; /* bitsize 32, bitpos 288 */
+  long unsigned int dwPOV; /* bitsize 32, bitpos 320 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 352 */
+  long unsigned int dwReserved2; /* bitsize 32, bitpos 384 */
+};
+typedef struct joyinfoex_tag /* id 55 */ JOYINFOEX;
+typedef struct joyinfoex_tag /* id 55 */ *PJOYINFOEX;
+typedef PJOYINFOEX NPJOYINFOEX;
+typedef PJOYINFOEX LPJOYINFOEX;
+unsigned int joyGetNumDevs ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyGetDevCapsA (unsigned int uJoyID /* 0x8 */, PJOYCAPSA pjc /* 0xc */, unsigned int cbjc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyGetDevCapsW (unsigned int uJoyID /* 0x8 */, PJOYCAPSW pjc /* 0xc */, unsigned int cbjc /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyGetPos (unsigned int uJoyID /* 0x8 */, PJOYINFO pji /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyGetPosEx (unsigned int uJoyID /* 0x8 */, PJOYINFOEX pji /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyGetThreshold (unsigned int uJoyID /* 0x8 */, LPUINT puThreshold /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joyReleaseCapture (unsigned int uJoyID /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joySetCapture (long int hwnd /* 0x8 */, unsigned int uJoyID /* 0xc */, unsigned int uPeriod /* 0x10 */, int fChanged /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int joySetThreshold (unsigned int uJoyID /* 0x8 */, unsigned int uThreshold /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int FOURCC;
+typedef LPCBYTE HPSTR;
+typedef long int HMMIO;
+typedef long int (MMIOPROC) (/* unknown */);
+typedef MMIOPROC *LPMMIOPROC;
+struct _MMIOINFO { /* size 72 id 56 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 0 */
+  long unsigned int fccIOProc; /* bitsize 32, bitpos 32 */
+  LPMMIOPROC pIOProc; /* bitsize 32, bitpos 64 */
+  unsigned int wErrorRet; /* bitsize 32, bitpos 96 */
+  long int htask; /* bitsize 32, bitpos 128 */
+  long int cchBuffer; /* bitsize 32, bitpos 160 */
+  LPCBYTE pchBuffer; /* bitsize 32, bitpos 192 */
+  LPCBYTE pchNext; /* bitsize 32, bitpos 224 */
+  LPCBYTE pchEndRead; /* bitsize 32, bitpos 256 */
+  LPCBYTE pchEndWrite; /* bitsize 32, bitpos 288 */
+  long int lBufOffset; /* bitsize 32, bitpos 320 */
+  long int lDiskOffset; /* bitsize 32, bitpos 352 */
+  long unsigned int adwInfo[3]; /* bitsize 96, bitpos 384 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 480 */
+  long unsigned int dwReserved2; /* bitsize 32, bitpos 512 */
+  long int hmmio; /* bitsize 32, bitpos 544 */
+};
+typedef struct _MMIOINFO /* id 56 */ MMIOINFO;
+typedef struct _MMIOINFO /* id 56 */ *PMMIOINFO;
+typedef PMMIOINFO NPMMIOINFO;
+typedef PMMIOINFO LPMMIOINFO;
+typedef struct _MMIOINFO /* id 56 */ *LPCMMIOINFO;
+struct _MMCKINFO { /* size 20 id 57 */
+  long unsigned int ckid; /* bitsize 32, bitpos 0 */
+  long unsigned int cksize; /* bitsize 32, bitpos 32 */
+  long unsigned int fccType; /* bitsize 32, bitpos 64 */
+  long unsigned int dwDataOffset; /* bitsize 32, bitpos 96 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 128 */
+};
+typedef struct _MMCKINFO /* id 57 */ MMCKINFO;
+typedef struct _MMCKINFO /* id 57 */ *PMMCKINFO;
+typedef PMMCKINFO NPMMCKINFO;
+typedef PMMCKINFO LPMMCKINFO;
+typedef struct _MMCKINFO /* id 57 */ *LPCMMCKINFO;
+long unsigned int mmioStringToFOURCCA (PSTR sz /* 0x8 */, unsigned int uFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int mmioStringToFOURCCW (PWCHAR sz /* 0x8 */, unsigned int uFlags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+LPMMIOPROC mmioInstallIOProcA (long unsigned int fccIOProc /* 0x8 */, LPMMIOPROC pIOProc /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+LPMMIOPROC mmioInstallIOProcW (long unsigned int fccIOProc /* 0x8 */, LPMMIOPROC pIOProc /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioOpenA (PSTR pszFileName /* 0x8 */, PMMIOINFO pmmioinfo /* 0xc */, long unsigned int fdwOpen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioOpenW (PWCHAR pszFileName /* 0x8 */, PMMIOINFO pmmioinfo /* 0xc */, long unsigned int fdwOpen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioRenameA (PSTR pszFileName /* 0x8 */, PSTR pszNewFileName /* 0xc */, LPCMMIOINFO pmmioinfo /* 0x10 */, long unsigned int fdwRename /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioRenameW (PWCHAR pszFileName /* 0x8 */, PWCHAR pszNewFileName /* 0xc */, LPCMMIOINFO pmmioinfo /* 0x10 */, long unsigned int fdwRename /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioClose (long int hmmio /* 0x8 */, unsigned int fuClose /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioRead (long int hmmio /* 0x8 */, LPCBYTE pch /* 0xc */, long int cch /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioWrite (long int hmmio /* 0x8 */, char *pch /* 0xc */, long int cch /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioSeek (long int hmmio /* 0x8 */, long int lOffset /* 0xc */, int iOrigin /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioGetInfo (long int hmmio /* 0x8 */, PMMIOINFO pmmioinfo /* 0xc */, unsigned int fuInfo /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioSetInfo (long int hmmio /* 0x8 */, LPCMMIOINFO pmmioinfo /* 0xc */, unsigned int fuInfo /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioSetBuffer (long int hmmio /* 0x8 */, PSTR pchBuffer /* 0xc */, long int cchBuffer /* 0x10 */, unsigned int fuBuffer /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioFlush (long int hmmio /* 0x8 */, unsigned int fuFlush /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioAdvance (long int hmmio /* 0x8 */, PMMIOINFO pmmioinfo /* 0xc */, unsigned int fuAdvance /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mmioSendMessage (long int hmmio /* 0x8 */, unsigned int uMsg /* 0xc */, long int lParam1 /* 0x10 */, long int lParam2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioDescend (long int hmmio /* 0x8 */, PMMCKINFO pmmcki /* 0xc */, LPCMMCKINFO pmmckiParent /* 0x10 */, unsigned int fuDescend /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioAscend (long int hmmio /* 0x8 */, PMMCKINFO pmmcki /* 0xc */, unsigned int fuAscend /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mmioCreateChunk (long int hmmio /* 0x8 */, PMMCKINFO pmmcki /* 0xc */, unsigned int fuCreate /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int MCIERROR;
+typedef unsigned int MCIDEVICEID;
+typedef unsigned int (*YIELDPROC) (/* unknown */);
+long unsigned int mciSendCommandA (unsigned int mciId /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dwParam1 /* 0x10 */, long unsigned int dwParam2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int mciSendCommandW (unsigned int mciId /* 0x8 */, unsigned int uMsg /* 0xc */, long unsigned int dwParam1 /* 0x10 */, long unsigned int dwParam2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int mciSendStringA (PSTR lpstrCommand /* 0x8 */, PSTR lpstrReturnString /* 0xc */, unsigned int uReturnLength /* 0x10 */, long int hwndCallback /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int mciSendStringW (PWCHAR lpstrCommand /* 0x8 */, PWCHAR lpstrReturnString /* 0xc */, unsigned int uReturnLength /* 0x10 */, long int hwndCallback /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mciGetDeviceIDA (PSTR pszDevice /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mciGetDeviceIDW (PWCHAR pszDevice /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mciGetDeviceIDFromElementIDA (long unsigned int dwElementID /* 0x8 */, PSTR lpstrType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mciGetDeviceIDFromElementIDW (long unsigned int dwElementID /* 0x8 */, PWCHAR lpstrType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int mciGetErrorStringA (long unsigned int mcierr /* 0x8 */, PSTR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int mciGetErrorStringW (long unsigned int mcierr /* 0x8 */, PWCHAR pszText /* 0xc */, unsigned int cchText /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int mciSetYieldProc (unsigned int mciId /* 0x8 */, YIELDPROC fpYieldProc /* 0xc */, long unsigned int dwYieldData /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mciGetCreatorTask (unsigned int mciId /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+YIELDPROC mciGetYieldProc (unsigned int mciId /* 0x8 */, PDWORD pdwYieldData /* 0xc */)
+{ /* 0x0 */
+  /* file w95types.h line 94 addr 0x0 */
+  /* file w95types.h line 94 addr 0x3 */
+  /* file w95types.h line 103 addr 0x0 */
+  /* file w95types.h line 103 addr 0x3 */
+  /* file w95types.h line 112 addr 0x0 */
+  /* file w95types.h line 112 addr 0x3 */
+  /* file w95types.h line 121 addr 0x0 */
+  /* file w95types.h line 121 addr 0x3 */
+  /* file w95types.h line 130 addr 0x0 */
+  /* file w95types.h line 130 addr 0xc */
+  /* file w95types.h line 138 addr 0x0 */
+  /* file w95types.h line 138 addr 0x3 */
+  /* file mmsystem.c line 366 addr 0x0 */
+  /* file mmsystem.c line 366 addr 0x3 */
+  /* file mmsystem.c line 367 addr 0x0 */
+  /* file mmsystem.c line 367 addr 0x3 */
+  /* file mmsystem.c line 368 addr 0x0 */
+  /* file mmsystem.c line 368 addr 0x3 */
+  /* file mmsystem.c line 369 addr 0x0 */
+  /* file mmsystem.c line 369 addr 0x3 */
+  /* file mmsystem.c line 370 addr 0x0 */
+  /* file mmsystem.c line 370 addr 0x3 */
+  /* file mmsystem.c line 371 addr 0x0 */
+  /* file mmsystem.c line 371 addr 0x3 */
+  /* file mmsystem.c line 457 addr 0x0 */
+  /* file mmsystem.c line 457 addr 0x3 */
+  /* file mmsystem.c line 458 addr 0x0 */
+  /* file mmsystem.c line 458 addr 0x3 */
+  /* file mmsystem.c line 503 addr 0x0 */
+  /* file mmsystem.c line 503 addr 0x3 */
+  /* file mmsystem.c line 504 addr 0x0 */
+  /* file mmsystem.c line 504 addr 0x3 */
+  /* file mmsystem.c line 739 addr 0x0 */
+  /* file mmsystem.c line 739 addr 0x3 */
+  /* file mmsystem.c line 743 addr 0x0 */
+  /* file mmsystem.c line 743 addr 0x3 */
+  /* file mmsystem.c line 744 addr 0x0 */
+  /* file mmsystem.c line 744 addr 0x3 */
+  /* file mmsystem.c line 756 addr 0x0 */
+  /* file mmsystem.c line 756 addr 0x3 */
+  /* file mmsystem.c line 757 addr 0x0 */
+  /* file mmsystem.c line 757 addr 0x3 */
+  /* file mmsystem.c line 765 addr 0x0 */
+  /* file mmsystem.c line 765 addr 0x3 */
+  /* file mmsystem.c line 766 addr 0x0 */
+  /* file mmsystem.c line 766 addr 0x3 */
+  /* file mmsystem.c line 778 addr 0x0 */
+  /* file mmsystem.c line 778 addr 0x3 */
+  /* file mmsystem.c line 780 addr 0x0 */
+  /* file mmsystem.c line 780 addr 0x3 */
+  /* file mmsystem.c line 781 addr 0x0 */
+  /* file mmsystem.c line 781 addr 0x3 */
+  /* file mmsystem.c line 782 addr 0x0 */
+  /* file mmsystem.c line 782 addr 0x3 */
+  /* file mmsystem.c line 783 addr 0x0 */
+  /* file mmsystem.c line 783 addr 0x3 */
+  /* file mmsystem.c line 784 addr 0x0 */
+  /* file mmsystem.c line 784 addr 0x3 */
+  /* file mmsystem.c line 785 addr 0x0 */
+  /* file mmsystem.c line 785 addr 0x3 */
+  /* file mmsystem.c line 786 addr 0x0 */
+  /* file mmsystem.c line 786 addr 0x3 */
+  /* file mmsystem.c line 787 addr 0x0 */
+  /* file mmsystem.c line 787 addr 0x3 */
+  /* file mmsystem.c line 788 addr 0x0 */
+  /* file mmsystem.c line 788 addr 0x3 */
+  /* file mmsystem.c line 789 addr 0x0 */
+  /* file mmsystem.c line 789 addr 0x3 */
+  /* file mmsystem.c line 790 addr 0x0 */
+  /* file mmsystem.c line 790 addr 0x3 */
+  /* file mmsystem.c line 791 addr 0x0 */
+  /* file mmsystem.c line 791 addr 0x3 */
+  /* file mmsystem.c line 792 addr 0x0 */
+  /* file mmsystem.c line 792 addr 0x3 */
+  /* file mmsystem.c line 793 addr 0x0 */
+  /* file mmsystem.c line 793 addr 0x3 */
+  /* file mmsystem.c line 797 addr 0x0 */
+  /* file mmsystem.c line 797 addr 0x3 */
+  /* file mmsystem.c line 803 addr 0x0 */
+  /* file mmsystem.c line 803 addr 0x3 */
+  /* file mmsystem.c line 807 addr 0x0 */
+  /* file mmsystem.c line 807 addr 0x3 */
+  /* file mmsystem.c line 808 addr 0x0 */
+  /* file mmsystem.c line 808 addr 0x3 */
+  /* file mmsystem.c line 821 addr 0x0 */
+  /* file mmsystem.c line 821 addr 0x3 */
+  /* file mmsystem.c line 822 addr 0x0 */
+  /* file mmsystem.c line 822 addr 0x3 */
+  /* file mmsystem.c line 834 addr 0x0 */
+  /* file mmsystem.c line 834 addr 0x3 */
+  /* file mmsystem.c line 836 addr 0x0 */
+  /* file mmsystem.c line 836 addr 0x3 */
+  /* file mmsystem.c line 837 addr 0x0 */
+  /* file mmsystem.c line 837 addr 0x3 */
+  /* file mmsystem.c line 838 addr 0x0 */
+  /* file mmsystem.c line 838 addr 0x3 */
+  /* file mmsystem.c line 839 addr 0x0 */
+  /* file mmsystem.c line 839 addr 0x3 */
+  /* file mmsystem.c line 840 addr 0x0 */
+  /* file mmsystem.c line 840 addr 0x3 */
+  /* file mmsystem.c line 841 addr 0x0 */
+  /* file mmsystem.c line 841 addr 0x3 */
+  /* file mmsystem.c line 842 addr 0x0 */
+  /* file mmsystem.c line 842 addr 0x3 */
+  /* file mmsystem.c line 843 addr 0x0 */
+  /* file mmsystem.c line 843 addr 0x3 */
+  /* file mmsystem.c line 844 addr 0x0 */
+  /* file mmsystem.c line 844 addr 0x3 */
+  /* file mmsystem.c line 848 addr 0x0 */
+  /* file mmsystem.c line 848 addr 0x3 */
+  /* file mmsystem.c line 1137 addr 0x0 */
+  /* file mmsystem.c line 1137 addr 0x3 */
+  /* file mmsystem.c line 1139 addr 0x0 */
+  /* file mmsystem.c line 1139 addr 0x3 */
+  /* file mmsystem.c line 1140 addr 0x0 */
+  /* file mmsystem.c line 1140 addr 0x3 */
+  /* file mmsystem.c line 1142 addr 0x0 */
+  /* file mmsystem.c line 1142 addr 0x3 */
+  /* file mmsystem.c line 1143 addr 0x0 */
+  /* file mmsystem.c line 1143 addr 0x3 */
+  /* file mmsystem.c line 1145 addr 0x0 */
+  /* file mmsystem.c line 1145 addr 0x3 */
+  /* file mmsystem.c line 1146 addr 0x0 */
+  /* file mmsystem.c line 1146 addr 0x3 */
+  /* file mmsystem.c line 1147 addr 0x0 */
+  /* file mmsystem.c line 1147 addr 0x3 */
+  /* file mmsystem.c line 1148 addr 0x0 */
+  /* file mmsystem.c line 1148 addr 0x3 */
+  /* file mmsystem.c line 1151 addr 0x0 */
+  /* file mmsystem.c line 1151 addr 0x3 */
+  /* file mmsystem.c line 1152 addr 0x0 */
+  /* file mmsystem.c line 1152 addr 0x3 */
+  /* file mmsystem.c line 1158 addr 0x0 */
+  /* file mmsystem.c line 1158 addr 0x3 */
+  /* file mmsystem.c line 1159 addr 0x0 */
+  /* file mmsystem.c line 1159 addr 0x3 */
+  /* file mmsystem.c line 1171 addr 0x0 */
+  /* file mmsystem.c line 1171 addr 0x3 */
+  /* file mmsystem.c line 1172 addr 0x0 */
+  /* file mmsystem.c line 1172 addr 0x3 */
+  /* file mmsystem.c line 1180 addr 0x0 */
+  /* file mmsystem.c line 1180 addr 0x3 */
+  /* file mmsystem.c line 1181 addr 0x0 */
+  /* file mmsystem.c line 1181 addr 0x3 */
+  /* file mmsystem.c line 1193 addr 0x0 */
+  /* file mmsystem.c line 1193 addr 0x3 */
+  /* file mmsystem.c line 1194 addr 0x0 */
+  /* file mmsystem.c line 1194 addr 0x3 */
+  /* file mmsystem.c line 1195 addr 0x0 */
+  /* file mmsystem.c line 1195 addr 0x3 */
+  /* file mmsystem.c line 1196 addr 0x0 */
+  /* file mmsystem.c line 1196 addr 0x3 */
+  /* file mmsystem.c line 1197 addr 0x0 */
+  /* file mmsystem.c line 1197 addr 0x3 */
+  /* file mmsystem.c line 1198 addr 0x0 */
+  /* file mmsystem.c line 1198 addr 0x3 */
+  /* file mmsystem.c line 1199 addr 0x0 */
+  /* file mmsystem.c line 1199 addr 0x3 */
+  /* file mmsystem.c line 1200 addr 0x0 */
+  /* file mmsystem.c line 1200 addr 0x3 */
+  /* file mmsystem.c line 1201 addr 0x0 */
+  /* file mmsystem.c line 1201 addr 0x3 */
+  /* file mmsystem.c line 1202 addr 0x0 */
+  /* file mmsystem.c line 1202 addr 0x3 */
+  /* file mmsystem.c line 1206 addr 0x0 */
+  /* file mmsystem.c line 1206 addr 0x3 */
+  /* file mmsystem.c line 1212 addr 0x0 */
+  /* file mmsystem.c line 1212 addr 0x3 */
+  /* file mmsystem.c line 1216 addr 0x0 */
+  /* file mmsystem.c line 1216 addr 0x3 */
+  /* file mmsystem.c line 1217 addr 0x0 */
+  /* file mmsystem.c line 1217 addr 0x3 */
+  /* file mmsystem.c line 1223 addr 0x0 */
+  /* file mmsystem.c line 1223 addr 0x3 */
+  /* file mmsystem.c line 1224 addr 0x0 */
+  /* file mmsystem.c line 1224 addr 0x3 */
+  /* file mmsystem.c line 1237 addr 0x0 */
+  /* file mmsystem.c line 1237 addr 0x3 */
+  /* file mmsystem.c line 1238 addr 0x0 */
+  /* file mmsystem.c line 1238 addr 0x3 */
+  /* file mmsystem.c line 1239 addr 0x0 */
+  /* file mmsystem.c line 1239 addr 0x3 */
+  /* file mmsystem.c line 1240 addr 0x0 */
+  /* file mmsystem.c line 1240 addr 0x3 */
+  /* file mmsystem.c line 1241 addr 0x0 */
+  /* file mmsystem.c line 1241 addr 0x3 */
+  /* file mmsystem.c line 1242 addr 0x0 */
+  /* file mmsystem.c line 1242 addr 0x3 */
+  /* file mmsystem.c line 1243 addr 0x0 */
+  /* file mmsystem.c line 1243 addr 0x3 */
+  /* file mmsystem.c line 1244 addr 0x0 */
+  /* file mmsystem.c line 1244 addr 0x3 */
+  /* file mmsystem.c line 1245 addr 0x0 */
+  /* file mmsystem.c line 1245 addr 0x3 */
+  /* file mmsystem.c line 1249 addr 0x0 */
+  /* file mmsystem.c line 1249 addr 0x3 */
+  /* file mmsystem.c line 1324 addr 0x0 */
+  /* file mmsystem.c line 1324 addr 0x3 */
+  /* file mmsystem.c line 1327 addr 0x0 */
+  /* file mmsystem.c line 1327 addr 0x3 */
+  /* file mmsystem.c line 1328 addr 0x0 */
+  /* file mmsystem.c line 1328 addr 0x3 */
+  /* file mmsystem.c line 1338 addr 0x0 */
+  /* file mmsystem.c line 1338 addr 0x3 */
+  /* file mmsystem.c line 1339 addr 0x0 */
+  /* file mmsystem.c line 1339 addr 0x3 */
+  /* file mmsystem.c line 1343 addr 0x0 */
+  /* file mmsystem.c line 1343 addr 0x3 */
+  /* file mmsystem.c line 1392 addr 0x0 */
+  /* file mmsystem.c line 1392 addr 0x3 */
+  /* file mmsystem.c line 1435 addr 0x0 */
+  /* file mmsystem.c line 1435 addr 0x3 */
+  /* file mmsystem.c line 1436 addr 0x0 */
+  /* file mmsystem.c line 1436 addr 0x3 */
+  /* file mmsystem.c line 1447 addr 0x0 */
+  /* file mmsystem.c line 1447 addr 0x3 */
+  /* file mmsystem.c line 1449 addr 0x0 */
+  /* file mmsystem.c line 1449 addr 0x3 */
+  /* file mmsystem.c line 1451 addr 0x0 */
+  /* file mmsystem.c line 1451 addr 0x3 */
+  /* file mmsystem.c line 1587 addr 0x0 */
+  /* file mmsystem.c line 1587 addr 0x3 */
+  /* file mmsystem.c line 1588 addr 0x0 */
+  /* file mmsystem.c line 1588 addr 0x3 */
+  /* file mmsystem.c line 1607 addr 0x0 */
+  /* file mmsystem.c line 1607 addr 0x3 */
+  /* file mmsystem.c line 1837 addr 0x0 */
+  /* file mmsystem.c line 1837 addr 0x3 */
+  /* file mmsystem.c line 1838 addr 0x0 */
+  /* file mmsystem.c line 1838 addr 0x3 */
+  /* file mmsystem.c line 1925 addr 0x0 */
+  /* file mmsystem.c line 1925 addr 0x3 */
+  /* file mmsystem.c line 1926 addr 0x0 */
+  /* file mmsystem.c line 1926 addr 0x3 */
+  /* file mmsystem.c line 1942 addr 0x0 */
+  /* file mmsystem.c line 1942 addr 0x3 */
+  /* file mmsystem.c line 1987 addr 0x0 */
+  /* file mmsystem.c line 1987 addr 0x3 */
+  /* file mmsystem.c line 1988 addr 0x0 */
+  /* file mmsystem.c line 1988 addr 0x3 */
+  /* file mmsystem.c line 1990 addr 0x0 */
+  /* file mmsystem.c line 1990 addr 0x3 */
+  /* file mmsystem.c line 1991 addr 0x0 */
+  /* file mmsystem.c line 1991 addr 0x3 */
+  /* file mmsystem.c line 1992 addr 0x0 */
+  /* file mmsystem.c line 1992 addr 0x3 */
+  /* file mmsystem.c line 1993 addr 0x0 */
+  /* file mmsystem.c line 1993 addr 0x3 */
+  /* file mmsystem.c line 1994 addr 0x0 */
+  /* file mmsystem.c line 1994 addr 0x3 */
+  /* file mmsystem.c line 2231 addr 0x0 */
+  /* file mmsystem.c line 2231 addr 0x3 */
+  /* file mmsystem.c line 2234 addr 0x0 */
+  /* file mmsystem.c line 2234 addr 0x3 */
+  /* file mmsystem.c line 2235 addr 0x0 */
+  /* file mmsystem.c line 2235 addr 0x3 */
+  /* file mmsystem.c line 2245 addr 0x0 */
+  /* file mmsystem.c line 2245 addr 0x3 */
+  /* file mmsystem.c line 2248 addr 0x0 */
+  /* file mmsystem.c line 2248 addr 0x3 */
+  /* file mmsystem.c line 2251 addr 0x0 */
+  /* file mmsystem.c line 2251 addr 0x3 */
+  /* file mmsystem.c line 2252 addr 0x0 */
+  /* file mmsystem.c line 2252 addr 0x3 */
+  /* file mmsystem.c line 2254 addr 0x0 */
+  /* file mmsystem.c line 2254 addr 0x3 */
+  /* file mmsystem.c line 2255 addr 0x0 */
+  /* file mmsystem.c line 2255 addr 0x3 */
+  /* file mmsystem.c line 2418 addr 0x0 */
+  /* file mmsystem.c line 2418 addr 0x3 */
+  /* file mmsystem.c line 2419 addr 0x0 */
+  /* file mmsystem.c line 2419 addr 0x3 */
+  /* file mmsystem.c line 2425 addr 0x0 */
+  /* file mmsystem.c line 2425 addr 0x3 */
+  /* file mmsystem.c line 2426 addr 0x0 */
+  /* file mmsystem.c line 2426 addr 0x3 */
+  /* file mmsystem.c line 2432 addr 0x0 */
+  /* file mmsystem.c line 2432 addr 0x3 */
+  /* file mmsystem.c line 2433 addr 0x0 */
+  /* file mmsystem.c line 2433 addr 0x3 */
+  /* file mmsystem.c line 2439 addr 0x0 */
+  /* file mmsystem.c line 2439 addr 0x3 */
+  /* file mmsystem.c line 2440 addr 0x0 */
+  /* file mmsystem.c line 2440 addr 0x3 */
+  /* file mmsystem.c line 2455 addr 0x0 */
+  /* file mmsystem.c line 2455 addr 0x3 */
+  /* file mmsystem.c line 2456 addr 0x0 */
+  /* file mmsystem.c line 2456 addr 0x3 */
+  /* file mmsystem.c line 2457 addr 0x0 */
+  /* file mmsystem.c line 2457 addr 0x3 */
+  /* file mmsystem.c line 2458 addr 0x0 */
+  /* file mmsystem.c line 2458 addr 0x3 */
+  /* file mmsystem.c line 2459 addr 0x0 */
+  /* file mmsystem.c line 2459 addr 0x3 */
+  /* file mmsystem.c line 2460 addr 0x0 */
+  /* file mmsystem.c line 2460 addr 0x3 */
+  /* file mmsystem.c line 2462 addr 0x0 */
+  /* file mmsystem.c line 2462 addr 0x3 */
+  /* file mmsystem.c line 2463 addr 0x0 */
+  /* file mmsystem.c line 2463 addr 0x3 */
+  /* file mmsystem.c line 2464 addr 0x0 */
+  /* file mmsystem.c line 2464 addr 0x3 */
+  /* file mmsystem.c line 2466 addr 0x0 */
+  /* file mmsystem.c line 2466 addr 0x3 */
+  /* file mmsystem.c line 2468 addr 0x0 */
+  /* file mmsystem.c line 2468 addr 0x3 */
+  /* file mmsystem.c line 2469 addr 0x0 */
+  /* file mmsystem.c line 2469 addr 0x3 */
+  /* file mmsystem.c line 2470 addr 0x0 */
+  /* file mmsystem.c line 2470 addr 0x3 */
+  /* file mmsystem.c line 2498 addr 0x0 */
+  /* file mmsystem.c line 2498 addr 0x3 */
+  /* file mmsystem.c line 2499 addr 0x0 */
+  /* file mmsystem.c line 2499 addr 0x3 */
+  /* file mmsystem.c line 2505 addr 0x0 */
+  /* file mmsystem.c line 2505 addr 0x3 */
+  /* file mmsystem.c line 2506 addr 0x0 */
+  /* file mmsystem.c line 2506 addr 0x3 */
+  /* file mmsystem.c line 2512 addr 0x0 */
+  /* file mmsystem.c line 2512 addr 0x3 */
+  /* file mmsystem.c line 2513 addr 0x0 */
+  /* file mmsystem.c line 2513 addr 0x3 */
+  /* file mmsystem.c line 2519 addr 0x0 */
+  /* file mmsystem.c line 2519 addr 0x3 */
+  /* file mmsystem.c line 2520 addr 0x0 */
+  /* file mmsystem.c line 2520 addr 0x3 */
+  /* file mmsystem.c line 2526 addr 0x0 */
+  /* file mmsystem.c line 2526 addr 0x3 */
+  /* file mmsystem.c line 2527 addr 0x0 */
+  /* file mmsystem.c line 2527 addr 0x3 */
+  /* file mmsystem.c line 2542 addr 0x0 */
+  /* file mmsystem.c line 2542 addr 0x3 */
+  /* file mmsystem.c line 2545 addr 0x0 */
+  /* file mmsystem.c line 2545 addr 0x3 */
+  /* file mmsystem.c line 2546 addr 0x0 */
+  /* file mmsystem.c line 2546 addr 0x3 */
+} /* 0xa77 */
+struct tagMCI_GENERIC_PARMS { /* size 4 id 58 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+};
+typedef struct tagMCI_GENERIC_PARMS /* id 58 */ MCI_GENERIC_PARMS;
+typedef struct tagMCI_GENERIC_PARMS /* id 58 */ *PMCI_GENERIC_PARMS;
+typedef PMCI_GENERIC_PARMS LPMCI_GENERIC_PARMS;
+struct tagMCI_OPEN_PARMSA { /* size 20 id 59 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PSTR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PSTR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PSTR lpstrAlias; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMCI_OPEN_PARMSA /* id 59 */ MCI_OPEN_PARMSA;
+typedef struct tagMCI_OPEN_PARMSA /* id 59 */ *PMCI_OPEN_PARMSA;
+typedef PMCI_OPEN_PARMSA LPMCI_OPEN_PARMSA;
+struct tagMCI_OPEN_PARMSW { /* size 20 id 60 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PWCHAR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PWCHAR lpstrAlias; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMCI_OPEN_PARMSW /* id 60 */ MCI_OPEN_PARMSW;
+typedef struct tagMCI_OPEN_PARMSW /* id 60 */ *PMCI_OPEN_PARMSW;
+typedef PMCI_OPEN_PARMSW LPMCI_OPEN_PARMSW;
+typedef struct tagMCI_OPEN_PARMSA /* id 59 */ MCI_OPEN_PARMS;
+typedef PMCI_OPEN_PARMSA PMCI_OPEN_PARMS;
+typedef PMCI_OPEN_PARMSA LPMCI_OPEN_PARMS;
+struct tagMCI_PLAY_PARMS { /* size 12 id 61 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrom; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_PLAY_PARMS /* id 61 */ MCI_PLAY_PARMS;
+typedef struct tagMCI_PLAY_PARMS /* id 61 */ *PMCI_PLAY_PARMS;
+typedef PMCI_PLAY_PARMS LPMCI_PLAY_PARMS;
+struct tagMCI_SEEK_PARMS { /* size 8 id 62 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_SEEK_PARMS /* id 62 */ MCI_SEEK_PARMS;
+typedef struct tagMCI_SEEK_PARMS /* id 62 */ *PMCI_SEEK_PARMS;
+typedef PMCI_SEEK_PARMS LPMCI_SEEK_PARMS;
+struct tagMCI_STATUS_PARMS { /* size 16 id 63 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwItem; /* bitsize 32, bitpos 64 */
+  long unsigned int dwTrack; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_STATUS_PARMS /* id 63 */ MCI_STATUS_PARMS;
+typedef struct tagMCI_STATUS_PARMS /* id 63 */ *PMCI_STATUS_PARMS;
+typedef PMCI_STATUS_PARMS LPMCI_STATUS_PARMS;
+struct tagMCI_INFO_PARMSA { /* size 12 id 64 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpstrReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwRetSize; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_INFO_PARMSA /* id 64 */ MCI_INFO_PARMSA;
+typedef struct tagMCI_INFO_PARMSA /* id 64 */ *LPMCI_INFO_PARMSA;
+struct tagMCI_INFO_PARMSW { /* size 12 id 65 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpstrReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwRetSize; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_INFO_PARMSW /* id 65 */ MCI_INFO_PARMSW;
+typedef struct tagMCI_INFO_PARMSW /* id 65 */ *LPMCI_INFO_PARMSW;
+typedef struct tagMCI_INFO_PARMSA /* id 64 */ MCI_INFO_PARMS;
+typedef LPMCI_INFO_PARMSA LPMCI_INFO_PARMS;
+struct tagMCI_GETDEVCAPS_PARMS { /* size 12 id 66 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwItem; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_GETDEVCAPS_PARMS /* id 66 */ MCI_GETDEVCAPS_PARMS;
+typedef struct tagMCI_GETDEVCAPS_PARMS /* id 66 */ *PMCI_GETDEVCAPS_PARMS;
+typedef PMCI_GETDEVCAPS_PARMS LPMCI_GETDEVCAPS_PARMS;
+struct tagMCI_SYSINFO_PARMSA { /* size 20 id 67 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpstrReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwRetSize; /* bitsize 32, bitpos 64 */
+  long unsigned int dwNumber; /* bitsize 32, bitpos 96 */
+  unsigned int wDeviceType; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMCI_SYSINFO_PARMSA /* id 67 */ MCI_SYSINFO_PARMSA;
+typedef struct tagMCI_SYSINFO_PARMSA /* id 67 */ *PMCI_SYSINFO_PARMSA;
+typedef PMCI_SYSINFO_PARMSA LPMCI_SYSINFO_PARMSA;
+struct tagMCI_SYSINFO_PARMSW { /* size 20 id 68 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpstrReturn; /* bitsize 32, bitpos 32 */
+  long unsigned int dwRetSize; /* bitsize 32, bitpos 64 */
+  long unsigned int dwNumber; /* bitsize 32, bitpos 96 */
+  unsigned int wDeviceType; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMCI_SYSINFO_PARMSW /* id 68 */ MCI_SYSINFO_PARMSW;
+typedef struct tagMCI_SYSINFO_PARMSW /* id 68 */ *PMCI_SYSINFO_PARMSW;
+typedef PMCI_SYSINFO_PARMSW LPMCI_SYSINFO_PARMSW;
+typedef struct tagMCI_SYSINFO_PARMSA /* id 67 */ MCI_SYSINFO_PARMS;
+typedef PMCI_SYSINFO_PARMSA PMCI_SYSINFO_PARMS;
+typedef PMCI_SYSINFO_PARMSA LPMCI_SYSINFO_PARMS;
+struct tagMCI_SET_PARMS { /* size 12 id 69 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTimeFormat; /* bitsize 32, bitpos 32 */
+  long unsigned int dwAudio; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_SET_PARMS /* id 69 */ MCI_SET_PARMS;
+typedef struct tagMCI_SET_PARMS /* id 69 */ *PMCI_SET_PARMS;
+typedef PMCI_SET_PARMS LPMCI_SET_PARMS;
+struct tagMCI_BREAK_PARMS { /* size 12 id 70 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  int nVirtKey; /* bitsize 32, bitpos 32 */
+  long int hwndBreak; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_BREAK_PARMS /* id 70 */ MCI_BREAK_PARMS;
+typedef struct tagMCI_BREAK_PARMS /* id 70 */ *PMCI_BREAK_PARMS;
+typedef PMCI_BREAK_PARMS LPMCI_BREAK_PARMS;
+struct tagMCI_SAVE_PARMSA { /* size 8 id 71 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpfilename; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_SAVE_PARMSA /* id 71 */ MCI_SAVE_PARMSA;
+typedef struct tagMCI_SAVE_PARMSA /* id 71 */ *PMCI_SAVE_PARMSA;
+typedef PMCI_SAVE_PARMSA LPMCI_SAVE_PARMSA;
+struct tagMCI_SAVE_PARMSW { /* size 8 id 72 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpfilename; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_SAVE_PARMSW /* id 72 */ MCI_SAVE_PARMSW;
+typedef struct tagMCI_SAVE_PARMSW /* id 72 */ *PMCI_SAVE_PARMSW;
+typedef PMCI_SAVE_PARMSW LPMCI_SAVE_PARMSW;
+typedef struct tagMCI_SAVE_PARMSA /* id 71 */ MCI_SAVE_PARMS;
+typedef PMCI_SAVE_PARMSA PMCI_SAVE_PARMS;
+typedef PMCI_SAVE_PARMSA LPMCI_SAVE_PARMS;
+struct tagMCI_LOAD_PARMSA { /* size 8 id 73 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpfilename; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_LOAD_PARMSA /* id 73 */ MCI_LOAD_PARMSA;
+typedef struct tagMCI_LOAD_PARMSA /* id 73 */ *PMCI_LOAD_PARMSA;
+typedef PMCI_LOAD_PARMSA LPMCI_LOAD_PARMSA;
+struct tagMCI_LOAD_PARMSW { /* size 8 id 74 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpfilename; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_LOAD_PARMSW /* id 74 */ MCI_LOAD_PARMSW;
+typedef struct tagMCI_LOAD_PARMSW /* id 74 */ *PMCI_LOAD_PARMSW;
+typedef PMCI_LOAD_PARMSW LPMCI_LOAD_PARMSW;
+typedef struct tagMCI_LOAD_PARMSA /* id 73 */ MCI_LOAD_PARMS;
+typedef PMCI_LOAD_PARMSA PMCI_LOAD_PARMS;
+typedef PMCI_LOAD_PARMSA LPMCI_LOAD_PARMS;
+struct tagMCI_RECORD_PARMS { /* size 12 id 75 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrom; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_RECORD_PARMS /* id 75 */ MCI_RECORD_PARMS;
+typedef struct tagMCI_RECORD_PARMS /* id 75 */ *LPMCI_RECORD_PARMS;
+struct tagMCI_VD_PLAY_PARMS { /* size 16 id 76 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrom; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 64 */
+  long unsigned int dwSpeed; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_VD_PLAY_PARMS /* id 76 */ MCI_VD_PLAY_PARMS;
+typedef struct tagMCI_VD_PLAY_PARMS /* id 76 */ *PMCI_VD_PLAY_PARMS;
+typedef PMCI_VD_PLAY_PARMS LPMCI_VD_PLAY_PARMS;
+struct tagMCI_VD_STEP_PARMS { /* size 8 id 77 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrames; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_VD_STEP_PARMS /* id 77 */ MCI_VD_STEP_PARMS;
+typedef struct tagMCI_VD_STEP_PARMS /* id 77 */ *PMCI_VD_STEP_PARMS;
+typedef PMCI_VD_STEP_PARMS LPMCI_VD_STEP_PARMS;
+struct tagMCI_VD_ESCAPE_PARMSA { /* size 8 id 78 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpstrCommand; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_VD_ESCAPE_PARMSA /* id 78 */ MCI_VD_ESCAPE_PARMSA;
+typedef struct tagMCI_VD_ESCAPE_PARMSA /* id 78 */ *PMCI_VD_ESCAPE_PARMSA;
+typedef PMCI_VD_ESCAPE_PARMSA LPMCI_VD_ESCAPE_PARMSA;
+struct tagMCI_VD_ESCAPE_PARMSW { /* size 8 id 79 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpstrCommand; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_VD_ESCAPE_PARMSW /* id 79 */ MCI_VD_ESCAPE_PARMSW;
+typedef struct tagMCI_VD_ESCAPE_PARMSW /* id 79 */ *PMCI_VD_ESCAPE_PARMSW;
+typedef PMCI_VD_ESCAPE_PARMSW LPMCI_VD_ESCAPE_PARMSW;
+typedef struct tagMCI_VD_ESCAPE_PARMSA /* id 78 */ MCI_VD_ESCAPE_PARMS;
+typedef PMCI_VD_ESCAPE_PARMSA PMCI_VD_ESCAPE_PARMS;
+typedef PMCI_VD_ESCAPE_PARMSA LPMCI_VD_ESCAPE_PARMS;
+struct tagMCI_WAVE_OPEN_PARMSA { /* size 24 id 80 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PSTR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PSTR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PSTR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwBufferSeconds; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagMCI_WAVE_OPEN_PARMSA /* id 80 */ MCI_WAVE_OPEN_PARMSA;
+typedef struct tagMCI_WAVE_OPEN_PARMSA /* id 80 */ *PMCI_WAVE_OPEN_PARMSA;
+typedef PMCI_WAVE_OPEN_PARMSA LPMCI_WAVE_OPEN_PARMSA;
+struct tagMCI_WAVE_OPEN_PARMSW { /* size 24 id 81 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PWCHAR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PWCHAR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwBufferSeconds; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagMCI_WAVE_OPEN_PARMSW /* id 81 */ MCI_WAVE_OPEN_PARMSW;
+typedef struct tagMCI_WAVE_OPEN_PARMSW /* id 81 */ *PMCI_WAVE_OPEN_PARMSW;
+typedef PMCI_WAVE_OPEN_PARMSW LPMCI_WAVE_OPEN_PARMSW;
+typedef struct tagMCI_WAVE_OPEN_PARMSA /* id 80 */ MCI_WAVE_OPEN_PARMS;
+typedef PMCI_WAVE_OPEN_PARMSA PMCI_WAVE_OPEN_PARMS;
+typedef PMCI_WAVE_OPEN_PARMSA LPMCI_WAVE_OPEN_PARMS;
+struct tagMCI_WAVE_DELETE_PARMS { /* size 12 id 82 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrom; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMCI_WAVE_DELETE_PARMS /* id 82 */ MCI_WAVE_DELETE_PARMS;
+typedef struct tagMCI_WAVE_DELETE_PARMS /* id 82 */ *PMCI_WAVE_DELETE_PARMS;
+typedef PMCI_WAVE_DELETE_PARMS LPMCI_WAVE_DELETE_PARMS;
+struct tagMCI_WAVE_SET_PARMS { /* size 44 id 83 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTimeFormat; /* bitsize 32, bitpos 32 */
+  long unsigned int dwAudio; /* bitsize 32, bitpos 64 */
+  unsigned int wInput; /* bitsize 32, bitpos 96 */
+  unsigned int wOutput; /* bitsize 32, bitpos 128 */
+  short unsigned int wFormatTag; /* bitsize 16, bitpos 160 */
+  short unsigned int wReserved2; /* bitsize 16, bitpos 176 */
+  short unsigned int nChannels; /* bitsize 16, bitpos 192 */
+  short unsigned int wReserved3; /* bitsize 16, bitpos 208 */
+  long unsigned int nSamplesPerSec; /* bitsize 32, bitpos 224 */
+  long unsigned int nAvgBytesPerSec; /* bitsize 32, bitpos 256 */
+  short unsigned int nBlockAlign; /* bitsize 16, bitpos 288 */
+  short unsigned int wReserved4; /* bitsize 16, bitpos 304 */
+  short unsigned int wBitsPerSample; /* bitsize 16, bitpos 320 */
+  short unsigned int wReserved5; /* bitsize 16, bitpos 336 */
+};
+typedef struct tagMCI_WAVE_SET_PARMS /* id 83 */ MCI_WAVE_SET_PARMS;
+typedef struct tagMCI_WAVE_SET_PARMS /* id 83 */ *PMCI_WAVE_SET_PARMS;
+typedef PMCI_WAVE_SET_PARMS LPMCI_WAVE_SET_PARMS;
+struct tagMCI_SEQ_SET_PARMS { /* size 32 id 84 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwTimeFormat; /* bitsize 32, bitpos 32 */
+  long unsigned int dwAudio; /* bitsize 32, bitpos 64 */
+  long unsigned int dwTempo; /* bitsize 32, bitpos 96 */
+  long unsigned int dwPort; /* bitsize 32, bitpos 128 */
+  long unsigned int dwSlave; /* bitsize 32, bitpos 160 */
+  long unsigned int dwMaster; /* bitsize 32, bitpos 192 */
+  long unsigned int dwOffset; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagMCI_SEQ_SET_PARMS /* id 84 */ MCI_SEQ_SET_PARMS;
+typedef struct tagMCI_SEQ_SET_PARMS /* id 84 */ *PMCI_SEQ_SET_PARMS;
+typedef PMCI_SEQ_SET_PARMS LPMCI_SEQ_SET_PARMS;
+struct tagMCI_ANIM_OPEN_PARMSA { /* size 28 id 85 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PSTR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PSTR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PSTR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  long int hWndParent; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagMCI_ANIM_OPEN_PARMSA /* id 85 */ MCI_ANIM_OPEN_PARMSA;
+typedef struct tagMCI_ANIM_OPEN_PARMSA /* id 85 */ *PMCI_ANIM_OPEN_PARMSA;
+typedef PMCI_ANIM_OPEN_PARMSA LPMCI_ANIM_OPEN_PARMSA;
+struct tagMCI_ANIM_OPEN_PARMSW { /* size 28 id 86 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PWCHAR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PWCHAR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  long int hWndParent; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagMCI_ANIM_OPEN_PARMSW /* id 86 */ MCI_ANIM_OPEN_PARMSW;
+typedef struct tagMCI_ANIM_OPEN_PARMSW /* id 86 */ *PMCI_ANIM_OPEN_PARMSW;
+typedef PMCI_ANIM_OPEN_PARMSW LPMCI_ANIM_OPEN_PARMSW;
+typedef struct tagMCI_ANIM_OPEN_PARMSA /* id 85 */ MCI_ANIM_OPEN_PARMS;
+typedef PMCI_ANIM_OPEN_PARMSA PMCI_ANIM_OPEN_PARMS;
+typedef PMCI_ANIM_OPEN_PARMSA LPMCI_ANIM_OPEN_PARMS;
+struct tagMCI_ANIM_PLAY_PARMS { /* size 16 id 87 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrom; /* bitsize 32, bitpos 32 */
+  long unsigned int dwTo; /* bitsize 32, bitpos 64 */
+  long unsigned int dwSpeed; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_ANIM_PLAY_PARMS /* id 87 */ MCI_ANIM_PLAY_PARMS;
+typedef struct tagMCI_ANIM_PLAY_PARMS /* id 87 */ *PMCI_ANIM_PLAY_PARMS;
+typedef PMCI_ANIM_PLAY_PARMS LPMCI_ANIM_PLAY_PARMS;
+struct tagMCI_ANIM_STEP_PARMS { /* size 8 id 88 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFrames; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagMCI_ANIM_STEP_PARMS /* id 88 */ MCI_ANIM_STEP_PARMS;
+typedef struct tagMCI_ANIM_STEP_PARMS /* id 88 */ *PMCI_ANIM_STEP_PARMS;
+typedef PMCI_ANIM_STEP_PARMS LPMCI_ANIM_STEP_PARMS;
+struct tagMCI_ANIM_WINDOW_PARMSA { /* size 16 id 89 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int nCmdShow; /* bitsize 32, bitpos 64 */
+  PSTR lpstrText; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_ANIM_WINDOW_PARMSA /* id 89 */ MCI_ANIM_WINDOW_PARMSA;
+typedef struct tagMCI_ANIM_WINDOW_PARMSA /* id 89 */ *PMCI_ANIM_WINDOW_PARMSA;
+typedef PMCI_ANIM_WINDOW_PARMSA LPMCI_ANIM_WINDOW_PARMSA;
+struct tagMCI_ANIM_WINDOW_PARMSW { /* size 16 id 90 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int nCmdShow; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrText; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_ANIM_WINDOW_PARMSW /* id 90 */ MCI_ANIM_WINDOW_PARMSW;
+typedef struct tagMCI_ANIM_WINDOW_PARMSW /* id 90 */ *PMCI_ANIM_WINDOW_PARMSW;
+typedef PMCI_ANIM_WINDOW_PARMSW LPMCI_ANIM_WINDOW_PARMSW;
+typedef struct tagMCI_ANIM_WINDOW_PARMSA /* id 89 */ MCI_ANIM_WINDOW_PARMS;
+typedef PMCI_ANIM_WINDOW_PARMSA PMCI_ANIM_WINDOW_PARMS;
+typedef PMCI_ANIM_WINDOW_PARMSA LPMCI_ANIM_WINDOW_PARMS;
+struct tagMCI_ANIM_RECT_PARMS { /* size 20 id 91 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 32 */
+};
+typedef struct tagMCI_ANIM_RECT_PARMS /* id 91 */ MCI_ANIM_RECT_PARMS;
+typedef struct tagMCI_ANIM_RECT_PARMS /* id 91 */ *PMCI_ANIM_RECT_PARMS;
+typedef PMCI_ANIM_RECT_PARMS LPMCI_ANIM_RECT_PARMS;
+struct tagMCI_ANIM_UPDATE_PARMS { /* size 24 id 92 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 32 */
+  long int hDC; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagMCI_ANIM_UPDATE_PARMS /* id 92 */ MCI_ANIM_UPDATE_PARMS;
+typedef struct tagMCI_ANIM_UPDATE_PARMS /* id 92 */ *PMCI_ANIM_UPDATE_PARMS;
+typedef PMCI_ANIM_UPDATE_PARMS LPMCI_ANIM_UPDATE_PARMS;
+struct tagMCI_OVLY_OPEN_PARMSA { /* size 28 id 93 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PSTR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PSTR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PSTR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  long int hWndParent; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagMCI_OVLY_OPEN_PARMSA /* id 93 */ MCI_OVLY_OPEN_PARMSA;
+typedef struct tagMCI_OVLY_OPEN_PARMSA /* id 93 */ *PMCI_OVLY_OPEN_PARMSA;
+typedef PMCI_OVLY_OPEN_PARMSA LPMCI_OVLY_OPEN_PARMSA;
+struct tagMCI_OVLY_OPEN_PARMSW { /* size 28 id 94 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  unsigned int wDeviceID; /* bitsize 32, bitpos 32 */
+  PWCHAR lpstrDeviceType; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrElementName; /* bitsize 32, bitpos 96 */
+  PWCHAR lpstrAlias; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  long int hWndParent; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagMCI_OVLY_OPEN_PARMSW /* id 94 */ MCI_OVLY_OPEN_PARMSW;
+typedef struct tagMCI_OVLY_OPEN_PARMSW /* id 94 */ *PMCI_OVLY_OPEN_PARMSW;
+typedef PMCI_OVLY_OPEN_PARMSW LPMCI_OVLY_OPEN_PARMSW;
+typedef struct tagMCI_OVLY_OPEN_PARMSA /* id 93 */ MCI_OVLY_OPEN_PARMS;
+typedef PMCI_OVLY_OPEN_PARMSA PMCI_OVLY_OPEN_PARMS;
+typedef PMCI_OVLY_OPEN_PARMSA LPMCI_OVLY_OPEN_PARMS;
+struct tagMCI_OVLY_WINDOW_PARMSA { /* size 16 id 95 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int nCmdShow; /* bitsize 32, bitpos 64 */
+  PSTR lpstrText; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_OVLY_WINDOW_PARMSA /* id 95 */ MCI_OVLY_WINDOW_PARMSA;
+typedef struct tagMCI_OVLY_WINDOW_PARMSA /* id 95 */ *PMCI_OVLY_WINDOW_PARMSA;
+typedef PMCI_OVLY_WINDOW_PARMSA LPMCI_OVLY_WINDOW_PARMSA;
+struct tagMCI_OVLY_WINDOW_PARMSW { /* size 16 id 96 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  long int hWnd; /* bitsize 32, bitpos 32 */
+  unsigned int nCmdShow; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstrText; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMCI_OVLY_WINDOW_PARMSW /* id 96 */ MCI_OVLY_WINDOW_PARMSW;
+typedef struct tagMCI_OVLY_WINDOW_PARMSW /* id 96 */ *PMCI_OVLY_WINDOW_PARMSW;
+typedef PMCI_OVLY_WINDOW_PARMSW LPMCI_OVLY_WINDOW_PARMSW;
+typedef struct tagMCI_OVLY_WINDOW_PARMSA /* id 95 */ MCI_OVLY_WINDOW_PARMS;
+typedef PMCI_OVLY_WINDOW_PARMSA PMCI_OVLY_WINDOW_PARMS;
+typedef PMCI_OVLY_WINDOW_PARMSA LPMCI_OVLY_WINDOW_PARMS;
+struct tagMCI_OVLY_RECT_PARMS { /* size 20 id 97 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 32 */
+};
+typedef struct tagMCI_OVLY_RECT_PARMS /* id 97 */ MCI_OVLY_RECT_PARMS;
+typedef struct tagMCI_OVLY_RECT_PARMS /* id 97 */ *PMCI_OVLY_RECT_PARMS;
+typedef PMCI_OVLY_RECT_PARMS LPMCI_OVLY_RECT_PARMS;
+struct tagMCI_OVLY_SAVE_PARMSA { /* size 24 id 98 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpfilename; /* bitsize 32, bitpos 32 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagMCI_OVLY_SAVE_PARMSA /* id 98 */ MCI_OVLY_SAVE_PARMSA;
+typedef struct tagMCI_OVLY_SAVE_PARMSA /* id 98 */ *PMCI_OVLY_SAVE_PARMSA;
+typedef PMCI_OVLY_SAVE_PARMSA LPMCI_OVLY_SAVE_PARMSA;
+struct tagMCI_OVLY_SAVE_PARMSW { /* size 24 id 99 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpfilename; /* bitsize 32, bitpos 32 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagMCI_OVLY_SAVE_PARMSW /* id 99 */ MCI_OVLY_SAVE_PARMSW;
+typedef struct tagMCI_OVLY_SAVE_PARMSW /* id 99 */ *PMCI_OVLY_SAVE_PARMSW;
+typedef PMCI_OVLY_SAVE_PARMSW LPMCI_OVLY_SAVE_PARMSW;
+typedef struct tagMCI_OVLY_SAVE_PARMSA /* id 98 */ MCI_OVLY_SAVE_PARMS;
+typedef PMCI_OVLY_SAVE_PARMSA PMCI_OVLY_SAVE_PARMS;
+typedef PMCI_OVLY_SAVE_PARMSA LPMCI_OVLY_SAVE_PARMS;
+struct tagMCI_OVLY_LOAD_PARMSA { /* size 24 id 100 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PSTR lpfilename; /* bitsize 32, bitpos 32 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagMCI_OVLY_LOAD_PARMSA /* id 100 */ MCI_OVLY_LOAD_PARMSA;
+typedef struct tagMCI_OVLY_LOAD_PARMSA /* id 100 */ *PMCI_OVLY_LOAD_PARMSA;
+typedef PMCI_OVLY_LOAD_PARMSA LPMCI_OVLY_LOAD_PARMSA;
+struct tagMCI_OVLY_LOAD_PARMSW { /* size 24 id 101 */
+  long unsigned int dwCallback; /* bitsize 32, bitpos 0 */
+  PWCHAR lpfilename; /* bitsize 32, bitpos 32 */
+  struct tagRECT /* id 2 */ rc; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagMCI_OVLY_LOAD_PARMSW /* id 101 */ MCI_OVLY_LOAD_PARMSW;
+typedef struct tagMCI_OVLY_LOAD_PARMSW /* id 101 */ *PMCI_OVLY_LOAD_PARMSW;
+typedef PMCI_OVLY_LOAD_PARMSW LPMCI_OVLY_LOAD_PARMSW;
+typedef struct tagMCI_OVLY_LOAD_PARMSA /* id 100 */ MCI_OVLY_LOAD_PARMS;
+typedef PMCI_OVLY_LOAD_PARMSA PMCI_OVLY_LOAD_PARMS;
+typedef PMCI_OVLY_LOAD_PARMSA LPMCI_OVLY_LOAD_PARMS;

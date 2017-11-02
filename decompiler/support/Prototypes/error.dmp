@@ -1,0 +1,38 @@
+
+error.o:     file format elf32-i386
+
+error.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float0 complex float;
+typedef complex float0 complex double;
+typedef complex float0 complex long double;
+typedef char *__builtin_va_list;
+typedef enum { False, True } _Bool;
+#pragma cconv _cdecl
+void error (int __status /* 0x8 */, int __errnum /* 0xc */, char *__format /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void error_at_line (int __status /* 0x8 */, int __errnum /* 0xc */, char *__fname /* 0x10 */, unsigned int __lineno /* 0x14 */, char *__format /* 0x18 */)
+{ /* 0x0 */
+  /* file error.c line 46 addr 0x0 */
+  /* file error.c line 46 addr 0x3 */
+  /* file error.c line 49 addr 0x0 */
+  /* file error.c line 49 addr 0x3 */
+} /* 0xa */

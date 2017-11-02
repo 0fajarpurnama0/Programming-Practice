@@ -1,0 +1,37 @@
+<!-- Comment by Fajar Purnama 152-D8713. XML stands for EXtensible Markup Language. XML was designed to store and transport data. XML was designed to be both human and machine-readable. XML was designed to carry data - with focus on what data is. XML tags are not predefined like HTML tags are. -->
+
+<?xml version="1.0" encoding="UTF-8"?> <!-- uses xml version 1.0 and 8 bit character encoding UTF-8 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>cae-webapi01</display-name> <!-- display name is used by admin tools and alike, it displays cae-webapi01 -->
+  <welcome-file-list> <!-- lists welcome files -->
+<!--   公開用ページ -->
+    <welcome-file>index.html</welcome-file> <!-- A welcome file is the file that is invoked automatically by the server, in this case is index.html -->
+  </welcome-file-list> <!-- closing tag -->
+<!-- jsoncの設定 (RESTful service) -->
+
+<!-- For a Java servlet to be accessible from a browser, you must tell the servlet container what servlets to deploy, and what URL's to map the servlets to. This is done in the web.xml file of your Java web application. -->
+
+  <servlet> <!-- Servlets are Java programs that are already compiled which also creates dynamic web content. -->
+    <servlet-name>restServlet</servlet-name> <!-- The name of the servlet -->
+    <servlet-class>net.arnx.jsonic.web.RESTServlet</servlet-class> <!-- class of the servlet, some says its location -->
+    <init-param> <!-- initialization parameter -->
+      <param-name>config</param-name> <!-- named it config -->
+      <param-value> 
+	     {
+	       "debug": true, <!-- Allows debug -->
+	       "encoding": "UTF-8", <!-- Uses UTF-8 encoding -->
+	       "mappings": {
+	         "/{package}/{class}.json": { <!-- Maps to package, class, .json -->
+	           "target": "rest.${package}.${class}Service", <!-- Targets restful package, class, service -->
+	           "verb": [ "GET" ] <!-- xml verbs, GET method -->
+	          }
+	        }
+	       }
+	       </param-value> <!-- closing tag -->
+    </init-param> <!-- closing tag -->
+  </servlet> <!-- closing tag -->
+  <servlet-mapping> 
+    <servlet-name>restServlet</servlet-name>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
+</web-app>

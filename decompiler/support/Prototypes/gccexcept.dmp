@@ -1,0 +1,29 @@
+
+GCCEXCEPT.O:     file format elf32-i386
+
+/gccexcept.c:
+typedef int32 int;
+void	___cxa_throw() __noreturn
+{
+}
+
+void	_exit() __noreturn
+{
+}
+
+void	__ZSt9terminatev() __noreturn
+{
+}
+
+void	__cxa_call_unexpected() __noreturn
+{
+}
+
+void	__ZN10__cxxabiv111__terminateEPFvvE() __noreturn
+{
+}
+
+void	__ZN10__cxxabiv112__unexpectedEPFvvE() __noreturn
+{
+}
+

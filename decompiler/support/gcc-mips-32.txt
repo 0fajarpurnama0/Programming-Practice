@@ -1,0 +1,7 @@
+dup2:
+8F 99 ?? ??                     lw t9,-32752(gp)
+03 E0 78 21                     addu t7,ra,zero
+03 20 F8 09                     jalr ra,t9
+24 18 0F AA                     addiu t8,zero,#0xfaa
+;
+

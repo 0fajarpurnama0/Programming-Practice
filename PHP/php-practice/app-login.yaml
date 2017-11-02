@@ -1,0 +1,9 @@
+application: sample-login
+module: default
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /.*
+  script: self-login-example.php

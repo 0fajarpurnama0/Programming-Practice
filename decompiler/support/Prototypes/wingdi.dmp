@@ -1,0 +1,3537 @@
+
+WINGDI.O:     file format elf32-i386
+
+/d/c/wrec/suppw95/wingdi.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef void VOID;
+typedef void *PVOID;
+typedef long int HANDLE;
+typedef short int SHORT;
+typedef long int *PHANDLE;
+typedef long int *PLONG;
+typedef long int HKEY;
+typedef long int LONG;
+typedef PLONG LPCLONG;
+typedef int *LPCWORD;
+typedef unsigned char CHAR;
+typedef short unsigned int WCHAR;
+typedef short unsigned int *PWCHAR;
+typedef PWCHAR LPWCHAR;
+typedef PWCHAR LPCWCHAR;
+typedef PWCHAR PWSTR;
+typedef PWCHAR LPWSTR;
+typedef PWCHAR LPCWSTR;
+typedef char *LPCBYTE;
+typedef unsigned char *PSTR;
+typedef PSTR LPSTR;
+typedef PSTR LPCSTR;
+typedef long int RTL_CRITICAL_SECTION;
+typedef PLONG PRTL_CRITICAL_SECTION;
+typedef long int RTL_CRITICAL_SECTION_DEBUG;
+typedef PLONG PRTL_CRITICAL_SECTION_DEBUG;
+typedef long int ACCESS_MASK;
+typedef long int *PACCESS_MASK;
+long int RtlEqualMemory (void *Source1 /* 0x8 */, void *Source2 /* 0xc */, long int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ w95types.h:
+void RtlCopyMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlCopyMemory32 (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlMoveMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlFillMemory (void *Destination /* 0x8 */, int Length /* 0xc */, int Fill /* 0x10 */)
+{ /* 0x0 */
+  unsigned char Fill /* 0xffffffff */;
+} /* 0x0 */
+void RtlZeroMemory (void *Destination /* 0x8 */, int Length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int ULONG;
+typedef long unsigned int *PULONG;
+typedef short unsigned int USHORT;
+typedef short unsigned int *PUSHORT;
+typedef unsigned char UCHAR;
+typedef unsigned char *PUCHAR;
+typedef LPCBYTE PSZ;
+typedef long unsigned int DWORD;
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef short unsigned int WORD;
+typedef float FLOAT;
+typedef float *PFLOAT;
+typedef int *PBOOL;
+typedef PBOOL LPBOOL;
+typedef unsigned char *PBYTE;
+typedef PBYTE LPBYTE;
+typedef LPCWORD PINT;
+typedef LPCWORD LPINT;
+typedef short unsigned int *PWORD;
+typedef PWORD LPWORD;
+typedef PLONG LPLONG;
+typedef long unsigned int *PDWORD;
+typedef PDWORD LPDWORD;
+typedef PVOID LPVOID;
+typedef PVOID LPCVOID;
+typedef int INT;
+typedef unsigned int UINT;
+typedef unsigned int *PUINT;
+typedef unsigned int WPARAM;
+typedef long int LPARAM;
+typedef long int LRESULT;
+typedef long int HWND;
+typedef long int HHOOK;
+typedef short unsigned int ATOM;
+typedef PHANDLE SPHANDLE;
+typedef PHANDLE LPHANDLE;
+typedef long int HGLOBAL;
+typedef long int HLOCAL;
+typedef long int GLOBALHANDLE;
+typedef long int LOCALHANDLE;
+typedef int (*FARPROC) (/* unknown */);
+typedef FARPROC NEARPROC;
+typedef FARPROC PROC;
+typedef long int HGDIOBJ;
+typedef long int HACCEL;
+typedef long int HBITMAP;
+typedef long int HBRUSH;
+typedef long int HCOLORSPACE;
+typedef long int HDC;
+typedef long int HGLRC;
+typedef long int HDESK;
+typedef long int HENHMETAFILE;
+typedef long int HFONT;
+typedef long int HICON;
+typedef long int HMENU;
+typedef long int HMETAFILE;
+typedef long int HINSTANCE;
+typedef long int HMODULE;
+typedef long int HPALETTE;
+typedef long int HPEN;
+typedef long int HRGN;
+typedef long int HRSRC;
+typedef long int HSTR;
+typedef long int HTASK;
+typedef long int HWINSTA;
+typedef long int HKL;
+typedef int HFILE;
+typedef long int HCURSOR;
+typedef long unsigned int COLORREF;
+typedef PDWORD LPCOLORREF;
+struct tagRECT { /* size 16 id 2 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagRECT /* id 2 */ RECT;
+typedef struct tagRECT /* id 2 */ *PRECT;
+typedef PRECT NPRECT;
+typedef PRECT LPRECT;
+typedef struct tagRECT /* id 2 */ *LPCRECT;
+struct _RECTL { /* size 16 id 3 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct _RECTL /* id 3 */ RECTL;
+typedef struct _RECTL /* id 3 */ *PRECTL;
+typedef PRECTL LPRECTL;
+typedef struct _RECTL /* id 3 */ *LPCRECTL;
+struct tagPOINT { /* size 8 id 4 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINT /* id 4 */ POINT;
+typedef struct tagPOINT /* id 4 */ *PPOINT;
+typedef PPOINT NPPOINT;
+typedef PPOINT LPPOINT;
+struct _POINTL { /* size 8 id 5 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTL /* id 5 */ POINTL;
+typedef struct _POINTL /* id 5 */ *PPOINTL;
+struct tagSIZE { /* size 8 id 6 */
+  long int cx; /* bitsize 32, bitpos 0 */
+  long int cy; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSIZE /* id 6 */ SIZE;
+typedef struct tagSIZE /* id 6 */ *PSIZE;
+typedef PSIZE LPSIZE;
+typedef struct tagSIZE /* id 6 */ SIZEL;
+typedef struct tagSIZE /* id 6 */ *PSIZEL;
+typedef PSIZEL LPSIZEL;
+struct tagPOINTS { /* size 4 id 7 */
+  short int x; /* bitsize 16, bitpos 0 */
+  short int y; /* bitsize 16, bitpos 16 */
+};
+typedef struct tagPOINTS /* id 7 */ POINTS;
+typedef struct tagPOINTS /* id 7 */ *PPOINTS;
+typedef PPOINTS LPPOINTS;
+struct tagXFORM { /* size 24 id 8 */
+  float eM11; /* bitsize 32, bitpos 0 */
+  float eM12; /* bitsize 32, bitpos 32 */
+  float eM21; /* bitsize 32, bitpos 64 */
+  float eM22; /* bitsize 32, bitpos 96 */
+  float eDx; /* bitsize 32, bitpos 128 */
+  float eDy; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagXFORM /* id 8 */ XFORM;
+typedef struct tagXFORM /* id 8 */ *PXFORM;
+typedef PXFORM LPXFORM;
+struct tagBITMAP { /* size 24 id 9 */
+  long int bmType; /* bitsize 32, bitpos 0 */
+  long int bmWidth; /* bitsize 32, bitpos 32 */
+  long int bmHeight; /* bitsize 32, bitpos 64 */
+  long int bmWidthBytes; /* bitsize 32, bitpos 96 */
+  short unsigned int bmPlanes; /* bitsize 16, bitpos 128 */
+  short unsigned int bmBitsPixel; /* bitsize 16, bitpos 144 */
+  PVOID bmBits; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagBITMAP /* id 9 */ BITMAP;
+typedef struct tagBITMAP /* id 9 */ *PBITMAP;
+typedef PBITMAP NPBITMAP;
+typedef PBITMAP LPBITMAP;
+struct tagRGBTRIPLE { /* size 3 id 10 */
+  unsigned char rgbtBlue; /* bitsize 8, bitpos 0 */
+  unsigned char rgbtGreen; /* bitsize 8, bitpos 8 */
+  unsigned char rgbtRed; /* bitsize 8, bitpos 16 */
+};
+typedef struct tagRGBTRIPLE /* id 10 */ RGBTRIPLE;
+struct tagRGBQUAD { /* size 4 id 11 */
+  unsigned char rgbBlue; /* bitsize 8, bitpos 0 */
+  unsigned char rgbGreen; /* bitsize 8, bitpos 8 */
+  unsigned char rgbRed; /* bitsize 8, bitpos 16 */
+  unsigned char rgbReserved; /* bitsize 8, bitpos 24 */
+};
+typedef struct tagRGBQUAD /* id 11 */ RGBQUAD;
+typedef struct tagRGBQUAD /* id 11 */ *LPRGBQUAD;
+typedef long int LCSCSTYPE;
+typedef long int LCSGAMUTMATCH;
+typedef long int FXPT16DOT16;
+typedef PLONG LPFXPT16DOT16;
+typedef long int FXPT2DOT30;
+typedef PLONG LPFXPT2DOT30;
+struct tagCIEXYZ { /* size 12 id 12 */
+  long int ciexyzX; /* bitsize 32, bitpos 0 */
+  long int ciexyzY; /* bitsize 32, bitpos 32 */
+  long int ciexyzZ; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagCIEXYZ /* id 12 */ CIEXYZ;
+typedef struct tagCIEXYZ /* id 12 */ *LPCIEXYZ;
+struct tagICEXYZTRIPLE { /* size 36 id 13 */
+  struct tagCIEXYZ /* id 12 */ ciexyzRed; /* bitsize 96, bitpos 0 */
+  struct tagCIEXYZ /* id 12 */ ciexyzGreen; /* bitsize 96, bitpos 96 */
+  struct tagCIEXYZ /* id 12 */ ciexyzBlue; /* bitsize 96, bitpos 192 */
+};
+typedef struct tagICEXYZTRIPLE /* id 13 */ CIEXYZTRIPLE;
+typedef struct tagICEXYZTRIPLE /* id 13 */ *LPCIEXYZTRIPLE;
+struct tagLOGCOLORSPACEA { /* size 328 id 14 */
+  long unsigned int lcsSignature; /* bitsize 32, bitpos 0 */
+  long unsigned int lcsVersion; /* bitsize 32, bitpos 32 */
+  long unsigned int lcsSize; /* bitsize 32, bitpos 64 */
+  long int lcsCSType; /* bitsize 32, bitpos 96 */
+  long int lcsIntent; /* bitsize 32, bitpos 128 */
+  struct tagICEXYZTRIPLE /* id 13 */ lcsEndpoints; /* bitsize 288, bitpos 160 */
+  long unsigned int lcsGammaRed; /* bitsize 32, bitpos 448 */
+  long unsigned int lcsGammaGreen; /* bitsize 32, bitpos 480 */
+  long unsigned int lcsGammaBlue; /* bitsize 32, bitpos 512 */
+  unsigned char lcsFilename[260]; /* bitsize 2080, bitpos 544 */
+};
+typedef struct tagLOGCOLORSPACEA /* id 14 */ LOGCOLORSPACEA;
+typedef struct tagLOGCOLORSPACEA /* id 14 */ *LPLOGCOLORSPACEA;
+struct tagLOGCOLORSPACEW { /* size 588 id 15 */
+  long unsigned int lcsSignature; /* bitsize 32, bitpos 0 */
+  long unsigned int lcsVersion; /* bitsize 32, bitpos 32 */
+  long unsigned int lcsSize; /* bitsize 32, bitpos 64 */
+  long int lcsCSType; /* bitsize 32, bitpos 96 */
+  long int lcsIntent; /* bitsize 32, bitpos 128 */
+  struct tagICEXYZTRIPLE /* id 13 */ lcsEndpoints; /* bitsize 288, bitpos 160 */
+  long unsigned int lcsGammaRed; /* bitsize 32, bitpos 448 */
+  long unsigned int lcsGammaGreen; /* bitsize 32, bitpos 480 */
+  long unsigned int lcsGammaBlue; /* bitsize 32, bitpos 512 */
+  short unsigned int lcsFilename[260]; /* bitsize 4160, bitpos 544 */
+};
+typedef struct tagLOGCOLORSPACEW /* id 15 */ LOGCOLORSPACEW;
+typedef struct tagLOGCOLORSPACEW /* id 15 */ *LPLOGCOLORSPACEW;
+typedef struct tagLOGCOLORSPACEA /* id 14 */ LOGCOLORSPACE;
+typedef LPLOGCOLORSPACEA LPLOGCOLORSPACE;
+struct tagBITMAPCOREHEADER { /* size 12 id 16 */
+  long unsigned int bcSize; /* bitsize 32, bitpos 0 */
+  short unsigned int bcWidth; /* bitsize 16, bitpos 32 */
+  short unsigned int bcHeight; /* bitsize 16, bitpos 48 */
+  short unsigned int bcPlanes; /* bitsize 16, bitpos 64 */
+  short unsigned int bcBitCount; /* bitsize 16, bitpos 80 */
+};
+typedef struct tagBITMAPCOREHEADER /* id 16 */ BITMAPCOREHEADER;
+typedef struct tagBITMAPCOREHEADER /* id 16 */ *LPBITMAPCOREHEADER;
+typedef LPBITMAPCOREHEADER PBITMAPCOREHEADER;
+struct tagBITMAPINFOHEADER { /* size 40 id 17 */
+  long unsigned int biSize; /* bitsize 32, bitpos 0 */
+  long int biWidth; /* bitsize 32, bitpos 32 */
+  long int biHeight; /* bitsize 32, bitpos 64 */
+  short unsigned int biPlanes; /* bitsize 16, bitpos 96 */
+  short unsigned int biBitCount; /* bitsize 16, bitpos 112 */
+  long unsigned int biCompression; /* bitsize 32, bitpos 128 */
+  long unsigned int biSizeImage; /* bitsize 32, bitpos 160 */
+  long int biXPelsPerMeter; /* bitsize 32, bitpos 192 */
+  long int biYPelsPerMeter; /* bitsize 32, bitpos 224 */
+  long unsigned int biClrUsed; /* bitsize 32, bitpos 256 */
+  long unsigned int biClrImportant; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagBITMAPINFOHEADER /* id 17 */ BITMAPINFOHEADER;
+typedef struct tagBITMAPINFOHEADER /* id 17 */ *LPBITMAPINFOHEADER;
+typedef LPBITMAPINFOHEADER PBITMAPINFOHEADER;
+typedef struct %anon18 { /* size 108 */
+  long unsigned int bV4Size; /* bitsize 32, bitpos 0 */
+  long int bV4Width; /* bitsize 32, bitpos 32 */
+  long int bV4Height; /* bitsize 32, bitpos 64 */
+  short unsigned int bV4Planes; /* bitsize 16, bitpos 96 */
+  short unsigned int bV4BitCount; /* bitsize 16, bitpos 112 */
+  long unsigned int bV4V4Compression; /* bitsize 32, bitpos 128 */
+  long unsigned int bV4SizeImage; /* bitsize 32, bitpos 160 */
+  long int bV4XPelsPerMeter; /* bitsize 32, bitpos 192 */
+  long int bV4YPelsPerMeter; /* bitsize 32, bitpos 224 */
+  long unsigned int bV4ClrUsed; /* bitsize 32, bitpos 256 */
+  long unsigned int bV4ClrImportant; /* bitsize 32, bitpos 288 */
+  long unsigned int bV4RedMask; /* bitsize 32, bitpos 320 */
+  long unsigned int bV4GreenMask; /* bitsize 32, bitpos 352 */
+  long unsigned int bV4BlueMask; /* bitsize 32, bitpos 384 */
+  long unsigned int bV4AlphaMask; /* bitsize 32, bitpos 416 */
+  long unsigned int bV4CSType; /* bitsize 32, bitpos 448 */
+  struct tagICEXYZTRIPLE /* id 13 */ bV4Endpoints; /* bitsize 288, bitpos 480 */
+  long unsigned int bV4GammaRed; /* bitsize 32, bitpos 768 */
+  long unsigned int bV4GammaGreen; /* bitsize 32, bitpos 800 */
+  long unsigned int bV4GammaBlue; /* bitsize 32, bitpos 832 */
+} BITMAPV4HEADER;
+typedef BITMAPV4HEADER *LPBITMAPV4HEADER;
+typedef LPBITMAPV4HEADER PBITMAPV4HEADER;
+struct tagBITMAPINFO { /* size 44 id 19 */
+  struct tagBITMAPINFOHEADER /* id 17 */ bmiHeader; /* bitsize 320, bitpos 0 */
+  struct tagRGBQUAD /* id 11 */ bmiColors[1]; /* bitsize 32, bitpos 320 */
+};
+typedef struct tagBITMAPINFO /* id 19 */ BITMAPINFO;
+typedef struct tagBITMAPINFO /* id 19 */ *LPBITMAPINFO;
+typedef LPBITMAPINFO PBITMAPINFO;
+struct tagBITMAPCOREINFO { /* size 16 id 20 */
+  struct tagBITMAPCOREHEADER /* id 16 */ bmciHeader; /* bitsize 96, bitpos 0 */
+  struct tagRGBTRIPLE /* id 10 */ bmciColors[1]; /* bitsize 24, bitpos 96 */
+};
+typedef struct tagBITMAPCOREINFO /* id 20 */ BITMAPCOREINFO;
+typedef struct tagBITMAPCOREINFO /* id 20 */ *LPBITMAPCOREINFO;
+typedef LPBITMAPCOREINFO PBITMAPCOREINFO;
+struct tagBITMAPFILEHEADER { /* size 16 id 21 */
+  short unsigned int bfType; /* bitsize 16, bitpos 0 */
+  long unsigned int bfSize; /* bitsize 32, bitpos 32 */
+  short unsigned int bfReserved1; /* bitsize 16, bitpos 64 */
+  short unsigned int bfReserved2; /* bitsize 16, bitpos 80 */
+  long unsigned int bfOffBits; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagBITMAPFILEHEADER /* id 21 */ BITMAPFILEHEADER;
+typedef struct tagBITMAPFILEHEADER /* id 21 */ *LPBITMAPFILEHEADER;
+typedef LPBITMAPFILEHEADER PBITMAPFILEHEADER;
+struct tagFONTSIGNATURE { /* size 24 id 22 */
+  long unsigned int fsUsb[4]; /* bitsize 128, bitpos 0 */
+  long unsigned int fsCsb[2]; /* bitsize 64, bitpos 128 */
+};
+typedef struct tagFONTSIGNATURE /* id 22 */ FONTSIGNATURE;
+typedef struct tagFONTSIGNATURE /* id 22 */ *PFONTSIGNATURE;
+typedef PFONTSIGNATURE LPFONTSIGNATURE;
+struct tagCHARSETINFO { /* size 32 id 23 */
+  unsigned int ciCharset; /* bitsize 32, bitpos 0 */
+  unsigned int ciACP; /* bitsize 32, bitpos 32 */
+  struct tagFONTSIGNATURE /* id 22 */ fs; /* bitsize 192, bitpos 64 */
+};
+typedef struct tagCHARSETINFO /* id 23 */ CHARSETINFO;
+typedef struct tagCHARSETINFO /* id 23 */ *PCHARSETINFO;
+typedef PCHARSETINFO NPCHARSETINFO;
+typedef PCHARSETINFO LPCHARSETINFO;
+struct tagLOCALESIGNATURE { /* size 32 id 24 */
+  long unsigned int lsUsb[4]; /* bitsize 128, bitpos 0 */
+  long unsigned int lsCsbDefault[2]; /* bitsize 64, bitpos 128 */
+  long unsigned int lsCsbSupported[2]; /* bitsize 64, bitpos 192 */
+};
+typedef struct tagLOCALESIGNATURE /* id 24 */ LOCALESIGNATURE;
+typedef struct tagLOCALESIGNATURE /* id 24 */ *PLOCALESIGNATURE;
+typedef PLOCALESIGNATURE LPLOCALESIGNATURE;
+struct tagHANDLETABLE { /* size 4 id 25 */
+  long int objectHandle[1]; /* bitsize 32, bitpos 0 */
+};
+typedef struct tagHANDLETABLE /* id 25 */ HANDLETABLE;
+typedef struct tagHANDLETABLE /* id 25 */ *PHANDLETABLE;
+typedef PHANDLETABLE LPHANDLETABLE;
+struct tagMETARECORD { /* size 8 id 26 */
+  long unsigned int rdSize; /* bitsize 32, bitpos 0 */
+  short unsigned int rdFunction; /* bitsize 16, bitpos 32 */
+  short unsigned int rdParm[1]; /* bitsize 16, bitpos 48 */
+};
+typedef struct tagMETARECORD /* id 26 */ METARECORD;
+typedef struct tagMETARECORD /* id 26 */ *PMETARECORD;
+typedef PMETARECORD LPMETARECORD;
+struct tagMETAFILEPICT { /* size 16 id 27 */
+  long int mm; /* bitsize 32, bitpos 0 */
+  long int xExt; /* bitsize 32, bitpos 32 */
+  long int yExt; /* bitsize 32, bitpos 64 */
+  long int hMF; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagMETAFILEPICT /* id 27 */ METAFILEPICT;
+typedef struct tagMETAFILEPICT /* id 27 */ *LPMETAFILEPICT;
+struct tagMETAHEADER { /* size 24 id 28 */
+  short unsigned int mtType; /* bitsize 16, bitpos 0 */
+  short unsigned int mtHeaderSize; /* bitsize 16, bitpos 16 */
+  short unsigned int mtVersion; /* bitsize 16, bitpos 32 */
+  long unsigned int mtSize; /* bitsize 32, bitpos 64 */
+  short unsigned int mtNoObjects; /* bitsize 16, bitpos 96 */
+  long unsigned int mtMaxRecord; /* bitsize 32, bitpos 128 */
+  short unsigned int mtNoParameters; /* bitsize 16, bitpos 160 */
+};
+typedef struct tagMETAHEADER /* id 28 */ METAHEADER;
+typedef struct tagMETAHEADER /* id 28 */ *PMETAHEADER;
+typedef PMETAHEADER LPMETAHEADER;
+struct tagENHMETARECORD { /* size 12 id 29 */
+  long unsigned int iType; /* bitsize 32, bitpos 0 */
+  long unsigned int nSize; /* bitsize 32, bitpos 32 */
+  long unsigned int dParm[1]; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagENHMETARECORD /* id 29 */ ENHMETARECORD;
+typedef struct tagENHMETARECORD /* id 29 */ *PENHMETARECORD;
+typedef PENHMETARECORD LPENHMETARECORD;
+struct tagENHMETAHEADER { /* size 100 id 30 */
+  long unsigned int iType; /* bitsize 32, bitpos 0 */
+  long unsigned int nSize; /* bitsize 32, bitpos 32 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  struct _RECTL /* id 3 */ rclFrame; /* bitsize 128, bitpos 192 */
+  long unsigned int dSignature; /* bitsize 32, bitpos 320 */
+  long unsigned int nVersion; /* bitsize 32, bitpos 352 */
+  long unsigned int nBytes; /* bitsize 32, bitpos 384 */
+  long unsigned int nRecords; /* bitsize 32, bitpos 416 */
+  short unsigned int nHandles; /* bitsize 16, bitpos 448 */
+  short unsigned int sReserved; /* bitsize 16, bitpos 464 */
+  long unsigned int nDescription; /* bitsize 32, bitpos 480 */
+  long unsigned int offDescription; /* bitsize 32, bitpos 512 */
+  long unsigned int nPalEntries; /* bitsize 32, bitpos 544 */
+  struct tagSIZE /* id 6 */ szlDevice; /* bitsize 64, bitpos 576 */
+  struct tagSIZE /* id 6 */ szlMillimeters; /* bitsize 64, bitpos 640 */
+  long unsigned int cbPixelFormat; /* bitsize 32, bitpos 704 */
+  long unsigned int offPixelFormat; /* bitsize 32, bitpos 736 */
+  long unsigned int bOpenGL; /* bitsize 32, bitpos 768 */
+};
+typedef struct tagENHMETAHEADER /* id 30 */ ENHMETAHEADER;
+typedef struct tagENHMETAHEADER /* id 30 */ *PENHMETAHEADER;
+typedef PENHMETAHEADER LPENHMETAHEADER;
+typedef unsigned char BCHAR;
+struct tagTEXTMETRICA { /* size 56 id 31 */
+  long int tmHeight; /* bitsize 32, bitpos 0 */
+  long int tmAscent; /* bitsize 32, bitpos 32 */
+  long int tmDescent; /* bitsize 32, bitpos 64 */
+  long int tmInternalLeading; /* bitsize 32, bitpos 96 */
+  long int tmExternalLeading; /* bitsize 32, bitpos 128 */
+  long int tmAveCharWidth; /* bitsize 32, bitpos 160 */
+  long int tmMaxCharWidth; /* bitsize 32, bitpos 192 */
+  long int tmWeight; /* bitsize 32, bitpos 224 */
+  long int tmOverhang; /* bitsize 32, bitpos 256 */
+  long int tmDigitizedAspectX; /* bitsize 32, bitpos 288 */
+  long int tmDigitizedAspectY; /* bitsize 32, bitpos 320 */
+  unsigned char tmFirstChar; /* bitsize 8, bitpos 352 */
+  unsigned char tmLastChar; /* bitsize 8, bitpos 360 */
+  unsigned char tmDefaultChar; /* bitsize 8, bitpos 368 */
+  unsigned char tmBreakChar; /* bitsize 8, bitpos 376 */
+  unsigned char tmItalic; /* bitsize 8, bitpos 384 */
+  unsigned char tmUnderlined; /* bitsize 8, bitpos 392 */
+  unsigned char tmStruckOut; /* bitsize 8, bitpos 400 */
+  unsigned char tmPitchAndFamily; /* bitsize 8, bitpos 408 */
+  unsigned char tmCharSet; /* bitsize 8, bitpos 416 */
+};
+typedef struct tagTEXTMETRICA /* id 31 */ TEXTMETRICA;
+typedef struct tagTEXTMETRICA /* id 31 */ *PTEXTMETRICA;
+typedef PTEXTMETRICA NPTEXTMETRICA;
+typedef PTEXTMETRICA LPTEXTMETRICA;
+struct tagTEXTMETRICW { /* size 60 id 32 */
+  long int tmHeight; /* bitsize 32, bitpos 0 */
+  long int tmAscent; /* bitsize 32, bitpos 32 */
+  long int tmDescent; /* bitsize 32, bitpos 64 */
+  long int tmInternalLeading; /* bitsize 32, bitpos 96 */
+  long int tmExternalLeading; /* bitsize 32, bitpos 128 */
+  long int tmAveCharWidth; /* bitsize 32, bitpos 160 */
+  long int tmMaxCharWidth; /* bitsize 32, bitpos 192 */
+  long int tmWeight; /* bitsize 32, bitpos 224 */
+  long int tmOverhang; /* bitsize 32, bitpos 256 */
+  long int tmDigitizedAspectX; /* bitsize 32, bitpos 288 */
+  long int tmDigitizedAspectY; /* bitsize 32, bitpos 320 */
+  short unsigned int tmFirstChar; /* bitsize 16, bitpos 352 */
+  short unsigned int tmLastChar; /* bitsize 16, bitpos 368 */
+  short unsigned int tmDefaultChar; /* bitsize 16, bitpos 384 */
+  short unsigned int tmBreakChar; /* bitsize 16, bitpos 400 */
+  unsigned char tmItalic; /* bitsize 8, bitpos 416 */
+  unsigned char tmUnderlined; /* bitsize 8, bitpos 424 */
+  unsigned char tmStruckOut; /* bitsize 8, bitpos 432 */
+  unsigned char tmPitchAndFamily; /* bitsize 8, bitpos 440 */
+  unsigned char tmCharSet; /* bitsize 8, bitpos 448 */
+};
+typedef struct tagTEXTMETRICW /* id 32 */ TEXTMETRICW;
+typedef struct tagTEXTMETRICW /* id 32 */ *PTEXTMETRICW;
+typedef PTEXTMETRICW NPTEXTMETRICW;
+typedef PTEXTMETRICW LPTEXTMETRICW;
+typedef struct tagTEXTMETRICA /* id 31 */ TEXTMETRIC;
+typedef PTEXTMETRICA PTEXTMETRIC;
+typedef PTEXTMETRICA NPTEXTMETRIC;
+typedef PTEXTMETRICA LPTEXTMETRIC;
+struct tagNEWTEXTMETRICA { /* size 72 id 33 */
+  long int tmHeight; /* bitsize 32, bitpos 0 */
+  long int tmAscent; /* bitsize 32, bitpos 32 */
+  long int tmDescent; /* bitsize 32, bitpos 64 */
+  long int tmInternalLeading; /* bitsize 32, bitpos 96 */
+  long int tmExternalLeading; /* bitsize 32, bitpos 128 */
+  long int tmAveCharWidth; /* bitsize 32, bitpos 160 */
+  long int tmMaxCharWidth; /* bitsize 32, bitpos 192 */
+  long int tmWeight; /* bitsize 32, bitpos 224 */
+  long int tmOverhang; /* bitsize 32, bitpos 256 */
+  long int tmDigitizedAspectX; /* bitsize 32, bitpos 288 */
+  long int tmDigitizedAspectY; /* bitsize 32, bitpos 320 */
+  unsigned char tmFirstChar; /* bitsize 8, bitpos 352 */
+  unsigned char tmLastChar; /* bitsize 8, bitpos 360 */
+  unsigned char tmDefaultChar; /* bitsize 8, bitpos 368 */
+  unsigned char tmBreakChar; /* bitsize 8, bitpos 376 */
+  unsigned char tmItalic; /* bitsize 8, bitpos 384 */
+  unsigned char tmUnderlined; /* bitsize 8, bitpos 392 */
+  unsigned char tmStruckOut; /* bitsize 8, bitpos 400 */
+  unsigned char tmPitchAndFamily; /* bitsize 8, bitpos 408 */
+  unsigned char tmCharSet; /* bitsize 8, bitpos 416 */
+  long unsigned int ntmFlags; /* bitsize 32, bitpos 448 */
+  unsigned int ntmSizeEM; /* bitsize 32, bitpos 480 */
+  unsigned int ntmCellHeight; /* bitsize 32, bitpos 512 */
+  unsigned int ntmAvgWidth; /* bitsize 32, bitpos 544 */
+};
+typedef struct tagNEWTEXTMETRICA /* id 33 */ NEWTEXTMETRICA;
+typedef struct tagNEWTEXTMETRICA /* id 33 */ *PNEWTEXTMETRICA;
+typedef PNEWTEXTMETRICA NPNEWTEXTMETRICA;
+typedef PNEWTEXTMETRICA LPNEWTEXTMETRICA;
+struct tagNEWTEXTMETRICW { /* size 76 id 34 */
+  long int tmHeight; /* bitsize 32, bitpos 0 */
+  long int tmAscent; /* bitsize 32, bitpos 32 */
+  long int tmDescent; /* bitsize 32, bitpos 64 */
+  long int tmInternalLeading; /* bitsize 32, bitpos 96 */
+  long int tmExternalLeading; /* bitsize 32, bitpos 128 */
+  long int tmAveCharWidth; /* bitsize 32, bitpos 160 */
+  long int tmMaxCharWidth; /* bitsize 32, bitpos 192 */
+  long int tmWeight; /* bitsize 32, bitpos 224 */
+  long int tmOverhang; /* bitsize 32, bitpos 256 */
+  long int tmDigitizedAspectX; /* bitsize 32, bitpos 288 */
+  long int tmDigitizedAspectY; /* bitsize 32, bitpos 320 */
+  short unsigned int tmFirstChar; /* bitsize 16, bitpos 352 */
+  short unsigned int tmLastChar; /* bitsize 16, bitpos 368 */
+  short unsigned int tmDefaultChar; /* bitsize 16, bitpos 384 */
+  short unsigned int tmBreakChar; /* bitsize 16, bitpos 400 */
+  unsigned char tmItalic; /* bitsize 8, bitpos 416 */
+  unsigned char tmUnderlined; /* bitsize 8, bitpos 424 */
+  unsigned char tmStruckOut; /* bitsize 8, bitpos 432 */
+  unsigned char tmPitchAndFamily; /* bitsize 8, bitpos 440 */
+  unsigned char tmCharSet; /* bitsize 8, bitpos 448 */
+  long unsigned int ntmFlags; /* bitsize 32, bitpos 480 */
+  unsigned int ntmSizeEM; /* bitsize 32, bitpos 512 */
+  unsigned int ntmCellHeight; /* bitsize 32, bitpos 544 */
+  unsigned int ntmAvgWidth; /* bitsize 32, bitpos 576 */
+};
+typedef struct tagNEWTEXTMETRICW /* id 34 */ NEWTEXTMETRICW;
+typedef struct tagNEWTEXTMETRICW /* id 34 */ *PNEWTEXTMETRICW;
+typedef PNEWTEXTMETRICW NPNEWTEXTMETRICW;
+typedef PNEWTEXTMETRICW LPNEWTEXTMETRICW;
+typedef struct tagNEWTEXTMETRICA /* id 33 */ NEWTEXTMETRIC;
+typedef PNEWTEXTMETRICA PNEWTEXTMETRIC;
+typedef PNEWTEXTMETRICA NPNEWTEXTMETRIC;
+typedef PNEWTEXTMETRICA LPNEWTEXTMETRIC;
+struct tagNEWTEXTMETRICEXA { /* size 96 id 35 */
+  struct tagNEWTEXTMETRICA /* id 33 */ ntmTm; /* bitsize 576, bitpos 0 */
+  struct tagFONTSIGNATURE /* id 22 */ ntmFontSig; /* bitsize 192, bitpos 576 */
+};
+typedef struct tagNEWTEXTMETRICEXA /* id 35 */ NEWTEXTMETRICEXA;
+struct tagNEWTEXTMETRICEXW { /* size 100 id 36 */
+  struct tagNEWTEXTMETRICW /* id 34 */ ntmTm; /* bitsize 608, bitpos 0 */
+  struct tagFONTSIGNATURE /* id 22 */ ntmFontSig; /* bitsize 192, bitpos 608 */
+};
+typedef struct tagNEWTEXTMETRICEXW /* id 36 */ NEWTEXTMETRICEXW;
+typedef struct tagNEWTEXTMETRICEXA /* id 35 */ NEWTEXTMETRICEX;
+struct tagPELARRAY { /* size 20 id 37 */
+  long int paXCount; /* bitsize 32, bitpos 0 */
+  long int paYCount; /* bitsize 32, bitpos 32 */
+  long int paXExt; /* bitsize 32, bitpos 64 */
+  long int paYExt; /* bitsize 32, bitpos 96 */
+  unsigned char paRGBs; /* bitsize 8, bitpos 128 */
+};
+typedef struct tagPELARRAY /* id 37 */ PELARRAY;
+typedef struct tagPELARRAY /* id 37 */ *PPELARRAY;
+typedef PPELARRAY NPPELARRAY;
+typedef PPELARRAY LPPELARRAY;
+struct tagLOGBRUSH { /* size 12 id 38 */
+  unsigned int lbStyle; /* bitsize 32, bitpos 0 */
+  long unsigned int lbColor; /* bitsize 32, bitpos 32 */
+  long int lbHatch; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagLOGBRUSH /* id 38 */ LOGBRUSH;
+typedef struct tagLOGBRUSH /* id 38 */ *PLOGBRUSH;
+typedef PLOGBRUSH NPLOGBRUSH;
+typedef PLOGBRUSH LPLOGBRUSH;
+typedef struct tagLOGBRUSH /* id 38 */ PATTERN;
+typedef struct tagLOGBRUSH /* id 38 */ *PPATTERN;
+typedef PPATTERN NPPATTERN;
+typedef PPATTERN LPPATTERN;
+struct tagLOGPEN { /* size 16 id 39 */
+  unsigned int lopnStyle; /* bitsize 32, bitpos 0 */
+  struct tagPOINT /* id 4 */ lopnWidth; /* bitsize 64, bitpos 32 */
+  long unsigned int lopnColor; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagLOGPEN /* id 39 */ LOGPEN;
+typedef struct tagLOGPEN /* id 39 */ *PLOGPEN;
+typedef PLOGPEN NPLOGPEN;
+typedef PLOGPEN LPLOGPEN;
+struct tagEXTLOGPEN { /* size 28 id 40 */
+  long unsigned int elpPenStyle; /* bitsize 32, bitpos 0 */
+  long unsigned int elpWidth; /* bitsize 32, bitpos 32 */
+  unsigned int elpBrushStyle; /* bitsize 32, bitpos 64 */
+  long unsigned int elpColor; /* bitsize 32, bitpos 96 */
+  long int elpHatch; /* bitsize 32, bitpos 128 */
+  long unsigned int elpNumEntries; /* bitsize 32, bitpos 160 */
+  long unsigned int elpStyleEntry[1]; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagEXTLOGPEN /* id 40 */ EXTLOGPEN;
+typedef struct tagEXTLOGPEN /* id 40 */ *PEXTLOGPEN;
+typedef PEXTLOGPEN NPEXTLOGPEN;
+typedef PEXTLOGPEN LPEXTLOGPEN;
+struct tagPALETTEENTRY { /* size 4 id 41 */
+  unsigned char peRed; /* bitsize 8, bitpos 0 */
+  unsigned char peGreen; /* bitsize 8, bitpos 8 */
+  unsigned char peBlue; /* bitsize 8, bitpos 16 */
+  unsigned char peFlags; /* bitsize 8, bitpos 24 */
+};
+typedef struct tagPALETTEENTRY /* id 41 */ PALETTEENTRY;
+typedef struct tagPALETTEENTRY /* id 41 */ *PPALETTEENTRY;
+typedef PPALETTEENTRY LPPALETTEENTRY;
+struct tagLOGPALETTE { /* size 8 id 42 */
+  short unsigned int palVersion; /* bitsize 16, bitpos 0 */
+  short unsigned int palNumEntries; /* bitsize 16, bitpos 16 */
+  struct tagPALETTEENTRY /* id 41 */ palPalEntry[1]; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagLOGPALETTE /* id 42 */ LOGPALETTE;
+typedef struct tagLOGPALETTE /* id 42 */ *PLOGPALETTE;
+typedef PLOGPALETTE NPLOGPALETTE;
+typedef PLOGPALETTE LPLOGPALETTE;
+struct tagLOGFONTA { /* size 60 id 43 */
+  long int lfHeight; /* bitsize 32, bitpos 0 */
+  long int lfWidth; /* bitsize 32, bitpos 32 */
+  long int lfEscapement; /* bitsize 32, bitpos 64 */
+  long int lfOrientation; /* bitsize 32, bitpos 96 */
+  long int lfWeight; /* bitsize 32, bitpos 128 */
+  unsigned char lfItalic; /* bitsize 8, bitpos 160 */
+  unsigned char lfUnderline; /* bitsize 8, bitpos 168 */
+  unsigned char lfStrikeOut; /* bitsize 8, bitpos 176 */
+  unsigned char lfCharSet; /* bitsize 8, bitpos 184 */
+  unsigned char lfOutPrecision; /* bitsize 8, bitpos 192 */
+  unsigned char lfClipPrecision; /* bitsize 8, bitpos 200 */
+  unsigned char lfQuality; /* bitsize 8, bitpos 208 */
+  unsigned char lfPitchAndFamily; /* bitsize 8, bitpos 216 */
+  unsigned char lfFaceName[32]; /* bitsize 256, bitpos 224 */
+};
+typedef struct tagLOGFONTA /* id 43 */ LOGFONTA;
+typedef struct tagLOGFONTA /* id 43 */ *PLOGFONTA;
+typedef PLOGFONTA NPLOGFONTA;
+typedef PLOGFONTA LPLOGFONTA;
+struct tagLOGFONTW { /* size 92 id 44 */
+  long int lfHeight; /* bitsize 32, bitpos 0 */
+  long int lfWidth; /* bitsize 32, bitpos 32 */
+  long int lfEscapement; /* bitsize 32, bitpos 64 */
+  long int lfOrientation; /* bitsize 32, bitpos 96 */
+  long int lfWeight; /* bitsize 32, bitpos 128 */
+  unsigned char lfItalic; /* bitsize 8, bitpos 160 */
+  unsigned char lfUnderline; /* bitsize 8, bitpos 168 */
+  unsigned char lfStrikeOut; /* bitsize 8, bitpos 176 */
+  unsigned char lfCharSet; /* bitsize 8, bitpos 184 */
+  unsigned char lfOutPrecision; /* bitsize 8, bitpos 192 */
+  unsigned char lfClipPrecision; /* bitsize 8, bitpos 200 */
+  unsigned char lfQuality; /* bitsize 8, bitpos 208 */
+  unsigned char lfPitchAndFamily; /* bitsize 8, bitpos 216 */
+  short unsigned int lfFaceName[32]; /* bitsize 512, bitpos 224 */
+};
+typedef struct tagLOGFONTW /* id 44 */ LOGFONTW;
+typedef struct tagLOGFONTW /* id 44 */ *PLOGFONTW;
+typedef PLOGFONTW NPLOGFONTW;
+typedef PLOGFONTW LPLOGFONTW;
+typedef struct tagLOGFONTA /* id 43 */ LOGFONT;
+typedef PLOGFONTA PLOGFONT;
+typedef PLOGFONTA NPLOGFONT;
+typedef PLOGFONTA LPLOGFONT;
+struct tagENUMLOGFONTA { /* size 156 id 45 */
+  struct tagLOGFONTA /* id 43 */ elfLogFont; /* bitsize 480, bitpos 0 */
+  unsigned char elfFullName[64]; /* bitsize 512, bitpos 480 */
+  unsigned char elfStyle[32]; /* bitsize 256, bitpos 992 */
+};
+typedef struct tagENUMLOGFONTA /* id 45 */ ENUMLOGFONTA;
+typedef struct tagENUMLOGFONTA /* id 45 */ *LPENUMLOGFONTA;
+struct tagENUMLOGFONTW { /* size 284 id 46 */
+  struct tagLOGFONTW /* id 44 */ elfLogFont; /* bitsize 736, bitpos 0 */
+  short unsigned int elfFullName[64]; /* bitsize 1024, bitpos 736 */
+  short unsigned int elfStyle[32]; /* bitsize 512, bitpos 1760 */
+};
+typedef struct tagENUMLOGFONTW /* id 46 */ ENUMLOGFONTW;
+typedef struct tagENUMLOGFONTW /* id 46 */ *LPENUMLOGFONTW;
+typedef struct tagENUMLOGFONTA /* id 45 */ ENUMLOGFONT;
+typedef LPENUMLOGFONTA LPENUMLOGFONT;
+struct tagENUMLOGFONTEXA { /* size 188 id 47 */
+  struct tagLOGFONTA /* id 43 */ elfLogFont; /* bitsize 480, bitpos 0 */
+  unsigned char elfFullName[64]; /* bitsize 512, bitpos 480 */
+  unsigned char elfStyle[32]; /* bitsize 256, bitpos 992 */
+  unsigned char elfScript[32]; /* bitsize 256, bitpos 1248 */
+};
+typedef struct tagENUMLOGFONTEXA /* id 47 */ ENUMLOGFONTEXA;
+typedef struct tagENUMLOGFONTEXA /* id 47 */ *LPENUMLOGFONTEXA;
+struct tagENUMLOGFONTEXW { /* size 348 id 48 */
+  struct tagLOGFONTW /* id 44 */ elfLogFont; /* bitsize 736, bitpos 0 */
+  short unsigned int elfFullName[64]; /* bitsize 1024, bitpos 736 */
+  short unsigned int elfStyle[32]; /* bitsize 512, bitpos 1760 */
+  short unsigned int elfScript[32]; /* bitsize 512, bitpos 2272 */
+};
+typedef struct tagENUMLOGFONTEXW /* id 48 */ ENUMLOGFONTEXW;
+typedef struct tagENUMLOGFONTEXW /* id 48 */ *LPENUMLOGFONTEXW;
+typedef struct tagENUMLOGFONTEXA /* id 47 */ ENUMLOGFONTEX;
+typedef LPENUMLOGFONTEXA LPENUMLOGFONTEX;
+struct tagPANOSE { /* size 10 id 49 */
+  unsigned char bFamilyType; /* bitsize 8, bitpos 0 */
+  unsigned char bSerifStyle; /* bitsize 8, bitpos 8 */
+  unsigned char bWeight; /* bitsize 8, bitpos 16 */
+  unsigned char bProportion; /* bitsize 8, bitpos 24 */
+  unsigned char bContrast; /* bitsize 8, bitpos 32 */
+  unsigned char bStrokeVariation; /* bitsize 8, bitpos 40 */
+  unsigned char bArmStyle; /* bitsize 8, bitpos 48 */
+  unsigned char bLetterform; /* bitsize 8, bitpos 56 */
+  unsigned char bMidline; /* bitsize 8, bitpos 64 */
+  unsigned char bXHeight; /* bitsize 8, bitpos 72 */
+};
+typedef struct tagPANOSE /* id 49 */ PANOSE;
+typedef struct tagPANOSE /* id 49 */ *LPPANOSE;
+struct tagEXTLOGFONTA { /* size 192 id 50 */
+  struct tagLOGFONTA /* id 43 */ elfLogFont; /* bitsize 480, bitpos 0 */
+  unsigned char elfFullName[64]; /* bitsize 512, bitpos 480 */
+  unsigned char elfStyle[32]; /* bitsize 256, bitpos 992 */
+  long unsigned int elfVersion; /* bitsize 32, bitpos 1248 */
+  long unsigned int elfStyleSize; /* bitsize 32, bitpos 1280 */
+  long unsigned int elfMatch; /* bitsize 32, bitpos 1312 */
+  long unsigned int elfReserved; /* bitsize 32, bitpos 1344 */
+  unsigned char elfVendorId[4]; /* bitsize 32, bitpos 1376 */
+  long unsigned int elfCulture; /* bitsize 32, bitpos 1408 */
+  struct tagPANOSE /* id 49 */ elfPanose; /* bitsize 80, bitpos 1440 */
+};
+typedef struct tagEXTLOGFONTA /* id 50 */ EXTLOGFONTA;
+typedef struct tagEXTLOGFONTA /* id 50 */ *PEXTLOGFONTA;
+typedef PEXTLOGFONTA NPEXTLOGFONTA;
+typedef PEXTLOGFONTA LPEXTLOGFONTA;
+struct tagEXTLOGFONTW { /* size 320 id 51 */
+  struct tagLOGFONTW /* id 44 */ elfLogFont; /* bitsize 736, bitpos 0 */
+  short unsigned int elfFullName[64]; /* bitsize 1024, bitpos 736 */
+  short unsigned int elfStyle[32]; /* bitsize 512, bitpos 1760 */
+  long unsigned int elfVersion; /* bitsize 32, bitpos 2272 */
+  long unsigned int elfStyleSize; /* bitsize 32, bitpos 2304 */
+  long unsigned int elfMatch; /* bitsize 32, bitpos 2336 */
+  long unsigned int elfReserved; /* bitsize 32, bitpos 2368 */
+  unsigned char elfVendorId[4]; /* bitsize 32, bitpos 2400 */
+  long unsigned int elfCulture; /* bitsize 32, bitpos 2432 */
+  struct tagPANOSE /* id 49 */ elfPanose; /* bitsize 80, bitpos 2464 */
+};
+typedef struct tagEXTLOGFONTW /* id 51 */ EXTLOGFONTW;
+typedef struct tagEXTLOGFONTW /* id 51 */ *PEXTLOGFONTW;
+typedef PEXTLOGFONTW NPEXTLOGFONTW;
+typedef PEXTLOGFONTW LPEXTLOGFONTW;
+typedef struct tagEXTLOGFONTA /* id 50 */ EXTLOGFONT;
+typedef PEXTLOGFONTA PEXTLOGFONT;
+typedef PEXTLOGFONTA NPEXTLOGFONT;
+typedef PEXTLOGFONTA LPEXTLOGFONT;
+struct _devicemodeA { /* size 156 id 52 */
+  unsigned char dmDeviceName[32]; /* bitsize 256, bitpos 0 */
+  short unsigned int dmSpecVersion; /* bitsize 16, bitpos 256 */
+  short unsigned int dmDriverVersion; /* bitsize 16, bitpos 272 */
+  short unsigned int dmSize; /* bitsize 16, bitpos 288 */
+  short unsigned int dmDriverExtra; /* bitsize 16, bitpos 304 */
+  long unsigned int dmFields; /* bitsize 32, bitpos 320 */
+  short int dmOrientation; /* bitsize 16, bitpos 352 */
+  short int dmPaperSize; /* bitsize 16, bitpos 368 */
+  short int dmPaperLength; /* bitsize 16, bitpos 384 */
+  short int dmPaperWidth; /* bitsize 16, bitpos 400 */
+  short int dmScale; /* bitsize 16, bitpos 416 */
+  short int dmCopies; /* bitsize 16, bitpos 432 */
+  short int dmDefaultSource; /* bitsize 16, bitpos 448 */
+  short int dmPrintQuality; /* bitsize 16, bitpos 464 */
+  short int dmColor; /* bitsize 16, bitpos 480 */
+  short int dmDuplex; /* bitsize 16, bitpos 496 */
+  short int dmYResolution; /* bitsize 16, bitpos 512 */
+  short int dmTTOption; /* bitsize 16, bitpos 528 */
+  short int dmCollate; /* bitsize 16, bitpos 544 */
+  unsigned char dmFormName[32]; /* bitsize 256, bitpos 560 */
+  short unsigned int dmLogPixels; /* bitsize 16, bitpos 816 */
+  long unsigned int dmBitsPerPel; /* bitsize 32, bitpos 832 */
+  long unsigned int dmPelsWidth; /* bitsize 32, bitpos 864 */
+  long unsigned int dmPelsHeight; /* bitsize 32, bitpos 896 */
+  long unsigned int dmDisplayFlags; /* bitsize 32, bitpos 928 */
+  long unsigned int dmDisplayFrequency; /* bitsize 32, bitpos 960 */
+  long unsigned int dmICMMethod; /* bitsize 32, bitpos 992 */
+  long unsigned int dmICMIntent; /* bitsize 32, bitpos 1024 */
+  long unsigned int dmMediaType; /* bitsize 32, bitpos 1056 */
+  long unsigned int dmDitherType; /* bitsize 32, bitpos 1088 */
+  long unsigned int dmICCManufacturer; /* bitsize 32, bitpos 1120 */
+  long unsigned int dmICCModel; /* bitsize 32, bitpos 1152 */
+  long unsigned int dmPanningWidth; /* bitsize 32, bitpos 1184 */
+  long unsigned int dmPanningHeight; /* bitsize 32, bitpos 1216 */
+};
+typedef struct _devicemodeA /* id 52 */ DEVMODEA;
+typedef struct _devicemodeA /* id 52 */ *PDEVMODEA;
+typedef PDEVMODEA NPDEVMODEA;
+typedef PDEVMODEA LPDEVMODEA;
+struct _devicemodeW { /* size 220 id 53 */
+  short unsigned int dmDeviceName[32]; /* bitsize 512, bitpos 0 */
+  short unsigned int dmSpecVersion; /* bitsize 16, bitpos 512 */
+  short unsigned int dmDriverVersion; /* bitsize 16, bitpos 528 */
+  short unsigned int dmSize; /* bitsize 16, bitpos 544 */
+  short unsigned int dmDriverExtra; /* bitsize 16, bitpos 560 */
+  long unsigned int dmFields; /* bitsize 32, bitpos 576 */
+  short int dmOrientation; /* bitsize 16, bitpos 608 */
+  short int dmPaperSize; /* bitsize 16, bitpos 624 */
+  short int dmPaperLength; /* bitsize 16, bitpos 640 */
+  short int dmPaperWidth; /* bitsize 16, bitpos 656 */
+  short int dmScale; /* bitsize 16, bitpos 672 */
+  short int dmCopies; /* bitsize 16, bitpos 688 */
+  short int dmDefaultSource; /* bitsize 16, bitpos 704 */
+  short int dmPrintQuality; /* bitsize 16, bitpos 720 */
+  short int dmColor; /* bitsize 16, bitpos 736 */
+  short int dmDuplex; /* bitsize 16, bitpos 752 */
+  short int dmYResolution; /* bitsize 16, bitpos 768 */
+  short int dmTTOption; /* bitsize 16, bitpos 784 */
+  short int dmCollate; /* bitsize 16, bitpos 800 */
+  short unsigned int dmFormName[32]; /* bitsize 512, bitpos 816 */
+  short unsigned int dmLogPixels; /* bitsize 16, bitpos 1328 */
+  long unsigned int dmBitsPerPel; /* bitsize 32, bitpos 1344 */
+  long unsigned int dmPelsWidth; /* bitsize 32, bitpos 1376 */
+  long unsigned int dmPelsHeight; /* bitsize 32, bitpos 1408 */
+  long unsigned int dmDisplayFlags; /* bitsize 32, bitpos 1440 */
+  long unsigned int dmDisplayFrequency; /* bitsize 32, bitpos 1472 */
+  long unsigned int dmICMMethod; /* bitsize 32, bitpos 1504 */
+  long unsigned int dmICMIntent; /* bitsize 32, bitpos 1536 */
+  long unsigned int dmMediaType; /* bitsize 32, bitpos 1568 */
+  long unsigned int dmDitherType; /* bitsize 32, bitpos 1600 */
+  long unsigned int dmICCManufacturer; /* bitsize 32, bitpos 1632 */
+  long unsigned int dmICCModel; /* bitsize 32, bitpos 1664 */
+  long unsigned int dmPanningWidth; /* bitsize 32, bitpos 1696 */
+  long unsigned int dmPanningHeight; /* bitsize 32, bitpos 1728 */
+};
+typedef struct _devicemodeW /* id 53 */ DEVMODEW;
+typedef struct _devicemodeW /* id 53 */ *PDEVMODEW;
+typedef PDEVMODEW NPDEVMODEW;
+typedef PDEVMODEW LPDEVMODEW;
+typedef struct _devicemodeA /* id 52 */ DEVMODE;
+typedef PDEVMODEA PDEVMODE;
+typedef PDEVMODEA NPDEVMODE;
+typedef PDEVMODEA LPDEVMODE;
+struct _RGNDATAHEADER { /* size 32 id 54 */
+  long unsigned int dwSize; /* bitsize 32, bitpos 0 */
+  long unsigned int iType; /* bitsize 32, bitpos 32 */
+  long unsigned int nCount; /* bitsize 32, bitpos 64 */
+  long unsigned int nRgnSize; /* bitsize 32, bitpos 96 */
+  struct tagRECT /* id 2 */ rcBound; /* bitsize 128, bitpos 128 */
+};
+typedef struct _RGNDATAHEADER /* id 54 */ RGNDATAHEADER;
+typedef struct _RGNDATAHEADER /* id 54 */ *PRGNDATAHEADER;
+struct _RGNDATA { /* size 36 id 55 */
+  struct _RGNDATAHEADER /* id 54 */ rdh; /* bitsize 256, bitpos 0 */
+  char Buffer[1]; /* bitsize 8, bitpos 256 */
+};
+typedef struct _RGNDATA /* id 55 */ RGNDATA;
+typedef struct _RGNDATA /* id 55 */ *PRGNDATA;
+typedef PRGNDATA NPRGNDATA;
+typedef PRGNDATA LPRGNDATA;
+struct _ABC { /* size 12 id 56 */
+  int abcA; /* bitsize 32, bitpos 0 */
+  unsigned int abcB; /* bitsize 32, bitpos 32 */
+  int abcC; /* bitsize 32, bitpos 64 */
+};
+typedef struct _ABC /* id 56 */ ABC;
+typedef struct _ABC /* id 56 */ *PABC;
+typedef PABC NPABC;
+typedef PABC LPABC;
+struct _ABCFLOAT { /* size 12 id 57 */
+  float abcfA; /* bitsize 32, bitpos 0 */
+  float abcfB; /* bitsize 32, bitpos 32 */
+  float abcfC; /* bitsize 32, bitpos 64 */
+};
+typedef struct _ABCFLOAT /* id 57 */ ABCFLOAT;
+typedef struct _ABCFLOAT /* id 57 */ *PABCFLOAT;
+typedef PABCFLOAT NPABCFLOAT;
+typedef PABCFLOAT LPABCFLOAT;
+struct _OUTLINETEXTMETRICA { /* size 212 id 58 */
+  unsigned int otmSize; /* bitsize 32, bitpos 0 */
+  struct tagTEXTMETRICA /* id 31 */ otmTextMetrics; /* bitsize 448, bitpos 32 */
+  unsigned char otmFiller; /* bitsize 8, bitpos 480 */
+  struct tagPANOSE /* id 49 */ otmPanoseNumber; /* bitsize 80, bitpos 488 */
+  unsigned int otmfsSelection; /* bitsize 32, bitpos 576 */
+  unsigned int otmfsType; /* bitsize 32, bitpos 608 */
+  int otmsCharSlopeRise; /* bitsize 32, bitpos 640 */
+  int otmsCharSlopeRun; /* bitsize 32, bitpos 672 */
+  int otmItalicAngle; /* bitsize 32, bitpos 704 */
+  unsigned int otmEMSquare; /* bitsize 32, bitpos 736 */
+  int otmAscent; /* bitsize 32, bitpos 768 */
+  int otmDescent; /* bitsize 32, bitpos 800 */
+  unsigned int otmLineGap; /* bitsize 32, bitpos 832 */
+  unsigned int otmsCapEmHeight; /* bitsize 32, bitpos 864 */
+  unsigned int otmsXHeight; /* bitsize 32, bitpos 896 */
+  struct tagRECT /* id 2 */ otmrcFontBox; /* bitsize 128, bitpos 928 */
+  int otmMacAscent; /* bitsize 32, bitpos 1056 */
+  int otmMacDescent; /* bitsize 32, bitpos 1088 */
+  unsigned int otmMacLineGap; /* bitsize 32, bitpos 1120 */
+  unsigned int otmusMinimumPPEM; /* bitsize 32, bitpos 1152 */
+  struct tagPOINT /* id 4 */ otmptSubscriptSize; /* bitsize 64, bitpos 1184 */
+  struct tagPOINT /* id 4 */ otmptSubscriptOffset; /* bitsize 64, bitpos 1248 */
+  struct tagPOINT /* id 4 */ otmptSuperscriptSize; /* bitsize 64, bitpos 1312 */
+  struct tagPOINT /* id 4 */ otmptSuperscriptOffset; /* bitsize 64, bitpos 1376 */
+  unsigned int otmsStrikeoutSize; /* bitsize 32, bitpos 1440 */
+  int otmsStrikeoutPosition; /* bitsize 32, bitpos 1472 */
+  int otmsUnderscoreSize; /* bitsize 32, bitpos 1504 */
+  int otmsUnderscorePosition; /* bitsize 32, bitpos 1536 */
+  PSTR otmpFamilyName; /* bitsize 32, bitpos 1568 */
+  PSTR otmpFaceName; /* bitsize 32, bitpos 1600 */
+  PSTR otmpStyleName; /* bitsize 32, bitpos 1632 */
+  PSTR otmpFullName; /* bitsize 32, bitpos 1664 */
+};
+typedef struct _OUTLINETEXTMETRICA /* id 58 */ OUTLINETEXTMETRICA;
+typedef struct _OUTLINETEXTMETRICA /* id 58 */ *POUTLINETEXTMETRICA;
+typedef POUTLINETEXTMETRICA NPOUTLINETEXTMETRICA;
+typedef POUTLINETEXTMETRICA LPOUTLINETEXTMETRICA;
+struct _OUTLINETEXTMETRICW { /* size 216 id 59 */
+  unsigned int otmSize; /* bitsize 32, bitpos 0 */
+  struct tagTEXTMETRICW /* id 32 */ otmTextMetrics; /* bitsize 480, bitpos 32 */
+  unsigned char otmFiller; /* bitsize 8, bitpos 512 */
+  struct tagPANOSE /* id 49 */ otmPanoseNumber; /* bitsize 80, bitpos 520 */
+  unsigned int otmfsSelection; /* bitsize 32, bitpos 608 */
+  unsigned int otmfsType; /* bitsize 32, bitpos 640 */
+  int otmsCharSlopeRise; /* bitsize 32, bitpos 672 */
+  int otmsCharSlopeRun; /* bitsize 32, bitpos 704 */
+  int otmItalicAngle; /* bitsize 32, bitpos 736 */
+  unsigned int otmEMSquare; /* bitsize 32, bitpos 768 */
+  int otmAscent; /* bitsize 32, bitpos 800 */
+  int otmDescent; /* bitsize 32, bitpos 832 */
+  unsigned int otmLineGap; /* bitsize 32, bitpos 864 */
+  unsigned int otmsCapEmHeight; /* bitsize 32, bitpos 896 */
+  unsigned int otmsXHeight; /* bitsize 32, bitpos 928 */
+  struct tagRECT /* id 2 */ otmrcFontBox; /* bitsize 128, bitpos 960 */
+  int otmMacAscent; /* bitsize 32, bitpos 1088 */
+  int otmMacDescent; /* bitsize 32, bitpos 1120 */
+  unsigned int otmMacLineGap; /* bitsize 32, bitpos 1152 */
+  unsigned int otmusMinimumPPEM; /* bitsize 32, bitpos 1184 */
+  struct tagPOINT /* id 4 */ otmptSubscriptSize; /* bitsize 64, bitpos 1216 */
+  struct tagPOINT /* id 4 */ otmptSubscriptOffset; /* bitsize 64, bitpos 1280 */
+  struct tagPOINT /* id 4 */ otmptSuperscriptSize; /* bitsize 64, bitpos 1344 */
+  struct tagPOINT /* id 4 */ otmptSuperscriptOffset; /* bitsize 64, bitpos 1408 */
+  unsigned int otmsStrikeoutSize; /* bitsize 32, bitpos 1472 */
+  int otmsStrikeoutPosition; /* bitsize 32, bitpos 1504 */
+  int otmsUnderscoreSize; /* bitsize 32, bitpos 1536 */
+  int otmsUnderscorePosition; /* bitsize 32, bitpos 1568 */
+  PSTR otmpFamilyName; /* bitsize 32, bitpos 1600 */
+  PSTR otmpFaceName; /* bitsize 32, bitpos 1632 */
+  PSTR otmpStyleName; /* bitsize 32, bitpos 1664 */
+  PSTR otmpFullName; /* bitsize 32, bitpos 1696 */
+};
+typedef struct _OUTLINETEXTMETRICW /* id 59 */ OUTLINETEXTMETRICW;
+typedef struct _OUTLINETEXTMETRICW /* id 59 */ *POUTLINETEXTMETRICW;
+typedef POUTLINETEXTMETRICW NPOUTLINETEXTMETRICW;
+typedef POUTLINETEXTMETRICW LPOUTLINETEXTMETRICW;
+typedef struct _OUTLINETEXTMETRICA /* id 58 */ OUTLINETEXTMETRIC;
+typedef POUTLINETEXTMETRICA POUTLINETEXTMETRIC;
+typedef POUTLINETEXTMETRICA NPOUTLINETEXTMETRIC;
+typedef POUTLINETEXTMETRICA LPOUTLINETEXTMETRIC;
+struct tagPOLYTEXTA { /* size 40 id 60 */
+  int x; /* bitsize 32, bitpos 0 */
+  int y; /* bitsize 32, bitpos 32 */
+  unsigned int n; /* bitsize 32, bitpos 64 */
+  PSTR lpstr; /* bitsize 32, bitpos 96 */
+  unsigned int uiFlags; /* bitsize 32, bitpos 128 */
+  struct tagRECT /* id 2 */ rcl; /* bitsize 128, bitpos 160 */
+  LPCWORD pdx; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagPOLYTEXTA /* id 60 */ POLYTEXTA;
+typedef struct tagPOLYTEXTA /* id 60 */ *PPOLYTEXTA;
+typedef PPOLYTEXTA NPPOLYTEXTA;
+typedef PPOLYTEXTA LPPOLYTEXTA;
+struct tagPOLYTEXTW { /* size 40 id 61 */
+  int x; /* bitsize 32, bitpos 0 */
+  int y; /* bitsize 32, bitpos 32 */
+  unsigned int n; /* bitsize 32, bitpos 64 */
+  PWCHAR lpstr; /* bitsize 32, bitpos 96 */
+  unsigned int uiFlags; /* bitsize 32, bitpos 128 */
+  struct tagRECT /* id 2 */ rcl; /* bitsize 128, bitpos 160 */
+  LPCWORD pdx; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagPOLYTEXTW /* id 61 */ POLYTEXTW;
+typedef struct tagPOLYTEXTW /* id 61 */ *PPOLYTEXTW;
+typedef PPOLYTEXTW NPPOLYTEXTW;
+typedef PPOLYTEXTW LPPOLYTEXTW;
+typedef struct tagPOLYTEXTA /* id 60 */ POLYTEXT;
+typedef PPOLYTEXTA PPOLYTEXT;
+typedef PPOLYTEXTA NPPOLYTEXT;
+typedef PPOLYTEXTA LPPOLYTEXT;
+struct _FIXED { /* size 4 id 62 */
+  short unsigned int fract; /* bitsize 16, bitpos 0 */
+  short int value; /* bitsize 16, bitpos 16 */
+};
+typedef struct _FIXED /* id 62 */ FIXED;
+struct _MAT2 { /* size 16 id 63 */
+  struct _FIXED /* id 62 */ eM11; /* bitsize 32, bitpos 0 */
+  struct _FIXED /* id 62 */ eM12; /* bitsize 32, bitpos 32 */
+  struct _FIXED /* id 62 */ eM21; /* bitsize 32, bitpos 64 */
+  struct _FIXED /* id 62 */ eM22; /* bitsize 32, bitpos 96 */
+};
+typedef struct _MAT2 /* id 63 */ MAT2;
+typedef struct _MAT2 /* id 63 */ *LPMAT2;
+struct _GLYPHMETRICS { /* size 20 id 64 */
+  unsigned int gmBlackBoxX; /* bitsize 32, bitpos 0 */
+  unsigned int gmBlackBoxY; /* bitsize 32, bitpos 32 */
+  struct tagPOINT /* id 4 */ gmptGlyphOrigin; /* bitsize 64, bitpos 64 */
+  short int gmCellIncX; /* bitsize 16, bitpos 128 */
+  short int gmCellIncY; /* bitsize 16, bitpos 144 */
+};
+typedef struct _GLYPHMETRICS /* id 64 */ GLYPHMETRICS;
+typedef struct _GLYPHMETRICS /* id 64 */ *LPGLYPHMETRICS;
+struct tagPOINTFX { /* size 8 id 65 */
+  struct _FIXED /* id 62 */ x; /* bitsize 32, bitpos 0 */
+  struct _FIXED /* id 62 */ y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINTFX /* id 65 */ POINTFX;
+typedef struct tagPOINTFX /* id 65 */ *LPPOINTFX;
+struct tagTTPOLYCURVE { /* size 12 id 66 */
+  short unsigned int wType; /* bitsize 16, bitpos 0 */
+  short unsigned int cpfx; /* bitsize 16, bitpos 16 */
+  struct tagPOINTFX /* id 65 */ apfx[1]; /* bitsize 64, bitpos 32 */
+};
+typedef struct tagTTPOLYCURVE /* id 66 */ TTPOLYCURVE;
+typedef struct tagTTPOLYCURVE /* id 66 */ *LPTTPOLYCURVE;
+struct tagTTPOLYGONHEADER { /* size 16 id 67 */
+  long unsigned int cb; /* bitsize 32, bitpos 0 */
+  long unsigned int dwType; /* bitsize 32, bitpos 32 */
+  struct tagPOINTFX /* id 65 */ pfxStart; /* bitsize 64, bitpos 64 */
+};
+typedef struct tagTTPOLYGONHEADER /* id 67 */ TTPOLYGONHEADER;
+typedef struct tagTTPOLYGONHEADER /* id 67 */ *LPTTPOLYGONHEADER;
+struct tagGCP_RESULTSA { /* size 36 id 68 */
+  long unsigned int lStructSize; /* bitsize 32, bitpos 0 */
+  PSTR lpOutString; /* bitsize 32, bitpos 32 */
+  unsigned int *lpOrder; /* bitsize 32, bitpos 64 */
+  LPCWORD lpDx; /* bitsize 32, bitpos 96 */
+  LPCWORD lpCaretPos; /* bitsize 32, bitpos 128 */
+  PSTR lpClass; /* bitsize 32, bitpos 160 */
+  PWCHAR lpGlyphs; /* bitsize 32, bitpos 192 */
+  unsigned int nGlyphs; /* bitsize 32, bitpos 224 */
+  int nMaxFit; /* bitsize 32, bitpos 256 */
+};
+typedef struct tagGCP_RESULTSA /* id 68 */ GCP_RESULTSA;
+typedef struct tagGCP_RESULTSA /* id 68 */ *LPGCP_RESULTSA;
+struct tagGCP_RESULTSW { /* size 36 id 69 */
+  long unsigned int lStructSize; /* bitsize 32, bitpos 0 */
+  PWCHAR lpOutString; /* bitsize 32, bitpos 32 */
+  unsigned int *lpOrder; /* bitsize 32, bitpos 64 */
+  LPCWORD lpDx; /* bitsize 32, bitpos 96 */
+  LPCWORD lpCaretPos; /* bitsize 32, bitpos 128 */
+  PSTR lpClass; /* bitsize 32, bitpos 160 */
+  PWCHAR lpGlyphs; /* bitsize 32, bitpos 192 */
+  unsigned int nGlyphs; /* bitsize 32, bitpos 224 */
+  int nMaxFit; /* bitsize 32, bitpos 256 */
+};
+typedef struct tagGCP_RESULTSW /* id 69 */ GCP_RESULTSW;
+typedef struct tagGCP_RESULTSW /* id 69 */ *LPGCP_RESULTSW;
+typedef struct tagGCP_RESULTSA /* id 68 */ GCP_RESULTS;
+typedef LPGCP_RESULTSA LPGCP_RESULTS;
+struct _RASTERIZER_STATUS { /* size 6 id 70 */
+  short int nSize; /* bitsize 16, bitpos 0 */
+  short int wFlags; /* bitsize 16, bitpos 16 */
+  short int nLanguageID; /* bitsize 16, bitpos 32 */
+};
+typedef struct _RASTERIZER_STATUS /* id 70 */ RASTERIZER_STATUS;
+typedef struct _RASTERIZER_STATUS /* id 70 */ *LPRASTERIZER_STATUS;
+struct tagPIXELFORMATDESCRIPTOR { /* size 40 id 71 */
+  short unsigned int nSize; /* bitsize 16, bitpos 0 */
+  short unsigned int nVersion; /* bitsize 16, bitpos 16 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  unsigned char iPixelType; /* bitsize 8, bitpos 64 */
+  unsigned char cColorBits; /* bitsize 8, bitpos 72 */
+  unsigned char cRedBits; /* bitsize 8, bitpos 80 */
+  unsigned char cRedShift; /* bitsize 8, bitpos 88 */
+  unsigned char cGreenBits; /* bitsize 8, bitpos 96 */
+  unsigned char cGreenShift; /* bitsize 8, bitpos 104 */
+  unsigned char cBlueBits; /* bitsize 8, bitpos 112 */
+  unsigned char cBlueShift; /* bitsize 8, bitpos 120 */
+  unsigned char cAlphaBits; /* bitsize 8, bitpos 128 */
+  unsigned char cAlphaShift; /* bitsize 8, bitpos 136 */
+  unsigned char cAccumBits; /* bitsize 8, bitpos 144 */
+  unsigned char cAccumRedBits; /* bitsize 8, bitpos 152 */
+  unsigned char cAccumGreenBits; /* bitsize 8, bitpos 160 */
+  unsigned char cAccumBlueBits; /* bitsize 8, bitpos 168 */
+  unsigned char cAccumAlphaBits; /* bitsize 8, bitpos 176 */
+  unsigned char cDepthBits; /* bitsize 8, bitpos 184 */
+  unsigned char cStencilBits; /* bitsize 8, bitpos 192 */
+  unsigned char cAuxBuffers; /* bitsize 8, bitpos 200 */
+  unsigned char iLayerType; /* bitsize 8, bitpos 208 */
+  unsigned char bReserved; /* bitsize 8, bitpos 216 */
+  long unsigned int dwLayerMask; /* bitsize 32, bitpos 224 */
+  long unsigned int dwVisibleMask; /* bitsize 32, bitpos 256 */
+  long unsigned int dwDamageMask; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagPIXELFORMATDESCRIPTOR /* id 71 */ PIXELFORMATDESCRIPTOR;
+typedef struct tagPIXELFORMATDESCRIPTOR /* id 71 */ *PPIXELFORMATDESCRIPTOR;
+typedef PPIXELFORMATDESCRIPTOR LPPIXELFORMATDESCRIPTOR;
+typedef FARPROC OLDFONTENUMPROC;
+typedef FARPROC FONTENUMPROCA;
+typedef FARPROC FONTENUMPROCW;
+typedef FARPROC FONTENUMPROC;
+typedef FARPROC GOBJENUMPROC;
+typedef FARPROC LINEDDAPROC;
+int AddFontResourceA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ wingdi.c:
+int AddFontResourceW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AnimatePalette (long int hPalette /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, struct tagPALETTEENTRY /* id 41 */ *palEntry /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Arc (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, int v7 /* 0x24 */, int v8 /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int BitBlt (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, long int hSrcDC /* 0x1c */, int v5 /* 0x20 */, int v6 /* 0x24 */, long unsigned int v7 /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CancelDC (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Chord (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, int v7 /* 0x24 */, int v8 /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ChoosePixelFormat (long int hDC /* 0x8 */, struct tagPIXELFORMATDESCRIPTOR /* id 71 */ *pixelFmt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CloseMetaFile (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CombineRgn (long int hRegion /* 0x8 */, long int hRegion1 /* 0xc */, long int hRegion2 /* 0x10 */, int val /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyMetaFileA (long int hMetaFile /* 0x8 */, PSTR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyMetaFileW (long int hMetaFile /* 0x8 */, PWCHAR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateBitmap (int v1 /* 0x8 */, int v2 /* 0xc */, unsigned int v3 /* 0x10 */, unsigned int v4 /* 0x14 */, void *ptr /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateBitmapIndirect (struct tagBITMAP /* id 9 */ *hBitmap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateBrushIndirect (struct tagLOGBRUSH /* id 38 */ *brush /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateCompatibleBitmap (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDiscardableBitmap (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateCompatibleDC (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDCA (PSTR str1 /* 0x8 */, PSTR str2 /* 0xc */, PSTR str3 /* 0x10 */, struct _devicemodeA /* id 52 */ *ptr /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDCW (PWCHAR str1 /* 0x8 */, PWCHAR str2 /* 0xc */, PWCHAR str3 /* 0x10 */, struct _devicemodeW /* id 53 */ *ptr /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDIBitmap (long int hDC /* 0x8 */, struct tagBITMAPINFOHEADER /* id 17 */ *pBitmap /* 0xc */, long unsigned int v1 /* 0x10 */, void *ptr1 /* 0x14 */, struct tagBITMAPINFO /* id 19 */ *pBitmapInfo /* 0x18 */, unsigned int v2 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDIBPatternBrush (long int hGlobal /* 0x8 */, unsigned int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDIBPatternBrushPt (void *ptr /* 0x8 */, unsigned int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEllipticRgn (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEllipticRgnIndirect (struct tagRECT /* id 2 */ *pRect /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFontIndirectA (struct tagLOGFONTA /* id 43 */ *pFont /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFontIndirectW (struct tagLOGFONTW /* id 44 */ *pFont /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFontA (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */, int v5 /* 0x18 */, long unsigned int v6 /* 0x1c */, long unsigned int v7 /* 0x20 */, long unsigned int v8 /* 0x24 */, long unsigned int v9 /* 0x28 */, long unsigned int v10 /* 0x2c */, long unsigned int v11 /* 0x30 */, long unsigned int v12 /* 0x34 */, long unsigned int v13 /* 0x38 */, PSTR str /* 0x3c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateFontW (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */, int v5 /* 0x18 */, long unsigned int v6 /* 0x1c */, long unsigned int v7 /* 0x20 */, long unsigned int v8 /* 0x24 */, long unsigned int v9 /* 0x28 */, long unsigned int v10 /* 0x2c */, long unsigned int v11 /* 0x30 */, long unsigned int v12 /* 0x34 */, long unsigned int v13 /* 0x38 */, PWCHAR str /* 0x3c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateHatchBrush (int v1 /* 0x8 */, long unsigned int col /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateICA (PSTR str1 /* 0x8 */, PSTR str2 /* 0xc */, PSTR str3 /* 0x10 */, struct _devicemodeA /* id 52 */ *ptr /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateICW (PWCHAR str1 /* 0x8 */, PWCHAR str2 /* 0xc */, PWCHAR str3 /* 0x10 */, struct _devicemodeW /* id 53 */ *ptr /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMetaFileA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMetaFileW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePalette (struct tagLOGPALETTE /* id 42 */ *pPalette /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePen (int v1 /* 0x8 */, int v2 /* 0xc */, long unsigned int color /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePenIndirect (struct tagLOGPEN /* id 39 */ *pPen /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePolyPolygonRgn (struct tagPOINT /* id 4 */ *pPt /* 0x8 */, int *p1 /* 0xc */, int v1 /* 0x10 */, int v2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePatternBrush (long int hBitmap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateRectRgn (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateRectRgnIndirect (struct tagRECT /* id 2 */ *pRect /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateRoundRectRgn (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */, int v5 /* 0x18 */, int v6 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateScalableFontResourceA (long unsigned int v1 /* 0x8 */, PSTR str /* 0xc */, PSTR str1 /* 0x10 */, PSTR str2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CreateScalableFontResourceW (long unsigned int v1 /* 0x8 */, PWCHAR str /* 0xc */, PWCHAR str1 /* 0x10 */, PWCHAR str2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateSolidBrush (long unsigned int color /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteDC (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteMetaFile (long int hMetaFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteObject (long int hObj /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DescribePixelFormat (long int hDC /* 0x8 */, int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PPIXELFORMATDESCRIPTOR pPixelFmt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef unsigned int (*LPFNDEVMODE) (/* unknown */);
+typedef long unsigned int (*LPFNDEVCAPS) (/* unknown */);
+int DeviceCapabilitiesA (PSTR str /* 0x8 */, PSTR str1 /* 0xc */, int v1 /* 0x10 */, PSTR str2 /* 0x14 */, struct _devicemodeA /* id 52 */ *ptr /* 0x18 */)
+{ /* 0x0 */
+  short unsigned int v1 /* 0xfffffffe */;
+} /* 0x0 */
+int DeviceCapabilitiesW (PWCHAR str /* 0x8 */, PWCHAR str1 /* 0xc */, int v1 /* 0x10 */, PWCHAR str2 /* 0x14 */, struct _devicemodeW /* id 53 */ *ptr /* 0x18 */)
+{ /* 0x0 */
+  short unsigned int v1 /* 0xfffffffe */;
+} /* 0x0 */
+int DrawEscape (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSTR str /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Ellipse (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontFamiliesExA (long int hDC /* 0x8 */, PLOGFONTA pFont /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */, long unsigned int wParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontFamiliesExW (long int hDC /* 0x8 */, PLOGFONTW pFont /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */, long unsigned int wParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontFamiliesA (long int hDC /* 0x8 */, PSTR str /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontFamiliesW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontsA (long int hDC /* 0x8 */, PSTR str /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumFontsW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, FARPROC pFontProc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumObjects (long int hDC /* 0x8 */, int v1 /* 0xc */, FARPROC pEnumProc /* 0x10 */, PVOID ptr /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EqualRgn (long int hRgn1 /* 0x8 */, long int hRgn2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int Escape (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSTR str /* 0x14 */, PVOID ptr /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExtEscape (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSTR str /* 0x14 */, int v3 /* 0x18 */, PSTR str1 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExcludeClipRect (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtCreateRegion (struct tagXFORM /* id 8 */ *pForm /* 0x8 */, long unsigned int v1 /* 0xc */, struct _RGNDATA /* id 55 */ *pRgn /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExtFloodFill (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, long unsigned int color /* 0x14 */, unsigned int v3 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FillRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */, long int hBrush /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FloodFill (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, long unsigned int color /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FrameRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */, long int hBrush /* 0x10 */, int v1 /* 0x14 */, int v2 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetROP2 (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetAspectRatioFilterEx (long int hDC /* 0x8 */, PSIZE ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetBkColor (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetBkMode (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetBitmapBits (long int hBitmap /* 0x8 */, long int size /* 0xc */, PVOID ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetBitmapDimensionEx (long int hBitmap /* 0x8 */, PSIZE size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetBoundsRect (long int hDC /* 0x8 */, PRECT lpRect /* 0xc */, unsigned int uInt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetBrushOrgEx (long int hDC /* 0x8 */, PPOINT pPoint /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidthA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPCWORD pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidthW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPCWORD pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidth32A (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPCWORD pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidth32W (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPCWORD pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidthFloatA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PFLOAT pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharWidthFloatW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PFLOAT pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharABCWidthsA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PABC pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharABCWidthsW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PABC pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharABCWidthsFloatA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PABCFLOAT pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCharABCWidthsFloatW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PABCFLOAT pVal /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClipBox (long int hDC /* 0x8 */, PRECT pRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClipRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMetaRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetCurrentObject (long int hDC /* 0x8 */, unsigned int obj /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCurrentPositionEx (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDeviceCaps (long int hDC /* 0x8 */, int cap /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDIBits (long int hDC /* 0x8 */, long int hBitmap /* 0xc */, unsigned int v1 /* 0x10 */, unsigned int v2 /* 0x14 */, PVOID ptr /* 0x18 */, LPBITMAPINFO pBitmap /* 0x1c */, unsigned int v3 /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFontData (long int hDC /* 0x8 */, long unsigned int v1 /* 0xc */, long unsigned int v2 /* 0x10 */, PVOID ptr /* 0x14 */, long unsigned int v3 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetGlyphOutlineA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPGLYPHMETRICS pMetric /* 0x14 */, long unsigned int v3 /* 0x18 */, PVOID ptr /* 0x1c */, struct _MAT2 /* id 63 */ *pMat /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetGlyphOutlineW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPGLYPHMETRICS pMetric /* 0x14 */, long unsigned int v3 /* 0x18 */, PVOID ptr /* 0x1c */, struct _MAT2 /* id 63 */ *pMat /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetGraphicsMode (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMapMode (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetMetaFileBitsEx (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PVOID ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMetaFileA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMetaFileW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetNearestColor (long int hDC /* 0x8 */, long unsigned int color /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetNearestPaletteIndex (long int hPalette /* 0x8 */, long unsigned int color /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetObjectType (long int h /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetOutlineTextMetricsA (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, POUTLINETEXTMETRICA pMetric /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetOutlineTextMetricsW (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, POUTLINETEXTMETRICW pMetric /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetPaletteEntries (long int hPalette /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PPALETTEENTRY pEntry /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetPixel (long int hDC /* 0x8 */, int x /* 0xc */, int y /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPixelFormat (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPolyFillMode (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetRasterizerCaps (LPRASTERIZER_STATUS pStatus /* 0x8 */, unsigned int cap /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetRegionData (long int hRgn /* 0x8 */, long unsigned int val /* 0xc */, PRGNDATA ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetRgnBox (long int hRgn /* 0x8 */, PRECT pRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetStockObject (int obj /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetStretchBltMode (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetSystemPaletteEntries (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, PPALETTEENTRY pPalette /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetSystemPaletteUse (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextCharacterExtra (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetTextAlign (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTextColor (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentPointA (long int hDC /* 0x8 */, PSTR str /* 0xc */, int v1 /* 0x10 */, PSIZE siz /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentPointW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, int v1 /* 0x10 */, PSIZE siz /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentPoint32A (long int hDC /* 0x8 */, PSTR str /* 0xc */, int v1 /* 0x10 */, PSIZE siz /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentPoint32W (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, int v1 /* 0x10 */, PSIZE siz /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentExPointA (long int hDC /* 0x8 */, PSTR str /* 0xc */, int v1 /* 0x10 */, int v2 /* 0x14 */, LPCWORD p1 /* 0x18 */, LPCWORD p2 /* 0x1c */, PSIZE psiz /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextExtentExPointW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, int v1 /* 0x10 */, int v2 /* 0x14 */, LPCWORD p1 /* 0x18 */, LPCWORD p2 /* 0x1c */, PSIZE psiz /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextCharset (long int hdc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextCharsetInfo (long int hdc /* 0x8 */, PFONTSIGNATURE lpSig /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TranslateCharsetInfo (PDWORD lpSrc /* 0x8 */, PCHARSETINFO lpCs /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetFontLanguageInfo (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCharacterPlacementA (long int hDC /* 0x8 */, PSTR str /* 0xc */, int v1 /* 0x10 */, int v2 /* 0x14 */, LPGCP_RESULTSA pRes /* 0x18 */, long unsigned int v3 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetCharacterPlacementW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, int v1 /* 0x10 */, int v2 /* 0x14 */, LPGCP_RESULTSW pRes /* 0x18 */, long unsigned int v3 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetViewportExtEx (long int hDC /* 0x8 */, PSIZE pSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetViewportOrgEx (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowExtEx (long int hDC /* 0x8 */, PSIZE pSize /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowOrgEx (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IntersectClipRect (long int hDC /* 0x8 */, int c1 /* 0xc */, int c2 /* 0x10 */, int c3 /* 0x14 */, int c4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InvertRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int LineDDA (int v1 /* 0x8 */, int v2 /* 0xc */, int v3 /* 0x10 */, int v4 /* 0x14 */, FARPROC pProc /* 0x18 */, long int lParam /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int LineTo (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MaskBlt (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, long int hDC1 /* 0x1c */, int v5 /* 0x20 */, int v6 /* 0x24 */, long int hBitmap /* 0x28 */, int v7 /* 0x2c */, int v8 /* 0x30 */, long unsigned int v9 /* 0x34 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlgBlt (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, long int hDC1 /* 0x10 */, int v1 /* 0x14 */, int v2 /* 0x18 */, int v3 /* 0x1c */, int v4 /* 0x20 */, long int hBitmap /* 0x24 */, int v5 /* 0x28 */, int v6 /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+int OffsetClipRgn (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OffsetRgn (long int hRgn /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PatBlt (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, long unsigned int v5 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int Pie (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, int v7 /* 0x24 */, int v8 /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlayMetaFile (long int hDC /* 0x8 */, long int hMetaFile /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int PaintRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyPolygon (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, int *ptr /* 0x10 */, int v1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PtInRegion (long int hRgn /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PtVisible (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RectInRegion (long int hRgn /* 0x8 */, struct tagRECT /* id 2 */ *pRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int RectVisible (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *pRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int Rectangle (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RestoreDC (long int hDC /* 0x8 */, int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ResetDCA (long int hDC /* 0x8 */, struct _devicemodeA /* id 52 */ *ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ResetDCW (long int hDC /* 0x8 */, struct _devicemodeW /* id 53 */ *ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int RealizePalette (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RemoveFontResourceA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RemoveFontResourceW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RoundRect (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ResizePalette (long int hPalette /* 0x8 */, unsigned int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SaveDC (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SelectClipRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExtSelectClipRgn (long int hDC /* 0x8 */, long int hRgn /* 0xc */, int v1 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMetaRgn (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SelectObject (long int hDC /* 0x8 */, long int hObj /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SelectPalette (long int hDC /* 0x8 */, long int hPalette /* 0xc */, int val /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetBkColor (long int hDC /* 0x8 */, long unsigned int color /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetBkMode (long int hDC /* 0x8 */, int mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetBitmapBits (long int hBitmap /* 0x8 */, long unsigned int val /* 0xc */, void *ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetBoundsRect (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *pRect /* 0xc */, unsigned int val /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDIBits (long int hDC /* 0x8 */, long int hBitmap /* 0xc */, unsigned int v1 /* 0x10 */, unsigned int v2 /* 0x14 */, void *ptr1 /* 0x18 */, struct tagBITMAPINFO /* id 19 */ *pBitmap /* 0x1c */, unsigned int v3 /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDIBitsToDevice (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */, long unsigned int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, unsigned int v7 /* 0x24 */, unsigned int v8 /* 0x28 */, void *ptr /* 0x2c */, struct tagBITMAPINFO /* id 19 */ *pBitmap /* 0x30 */, unsigned int v9 /* 0x34 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetMapperFlags (long int hDC /* 0x8 */, long unsigned int flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetGraphicsMode (long int hdc /* 0x8 */, int iMode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMapMode (long int hDC /* 0x8 */, int mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetMetaFileBitsEx (unsigned int v1 /* 0x8 */, PBYTE ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetPaletteEntries (long int hPalette /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, struct tagPALETTEENTRY /* id 41 */ *pEntry /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetPixel (long int hDC /* 0x8 */, int x /* 0xc */, int y /* 0x10 */, long unsigned int col /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPixelV (long int hDC /* 0x8 */, int x /* 0xc */, int y /* 0x10 */, long unsigned int col /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPixelFormat (long int hDC /* 0x8 */, int v1 /* 0xc */, struct tagPIXELFORMATDESCRIPTOR /* id 71 */ *pFmt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPolyFillMode (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int StretchBlt (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, long int hDc1 /* 0x1c */, int v5 /* 0x20 */, int v6 /* 0x24 */, int v7 /* 0x28 */, int v8 /* 0x2c */, long unsigned int v9 /* 0x30 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetRectRgn (long int hRgn /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int StretchDIBits (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, int v7 /* 0x24 */, int v8 /* 0x28 */, void *ptr /* 0x2c */, struct tagBITMAPINFO /* id 19 */ *pBitmap /* 0x30 */, unsigned int v10 /* 0x34 */, long unsigned int v11 /* 0x38 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetROP2 (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetStretchBltMode (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetSystemPaletteUse (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetTextCharacterExtra (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetTextColor (long int hDC /* 0x8 */, long unsigned int col /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetTextAlign (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetTextJustification (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UpdateColors (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlayMetaFileRecord (long int hDC /* 0x8 */, PHANDLETABLE pHandle /* 0xc */, PMETARECORD pMeta /* 0x10 */, unsigned int val /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef int (*MFENUMPROC) (/* unknown */);
+int EnumMetaFile (long int hDC /* 0x8 */, long int hMetaFile /* 0xc */, MFENUMPROC pEnumProc /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef int (*ENHMFENUMPROC) (/* unknown */);
+long int CloseEnhMetaFile (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyEnhMetaFileA (long int hMetaFile /* 0x8 */, PSTR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyEnhMetaFileW (long int hMetaFile /* 0x8 */, PWCHAR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEnhMetaFileA (long int hDC /* 0x8 */, PSTR str /* 0xc */, struct tagRECT /* id 2 */ *pRect /* 0x10 */, PSTR str1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateEnhMetaFileW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */, struct tagRECT /* id 2 */ *pRect /* 0x10 */, PWCHAR str1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteEnhMetaFile (long int hMetaFile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumEnhMetaFile (long int hDC /* 0x8 */, long int hMetaFile /* 0xc */, ENHMFENUMPROC pEnumProc /* 0x10 */, PVOID ptr /* 0x14 */, struct tagRECT /* id 2 */ *pRect /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetEnhMetaFileA (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetEnhMetaFileW (PWCHAR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFileBits (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PBYTE ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFileDescriptionA (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PSTR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFileDescriptionW (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PWCHAR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFileHeader (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PENHMETAHEADER pMetaHdr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFilePaletteEntries (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PPALETTEENTRY pEntry /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetEnhMetaFilePixelFormat (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, struct tagPIXELFORMATDESCRIPTOR /* id 71 */ *pFmt /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetWinMetaFileBits (long int hMetaFile /* 0x8 */, unsigned int v1 /* 0xc */, PBYTE ptr /* 0x10 */, int v2 /* 0x14 */, long int hDC /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlayEnhMetaFile (long int hDC /* 0x8 */, long int hMetaFile /* 0xc */, struct tagRECT /* id 2 */ *pRect /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PlayEnhMetaFileRecord (long int hDC /* 0x8 */, PHANDLETABLE pHandle /* 0xc */, struct tagENHMETARECORD /* id 29 */ *pMeta /* 0x10 */, unsigned int v1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetEnhMetaFileBits (unsigned int v /* 0x8 */, PBYTE ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetWinMetaFileBits (unsigned int v /* 0x8 */, PBYTE ptr /* 0xc */, long int hDC /* 0x10 */, struct tagMETAFILEPICT /* id 27 */ *pMeta /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GdiComment (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, PBYTE ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextMetricsA (long int hDC /* 0x8 */, PTEXTMETRICA pMetric /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextMetricsW (long int hDC /* 0x8 */, PTEXTMETRICW pMetric /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagDIBSECTION { /* size 84 id 72 */
+  struct tagBITMAP /* id 9 */ dsBm; /* bitsize 192, bitpos 0 */
+  struct tagBITMAPINFOHEADER /* id 17 */ dsBmih; /* bitsize 320, bitpos 192 */
+  long unsigned int dsBitfields[3]; /* bitsize 96, bitpos 512 */
+  long int dshSection; /* bitsize 32, bitpos 608 */
+  long unsigned int dsOffset; /* bitsize 32, bitpos 640 */
+};
+typedef struct tagDIBSECTION /* id 72 */ DIBSECTION;
+typedef struct tagDIBSECTION /* id 72 */ *LPDIBSECTION;
+typedef LPDIBSECTION PDIBSECTION;
+int AngleArc (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */, float v4 /* 0x18 */, float v5 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyPolyline (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, PDWORD ptr /* 0x10 */, long unsigned int v1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWorldTransform (long int hDC /* 0x8 */, PXFORM pXForm /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWorldTransform (long int hDC /* 0x8 */, struct tagXFORM /* id 8 */ *pXForm /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ModifyWorldTransform (long int hDC /* 0x8 */, struct tagXFORM /* id 8 */ *pXForm /* 0xc */, long unsigned int v1 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CombineTransform (PXFORM pXForm1 /* 0x8 */, struct tagXFORM /* id 8 */ *pXForm2 /* 0xc */, struct tagXFORM /* id 8 */ *pXForm3 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDIBSection (long int hDC /* 0x8 */, struct tagBITMAPINFO /* id 19 */ *pBitmap /* 0xc */, unsigned int v1 /* 0x10 */, void **ptr /* 0x14 */, long int handle /* 0x18 */, long unsigned int v2 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDIBColorTable (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPRGBQUAD pRGB /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetDIBColorTable (long int hDC /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, LPRGBQUAD pRGB /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagCOLORADJUSTMENT { /* size 24 id 73 */
+  short unsigned int caSize; /* bitsize 16, bitpos 0 */
+  short unsigned int caFlags; /* bitsize 16, bitpos 16 */
+  short unsigned int caIlluminantIndex; /* bitsize 16, bitpos 32 */
+  short unsigned int caRedGamma; /* bitsize 16, bitpos 48 */
+  short unsigned int caGreenGamma; /* bitsize 16, bitpos 64 */
+  short unsigned int caBlueGamma; /* bitsize 16, bitpos 80 */
+  short unsigned int caReferenceBlack; /* bitsize 16, bitpos 96 */
+  short unsigned int caReferenceWhite; /* bitsize 16, bitpos 112 */
+  short int caContrast; /* bitsize 16, bitpos 128 */
+  short int caBrightness; /* bitsize 16, bitpos 144 */
+  short int caColorfulness; /* bitsize 16, bitpos 160 */
+  short int caRedGreenTint; /* bitsize 16, bitpos 176 */
+};
+typedef struct tagCOLORADJUSTMENT /* id 73 */ COLORADJUSTMENT;
+typedef struct tagCOLORADJUSTMENT /* id 73 */ *PCOLORADJUSTMENT;
+typedef PCOLORADJUSTMENT LPCOLORADJUSTMENT;
+int SetColorAdjustment (long int hDC /* 0x8 */, struct tagCOLORADJUSTMENT /* id 73 */ *pColor /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetColorAdjustment (long int hDC /* 0x8 */, PCOLORADJUSTMENT pColor /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateHalftonePalette (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef FARPROC ABORTPROC;
+struct _DOCINFOA { /* size 20 id 74 */
+  int cbSize; /* bitsize 32, bitpos 0 */
+  PSTR lpszDocName; /* bitsize 32, bitpos 32 */
+  PSTR lpszOutput; /* bitsize 32, bitpos 64 */
+  PSTR lpszDatatype; /* bitsize 32, bitpos 96 */
+  long unsigned int fwType; /* bitsize 32, bitpos 128 */
+};
+typedef struct _DOCINFOA /* id 74 */ DOCINFOA;
+typedef struct _DOCINFOA /* id 74 */ *LPDOCINFOA;
+struct _DOCINFOW { /* size 20 id 75 */
+  int cbSize; /* bitsize 32, bitpos 0 */
+  PWCHAR lpszDocName; /* bitsize 32, bitpos 32 */
+  PWCHAR lpszOutput; /* bitsize 32, bitpos 64 */
+  PWCHAR lpszDatatype; /* bitsize 32, bitpos 96 */
+  long unsigned int fwType; /* bitsize 32, bitpos 128 */
+};
+typedef struct _DOCINFOW /* id 75 */ DOCINFOW;
+typedef struct _DOCINFOW /* id 75 */ *LPDOCINFOW;
+typedef struct _DOCINFOA /* id 74 */ DOCINFO;
+typedef LPDOCINFOA LPDOCINFO;
+int StartDocA (long int hDC /* 0x8 */, struct _DOCINFOA /* id 74 */ *pDocInfo /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int StartDocW (long int hDC /* 0x8 */, struct _DOCINFOW /* id 75 */ *pDocInfo /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndDoc (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int StartPage (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndPage (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AbortDoc (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetAbortProc (long int hDC /* 0x8 */, FARPROC pAbort /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int AbortPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ArcTo (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, int v5 /* 0x1c */, int v6 /* 0x20 */, int v7 /* 0x24 */, int v8 /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int BeginPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseFigure (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FillPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FlattenPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPath (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */, PBYTE ptr /* 0x10 */, int v1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int PathToRegion (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyDraw (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, PBYTE ptr /* 0x10 */, int v2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SelectClipPath (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetArcDirection (long int hDC /* 0x8 */, int v1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMiterLimit (long int hDC /* 0x8 */, float v1 /* 0xc */, PFLOAT pv2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int StrokeAndFillPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int StrokePath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WidenPath (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ExtCreatePen (long unsigned int v1 /* 0x8 */, long unsigned int v2 /* 0xc */, struct tagLOGBRUSH /* id 38 */ *pBrush /* 0x10 */, long unsigned int v3 /* 0x14 */, PDWORD pv4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMiterLimit (long int hDC /* 0x8 */, PFLOAT ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetArcDirection (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetObjectA (long int hObj /* 0x8 */, int v1 /* 0xc */, PVOID ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetObjectW (long int hObj /* 0x8 */, int v1 /* 0xc */, PVOID ptr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveToEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TextOutA (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSTR str /* 0x14 */, int v3 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TextOutW (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PWCHAR str /* 0x14 */, int v3 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExtTextOutA (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, unsigned int v3 /* 0x14 */, struct tagRECT /* id 2 */ *pRect /* 0x18 */, PSTR str /* 0x1c */, unsigned int v4 /* 0x20 */, int *ptr /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExtTextOutW (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, unsigned int v3 /* 0x14 */, struct tagRECT /* id 2 */ *pRect /* 0x18 */, PWCHAR str /* 0x1c */, unsigned int v4 /* 0x20 */, int *ptr /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyTextOutA (long int hDC /* 0x8 */, struct tagPOLYTEXTA /* id 60 */ *pPolyText /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyTextOutW (long int hDC /* 0x8 */, struct tagPOLYTEXTW /* id 61 */ *pPolyText /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePolygonRgn (struct tagPOINT /* id 4 */ *pPt /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DPtoLP (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LPtoDP (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Polygon (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int Polyline (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyBezier (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolyBezierTo (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PolylineTo (long int hDC /* 0x8 */, struct tagPOINT /* id 4 */ *pPt /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetViewportExtEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSIZE pSize /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetViewportOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowExtEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSIZE pSize /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OffsetViewportOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OffsetWindowOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScaleViewportExtEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, PSIZE pSize /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScaleWindowExtEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, int v4 /* 0x18 */, PSIZE pSize /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetBitmapDimensionEx (long int hBitmap /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PSIZE pSize /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetBrushOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextFaceA (long int hDC /* 0x8 */, int v /* 0xc */, PSTR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetTextFaceW (long int hDC /* 0x8 */, int v /* 0xc */, PWCHAR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagKERNINGPAIR { /* size 8 id 76 */
+  short unsigned int wFirst; /* bitsize 16, bitpos 0 */
+  short unsigned int wSecond; /* bitsize 16, bitpos 16 */
+  int iKernAmount; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagKERNINGPAIR /* id 76 */ KERNINGPAIR;
+typedef struct tagKERNINGPAIR /* id 76 */ *LPKERNINGPAIR;
+long unsigned int GetKerningPairsA (long int hDC /* 0x8 */, long unsigned int v /* 0xc */, LPKERNINGPAIR pKern /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetKerningPairsW (long int hDC /* 0x8 */, long unsigned int v /* 0xc */, LPKERNINGPAIR pKern /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDCOrgEx (long int hDC /* 0x8 */, PPOINT pPt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FixBrushOrgEx (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, PPOINT pPt /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnrealizeObject (long int hObj /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GdiFlush ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GdiSetBatchLimit (long unsigned int v /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GdiGetBatchLimit ()
+{ /* 0x0 */
+} /* 0x0 */
+int SetICMMode (long int hDC /* 0x8 */, int v /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CheckColorsInGamut (long int hDC /* 0x8 */, PVOID p1 /* 0xc */, PVOID p2 /* 0x10 */, long unsigned int v /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetColorSpace (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetLogColorSpaceA (long int hColSpc /* 0x8 */, LPLOGCOLORSPACEA pColSpc /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetLogColorSpaceW (long int hColSpc /* 0x8 */, LPLOGCOLORSPACEW pColSpc /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateColorSpaceA (LPLOGCOLORSPACEA pColSpc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateColorSpaceW (LPLOGCOLORSPACEW pColSpc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetColorSpace (long int hDC /* 0x8 */, long int pColSpc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteColorSpace (long int pColSpc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetICMProfileA (long int hDC /* 0x8 */, PDWORD p1 /* 0xc */, PSTR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetICMProfileW (long int hDC /* 0x8 */, PDWORD p1 /* 0xc */, PWCHAR str /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetICMProfileA (long int hDC /* 0x8 */, PSTR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetICMProfileW (long int hDC /* 0x8 */, PWCHAR str /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDeviceGammaRamp (long int hDC /* 0x8 */, PVOID ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDeviceGammaRamp (long int hDC /* 0x8 */, PVOID ptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ColorMatchToTarget (long int hDC /* 0x8 */, long int hDC1 /* 0xc */, long unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef int (*ICMENUMPROCA) (/* unknown */);
+typedef int (*ICMENUMPROCW) (/* unknown */);
+int EnumICMProfilesA (long int hDC /* 0x8 */, ICMENUMPROCA pMenuProc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumICMProfilesW (long int hDC /* 0x8 */, ICMENUMPROCW pMenuProc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagEMR { /* size 8 id 77 */
+  long unsigned int iType; /* bitsize 32, bitpos 0 */
+  long unsigned int nSize; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagEMR /* id 77 */ EMR;
+typedef struct tagEMR /* id 77 */ *PEMR;
+struct tagEMRTEXT { /* size 40 id 78 */
+  struct _POINTL /* id 5 */ ptlReference; /* bitsize 64, bitpos 0 */
+  long unsigned int nChars; /* bitsize 32, bitpos 64 */
+  long unsigned int offString; /* bitsize 32, bitpos 96 */
+  long unsigned int fOptions; /* bitsize 32, bitpos 128 */
+  struct _RECTL /* id 3 */ rcl; /* bitsize 128, bitpos 160 */
+  long unsigned int offDx; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagEMRTEXT /* id 78 */ EMRTEXT;
+typedef struct tagEMRTEXT /* id 78 */ *PEMRTEXT;
+struct tagABORTPATH { /* size 8 id 79 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+};
+typedef struct tagABORTPATH /* id 79 */ EMRABORTPATH;
+typedef struct tagABORTPATH /* id 79 */ *PEMRABORTPATH;
+typedef struct tagABORTPATH /* id 79 */ EMRBEGINPATH;
+typedef PEMRABORTPATH PEMRBEGINPATH;
+typedef struct tagABORTPATH /* id 79 */ EMRENDPATH;
+typedef PEMRABORTPATH PEMRENDPATH;
+typedef struct tagABORTPATH /* id 79 */ EMRCLOSEFIGURE;
+typedef PEMRABORTPATH PEMRCLOSEFIGURE;
+typedef struct tagABORTPATH /* id 79 */ EMRFLATTENPATH;
+typedef PEMRABORTPATH PEMRFLATTENPATH;
+typedef struct tagABORTPATH /* id 79 */ EMRWIDENPATH;
+typedef PEMRABORTPATH PEMRWIDENPATH;
+typedef struct tagABORTPATH /* id 79 */ EMRSETMETARGN;
+typedef PEMRABORTPATH PEMRSETMETARGN;
+typedef struct tagABORTPATH /* id 79 */ EMRSAVEDC;
+typedef PEMRABORTPATH PEMRSAVEDC;
+typedef struct tagABORTPATH /* id 79 */ EMRREALIZEPALETTE;
+typedef PEMRABORTPATH PEMRREALIZEPALETTE;
+struct tagEMRSELECTCLIPPATH { /* size 12 id 80 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int iMode; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSELECTCLIPPATH;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ *PEMRSELECTCLIPPATH;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETBKMODE;
+typedef PEMRSELECTCLIPPATH PEMRSETBKMODE;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETMAPMODE;
+typedef PEMRSELECTCLIPPATH PEMRSETMAPMODE;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETPOLYFILLMODE;
+typedef PEMRSELECTCLIPPATH PEMRSETPOLYFILLMODE;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETROP2;
+typedef PEMRSELECTCLIPPATH PEMRSETROP2;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETSTRETCHBLTMODE;
+typedef PEMRSELECTCLIPPATH PEMRSETSTRETCHBLTMODE;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETICMMODE;
+typedef PEMRSELECTCLIPPATH PEMRSETICMMODE;
+typedef struct tagEMRSELECTCLIPPATH /* id 80 */ EMRSETTEXTALIGN;
+typedef PEMRSELECTCLIPPATH PEMRSETTEXTALIGN;
+struct tagEMRSETMITERLIMIT { /* size 12 id 81 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  float eMiterLimit; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSETMITERLIMIT /* id 81 */ EMRSETMITERLIMIT;
+typedef struct tagEMRSETMITERLIMIT /* id 81 */ *PEMRSETMITERLIMIT;
+struct tagEMRRESTOREDC { /* size 12 id 82 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long int iRelative; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRRESTOREDC /* id 82 */ EMRRESTOREDC;
+typedef struct tagEMRRESTOREDC /* id 82 */ *PEMRRESTOREDC;
+struct tagEMRSETARCDIRECTION { /* size 12 id 83 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int iArcDirection; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSETARCDIRECTION /* id 83 */ EMRSETARCDIRECTION;
+typedef struct tagEMRSETARCDIRECTION /* id 83 */ *PEMRSETARCDIRECTION;
+struct tagEMRSETMAPPERFLAGS { /* size 12 id 84 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSETMAPPERFLAGS /* id 84 */ EMRSETMAPPERFLAGS;
+typedef struct tagEMRSETMAPPERFLAGS /* id 84 */ *PEMRSETMAPPERFLAGS;
+struct tagEMRSETTEXTCOLOR { /* size 12 id 85 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int crColor; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSETTEXTCOLOR /* id 85 */ EMRSETBKCOLOR;
+typedef struct tagEMRSETTEXTCOLOR /* id 85 */ *PEMRSETBKCOLOR;
+typedef struct tagEMRSETTEXTCOLOR /* id 85 */ EMRSETTEXTCOLOR;
+typedef PEMRSETBKCOLOR PEMRSETTEXTCOLOR;
+struct tagEMRSELECTOBJECT { /* size 12 id 86 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihObject; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSELECTOBJECT /* id 86 */ EMRSELECTOBJECT;
+typedef struct tagEMRSELECTOBJECT /* id 86 */ *PEMRSELECTOBJECT;
+typedef struct tagEMRSELECTOBJECT /* id 86 */ EMRDELETEOBJECT;
+typedef PEMRSELECTOBJECT PEMRDELETEOBJECT;
+struct tagEMRSELECTCOLORSPACE { /* size 12 id 87 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihCS; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSELECTCOLORSPACE /* id 87 */ EMRSELECTCOLORSPACE;
+typedef struct tagEMRSELECTCOLORSPACE /* id 87 */ *PEMRSELECTCOLORSPACE;
+typedef struct tagEMRSELECTCOLORSPACE /* id 87 */ EMRDELETECOLORSPACE;
+typedef PEMRSELECTCOLORSPACE PEMRDELETECOLORSPACE;
+struct tagEMRSELECTPALETTE { /* size 12 id 88 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPal; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagEMRSELECTPALETTE /* id 88 */ EMRSELECTPALETTE;
+typedef struct tagEMRSELECTPALETTE /* id 88 */ *PEMRSELECTPALETTE;
+struct tagEMRRESIZEPALETTE { /* size 16 id 89 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPal; /* bitsize 32, bitpos 64 */
+  long unsigned int cEntries; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagEMRRESIZEPALETTE /* id 89 */ EMRRESIZEPALETTE;
+typedef struct tagEMRRESIZEPALETTE /* id 89 */ *PEMRRESIZEPALETTE;
+struct tagEMRSETPALETTEENTRIES { /* size 24 id 90 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPal; /* bitsize 32, bitpos 64 */
+  long unsigned int iStart; /* bitsize 32, bitpos 96 */
+  long unsigned int cEntries; /* bitsize 32, bitpos 128 */
+  struct tagPALETTEENTRY /* id 41 */ aPalEntries[1]; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagEMRSETPALETTEENTRIES /* id 90 */ EMRSETPALETTEENTRIES;
+typedef struct tagEMRSETPALETTEENTRIES /* id 90 */ *PEMRSETPALETTEENTRIES;
+struct tagEMRSETCOLORADJUSTMENT { /* size 32 id 91 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct tagCOLORADJUSTMENT /* id 73 */ ColorAdjustment; /* bitsize 192, bitpos 64 */
+};
+typedef struct tagEMRSETCOLORADJUSTMENT /* id 91 */ EMRSETCOLORADJUSTMENT;
+typedef struct tagEMRSETCOLORADJUSTMENT /* id 91 */ *PEMRSETCOLORADJUSTMENT;
+struct tagEMRGDICOMMENT { /* size 16 id 92 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int cbData; /* bitsize 32, bitpos 64 */
+  unsigned char Data[1]; /* bitsize 8, bitpos 96 */
+};
+typedef struct tagEMRGDICOMMENT /* id 92 */ EMRGDICOMMENT;
+typedef struct tagEMRGDICOMMENT /* id 92 */ *PEMRGDICOMMENT;
+struct tagEMREOF { /* size 20 id 93 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int nPalEntries; /* bitsize 32, bitpos 64 */
+  long unsigned int offPalEntries; /* bitsize 32, bitpos 96 */
+  long unsigned int nSizeLast; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagEMREOF /* id 93 */ EMREOF;
+typedef struct tagEMREOF /* id 93 */ *PEMREOF;
+struct tagEMRLINETO { /* size 16 id 94 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptl; /* bitsize 64, bitpos 64 */
+};
+typedef struct tagEMRLINETO /* id 94 */ EMRLINETO;
+typedef struct tagEMRLINETO /* id 94 */ *PEMRLINETO;
+typedef struct tagEMRLINETO /* id 94 */ EMRMOVETOEX;
+typedef PEMRLINETO PEMRMOVETOEX;
+struct tagEMROFFSETCLIPRGN { /* size 16 id 95 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptlOffset; /* bitsize 64, bitpos 64 */
+};
+typedef struct tagEMROFFSETCLIPRGN /* id 95 */ EMROFFSETCLIPRGN;
+typedef struct tagEMROFFSETCLIPRGN /* id 95 */ *PEMROFFSETCLIPRGN;
+struct tagEMRFILLPATH { /* size 24 id 96 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagEMRFILLPATH /* id 96 */ EMRFILLPATH;
+typedef struct tagEMRFILLPATH /* id 96 */ *PEMRFILLPATH;
+typedef struct tagEMRFILLPATH /* id 96 */ EMRSTROKEANDFILLPATH;
+typedef PEMRFILLPATH PEMRSTROKEANDFILLPATH;
+typedef struct tagEMRFILLPATH /* id 96 */ EMRSTROKEPATH;
+typedef PEMRFILLPATH PEMRSTROKEPATH;
+struct tagEMREXCLUDECLIPRECT { /* size 24 id 97 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclClip; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagEMREXCLUDECLIPRECT /* id 97 */ EMREXCLUDECLIPRECT;
+typedef struct tagEMREXCLUDECLIPRECT /* id 97 */ *PEMREXCLUDECLIPRECT;
+typedef struct tagEMREXCLUDECLIPRECT /* id 97 */ EMRINTERSECTCLIPRECT;
+typedef PEMREXCLUDECLIPRECT PEMRINTERSECTCLIPRECT;
+struct tagEMRSETVIEWPORTORGEX { /* size 16 id 98 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptlOrigin; /* bitsize 64, bitpos 64 */
+};
+typedef struct tagEMRSETVIEWPORTORGEX /* id 98 */ EMRSETVIEWPORTORGEX;
+typedef struct tagEMRSETVIEWPORTORGEX /* id 98 */ *PEMRSETVIEWPORTORGEX;
+typedef struct tagEMRSETVIEWPORTORGEX /* id 98 */ EMRSETWINDOWORGEX;
+typedef PEMRSETVIEWPORTORGEX PEMRSETWINDOWORGEX;
+typedef struct tagEMRSETVIEWPORTORGEX /* id 98 */ EMRSETBRUSHORGEX;
+typedef PEMRSETVIEWPORTORGEX PEMRSETBRUSHORGEX;
+struct tagEMRSETVIEWPORTEXTEX { /* size 16 id 99 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct tagSIZE /* id 6 */ szlExtent; /* bitsize 64, bitpos 64 */
+};
+typedef struct tagEMRSETVIEWPORTEXTEX /* id 99 */ EMRSETVIEWPORTEXTEX;
+typedef struct tagEMRSETVIEWPORTEXTEX /* id 99 */ *PEMRSETVIEWPORTEXTEX;
+typedef struct tagEMRSETVIEWPORTEXTEX /* id 99 */ EMRSETWINDOWEXTEX;
+typedef PEMRSETVIEWPORTEXTEX PEMRSETWINDOWEXTEX;
+struct tagEMRSCALEVIEWPORTEXTEX { /* size 24 id 100 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long int xNum; /* bitsize 32, bitpos 64 */
+  long int xDenom; /* bitsize 32, bitpos 96 */
+  long int yNum; /* bitsize 32, bitpos 128 */
+  long int yDenom; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagEMRSCALEVIEWPORTEXTEX /* id 100 */ EMRSCALEVIEWPORTEXTEX;
+typedef struct tagEMRSCALEVIEWPORTEXTEX /* id 100 */ *PEMRSCALEVIEWPORTEXTEX;
+typedef struct tagEMRSCALEVIEWPORTEXTEX /* id 100 */ EMRSCALEWINDOWEXTEX;
+typedef PEMRSCALEVIEWPORTEXTEX PEMRSCALEWINDOWEXTEX;
+struct tagEMRSETWORLDTRANSFORM { /* size 32 id 101 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct tagXFORM /* id 8 */ xform; /* bitsize 192, bitpos 64 */
+};
+typedef struct tagEMRSETWORLDTRANSFORM /* id 101 */ EMRSETWORLDTRANSFORM;
+typedef struct tagEMRSETWORLDTRANSFORM /* id 101 */ *PEMRSETWORLDTRANSFORM;
+struct tagEMRMODIFYWORLDTRANSFORM { /* size 36 id 102 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct tagXFORM /* id 8 */ xform; /* bitsize 192, bitpos 64 */
+  long unsigned int iMode; /* bitsize 32, bitpos 256 */
+};
+typedef struct tagEMRMODIFYWORLDTRANSFORM /* id 102 */ EMRMODIFYWORLDTRANSFORM;
+typedef struct tagEMRMODIFYWORLDTRANSFORM /* id 102 */ *PEMRMODIFYWORLDTRANSFORM;
+struct tagEMRSETPIXELV { /* size 20 id 103 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptlPixel; /* bitsize 64, bitpos 64 */
+  long unsigned int crColor; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagEMRSETPIXELV /* id 103 */ EMRSETPIXELV;
+typedef struct tagEMRSETPIXELV /* id 103 */ *PEMRSETPIXELV;
+struct tagEMREXTFLOODFILL { /* size 24 id 104 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptlStart; /* bitsize 64, bitpos 64 */
+  long unsigned int crColor; /* bitsize 32, bitpos 128 */
+  long unsigned int iMode; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagEMREXTFLOODFILL /* id 104 */ EMREXTFLOODFILL;
+typedef struct tagEMREXTFLOODFILL /* id 104 */ *PEMREXTFLOODFILL;
+struct tagEMRELLIPSE { /* size 24 id 105 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBox; /* bitsize 128, bitpos 64 */
+};
+typedef struct tagEMRELLIPSE /* id 105 */ EMRELLIPSE;
+typedef struct tagEMRELLIPSE /* id 105 */ *PEMRELLIPSE;
+typedef struct tagEMRELLIPSE /* id 105 */ EMRRECTANGLE;
+typedef PEMRELLIPSE PEMRRECTANGLE;
+struct tagEMRROUNDRECT { /* size 32 id 106 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBox; /* bitsize 128, bitpos 64 */
+  struct tagSIZE /* id 6 */ szlCorner; /* bitsize 64, bitpos 192 */
+};
+typedef struct tagEMRROUNDRECT /* id 106 */ EMRROUNDRECT;
+typedef struct tagEMRROUNDRECT /* id 106 */ *PEMRROUNDRECT;
+struct tagEMRARC { /* size 40 id 107 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBox; /* bitsize 128, bitpos 64 */
+  struct _POINTL /* id 5 */ ptlStart; /* bitsize 64, bitpos 192 */
+  struct _POINTL /* id 5 */ ptlEnd; /* bitsize 64, bitpos 256 */
+};
+typedef struct tagEMRARC /* id 107 */ EMRARC;
+typedef struct tagEMRARC /* id 107 */ *PEMRARC;
+typedef struct tagEMRARC /* id 107 */ EMRARCTO;
+typedef PEMRARC PEMRARCTO;
+typedef struct tagEMRARC /* id 107 */ EMRCHORD;
+typedef PEMRARC PEMRCHORD;
+typedef struct tagEMRARC /* id 107 */ EMRPIE;
+typedef PEMRARC PEMRPIE;
+struct tagEMRANGLEARC { /* size 28 id 108 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _POINTL /* id 5 */ ptlCenter; /* bitsize 64, bitpos 64 */
+  long unsigned int nRadius; /* bitsize 32, bitpos 128 */
+  float eStartAngle; /* bitsize 32, bitpos 160 */
+  float eSweepAngle; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagEMRANGLEARC /* id 108 */ EMRANGLEARC;
+typedef struct tagEMRANGLEARC /* id 108 */ *PEMRANGLEARC;
+struct tagEMRPOLYLINE { /* size 36 id 109 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cptl; /* bitsize 32, bitpos 192 */
+  struct _POINTL /* id 5 */ aptl[1]; /* bitsize 64, bitpos 224 */
+};
+typedef struct tagEMRPOLYLINE /* id 109 */ EMRPOLYLINE;
+typedef struct tagEMRPOLYLINE /* id 109 */ *PEMRPOLYLINE;
+typedef struct tagEMRPOLYLINE /* id 109 */ EMRPOLYBEZIER;
+typedef PEMRPOLYLINE PEMRPOLYBEZIER;
+typedef struct tagEMRPOLYLINE /* id 109 */ EMRPOLYGON;
+typedef PEMRPOLYLINE PEMRPOLYGON;
+typedef struct tagEMRPOLYLINE /* id 109 */ EMRPOLYBEZIERTO;
+typedef PEMRPOLYLINE PEMRPOLYBEZIERTO;
+typedef struct tagEMRPOLYLINE /* id 109 */ EMRPOLYLINETO;
+typedef PEMRPOLYLINE PEMRPOLYLINETO;
+struct tagEMRPOLYLINE16 { /* size 32 id 110 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cpts; /* bitsize 32, bitpos 192 */
+  struct tagPOINTS /* id 7 */ apts[1]; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagEMRPOLYLINE16 /* id 110 */ EMRPOLYLINE16;
+typedef struct tagEMRPOLYLINE16 /* id 110 */ *PEMRPOLYLINE16;
+typedef struct tagEMRPOLYLINE16 /* id 110 */ EMRPOLYBEZIER16;
+typedef PEMRPOLYLINE16 PEMRPOLYBEZIER16;
+typedef struct tagEMRPOLYLINE16 /* id 110 */ EMRPOLYGON16;
+typedef PEMRPOLYLINE16 PEMRPOLYGON16;
+typedef struct tagEMRPOLYLINE16 /* id 110 */ EMRPOLYBEZIERTO16;
+typedef PEMRPOLYLINE16 PEMRPOLYBEZIERTO16;
+typedef struct tagEMRPOLYLINE16 /* id 110 */ EMRPOLYLINETO16;
+typedef PEMRPOLYLINE16 PEMRPOLYLINETO16;
+struct tagEMRPOLYDRAW { /* size 40 id 111 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cptl; /* bitsize 32, bitpos 192 */
+  struct _POINTL /* id 5 */ aptl[1]; /* bitsize 64, bitpos 224 */
+  unsigned char abTypes[1]; /* bitsize 8, bitpos 288 */
+};
+typedef struct tagEMRPOLYDRAW /* id 111 */ EMRPOLYDRAW;
+typedef struct tagEMRPOLYDRAW /* id 111 */ *PEMRPOLYDRAW;
+struct tagEMRPOLYDRAW16 { /* size 36 id 112 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cpts; /* bitsize 32, bitpos 192 */
+  struct tagPOINTS /* id 7 */ apts[1]; /* bitsize 32, bitpos 224 */
+  unsigned char abTypes[1]; /* bitsize 8, bitpos 256 */
+};
+typedef struct tagEMRPOLYDRAW16 /* id 112 */ EMRPOLYDRAW16;
+typedef struct tagEMRPOLYDRAW16 /* id 112 */ *PEMRPOLYDRAW16;
+struct tagEMRPOLYPOLYLINE { /* size 44 id 113 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int nPolys; /* bitsize 32, bitpos 192 */
+  long unsigned int cptl; /* bitsize 32, bitpos 224 */
+  long unsigned int aPolyCounts[1]; /* bitsize 32, bitpos 256 */
+  struct _POINTL /* id 5 */ aptl[1]; /* bitsize 64, bitpos 288 */
+};
+typedef struct tagEMRPOLYPOLYLINE /* id 113 */ EMRPOLYPOLYLINE;
+typedef struct tagEMRPOLYPOLYLINE /* id 113 */ *PEMRPOLYPOLYLINE;
+typedef struct tagEMRPOLYPOLYLINE /* id 113 */ EMRPOLYPOLYGON;
+typedef PEMRPOLYPOLYLINE PEMRPOLYPOLYGON;
+struct tagEMRPOLYPOLYLINE16 { /* size 40 id 114 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int nPolys; /* bitsize 32, bitpos 192 */
+  long unsigned int cpts; /* bitsize 32, bitpos 224 */
+  long unsigned int aPolyCounts[1]; /* bitsize 32, bitpos 256 */
+  struct tagPOINTS /* id 7 */ apts[1]; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagEMRPOLYPOLYLINE16 /* id 114 */ EMRPOLYPOLYLINE16;
+typedef struct tagEMRPOLYPOLYLINE16 /* id 114 */ *PEMRPOLYPOLYLINE16;
+typedef struct tagEMRPOLYPOLYLINE16 /* id 114 */ EMRPOLYPOLYGON16;
+typedef PEMRPOLYPOLYLINE16 PEMRPOLYPOLYGON16;
+struct tagEMRINVERTRGN { /* size 32 id 115 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cbRgnData; /* bitsize 32, bitpos 192 */
+  unsigned char RgnData[1]; /* bitsize 8, bitpos 224 */
+};
+typedef struct tagEMRINVERTRGN /* id 115 */ EMRINVERTRGN;
+typedef struct tagEMRINVERTRGN /* id 115 */ *PEMRINVERTRGN;
+typedef struct tagEMRINVERTRGN /* id 115 */ EMRPAINTRGN;
+typedef PEMRINVERTRGN PEMRPAINTRGN;
+struct tagEMRFILLRGN { /* size 36 id 116 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cbRgnData; /* bitsize 32, bitpos 192 */
+  long unsigned int ihBrush; /* bitsize 32, bitpos 224 */
+  unsigned char RgnData[1]; /* bitsize 8, bitpos 256 */
+};
+typedef struct tagEMRFILLRGN /* id 116 */ EMRFILLRGN;
+typedef struct tagEMRFILLRGN /* id 116 */ *PEMRFILLRGN;
+struct tagEMRFRAMERGN { /* size 44 id 117 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cbRgnData; /* bitsize 32, bitpos 192 */
+  long unsigned int ihBrush; /* bitsize 32, bitpos 224 */
+  struct tagSIZE /* id 6 */ szlStroke; /* bitsize 64, bitpos 256 */
+  unsigned char RgnData[1]; /* bitsize 8, bitpos 320 */
+};
+typedef struct tagEMRFRAMERGN /* id 117 */ EMRFRAMERGN;
+typedef struct tagEMRFRAMERGN /* id 117 */ *PEMRFRAMERGN;
+struct tagEMREXTSELECTCLIPRGN { /* size 20 id 118 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int cbRgnData; /* bitsize 32, bitpos 64 */
+  long unsigned int iMode; /* bitsize 32, bitpos 96 */
+  unsigned char RgnData[1]; /* bitsize 8, bitpos 128 */
+};
+typedef struct tagEMREXTSELECTCLIPRGN /* id 118 */ EMREXTSELECTCLIPRGN;
+typedef struct tagEMREXTSELECTCLIPRGN /* id 118 */ *PEMREXTSELECTCLIPRGN;
+struct tagEMREXTTEXTOUTA { /* size 76 id 119 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int iGraphicsMode; /* bitsize 32, bitpos 192 */
+  float exScale; /* bitsize 32, bitpos 224 */
+  float eyScale; /* bitsize 32, bitpos 256 */
+  struct tagEMRTEXT /* id 78 */ emrtext; /* bitsize 320, bitpos 288 */
+};
+typedef struct tagEMREXTTEXTOUTA /* id 119 */ EMREXTTEXTOUTA;
+typedef struct tagEMREXTTEXTOUTA /* id 119 */ *PEMREXTTEXTOUTA;
+typedef struct tagEMREXTTEXTOUTA /* id 119 */ EMREXTTEXTOUTW;
+typedef PEMREXTTEXTOUTA PEMREXTTEXTOUTW;
+struct tagEMRPOLYTEXTOUTA { /* size 80 id 120 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int iGraphicsMode; /* bitsize 32, bitpos 192 */
+  float exScale; /* bitsize 32, bitpos 224 */
+  float eyScale; /* bitsize 32, bitpos 256 */
+  long int cStrings; /* bitsize 32, bitpos 288 */
+  struct tagEMRTEXT /* id 78 */ aemrtext[1]; /* bitsize 320, bitpos 320 */
+};
+typedef struct tagEMRPOLYTEXTOUTA /* id 120 */ EMRPOLYTEXTOUTA;
+typedef struct tagEMRPOLYTEXTOUTA /* id 120 */ *PEMRPOLYTEXTOUTA;
+typedef struct tagEMRPOLYTEXTOUTA /* id 120 */ EMRPOLYTEXTOUTW;
+typedef PEMRPOLYTEXTOUTA PEMRPOLYTEXTOUTW;
+struct tagEMRBITBLT { /* size 100 id 121 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long int xDest; /* bitsize 32, bitpos 192 */
+  long int yDest; /* bitsize 32, bitpos 224 */
+  long int cxDest; /* bitsize 32, bitpos 256 */
+  long int cyDest; /* bitsize 32, bitpos 288 */
+  long unsigned int dwRop; /* bitsize 32, bitpos 320 */
+  long int xSrc; /* bitsize 32, bitpos 352 */
+  long int ySrc; /* bitsize 32, bitpos 384 */
+  struct tagXFORM /* id 8 */ xformSrc; /* bitsize 192, bitpos 416 */
+  long unsigned int crBkColorSrc; /* bitsize 32, bitpos 608 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 640 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 672 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 704 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 736 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 768 */
+};
+typedef struct tagEMRBITBLT /* id 121 */ EMRBITBLT;
+typedef struct tagEMRBITBLT /* id 121 */ *PEMRBITBLT;
+struct tagEMRSTRETCHBLT { /* size 108 id 122 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long int xDest; /* bitsize 32, bitpos 192 */
+  long int yDest; /* bitsize 32, bitpos 224 */
+  long int cxDest; /* bitsize 32, bitpos 256 */
+  long int cyDest; /* bitsize 32, bitpos 288 */
+  long unsigned int dwRop; /* bitsize 32, bitpos 320 */
+  long int xSrc; /* bitsize 32, bitpos 352 */
+  long int ySrc; /* bitsize 32, bitpos 384 */
+  struct tagXFORM /* id 8 */ xformSrc; /* bitsize 192, bitpos 416 */
+  long unsigned int crBkColorSrc; /* bitsize 32, bitpos 608 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 640 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 672 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 704 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 736 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 768 */
+  long int cxSrc; /* bitsize 32, bitpos 800 */
+  long int cySrc; /* bitsize 32, bitpos 832 */
+};
+typedef struct tagEMRSTRETCHBLT /* id 122 */ EMRSTRETCHBLT;
+typedef struct tagEMRSTRETCHBLT /* id 122 */ *PEMRSTRETCHBLT;
+struct tagEMRMASKBLT { /* size 128 id 123 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long int xDest; /* bitsize 32, bitpos 192 */
+  long int yDest; /* bitsize 32, bitpos 224 */
+  long int cxDest; /* bitsize 32, bitpos 256 */
+  long int cyDest; /* bitsize 32, bitpos 288 */
+  long unsigned int dwRop; /* bitsize 32, bitpos 320 */
+  long int xSrc; /* bitsize 32, bitpos 352 */
+  long int ySrc; /* bitsize 32, bitpos 384 */
+  struct tagXFORM /* id 8 */ xformSrc; /* bitsize 192, bitpos 416 */
+  long unsigned int crBkColorSrc; /* bitsize 32, bitpos 608 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 640 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 672 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 704 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 736 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 768 */
+  long int xMask; /* bitsize 32, bitpos 800 */
+  long int yMask; /* bitsize 32, bitpos 832 */
+  long unsigned int iUsageMask; /* bitsize 32, bitpos 864 */
+  long unsigned int offBmiMask; /* bitsize 32, bitpos 896 */
+  long unsigned int cbBmiMask; /* bitsize 32, bitpos 928 */
+  long unsigned int offBitsMask; /* bitsize 32, bitpos 960 */
+  long unsigned int cbBitsMask; /* bitsize 32, bitpos 992 */
+};
+typedef struct tagEMRMASKBLT /* id 123 */ EMRMASKBLT;
+typedef struct tagEMRMASKBLT /* id 123 */ *PEMRMASKBLT;
+struct tagEMRPLGBLT { /* size 140 id 124 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  struct _POINTL /* id 5 */ aptlDest[3]; /* bitsize 192, bitpos 192 */
+  long int xSrc; /* bitsize 32, bitpos 384 */
+  long int ySrc; /* bitsize 32, bitpos 416 */
+  long int cxSrc; /* bitsize 32, bitpos 448 */
+  long int cySrc; /* bitsize 32, bitpos 480 */
+  struct tagXFORM /* id 8 */ xformSrc; /* bitsize 192, bitpos 512 */
+  long unsigned int crBkColorSrc; /* bitsize 32, bitpos 704 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 736 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 768 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 800 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 832 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 864 */
+  long int xMask; /* bitsize 32, bitpos 896 */
+  long int yMask; /* bitsize 32, bitpos 928 */
+  long unsigned int iUsageMask; /* bitsize 32, bitpos 960 */
+  long unsigned int offBmiMask; /* bitsize 32, bitpos 992 */
+  long unsigned int cbBmiMask; /* bitsize 32, bitpos 1024 */
+  long unsigned int offBitsMask; /* bitsize 32, bitpos 1056 */
+  long unsigned int cbBitsMask; /* bitsize 32, bitpos 1088 */
+};
+typedef struct tagEMRPLGBLT /* id 124 */ EMRPLGBLT;
+typedef struct tagEMRPLGBLT /* id 124 */ *PEMRPLGBLT;
+struct tagEMRSETDIBITSTODEVICE { /* size 76 id 125 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long int xDest; /* bitsize 32, bitpos 192 */
+  long int yDest; /* bitsize 32, bitpos 224 */
+  long int xSrc; /* bitsize 32, bitpos 256 */
+  long int ySrc; /* bitsize 32, bitpos 288 */
+  long int cxSrc; /* bitsize 32, bitpos 320 */
+  long int cySrc; /* bitsize 32, bitpos 352 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 384 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 416 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 448 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 480 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 512 */
+  long unsigned int iStartScan; /* bitsize 32, bitpos 544 */
+  long unsigned int cScans; /* bitsize 32, bitpos 576 */
+};
+typedef struct tagEMRSETDIBITSTODEVICE /* id 125 */ EMRSETDIBITSTODEVICE;
+typedef struct tagEMRSETDIBITSTODEVICE /* id 125 */ *PEMRSETDIBITSTODEVICE;
+struct tagEMRSTRETCHDIBITS { /* size 80 id 126 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long int xDest; /* bitsize 32, bitpos 192 */
+  long int yDest; /* bitsize 32, bitpos 224 */
+  long int xSrc; /* bitsize 32, bitpos 256 */
+  long int ySrc; /* bitsize 32, bitpos 288 */
+  long int cxSrc; /* bitsize 32, bitpos 320 */
+  long int cySrc; /* bitsize 32, bitpos 352 */
+  long unsigned int offBmiSrc; /* bitsize 32, bitpos 384 */
+  long unsigned int cbBmiSrc; /* bitsize 32, bitpos 416 */
+  long unsigned int offBitsSrc; /* bitsize 32, bitpos 448 */
+  long unsigned int cbBitsSrc; /* bitsize 32, bitpos 480 */
+  long unsigned int iUsageSrc; /* bitsize 32, bitpos 512 */
+  long unsigned int dwRop; /* bitsize 32, bitpos 544 */
+  long int cxDest; /* bitsize 32, bitpos 576 */
+  long int cyDest; /* bitsize 32, bitpos 608 */
+};
+typedef struct tagEMRSTRETCHDIBITS /* id 126 */ EMRSTRETCHDIBITS;
+typedef struct tagEMRSTRETCHDIBITS /* id 126 */ *PEMRSTRETCHDIBITS;
+struct tagEMREXTCREATEFONTINDIRECTW { /* size 332 id 127 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihFont; /* bitsize 32, bitpos 64 */
+  struct tagEXTLOGFONTW /* id 51 */ elfw; /* bitsize 2560, bitpos 96 */
+};
+typedef struct tagEMREXTCREATEFONTINDIRECTW /* id 127 */ EMREXTCREATEFONTINDIRECTW;
+typedef struct tagEMREXTCREATEFONTINDIRECTW /* id 127 */ *PEMREXTCREATEFONTINDIRECTW;
+struct tagEMRCREATEPALETTE { /* size 20 id 128 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPal; /* bitsize 32, bitpos 64 */
+  struct tagLOGPALETTE /* id 42 */ lgpl; /* bitsize 64, bitpos 96 */
+};
+typedef struct tagEMRCREATEPALETTE /* id 128 */ EMRCREATEPALETTE;
+typedef struct tagEMRCREATEPALETTE /* id 128 */ *PEMRCREATEPALETTE;
+struct tagEMRCREATECOLORSPACE { /* size 600 id 129 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihCS; /* bitsize 32, bitpos 64 */
+  struct tagLOGCOLORSPACEW /* id 15 */ lcs; /* bitsize 4704, bitpos 96 */
+};
+typedef struct tagEMRCREATECOLORSPACE /* id 129 */ EMRCREATECOLORSPACE;
+typedef struct tagEMRCREATECOLORSPACE /* id 129 */ *PEMRCREATECOLORSPACE;
+struct tagEMRCREATEPEN { /* size 28 id 130 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPen; /* bitsize 32, bitpos 64 */
+  struct tagLOGPEN /* id 39 */ lopn; /* bitsize 128, bitpos 96 */
+};
+typedef struct tagEMRCREATEPEN /* id 130 */ EMRCREATEPEN;
+typedef struct tagEMRCREATEPEN /* id 130 */ *PEMRCREATEPEN;
+struct tagEMREXTCREATEPEN { /* size 56 id 131 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihPen; /* bitsize 32, bitpos 64 */
+  long unsigned int offBmi; /* bitsize 32, bitpos 96 */
+  long unsigned int cbBmi; /* bitsize 32, bitpos 128 */
+  long unsigned int offBits; /* bitsize 32, bitpos 160 */
+  long unsigned int cbBits; /* bitsize 32, bitpos 192 */
+  struct tagEXTLOGPEN /* id 40 */ elp; /* bitsize 224, bitpos 224 */
+};
+typedef struct tagEMREXTCREATEPEN /* id 131 */ EMREXTCREATEPEN;
+typedef struct tagEMREXTCREATEPEN /* id 131 */ *PEMREXTCREATEPEN;
+struct tagEMRCREATEBRUSHINDIRECT { /* size 24 id 132 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihBrush; /* bitsize 32, bitpos 64 */
+  struct tagLOGBRUSH /* id 38 */ lb; /* bitsize 96, bitpos 96 */
+};
+typedef struct tagEMRCREATEBRUSHINDIRECT /* id 132 */ EMRCREATEBRUSHINDIRECT;
+typedef struct tagEMRCREATEBRUSHINDIRECT /* id 132 */ *PEMRCREATEBRUSHINDIRECT;
+struct tagEMRCREATEMONOBRUSH { /* size 32 id 133 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihBrush; /* bitsize 32, bitpos 64 */
+  long unsigned int iUsage; /* bitsize 32, bitpos 96 */
+  long unsigned int offBmi; /* bitsize 32, bitpos 128 */
+  long unsigned int cbBmi; /* bitsize 32, bitpos 160 */
+  long unsigned int offBits; /* bitsize 32, bitpos 192 */
+  long unsigned int cbBits; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagEMRCREATEMONOBRUSH /* id 133 */ EMRCREATEMONOBRUSH;
+typedef struct tagEMRCREATEMONOBRUSH /* id 133 */ *PEMRCREATEMONOBRUSH;
+struct tagEMRCREATEDIBPATTERNBRUSHPT { /* size 32 id 134 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int ihBrush; /* bitsize 32, bitpos 64 */
+  long unsigned int iUsage; /* bitsize 32, bitpos 96 */
+  long unsigned int offBmi; /* bitsize 32, bitpos 128 */
+  long unsigned int cbBmi; /* bitsize 32, bitpos 160 */
+  long unsigned int offBits; /* bitsize 32, bitpos 192 */
+  long unsigned int cbBits; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagEMRCREATEDIBPATTERNBRUSHPT /* id 134 */ EMRCREATEDIBPATTERNBRUSHPT;
+typedef struct tagEMRCREATEDIBPATTERNBRUSHPT /* id 134 */ *PEMRCREATEDIBPATTERNBRUSHPT;
+struct tagEMRFORMAT { /* size 16 id 135 */
+  long unsigned int dSignature; /* bitsize 32, bitpos 0 */
+  long unsigned int nVersion; /* bitsize 32, bitpos 32 */
+  long unsigned int cbData; /* bitsize 32, bitpos 64 */
+  long unsigned int offData; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagEMRFORMAT /* id 135 */ EMRFORMAT;
+typedef struct tagEMRFORMAT /* id 135 */ *PEMRFORMAT;
+struct tagEMRGLSRECORD { /* size 16 id 136 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  long unsigned int cbData; /* bitsize 32, bitpos 64 */
+  unsigned char Data[1]; /* bitsize 8, bitpos 96 */
+};
+typedef struct tagEMRGLSRECORD /* id 136 */ EMRGLSRECORD;
+typedef struct tagEMRGLSRECORD /* id 136 */ *PEMRGLSRECORD;
+struct tagEMRGLSBOUNDEDRECORD { /* size 32 id 137 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct _RECTL /* id 3 */ rclBounds; /* bitsize 128, bitpos 64 */
+  long unsigned int cbData; /* bitsize 32, bitpos 192 */
+  unsigned char Data[1]; /* bitsize 8, bitpos 224 */
+};
+typedef struct tagEMRGLSBOUNDEDRECORD /* id 137 */ EMRGLSBOUNDEDRECORD;
+typedef struct tagEMRGLSBOUNDEDRECORD /* id 137 */ *PEMRGLSBOUNDEDRECORD;
+struct tagEMRPIXELFORMAT { /* size 48 id 138 */
+  struct tagEMR /* id 77 */ emr; /* bitsize 64, bitpos 0 */
+  struct tagPIXELFORMATDESCRIPTOR /* id 71 */ pfd; /* bitsize 320, bitpos 64 */
+};
+typedef struct tagEMRPIXELFORMAT /* id 138 */ EMRPIXELFORMAT;
+typedef struct tagEMRPIXELFORMAT /* id 138 */ *PEMRPIXELFORMAT;
+int wglCopyContext (long int hGl /* 0x8 */, long int hGl1 /* 0xc */, unsigned int v /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int wglCreateContext (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int wglCreateLayerContext (long int hDC /* 0x8 */, int v /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglDeleteContext (long int hGl /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int wglGetCurrentContext ()
+{ /* 0x0 */
+} /* 0x0 */
+long int wglGetCurrentDC ()
+{ /* 0x0 */
+} /* 0x0 */
+FARPROC wglGetProcAddress (PSTR str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglMakeCurrent (long int hDC /* 0x8 */, long int hGl1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglShareLists (long int hGl /* 0x8 */, long int hGl1 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglUseFontBitmapsA (long int hDC /* 0x8 */, long unsigned int v1 /* 0xc */, long unsigned int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglUseFontBitmapsW (long int hDC /* 0x8 */, long unsigned int v1 /* 0xc */, long unsigned int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SwapBuffers (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _POINTFLOAT { /* size 8 id 139 */
+  float x; /* bitsize 32, bitpos 0 */
+  float y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTFLOAT /* id 139 */ POINTFLOAT;
+typedef struct _POINTFLOAT /* id 139 */ *PPOINTFLOAT;
+struct _GLYPHMETRICSFLOAT { /* size 24 id 140 */
+  float gmfBlackBoxX; /* bitsize 32, bitpos 0 */
+  float gmfBlackBoxY; /* bitsize 32, bitpos 32 */
+  struct _POINTFLOAT /* id 139 */ gmfptGlyphOrigin; /* bitsize 64, bitpos 64 */
+  float gmfCellIncX; /* bitsize 32, bitpos 128 */
+  float gmfCellIncY; /* bitsize 32, bitpos 160 */
+};
+typedef struct _GLYPHMETRICSFLOAT /* id 140 */ GLYPHMETRICSFLOAT;
+typedef struct _GLYPHMETRICSFLOAT /* id 140 */ *PGLYPHMETRICSFLOAT;
+typedef PGLYPHMETRICSFLOAT LPGLYPHMETRICSFLOAT;
+int wglUseFontOutlinesA (long int hDC /* 0x8 */, long unsigned int v1 /* 0xc */, long unsigned int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */, float v4 /* 0x18 */, float v5 /* 0x1c */, int v6 /* 0x20 */, PGLYPHMETRICSFLOAT pGlyph /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglUseFontOutlinesW (long int hDC /* 0x8 */, long unsigned int v1 /* 0xc */, long unsigned int v2 /* 0x10 */, long unsigned int v3 /* 0x14 */, float v4 /* 0x18 */, float v5 /* 0x1c */, int v6 /* 0x20 */, PGLYPHMETRICSFLOAT pGlyph /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagLAYERPLANEDESCRIPTOR { /* size 32 id 141 */
+  short unsigned int nSize; /* bitsize 16, bitpos 0 */
+  short unsigned int nVersion; /* bitsize 16, bitpos 16 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  unsigned char iPixelType; /* bitsize 8, bitpos 64 */
+  unsigned char cColorBits; /* bitsize 8, bitpos 72 */
+  unsigned char cRedBits; /* bitsize 8, bitpos 80 */
+  unsigned char cRedShift; /* bitsize 8, bitpos 88 */
+  unsigned char cGreenBits; /* bitsize 8, bitpos 96 */
+  unsigned char cGreenShift; /* bitsize 8, bitpos 104 */
+  unsigned char cBlueBits; /* bitsize 8, bitpos 112 */
+  unsigned char cBlueShift; /* bitsize 8, bitpos 120 */
+  unsigned char cAlphaBits; /* bitsize 8, bitpos 128 */
+  unsigned char cAlphaShift; /* bitsize 8, bitpos 136 */
+  unsigned char cAccumBits; /* bitsize 8, bitpos 144 */
+  unsigned char cAccumRedBits; /* bitsize 8, bitpos 152 */
+  unsigned char cAccumGreenBits; /* bitsize 8, bitpos 160 */
+  unsigned char cAccumBlueBits; /* bitsize 8, bitpos 168 */
+  unsigned char cAccumAlphaBits; /* bitsize 8, bitpos 176 */
+  unsigned char cDepthBits; /* bitsize 8, bitpos 184 */
+  unsigned char cStencilBits; /* bitsize 8, bitpos 192 */
+  unsigned char cAuxBuffers; /* bitsize 8, bitpos 200 */
+  unsigned char iLayerPlane; /* bitsize 8, bitpos 208 */
+  unsigned char bReserved; /* bitsize 8, bitpos 216 */
+  long unsigned int crTransparent; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagLAYERPLANEDESCRIPTOR /* id 141 */ LAYERPLANEDESCRIPTOR;
+typedef struct tagLAYERPLANEDESCRIPTOR /* id 141 */ *PLAYERPLANEDESCRIPTOR;
+typedef PLAYERPLANEDESCRIPTOR LPLAYERPLANEDESCRIPTOR;
+int wglDescribeLayerPlane (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, unsigned int v3 /* 0x14 */, PLAYERPLANEDESCRIPTOR pLayer /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglSetLayerPaletteEntries (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, long unsigned int *pColor /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglGetLayerPaletteEntries (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, long unsigned int *pColor /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglRealizeLayerPalette (long int hDC /* 0x8 */, int v1 /* 0xc */, int v2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wglSwapLayerBuffers (long int hDC /* 0x8 */, unsigned int v /* 0xc */)
+{ /* 0x0 */
+  /* file w95types.h line 94 addr 0x0 */
+  /* file w95types.h line 94 addr 0x3 */
+  /* file w95types.h line 103 addr 0x0 */
+  /* file w95types.h line 103 addr 0x3 */
+  /* file w95types.h line 112 addr 0x0 */
+  /* file w95types.h line 112 addr 0x3 */
+  /* file w95types.h line 121 addr 0x0 */
+  /* file w95types.h line 121 addr 0x3 */
+  /* file w95types.h line 130 addr 0x0 */
+  /* file w95types.h line 130 addr 0xc */
+  /* file w95types.h line 138 addr 0x0 */
+  /* file w95types.h line 138 addr 0x3 */
+  /* file wingdi.c line 2279 addr 0x0 */
+  /* file wingdi.c line 2279 addr 0x3 */
+  /* file wingdi.c line 2280 addr 0x0 */
+  /* file wingdi.c line 2280 addr 0x3 */
+  /* file wingdi.c line 2287 addr 0x0 */
+  /* file wingdi.c line 2287 addr 0x3 */
+  /* file wingdi.c line 2288 addr 0x0 */
+  /* file wingdi.c line 2288 addr 0x3 */
+  /* file wingdi.c line 2289 addr 0x0 */
+  /* file wingdi.c line 2289 addr 0x3 */
+  /* file wingdi.c line 2290 addr 0x0 */
+  /* file wingdi.c line 2290 addr 0x3 */
+  /* file wingdi.c line 2291 addr 0x0 */
+  /* file wingdi.c line 2291 addr 0x3 */
+  /* file wingdi.c line 2292 addr 0x0 */
+  /* file wingdi.c line 2292 addr 0x3 */
+  /* file wingdi.c line 2293 addr 0x0 */
+  /* file wingdi.c line 2293 addr 0x3 */
+  /* file wingdi.c line 2294 addr 0x0 */
+  /* file wingdi.c line 2294 addr 0x3 */
+  /* file wingdi.c line 2295 addr 0x0 */
+  /* file wingdi.c line 2295 addr 0x3 */
+  /* file wingdi.c line 2296 addr 0x0 */
+  /* file wingdi.c line 2296 addr 0x3 */
+  /* file wingdi.c line 2302 addr 0x0 */
+  /* file wingdi.c line 2302 addr 0x3 */
+  /* file wingdi.c line 2303 addr 0x0 */
+  /* file wingdi.c line 2303 addr 0x3 */
+  /* file wingdi.c line 2304 addr 0x0 */
+  /* file wingdi.c line 2304 addr 0x3 */
+  /* file wingdi.c line 2305 addr 0x0 */
+  /* file wingdi.c line 2305 addr 0x3 */
+  /* file wingdi.c line 2306 addr 0x0 */
+  /* file wingdi.c line 2306 addr 0x3 */
+  /* file wingdi.c line 2307 addr 0x0 */
+  /* file wingdi.c line 2307 addr 0x3 */
+  /* file wingdi.c line 2308 addr 0x0 */
+  /* file wingdi.c line 2308 addr 0x3 */
+  /* file wingdi.c line 2309 addr 0x0 */
+  /* file wingdi.c line 2309 addr 0x3 */
+  /* file wingdi.c line 2315 addr 0x0 */
+  /* file wingdi.c line 2315 addr 0x3 */
+  /* file wingdi.c line 2316 addr 0x0 */
+  /* file wingdi.c line 2316 addr 0x3 */
+  /* file wingdi.c line 2317 addr 0x0 */
+  /* file wingdi.c line 2317 addr 0x3 */
+  /* file wingdi.c line 2318 addr 0x0 */
+  /* file wingdi.c line 2318 addr 0x3 */
+  /* file wingdi.c line 2319 addr 0x0 */
+  /* file wingdi.c line 2319 addr 0x3 */
+  /* file wingdi.c line 2320 addr 0x0 */
+  /* file wingdi.c line 2320 addr 0x3 */
+  /* file wingdi.c line 2321 addr 0x0 */
+  /* file wingdi.c line 2321 addr 0x3 */
+  /* file wingdi.c line 2329 addr 0x0 */
+  /* file wingdi.c line 2329 addr 0x3 */
+  /* file wingdi.c line 2332 addr 0x0 */
+  /* file wingdi.c line 2332 addr 0x3 */
+  /* file wingdi.c line 2339 addr 0x0 */
+  /* file wingdi.c line 2339 addr 0x3 */
+  /* file wingdi.c line 2340 addr 0x0 */
+  /* file wingdi.c line 2340 addr 0x3 */
+  /* file wingdi.c line 2341 addr 0x0 */
+  /* file wingdi.c line 2341 addr 0x3 */
+  /* file wingdi.c line 2347 addr 0x0 */
+  /* file wingdi.c line 2347 addr 0x3 */
+  /* file wingdi.c line 2348 addr 0x0 */
+  /* file wingdi.c line 2348 addr 0x3 */
+  /* file wingdi.c line 2354 addr 0x0 */
+  /* file wingdi.c line 2354 addr 0x3 */
+  /* file wingdi.c line 2355 addr 0x0 */
+  /* file wingdi.c line 2355 addr 0x3 */
+  /* file wingdi.c line 2356 addr 0x0 */
+  /* file wingdi.c line 2356 addr 0x3 */
+  /* file wingdi.c line 2357 addr 0x0 */
+  /* file wingdi.c line 2357 addr 0x3 */
+  /* file wingdi.c line 2358 addr 0x0 */
+  /* file wingdi.c line 2358 addr 0x3 */
+  /* file wingdi.c line 2359 addr 0x0 */
+  /* file wingdi.c line 2359 addr 0x3 */
+  /* file wingdi.c line 2360 addr 0x0 */
+  /* file wingdi.c line 2360 addr 0x3 */
+  /* file wingdi.c line 2361 addr 0x0 */
+  /* file wingdi.c line 2361 addr 0x3 */
+  /* file wingdi.c line 2362 addr 0x0 */
+  /* file wingdi.c line 2362 addr 0x3 */
+  /* file wingdi.c line 2363 addr 0x0 */
+  /* file wingdi.c line 2363 addr 0x3 */
+  /* file wingdi.c line 2369 addr 0x0 */
+  /* file wingdi.c line 2369 addr 0x3 */
+  /* file wingdi.c line 2371 addr 0x0 */
+  /* file wingdi.c line 2371 addr 0x3 */
+  /* file wingdi.c line 2372 addr 0x0 */
+  /* file wingdi.c line 2372 addr 0x3 */
+  /* file wingdi.c line 2373 addr 0x0 */
+  /* file wingdi.c line 2373 addr 0x3 */
+  /* file wingdi.c line 2374 addr 0x0 */
+  /* file wingdi.c line 2374 addr 0x3 */
+  /* file wingdi.c line 2440 addr 0x0 */
+  /* file wingdi.c line 2440 addr 0xd */
+  /* file wingdi.c line 2442 addr 0x0 */
+  /* file wingdi.c line 2442 addr 0xd */
+  /* file wingdi.c line 2449 addr 0x0 */
+  /* file wingdi.c line 2449 addr 0x3 */
+  /* file wingdi.c line 2450 addr 0x0 */
+  /* file wingdi.c line 2450 addr 0x3 */
+  /* file wingdi.c line 2453 addr 0x0 */
+  /* file wingdi.c line 2453 addr 0x3 */
+  /* file wingdi.c line 2454 addr 0x0 */
+  /* file wingdi.c line 2454 addr 0x3 */
+  /* file wingdi.c line 2462 addr 0x0 */
+  /* file wingdi.c line 2462 addr 0x3 */
+  /* file wingdi.c line 2463 addr 0x0 */
+  /* file wingdi.c line 2463 addr 0x3 */
+  /* file wingdi.c line 2469 addr 0x0 */
+  /* file wingdi.c line 2469 addr 0x3 */
+  /* file wingdi.c line 2470 addr 0x0 */
+  /* file wingdi.c line 2470 addr 0x3 */
+  /* file wingdi.c line 2480 addr 0x0 */
+  /* file wingdi.c line 2480 addr 0x3 */
+  /* file wingdi.c line 2484 addr 0x0 */
+  /* file wingdi.c line 2484 addr 0x3 */
+  /* file wingdi.c line 2485 addr 0x0 */
+  /* file wingdi.c line 2485 addr 0x3 */
+  /* file wingdi.c line 2486 addr 0x0 */
+  /* file wingdi.c line 2486 addr 0x3 */
+  /* file wingdi.c line 2487 addr 0x0 */
+  /* file wingdi.c line 2487 addr 0x3 */
+  /* file wingdi.c line 2488 addr 0x0 */
+  /* file wingdi.c line 2488 addr 0x3 */
+  /* file wingdi.c line 2489 addr 0x0 */
+  /* file wingdi.c line 2489 addr 0x3 */
+  /* file wingdi.c line 2490 addr 0x0 */
+  /* file wingdi.c line 2490 addr 0x3 */
+  /* file wingdi.c line 2491 addr 0x0 */
+  /* file wingdi.c line 2491 addr 0x3 */
+  /* file wingdi.c line 2492 addr 0x0 */
+  /* file wingdi.c line 2492 addr 0x3 */
+  /* file wingdi.c line 2493 addr 0x0 */
+  /* file wingdi.c line 2493 addr 0x3 */
+  /* file wingdi.c line 2494 addr 0x0 */
+  /* file wingdi.c line 2494 addr 0x3 */
+  /* file wingdi.c line 2495 addr 0x0 */
+  /* file wingdi.c line 2495 addr 0x3 */
+  /* file wingdi.c line 2496 addr 0x0 */
+  /* file wingdi.c line 2496 addr 0x3 */
+  /* file wingdi.c line 2497 addr 0x0 */
+  /* file wingdi.c line 2497 addr 0x3 */
+  /* file wingdi.c line 2498 addr 0x0 */
+  /* file wingdi.c line 2498 addr 0x3 */
+  /* file wingdi.c line 2499 addr 0x0 */
+  /* file wingdi.c line 2499 addr 0x3 */
+  /* file wingdi.c line 2501 addr 0x0 */
+  /* file wingdi.c line 2501 addr 0x3 */
+  /* file wingdi.c line 2503 addr 0x0 */
+  /* file wingdi.c line 2503 addr 0x3 */
+  /* file wingdi.c line 2504 addr 0x0 */
+  /* file wingdi.c line 2504 addr 0x3 */
+  /* file wingdi.c line 2510 addr 0x0 */
+  /* file wingdi.c line 2510 addr 0x3 */
+  /* file wingdi.c line 2511 addr 0x0 */
+  /* file wingdi.c line 2511 addr 0x3 */
+  /* file wingdi.c line 2517 addr 0x0 */
+  /* file wingdi.c line 2517 addr 0x3 */
+  /* file wingdi.c line 2518 addr 0x0 */
+  /* file wingdi.c line 2518 addr 0x3 */
+  /* file wingdi.c line 2525 addr 0x0 */
+  /* file wingdi.c line 2525 addr 0x3 */
+  /* file wingdi.c line 2526 addr 0x0 */
+  /* file wingdi.c line 2526 addr 0x3 */
+  /* file wingdi.c line 2532 addr 0x0 */
+  /* file wingdi.c line 2532 addr 0x3 */
+  /* file wingdi.c line 2533 addr 0x0 */
+  /* file wingdi.c line 2533 addr 0x3 */
+  /* file wingdi.c line 2540 addr 0x0 */
+  /* file wingdi.c line 2540 addr 0x3 */
+  /* file wingdi.c line 2541 addr 0x0 */
+  /* file wingdi.c line 2541 addr 0x3 */
+  /* file wingdi.c line 2542 addr 0x0 */
+  /* file wingdi.c line 2542 addr 0x3 */
+  /* file wingdi.c line 2543 addr 0x0 */
+  /* file wingdi.c line 2543 addr 0x3 */
+  /* file wingdi.c line 2544 addr 0x0 */
+  /* file wingdi.c line 2544 addr 0x3 */
+  /* file wingdi.c line 2545 addr 0x0 */
+  /* file wingdi.c line 2545 addr 0x3 */
+  /* file wingdi.c line 2546 addr 0x0 */
+  /* file wingdi.c line 2546 addr 0x3 */
+  /* file wingdi.c line 2547 addr 0x0 */
+  /* file wingdi.c line 2547 addr 0x3 */
+  /* file wingdi.c line 2548 addr 0x0 */
+  /* file wingdi.c line 2548 addr 0x3 */
+  /* file wingdi.c line 2549 addr 0x0 */
+  /* file wingdi.c line 2549 addr 0x3 */
+  /* file wingdi.c line 2555 addr 0x0 */
+  /* file wingdi.c line 2555 addr 0x3 */
+  /* file wingdi.c line 2556 addr 0x0 */
+  /* file wingdi.c line 2556 addr 0x3 */
+  /* file wingdi.c line 2557 addr 0x0 */
+  /* file wingdi.c line 2557 addr 0x3 */
+  /* file wingdi.c line 2558 addr 0x0 */
+  /* file wingdi.c line 2558 addr 0x3 */
+  /* file wingdi.c line 2559 addr 0x0 */
+  /* file wingdi.c line 2559 addr 0x3 */
+  /* file wingdi.c line 2565 addr 0x0 */
+  /* file wingdi.c line 2565 addr 0x3 */
+  /* file wingdi.c line 2566 addr 0x0 */
+  /* file wingdi.c line 2566 addr 0x3 */
+  /* file wingdi.c line 2567 addr 0x0 */
+  /* file wingdi.c line 2567 addr 0x3 */
+  /* file wingdi.c line 2571 addr 0x0 */
+  /* file wingdi.c line 2571 addr 0x3 */
+  /* file wingdi.c line 2572 addr 0x0 */
+  /* file wingdi.c line 2572 addr 0x3 */
+  /* file wingdi.c line 2581 addr 0x0 */
+  /* file wingdi.c line 2581 addr 0x3 */
+  /* file wingdi.c line 2582 addr 0x0 */
+  /* file wingdi.c line 2582 addr 0x3 */
+  /* file wingdi.c line 2583 addr 0x0 */
+  /* file wingdi.c line 2583 addr 0x3 */
+  /* file wingdi.c line 2584 addr 0x0 */
+  /* file wingdi.c line 2584 addr 0x3 */
+  /* file wingdi.c line 2585 addr 0x0 */
+  /* file wingdi.c line 2585 addr 0x3 */
+  /* file wingdi.c line 2586 addr 0x0 */
+  /* file wingdi.c line 2586 addr 0x3 */
+  /* file wingdi.c line 2587 addr 0x0 */
+  /* file wingdi.c line 2587 addr 0x3 */
+  /* file wingdi.c line 2588 addr 0x0 */
+  /* file wingdi.c line 2588 addr 0x3 */
+  /* file wingdi.c line 2589 addr 0x0 */
+  /* file wingdi.c line 2589 addr 0x3 */
+  /* file wingdi.c line 2590 addr 0x0 */
+  /* file wingdi.c line 2590 addr 0x3 */
+  /* file wingdi.c line 2591 addr 0x0 */
+  /* file wingdi.c line 2591 addr 0x3 */
+  /* file wingdi.c line 2592 addr 0x0 */
+  /* file wingdi.c line 2592 addr 0x3 */
+  /* file wingdi.c line 2593 addr 0x0 */
+  /* file wingdi.c line 2593 addr 0x3 */
+  /* file wingdi.c line 2594 addr 0x0 */
+  /* file wingdi.c line 2594 addr 0x3 */
+  /* file wingdi.c line 2601 addr 0x0 */
+  /* file wingdi.c line 2601 addr 0x3 */
+  /* file wingdi.c line 2607 addr 0x0 */
+  /* file wingdi.c line 2607 addr 0x3 */
+  /* file wingdi.c line 2619 addr 0x0 */
+  /* file wingdi.c line 2619 addr 0x3 */
+  /* file wingdi.c line 2625 addr 0x0 */
+  /* file wingdi.c line 2625 addr 0x3 */
+  /* file wingdi.c line 2640 addr 0x0 */
+  /* file wingdi.c line 2640 addr 0x3 */
+  /* file wingdi.c line 2649 addr 0x0 */
+  /* file wingdi.c line 2649 addr 0x3 */
+  /* file wingdi.c line 2657 addr 0x0 */
+  /* file wingdi.c line 2657 addr 0x3 */
+  /* file wingdi.c line 2658 addr 0x0 */
+  /* file wingdi.c line 2658 addr 0x3 */
+  /* file wingdi.c line 2659 addr 0x0 */
+  /* file wingdi.c line 2659 addr 0x3 */
+  /* file wingdi.c line 2660 addr 0x0 */
+  /* file wingdi.c line 2660 addr 0x3 */
+  /* file wingdi.c line 2661 addr 0x0 */
+  /* file wingdi.c line 2661 addr 0x3 */
+  /* file wingdi.c line 2662 addr 0x0 */
+  /* file wingdi.c line 2662 addr 0x3 */
+  /* file wingdi.c line 2670 addr 0x0 */
+  /* file wingdi.c line 2670 addr 0x3 */
+  /* file wingdi.c line 2671 addr 0x0 */
+  /* file wingdi.c line 2671 addr 0x3 */
+  /* file wingdi.c line 2672 addr 0x0 */
+  /* file wingdi.c line 2672 addr 0x3 */
+  /* file wingdi.c line 2673 addr 0x0 */
+  /* file wingdi.c line 2673 addr 0x3 */
+  /* file wingdi.c line 2675 addr 0x0 */
+  /* file wingdi.c line 2675 addr 0x3 */
+  /* file wingdi.c line 2676 addr 0x0 */
+  /* file wingdi.c line 2676 addr 0x3 */
+  /* file wingdi.c line 2677 addr 0x0 */
+  /* file wingdi.c line 2677 addr 0x3 */
+  /* file wingdi.c line 2678 addr 0x0 */
+  /* file wingdi.c line 2678 addr 0x3 */
+  /* file wingdi.c line 2680 addr 0x0 */
+  /* file wingdi.c line 2680 addr 0x3 */
+  /* file wingdi.c line 2682 addr 0x0 */
+  /* file wingdi.c line 2682 addr 0x3 */
+  /* file wingdi.c line 2684 addr 0x0 */
+  /* file wingdi.c line 2684 addr 0x3 */
+  /* file wingdi.c line 2685 addr 0x0 */
+  /* file wingdi.c line 2685 addr 0x3 */
+  /* file wingdi.c line 2686 addr 0x0 */
+  /* file wingdi.c line 2686 addr 0x3 */
+  /* file wingdi.c line 2687 addr 0x0 */
+  /* file wingdi.c line 2687 addr 0x3 */
+  /* file wingdi.c line 2688 addr 0x0 */
+  /* file wingdi.c line 2688 addr 0x3 */
+  /* file wingdi.c line 2689 addr 0x0 */
+  /* file wingdi.c line 2689 addr 0x3 */
+  /* file wingdi.c line 2690 addr 0x0 */
+  /* file wingdi.c line 2690 addr 0x3 */
+  /* file wingdi.c line 2691 addr 0x0 */
+  /* file wingdi.c line 2691 addr 0x3 */
+  /* file wingdi.c line 2692 addr 0x0 */
+  /* file wingdi.c line 2692 addr 0x3 */
+  /* file wingdi.c line 2693 addr 0x0 */
+  /* file wingdi.c line 2693 addr 0x3 */
+  /* file wingdi.c line 2694 addr 0x0 */
+  /* file wingdi.c line 2694 addr 0x3 */
+  /* file wingdi.c line 2695 addr 0x0 */
+  /* file wingdi.c line 2695 addr 0x3 */
+  /* file wingdi.c line 2696 addr 0x0 */
+  /* file wingdi.c line 2696 addr 0x3 */
+  /* file wingdi.c line 2697 addr 0x0 */
+  /* file wingdi.c line 2697 addr 0x3 */
+  /* file wingdi.c line 2698 addr 0x0 */
+  /* file wingdi.c line 2698 addr 0x3 */
+  /* file wingdi.c line 2704 addr 0x0 */
+  /* file wingdi.c line 2704 addr 0x3 */
+  /* file wingdi.c line 2705 addr 0x0 */
+  /* file wingdi.c line 2705 addr 0x3 */
+  /* file wingdi.c line 2706 addr 0x0 */
+  /* file wingdi.c line 2706 addr 0x3 */
+  /* file wingdi.c line 2712 addr 0x0 */
+  /* file wingdi.c line 2712 addr 0x3 */
+  /* file wingdi.c line 2713 addr 0x0 */
+  /* file wingdi.c line 2713 addr 0x3 */
+  /* file wingdi.c line 2715 addr 0x0 */
+  /* file wingdi.c line 2715 addr 0x3 */
+  /* file wingdi.c line 2716 addr 0x0 */
+  /* file wingdi.c line 2716 addr 0x3 */
+  /* file wingdi.c line 2717 addr 0x0 */
+  /* file wingdi.c line 2717 addr 0x3 */
+  /* file wingdi.c line 2718 addr 0x0 */
+  /* file wingdi.c line 2718 addr 0x3 */
+  /* file wingdi.c line 2719 addr 0x0 */
+  /* file wingdi.c line 2719 addr 0x3 */
+  /* file wingdi.c line 2720 addr 0x0 */
+  /* file wingdi.c line 2720 addr 0x3 */
+  /* file wingdi.c line 2721 addr 0x0 */
+  /* file wingdi.c line 2721 addr 0x3 */
+  /* file wingdi.c line 2722 addr 0x0 */
+  /* file wingdi.c line 2722 addr 0x3 */
+  /* file wingdi.c line 2723 addr 0x0 */
+  /* file wingdi.c line 2723 addr 0x3 */
+  /* file wingdi.c line 2725 addr 0x0 */
+  /* file wingdi.c line 2725 addr 0x3 */
+  /* file wingdi.c line 2726 addr 0x0 */
+  /* file wingdi.c line 2726 addr 0x3 */
+  /* file wingdi.c line 2728 addr 0x0 */
+  /* file wingdi.c line 2728 addr 0x3 */
+  /* file wingdi.c line 2729 addr 0x0 */
+  /* file wingdi.c line 2729 addr 0x3 */
+  /* file wingdi.c line 2730 addr 0x0 */
+  /* file wingdi.c line 2730 addr 0x3 */
+  /* file wingdi.c line 2731 addr 0x0 */
+  /* file wingdi.c line 2731 addr 0x3 */
+  /* file wingdi.c line 2732 addr 0x0 */
+  /* file wingdi.c line 2732 addr 0x3 */
+  /* file wingdi.c line 2733 addr 0x0 */
+  /* file wingdi.c line 2733 addr 0x3 */
+  /* file wingdi.c line 2734 addr 0x0 */
+  /* file wingdi.c line 2734 addr 0x3 */
+  /* file wingdi.c line 2735 addr 0x0 */
+  /* file wingdi.c line 2735 addr 0x3 */
+  /* file wingdi.c line 2736 addr 0x0 */
+  /* file wingdi.c line 2736 addr 0x3 */
+  /* file wingdi.c line 2737 addr 0x0 */
+  /* file wingdi.c line 2737 addr 0x3 */
+  /* file wingdi.c line 2738 addr 0x0 */
+  /* file wingdi.c line 2738 addr 0x3 */
+  /* file wingdi.c line 2739 addr 0x0 */
+  /* file wingdi.c line 2739 addr 0x3 */
+  /* file wingdi.c line 2741 addr 0x0 */
+  /* file wingdi.c line 2741 addr 0x3 */
+  /* file wingdi.c line 2742 addr 0x0 */
+  /* file wingdi.c line 2742 addr 0x3 */
+  /* file wingdi.c line 2743 addr 0x0 */
+  /* file wingdi.c line 2743 addr 0x3 */
+  /* file wingdi.c line 2744 addr 0x0 */
+  /* file wingdi.c line 2744 addr 0x3 */
+  /* file wingdi.c line 2745 addr 0x0 */
+  /* file wingdi.c line 2745 addr 0x3 */
+  /* file wingdi.c line 2746 addr 0x0 */
+  /* file wingdi.c line 2746 addr 0x3 */
+  /* file wingdi.c line 2747 addr 0x0 */
+  /* file wingdi.c line 2747 addr 0x3 */
+  /* file wingdi.c line 2748 addr 0x0 */
+  /* file wingdi.c line 2748 addr 0x3 */
+  /* file wingdi.c line 2749 addr 0x0 */
+  /* file wingdi.c line 2749 addr 0x3 */
+  /* file wingdi.c line 2753 addr 0x0 */
+  /* file wingdi.c line 2753 addr 0x3 */
+  /* file wingdi.c line 2755 addr 0x0 */
+  /* file wingdi.c line 2755 addr 0x3 */
+  /* file wingdi.c line 2761 addr 0x0 */
+  /* file wingdi.c line 2761 addr 0x3 */
+  /* file wingdi.c line 2762 addr 0x0 */
+  /* file wingdi.c line 2762 addr 0x3 */
+  /* file wingdi.c line 2763 addr 0x0 */
+  /* file wingdi.c line 2763 addr 0x3 */
+  /* file wingdi.c line 2769 addr 0x0 */
+  /* file wingdi.c line 2769 addr 0x3 */
+  /* file wingdi.c line 2770 addr 0x0 */
+  /* file wingdi.c line 2770 addr 0x3 */
+  /* file wingdi.c line 2776 addr 0x0 */
+  /* file wingdi.c line 2776 addr 0x3 */
+  /* file wingdi.c line 2778 addr 0x0 */
+  /* file wingdi.c line 2778 addr 0x3 */
+  /* file wingdi.c line 2779 addr 0x0 */
+  /* file wingdi.c line 2779 addr 0x3 */
+  /* file wingdi.c line 2780 addr 0x0 */
+  /* file wingdi.c line 2780 addr 0x3 */
+  /* file wingdi.c line 2786 addr 0x0 */
+  /* file wingdi.c line 2786 addr 0x3 */
+  /* file wingdi.c line 2787 addr 0x0 */
+  /* file wingdi.c line 2787 addr 0x3 */
+  /* file wingdi.c line 2788 addr 0x0 */
+  /* file wingdi.c line 2788 addr 0x3 */
+  /* file wingdi.c line 2794 addr 0x0 */
+  /* file wingdi.c line 2794 addr 0x3 */
+  /* file wingdi.c line 2795 addr 0x0 */
+  /* file wingdi.c line 2795 addr 0x3 */
+  /* file wingdi.c line 2797 addr 0x0 */
+  /* file wingdi.c line 2797 addr 0x3 */
+  /* file wingdi.c line 2798 addr 0x0 */
+  /* file wingdi.c line 2798 addr 0x3 */
+  /* file wingdi.c line 2799 addr 0x0 */
+  /* file wingdi.c line 2799 addr 0x3 */
+  /* file wingdi.c line 2800 addr 0x0 */
+  /* file wingdi.c line 2800 addr 0x3 */
+  /* file wingdi.c line 2801 addr 0x0 */
+  /* file wingdi.c line 2801 addr 0x3 */
+  /* file wingdi.c line 2802 addr 0x0 */
+  /* file wingdi.c line 2802 addr 0x3 */
+  /* file wingdi.c line 2803 addr 0x0 */
+  /* file wingdi.c line 2803 addr 0x3 */
+  /* file wingdi.c line 2809 addr 0x0 */
+  /* file wingdi.c line 2809 addr 0x3 */
+  /* file wingdi.c line 2810 addr 0x0 */
+  /* file wingdi.c line 2810 addr 0x3 */
+  /* file wingdi.c line 2829 addr 0x0 */
+  /* file wingdi.c line 2829 addr 0x3 */
+  /* file wingdi.c line 2830 addr 0x0 */
+  /* file wingdi.c line 2830 addr 0x3 */
+  /* file wingdi.c line 2831 addr 0x0 */
+  /* file wingdi.c line 2831 addr 0x3 */
+  /* file wingdi.c line 2832 addr 0x0 */
+  /* file wingdi.c line 2832 addr 0x3 */
+  /* file wingdi.c line 2833 addr 0x0 */
+  /* file wingdi.c line 2833 addr 0x3 */
+  /* file wingdi.c line 2834 addr 0x0 */
+  /* file wingdi.c line 2834 addr 0x3 */
+  /* file wingdi.c line 2835 addr 0x0 */
+  /* file wingdi.c line 2835 addr 0x3 */
+  /* file wingdi.c line 2836 addr 0x0 */
+  /* file wingdi.c line 2836 addr 0x3 */
+  /* file wingdi.c line 2837 addr 0x0 */
+  /* file wingdi.c line 2837 addr 0x3 */
+  /* file wingdi.c line 2889 addr 0x0 */
+  /* file wingdi.c line 2889 addr 0x3 */
+  /* file wingdi.c line 2890 addr 0x0 */
+  /* file wingdi.c line 2890 addr 0x3 */
+  /* file wingdi.c line 2891 addr 0x0 */
+  /* file wingdi.c line 2891 addr 0x3 */
+  /* file wingdi.c line 2929 addr 0x0 */
+  /* file wingdi.c line 2929 addr 0x3 */
+  /* file wingdi.c line 2930 addr 0x0 */
+  /* file wingdi.c line 2930 addr 0x3 */
+  /* file wingdi.c line 2936 addr 0x0 */
+  /* file wingdi.c line 2936 addr 0x3 */
+  /* file wingdi.c line 2937 addr 0x0 */
+  /* file wingdi.c line 2937 addr 0x3 */
+  /* file wingdi.c line 2938 addr 0x0 */
+  /* file wingdi.c line 2938 addr 0x3 */
+  /* file wingdi.c line 2939 addr 0x0 */
+  /* file wingdi.c line 2939 addr 0x3 */
+  /* file wingdi.c line 2940 addr 0x0 */
+  /* file wingdi.c line 2940 addr 0x3 */
+  /* file wingdi.c line 2942 addr 0x0 */
+  /* file wingdi.c line 2942 addr 0x3 */
+  /* file wingdi.c line 2943 addr 0x0 */
+  /* file wingdi.c line 2943 addr 0x3 */
+  /* file wingdi.c line 2944 addr 0x0 */
+  /* file wingdi.c line 2944 addr 0x3 */
+  /* file wingdi.c line 2945 addr 0x0 */
+  /* file wingdi.c line 2945 addr 0x3 */
+  /* file wingdi.c line 2946 addr 0x0 */
+  /* file wingdi.c line 2946 addr 0x3 */
+  /* file wingdi.c line 2947 addr 0x0 */
+  /* file wingdi.c line 2947 addr 0x3 */
+  /* file wingdi.c line 2948 addr 0x0 */
+  /* file wingdi.c line 2948 addr 0x3 */
+  /* file wingdi.c line 2949 addr 0x0 */
+  /* file wingdi.c line 2949 addr 0x3 */
+  /* file wingdi.c line 2950 addr 0x0 */
+  /* file wingdi.c line 2950 addr 0x3 */
+  /* file wingdi.c line 2951 addr 0x0 */
+  /* file wingdi.c line 2951 addr 0x3 */
+  /* file wingdi.c line 2952 addr 0x0 */
+  /* file wingdi.c line 2952 addr 0x3 */
+  /* file wingdi.c line 2953 addr 0x0 */
+  /* file wingdi.c line 2953 addr 0x3 */
+  /* file wingdi.c line 2954 addr 0x0 */
+  /* file wingdi.c line 2954 addr 0x3 */
+  /* file wingdi.c line 2955 addr 0x0 */
+  /* file wingdi.c line 2955 addr 0x3 */
+  /* file wingdi.c line 2956 addr 0x0 */
+  /* file wingdi.c line 2956 addr 0x3 */
+  /* file wingdi.c line 2957 addr 0x0 */
+  /* file wingdi.c line 2957 addr 0x3 */
+  /* file wingdi.c line 2958 addr 0x0 */
+  /* file wingdi.c line 2958 addr 0x3 */
+  /* file wingdi.c line 2959 addr 0x0 */
+  /* file wingdi.c line 2959 addr 0x3 */
+  /* file wingdi.c line 2960 addr 0x0 */
+  /* file wingdi.c line 2960 addr 0x3 */
+  /* file wingdi.c line 2962 addr 0x0 */
+  /* file wingdi.c line 2962 addr 0x3 */
+  /* file wingdi.c line 2963 addr 0x0 */
+  /* file wingdi.c line 2963 addr 0x3 */
+  /* file wingdi.c line 2969 addr 0x0 */
+  /* file wingdi.c line 2969 addr 0x3 */
+  /* file wingdi.c line 2970 addr 0x0 */
+  /* file wingdi.c line 2970 addr 0x3 */
+  /* file wingdi.c line 2971 addr 0x0 */
+  /* file wingdi.c line 2971 addr 0x3 */
+  /* file wingdi.c line 2977 addr 0x0 */
+  /* file wingdi.c line 2977 addr 0x3 */
+  /* file wingdi.c line 2978 addr 0x0 */
+  /* file wingdi.c line 2978 addr 0x3 */
+  /* file wingdi.c line 2984 addr 0x0 */
+  /* file wingdi.c line 2984 addr 0x3 */
+  /* file wingdi.c line 2985 addr 0x0 */
+  /* file wingdi.c line 2985 addr 0x3 */
+  /* file wingdi.c line 2992 addr 0x0 */
+  /* file wingdi.c line 2992 addr 0x3 */
+  /* file wingdi.c line 2993 addr 0x0 */
+  /* file wingdi.c line 2993 addr 0x3 */
+  /* file wingdi.c line 2994 addr 0x0 */
+  /* file wingdi.c line 2994 addr 0x3 */
+  /* file wingdi.c line 2995 addr 0x0 */
+  /* file wingdi.c line 2995 addr 0x3 */
+  /* file wingdi.c line 2996 addr 0x0 */
+  /* file wingdi.c line 2996 addr 0x3 */
+  /* file wingdi.c line 2998 addr 0x0 */
+  /* file wingdi.c line 2998 addr 0x3 */
+  /* file wingdi.c line 2999 addr 0x0 */
+  /* file wingdi.c line 2999 addr 0x3 */
+  /* file wingdi.c line 3000 addr 0x0 */
+  /* file wingdi.c line 3000 addr 0x3 */
+  /* file wingdi.c line 3002 addr 0x0 */
+  /* file wingdi.c line 3002 addr 0x3 */
+  /* file wingdi.c line 3003 addr 0x0 */
+  /* file wingdi.c line 3003 addr 0x3 */
+  /* file wingdi.c line 3004 addr 0x0 */
+  /* file wingdi.c line 3004 addr 0x3 */
+  /* file wingdi.c line 3005 addr 0x0 */
+  /* file wingdi.c line 3005 addr 0x3 */
+  /* file wingdi.c line 3007 addr 0x0 */
+  /* file wingdi.c line 3007 addr 0x3 */
+  /* file wingdi.c line 3008 addr 0x0 */
+  /* file wingdi.c line 3008 addr 0x3 */
+  /* file wingdi.c line 3009 addr 0x0 */
+  /* file wingdi.c line 3009 addr 0x3 */
+  /* file wingdi.c line 3010 addr 0x0 */
+  /* file wingdi.c line 3010 addr 0x3 */
+  /* file wingdi.c line 3011 addr 0x0 */
+  /* file wingdi.c line 3011 addr 0x3 */
+  /* file wingdi.c line 3012 addr 0x0 */
+  /* file wingdi.c line 3012 addr 0x3 */
+  /* file wingdi.c line 3014 addr 0x0 */
+  /* file wingdi.c line 3014 addr 0x3 */
+  /* file wingdi.c line 3015 addr 0x0 */
+  /* file wingdi.c line 3015 addr 0x3 */
+  /* file wingdi.c line 3030 addr 0x0 */
+  /* file wingdi.c line 3030 addr 0x3 */
+  /* file wingdi.c line 3031 addr 0x0 */
+  /* file wingdi.c line 3031 addr 0x3 */
+  /* file wingdi.c line 3038 addr 0x0 */
+  /* file wingdi.c line 3038 addr 0x3 */
+  /* file wingdi.c line 3039 addr 0x0 */
+  /* file wingdi.c line 3039 addr 0x3 */
+  /* file wingdi.c line 3040 addr 0x0 */
+  /* file wingdi.c line 3040 addr 0x3 */
+  /* file wingdi.c line 3042 addr 0x0 */
+  /* file wingdi.c line 3042 addr 0x3 */
+  /* file wingdi.c line 3043 addr 0x0 */
+  /* file wingdi.c line 3043 addr 0x3 */
+  /* file wingdi.c line 3044 addr 0x0 */
+  /* file wingdi.c line 3044 addr 0x3 */
+  /* file wingdi.c line 3052 addr 0x0 */
+  /* file wingdi.c line 3052 addr 0x3 */
+  /* file wingdi.c line 3053 addr 0x0 */
+  /* file wingdi.c line 3053 addr 0x3 */
+  /* file wingdi.c line 3054 addr 0x0 */
+  /* file wingdi.c line 3054 addr 0x3 */
+  /* file wingdi.c line 3055 addr 0x0 */
+  /* file wingdi.c line 3055 addr 0x3 */
+  /* file wingdi.c line 3056 addr 0x0 */
+  /* file wingdi.c line 3056 addr 0x3 */
+  /* file wingdi.c line 3062 addr 0x0 */
+  /* file wingdi.c line 3062 addr 0x3 */
+  /* file wingdi.c line 3063 addr 0x0 */
+  /* file wingdi.c line 3063 addr 0x3 */
+  /* file wingdi.c line 3069 addr 0x0 */
+  /* file wingdi.c line 3069 addr 0x3 */
+  /* file wingdi.c line 3070 addr 0x0 */
+  /* file wingdi.c line 3070 addr 0x3 */
+  /* file wingdi.c line 3071 addr 0x0 */
+  /* file wingdi.c line 3071 addr 0x3 */
+  /* file wingdi.c line 3072 addr 0x0 */
+  /* file wingdi.c line 3072 addr 0x3 */
+  /* file wingdi.c line 3078 addr 0x0 */
+  /* file wingdi.c line 3078 addr 0x3 */
+  /* file wingdi.c line 3079 addr 0x0 */
+  /* file wingdi.c line 3079 addr 0x3 */
+  /* file wingdi.c line 3085 addr 0x0 */
+  /* file wingdi.c line 3085 addr 0x3 */
+  /* file wingdi.c line 3086 addr 0x0 */
+  /* file wingdi.c line 3086 addr 0x3 */
+  /* file wingdi.c line 3087 addr 0x0 */
+  /* file wingdi.c line 3087 addr 0x3 */
+  /* file wingdi.c line 3095 addr 0x0 */
+  /* file wingdi.c line 3095 addr 0x3 */
+  /* file wingdi.c line 3096 addr 0x0 */
+  /* file wingdi.c line 3096 addr 0x3 */
+  /* file wingdi.c line 3874 addr 0x0 */
+  /* file wingdi.c line 3874 addr 0x3 */
+  /* file wingdi.c line 3875 addr 0x0 */
+  /* file wingdi.c line 3875 addr 0x3 */
+  /* file wingdi.c line 3876 addr 0x0 */
+  /* file wingdi.c line 3876 addr 0x3 */
+  /* file wingdi.c line 3877 addr 0x0 */
+  /* file wingdi.c line 3877 addr 0x3 */
+  /* file wingdi.c line 3878 addr 0x0 */
+  /* file wingdi.c line 3878 addr 0x3 */
+  /* file wingdi.c line 3879 addr 0x0 */
+  /* file wingdi.c line 3879 addr 0x3 */
+  /* file wingdi.c line 3880 addr 0x0 */
+  /* file wingdi.c line 3880 addr 0x3 */
+  /* file wingdi.c line 3881 addr 0x0 */
+  /* file wingdi.c line 3881 addr 0x3 */
+  /* file wingdi.c line 3882 addr 0x0 */
+  /* file wingdi.c line 3882 addr 0x3 */
+  /* file wingdi.c line 3883 addr 0x0 */
+  /* file wingdi.c line 3883 addr 0x3 */
+  /* file wingdi.c line 3884 addr 0x0 */
+  /* file wingdi.c line 3884 addr 0x3 */
+  /* file wingdi.c line 3890 addr 0x0 */
+  /* file wingdi.c line 3890 addr 0x3 */
+  /* file wingdi.c line 3908 addr 0x0 */
+  /* file wingdi.c line 3908 addr 0x3 */
+  /* file wingdi.c line 3910 addr 0x0 */
+  /* file wingdi.c line 3910 addr 0x3 */
+  /* file wingdi.c line 3994 addr 0x0 */
+  /* file wingdi.c line 3994 addr 0x3 */
+  /* file wingdi.c line 3996 addr 0x0 */
+  /* file wingdi.c line 3996 addr 0x3 */
+  /* file wingdi.c line 3998 addr 0x0 */
+  /* file wingdi.c line 3998 addr 0x3 */
+  /* file wingdi.c line 3999 addr 0x0 */
+  /* file wingdi.c line 3999 addr 0x3 */
+  /* file wingdi.c line 4000 addr 0x0 */
+  /* file wingdi.c line 4000 addr 0x3 */
+} /* 0x1537 */

@@ -1,0 +1,780 @@
+
+STDIO.O:     file format elf32-i386
+
+/home/cg/usr/src/cmd/wrec/supp/stdio.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef long double __long_double_t;
+typedef long int _G_clock_t;
+typedef short unsigned int _G_dev_t;
+typedef long int _G_fpos_t;
+typedef short unsigned int _G_gid_t;
+typedef long unsigned int _G_ino_t;
+typedef short unsigned int _G_mode_t;
+typedef short unsigned int _G_nlink_t;
+typedef long int _G_off_t;
+typedef int _G_pid_t;
+typedef int _G_ptrdiff_t;
+typedef long unsigned int _G_sigset_t;
+typedef unsigned int _G_size_t;
+typedef long int _G_time_t;
+typedef short unsigned int _G_uid_t;
+typedef long int _G_wchar_t;
+typedef int _G_ssize_t;
+typedef int _G_wint_t;
+typedef void *_G_va_list;
+typedef signed char _G_int8_t;
+typedef unsigned char _G_uint8_t;
+typedef short int _G_int16_t;
+typedef short unsigned int _G_uint16_t;
+typedef int _G_int32_t;
+typedef unsigned int _G_uint32_t;
+typedef long long int _G_int64_t;
+typedef long long unsigned int _G_uint64_t;
+struct _IO_lock_t { /* size 8 id 2 */
+  _G_va_list ptr; /* bitsize 32, bitpos 0 */
+  short int field1; /* bitsize 16, bitpos 32 */
+  short int field2; /* bitsize 16, bitpos 48 */
+};
+struct _IO_marker { /* size 12 id 3 */
+  struct _IO_marker /* id 3 */ *_next; /* bitsize 32, bitpos 0 */
+  struct _IO_FILE /* id 4 */ *_sbuf; /* bitsize 32, bitpos 32 */
+  int _pos; /* bitsize 32, bitpos 64 */
+};
+struct _IO_FILE { /* size 80 id 4 */
+  int _flags; /* bitsize 32, bitpos 0 */
+  char *_IO_read_ptr; /* bitsize 32, bitpos 32 */
+  char *_IO_read_end; /* bitsize 32, bitpos 64 */
+  char *_IO_read_base; /* bitsize 32, bitpos 96 */
+  char *_IO_write_base; /* bitsize 32, bitpos 128 */
+  char *_IO_write_ptr; /* bitsize 32, bitpos 160 */
+  char *_IO_write_end; /* bitsize 32, bitpos 192 */
+  char *_IO_buf_base; /* bitsize 32, bitpos 224 */
+  char *_IO_buf_end; /* bitsize 32, bitpos 256 */
+  char *_IO_save_base; /* bitsize 32, bitpos 288 */
+  char *_IO_backup_base; /* bitsize 32, bitpos 320 */
+  char *_IO_save_end; /* bitsize 32, bitpos 352 */
+  struct _IO_marker /* id 3 */ *_markers; /* bitsize 32, bitpos 384 */
+  struct _IO_FILE /* id 4 */ *_chain; /* bitsize 32, bitpos 416 */
+  int _fileno; /* bitsize 32, bitpos 448 */
+  int _blksize; /* bitsize 32, bitpos 480 */
+  long int _offset; /* bitsize 32, bitpos 512 */
+  short unsigned int _cur_column; /* bitsize 16, bitpos 544 */
+  char _unused; /* bitsize 8, bitpos 560 */
+  char _shortbuf[1]; /* bitsize 8, bitpos 568 */
+  struct _IO_lock_t /* id 2 */ _IO_lock; /* bitsize 64, bitpos 576 */
+};
+typedef struct _IO_FILE /* id 4 */ _IO_FILE;
+typedef unsigned int size_t;
+typedef struct _IO_FILE /* id 4 */ FILE;
+typedef long int fpos_t;
+#pragma cconv _cdecl
+int *__errno_location ()
+{ /* 0x0 */
+} /* 0x0 */
+
+void clearerr (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void clearerr_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fclose (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int feof (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int feof_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ferror (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ferror_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fflush (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fflush_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fgetc (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fgetc_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fgetpos (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int *pos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+char *fgets (char *dst /* 0x8 */, int sz /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *fgets_unlocked (char *dst /* 0x8 */, int sz /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *fopen (char *name /* 0x8 */, char *mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fprintf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fputc (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fputc_unlocked (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fputs (char *str /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fputs_unlocked (char *str /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int fread (_G_va_list dst /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int fread_unlocked (_G_va_list dst /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *freopen (char *name /* 0x8 */, char *mode /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fscanf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fseek (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int offset /* 0xc */, int whence /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fsetpos (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int *pos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ftell (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int fwrite (void *src /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int fwrite_unlocked (void *src /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getc (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getc_unlocked (struct _IO_FILE */* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+
+int getchar ()
+{ /* 0x0 */
+} /* 0x0 */
+int getchar_unlocked ()
+{ /* 0x0 */
+} /* 0x0 */
+char *gets (char *dst /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void perror (char *msg /* 0x8 */) __noreturn
+{ /* 0x0 */
+} /* 0x0 */
+int printf (char *format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int putc (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int putc_unlocked (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int putchar (int ch /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int putchar_unlocked (int ch /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int puts (char *str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int remove (char *name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int rename (char *_old /* 0x8 */, char *_new /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void rewind (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int scanf (char *format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void setbuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void setlinebuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void setbuffer (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */, int sz /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int setvbuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */, int mode /* 0x10 */, unsigned int size /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int sprintf (char *dst /* 0x8 */, char *format /* 0xc */, ...)
+{ /* 0x0 */
+} /* 0x0 */
+int sscanf (char *string /* 0x8 */, char *format /* 0xc */, ...)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *tmpfile ()
+{ /* 0x0 */
+} /* 0x0 */
+char *tmpnam (char *buff /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ungetc (int c /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int vfprintf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *fmt0 /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int vprintf (char *fmt /* 0x8 */, _G_va_list vals /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int vsprintf (char *string /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int vfscanf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int vscanf (char *format /* 0x8 */, _G_va_list vals /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int vsscanf (char *src /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getw (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int putw (int word /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+char *tempnam (char *__dir /* 0x8 */, char *__pfx /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void psignal (int __sig /* 0x8 */, char *__s /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int getdelim (char **a1 /* 0x8 */, unsigned int *sz /* 0xc */, int a2 /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int snprintf (char *dst /* 0x8 */, unsigned int sz /* 0xc */, char *format /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int vsnprintf (char *dst /* 0x8 */, unsigned int sz /* 0xc */, char *format /* 0x10 */, _G_va_list vals /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int asprintf (char **p1 /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int vasprintf (char **p1 /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *fdopen (int fd /* 0x8 */, char *name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int fileno (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fileno_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *popen (char *name /* 0x8 */, char *mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int pclose (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __underflow (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __overflow (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, int v /* 0xc */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 117 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 117 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 118 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 118 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 119 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 119 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 120 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 120 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 121 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 121 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 122 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 122 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 123 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 123 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 124 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 124 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 125 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 125 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 126 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 126 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 127 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 127 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 128 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 128 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 129 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 129 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 130 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 130 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 131 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 131 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 132 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 132 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 133 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 133 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 134 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 134 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 135 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 135 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 136 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 136 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 137 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 137 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 138 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 138 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 139 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 139 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 140 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 140 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 141 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 141 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 142 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 142 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 143 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 143 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 144 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 144 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 145 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 145 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 146 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 146 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 147 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 147 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 148 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 148 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 149 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 149 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 150 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 150 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 151 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 151 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 152 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 152 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 153 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 153 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 154 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 154 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 155 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 155 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 156 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 156 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 157 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 157 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 158 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 158 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 159 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 159 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 162 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 162 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 163 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 163 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 164 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 164 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 166 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 166 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 167 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 167 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 169 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 169 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 185 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 185 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 193 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 193 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 199 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 199 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 200 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 200 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 202 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 202 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 203 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 203 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 207 addr 0x0 */
+} /* 0x210 */
+
+int *___errno_location ()
+{ /* 0x0 */
+} /* 0x0 */
+
+void _clearerr (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _clearerr_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fclose (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _feof (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _feof_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _ferror (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _ferror_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fflush (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fflush_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fgetc (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fgetc_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fgetpos (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int *pos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_fgets (char *dst /* 0x8 */, int sz /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_fgets_unlocked (char *dst /* 0x8 */, int sz /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *_fopen (char *name /* 0x8 */, char *mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fprintf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fputc (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fputc_unlocked (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fputs (char *str /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fputs_unlocked (char *str /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _fread (_G_va_list dst /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _fread_unlocked (_G_va_list dst /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *_freopen (char *name /* 0x8 */, char *mode /* 0xc */, struct _IO_FILE /* id 4 */ *fp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fscanf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fseek (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int offset /* 0xc */, int whence /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fsetpos (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, long int *pos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _ftell (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _fwrite (void *src /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _fwrite_unlocked (void *src /* 0x8 */, unsigned int sz /* 0xc */, unsigned int nitems /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _getc (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _getc_unlocked (struct _IO_FILE */* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+
+int _getchar ()
+{ /* 0x0 */
+} /* 0x0 */
+int _getchar_unlocked ()
+{ /* 0x0 */
+} /* 0x0 */
+char *_gets (char *dst /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _perror (char *msg /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _printf (char *format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putc (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putc_unlocked (int ch /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putchar (int ch /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putchar_unlocked (int ch /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _puts (char *str /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _remove (char *name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _rename (char *_old /* 0x8 */, char *_new /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _rewind (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _scanf (char *format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _setbuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _setlinebuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _setbuffer (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */, int sz /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _setvbuf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *bufptr /* 0xc */, int mode /* 0x10 */, unsigned int size /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _sprintf (char *dst /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _sscanf (char *string /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *_tmpfile ()
+{ /* 0x0 */
+} /* 0x0 */
+char *_tmpnam (char *buff /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _ungetc (int c /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vfprintf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *fmt0 /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vprintf (char *fmt /* 0x8 */, _G_va_list vals /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vsprintf (char *string /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vfscanf (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vscanf (char *format /* 0x8 */, _G_va_list vals /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vsscanf (char *src /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _getw (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putw (int word /* 0x8 */, struct _IO_FILE /* id 4 */ *fp /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_tempnam (char *__dir /* 0x8 */, char *__pfx /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _psignal (int __sig /* 0x8 */, char *__s /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _getdelim (char **a1 /* 0x8 */, unsigned int *sz /* 0xc */, int a2 /* 0x10 */, struct _IO_FILE /* id 4 */ *fp /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _snprintf (char *dst /* 0x8 */, unsigned int sz /* 0xc */, char *format /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vsnprintf (char *dst /* 0x8 */, unsigned int sz /* 0xc */, char *format /* 0x10 */, _G_va_list vals /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _asprintf (char **p1 /* 0x8 */, char *format /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _vasprintf (char **p1 /* 0x8 */, char *format /* 0xc */, _G_va_list vals /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *_fdopen (int fd /* 0x8 */, char *name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fileno (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _fileno_unlocked (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _IO_FILE /* id 4 */ *_popen (char *name /* 0x8 */, char *mode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _pclose (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ___underflow (struct _IO_FILE /* id 4 */ *fp /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ___overflow (struct _IO_FILE /* id 4 */ *fp /* 0x8 */, int v /* 0xc */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 117 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 117 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 118 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 118 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 119 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 119 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 120 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 120 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 121 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 121 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 122 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 122 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 123 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 123 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 124 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 124 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 125 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 125 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 126 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 126 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 127 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 127 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 128 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 128 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 129 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 129 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 130 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 130 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 131 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 131 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 132 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 132 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 133 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 133 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 134 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 134 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 135 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 135 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 136 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 136 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 137 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 137 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 138 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 138 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 139 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 139 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 140 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 140 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 141 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 141 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 142 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 142 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 143 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 143 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 144 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 144 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 145 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 145 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 146 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 146 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 147 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 147 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 148 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 148 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 149 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 149 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 150 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 150 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 151 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 151 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 152 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 152 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 153 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 153 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 154 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 154 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 155 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 155 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 156 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 156 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 157 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 157 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 158 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 158 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 159 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 159 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 162 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 162 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 163 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 163 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 164 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 164 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 166 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 166 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 167 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 167 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 169 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 169 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 185 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 185 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 193 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 193 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 199 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 199 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 200 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 200 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 202 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 202 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 203 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 203 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdio.c line 207 addr 0x0 */
+} /* 0x210 */

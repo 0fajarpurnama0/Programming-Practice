@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/Programming/C/my_heap_buffer_overflow.c.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Type { color: #2e8b57; font-weight: bold; }
+.PreProc { color: #800080; }
+.Constant { color: #ff00ff; }
+.Special { color: #6a5acd; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc"> #include </span><span class="Constant">&lt;stdio.h&gt;</span>
+<span class="PreProc"> #include </span><span class="Constant">&lt;unistd.h&gt;</span>
+<span class="PreProc"> #include </span><span class="Constant">&lt;stdlib.h&gt;</span>
+<span class="PreProc"> #include </span><span class="Constant">&lt;string.h&gt;</span>
+<span class="PreProc"> #define Debug fprintf</span>
+<span class="PreProc"> #define BUFSIZE </span><span class="Constant">16</span>
+ <span class="Type">int</span>  globalA;
+ <span class="Type">unsigned</span> <span class="Type">int</span> DoFilter(<span class="Type">void</span>) {
+     __asm__(<span class="Constant">&quot;movl </span><span class="Special">%e</span><span class="Constant">sp,</span><span class="Special">%e</span><span class="Constant">ax&quot;</span>);
+ }
+ <span class="Type">int</span>  main(<span class="Type">int</span> argc, <span class="Type">char</span> *argv[])
+ {
+     <span class="Type">char</span> *buf,*wbuf;
+     <span class="Type">char</span> abuf[BUFSIZE],awbuf[BUFSIZE];
+     <span class="Type">unsigned</span> <span class="Type">int</span> pnt,diff;
+     <span class="Type">static</span> <span class="Type">char</span> sbuf[BUFSIZE];
+     buf=(<span class="Type">char</span> *)malloc(BUFSIZE); wbuf=(<span class="Type">char</span> *)malloc(BUFSIZE);
+     diff=(<span class="Type">unsigned</span> <span class="Type">int</span>)wbuf - (<span class="Type">unsigned</span> <span class="Type">int</span>)buf;
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;int globalA   = </span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,&amp;globalA);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;DoFilter ()   = </span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,DoFilter);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;st. char sbuf =</span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,sbuf);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;malloced buf  = </span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,buf);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;malloced wbuf = </span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,wbuf);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot; diff=&amp;wbuf-&amp;buf= </span><span class="Special">%d</span><span class="Special">\n</span><span class="Constant">&quot;</span>,diff);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;Auto Var  abuf=</span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,abuf);
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;Auto Var awbuf=</span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,awbuf);
+     pnt=DoFilter();
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;pnt=DoFilter()= </span><span class="Special">%u</span><span class="Special">\n</span><span class="Constant">&quot;</span>,pnt);
+     memset(wbuf,<span class="Constant">'W'</span>,BUFSIZE-<span class="Constant">1</span>);wbuf[BUFSIZE-<span class="Constant">1</span>]=<span class="Special">'\0'</span>;
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;before overwriting= </span><span class="Special">%s</span><span class="Special">\n</span><span class="Constant">&quot;</span>,wbuf);
+     memset(buf,<span class="Constant">'B'</span>,(<span class="Type">unsigned</span> <span class="Type">int</span>)(diff + <span class="Constant">8</span>));
+     fprintf(<span class="Constant">stdout</span>,<span class="Constant">&quot;after overwriting = </span><span class="Special">%s</span><span class="Special">\n</span><span class="Constant">&quot;</span>,wbuf);
+     exit(<span class="Constant">0</span>);
+ }
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

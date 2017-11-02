@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Identification</title>
+</head>
+<body>
+<script>
+function validateForm() {
+    var first_name = document.forms["myForm"]["first_name"].value;
+    var last_name = document.forms["myForm"]["last_name"].value;
+    
+    document.cookie = "first_name="+first_name;
+    document.cookie = "last_name="+last_name;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+</script>
+<form id="myForm" action="section_page_view_second_prototype.html" onsubmit="validateForm()">
+First Name: <input id="first_name" type="text" name="first_name">
+<br />
+Last Name: <input id="last_name" type="text" name="last_name" />
+<input type="submit" value="proceed" />
+</form>
+</body>
+</html>

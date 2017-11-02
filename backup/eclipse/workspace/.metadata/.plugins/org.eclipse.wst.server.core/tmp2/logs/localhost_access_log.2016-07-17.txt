@@ -1,0 +1,8 @@
+127.0.0.1 - - [17/Jul/2016:23:00:42 +0900] "GET / HTTP/1.1" 404 969
+127.0.0.1 - - [17/Jul/2016:23:01:08 +0900] "GET / HTTP/1.1" 404 969
+127.0.0.1 - - [17/Jul/2016:23:04:01 +0900] "GET / HTTP/1.1" 404 969
+0:0:0:0:0:0:0:1 - - [17/Jul/2016:23:04:01 +0900] "GET /jsonRestSample01/sample01.html HTTP/1.1" 200 3436
+0:0:0:0:0:0:0:1 - - [17/Jul/2016:23:04:02 +0900] "GET /jsonRestSample01/sample/sample.json?callback=jQuery111309223338211886585_1468764242466&par=JSONPTest&_=1468764242467 HTTP/1.1" 200 243
+0:0:0:0:0:0:0:1 - - [17/Jul/2016:23:04:02 +0900] "GET /jsonRestSample01/sample/sample.json?par=JSONTest HTTP/1.1" 200 118
+0:0:0:0:0:0:0:1 - - [17/Jul/2016:23:04:03 +0900] "GET /jsonRestSample01/sample/proxySample.json?&uri=http://weather.livedoor.com/forecast/webservice/json/v1?city=430010 HTTP/1.1" 200 4781
+0:0:0:0:0:0:0:1 - - [17/Jul/2016:23:04:03 +0900] "GET /jsonRestSample01/sample/proxySample.json?callback=jQuery111309223338211886585_1468764242468&uri=http://weather.livedoor.com/forecast/webservice/json/v1?city=430010&_=1468764242469 HTTP/1.1" 200 4905

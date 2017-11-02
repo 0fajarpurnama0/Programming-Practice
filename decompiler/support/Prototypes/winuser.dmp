@@ -1,0 +1,3432 @@
+
+WINUSER.O:     file format elf32-i386
+
+/d/c/wrec/suppw95/winuser.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef void VOID;
+typedef void *PVOID;
+typedef long int HANDLE;
+typedef short int SHORT;
+typedef long int *PHANDLE;
+typedef long int *PLONG;
+typedef long int HKEY;
+typedef long int LONG;
+typedef PLONG LPCLONG;
+typedef int *LPCWORD;
+typedef unsigned char CHAR;
+typedef short unsigned int WCHAR;
+typedef short unsigned int *PWCHAR;
+typedef PWCHAR LPWCHAR;
+typedef PWCHAR LPCWCHAR;
+typedef PWCHAR PWSTR;
+typedef PWCHAR LPWSTR;
+typedef PWCHAR LPCWSTR;
+typedef char *LPCBYTE;
+typedef unsigned char *PSTR;
+typedef PSTR LPSTR;
+typedef PSTR LPCSTR;
+typedef long int RTL_CRITICAL_SECTION;
+typedef PLONG PRTL_CRITICAL_SECTION;
+typedef long int RTL_CRITICAL_SECTION_DEBUG;
+typedef PLONG PRTL_CRITICAL_SECTION_DEBUG;
+typedef long int ACCESS_MASK;
+typedef long int *PACCESS_MASK;
+long int RtlEqualMemory (void *Source1 /* 0x8 */, void *Source2 /* 0xc */, long int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ w95types.h:
+void RtlCopyMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlCopyMemory32 (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlMoveMemory (void *Destination /* 0x8 */, void *Source /* 0xc */, int Length /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void RtlFillMemory (void *Destination /* 0x8 */, int Length /* 0xc */, int Fill /* 0x10 */)
+{ /* 0x0 */
+  unsigned char Fill /* 0xffffffff */;
+} /* 0x0 */
+void RtlZeroMemory (void *Destination /* 0x8 */, int Length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int ULONG;
+typedef long unsigned int *PULONG;
+typedef short unsigned int USHORT;
+typedef short unsigned int *PUSHORT;
+typedef unsigned char UCHAR;
+typedef unsigned char *PUCHAR;
+typedef LPCBYTE PSZ;
+typedef long unsigned int DWORD;
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef short unsigned int WORD;
+typedef float FLOAT;
+typedef float *PFLOAT;
+typedef int *PBOOL;
+typedef PBOOL LPBOOL;
+typedef unsigned char *PBYTE;
+typedef PBYTE LPBYTE;
+typedef LPCWORD PINT;
+typedef LPCWORD LPINT;
+typedef short unsigned int *PWORD;
+typedef PWORD LPWORD;
+typedef PLONG LPLONG;
+typedef long unsigned int *PDWORD;
+typedef PDWORD LPDWORD;
+typedef PVOID LPVOID;
+typedef PVOID LPCVOID;
+typedef int INT;
+typedef unsigned int UINT;
+typedef unsigned int *PUINT;
+typedef unsigned int WPARAM;
+typedef long int LPARAM;
+typedef long int LRESULT;
+typedef long int HWND;
+typedef long int HHOOK;
+typedef short unsigned int ATOM;
+typedef PHANDLE SPHANDLE;
+typedef PHANDLE LPHANDLE;
+typedef long int HGLOBAL;
+typedef long int HLOCAL;
+typedef long int GLOBALHANDLE;
+typedef long int LOCALHANDLE;
+typedef int (*FARPROC) (/* unknown */);
+typedef FARPROC NEARPROC;
+typedef FARPROC PROC;
+typedef long int HGDIOBJ;
+typedef long int HACCEL;
+typedef long int HBITMAP;
+typedef long int HBRUSH;
+typedef long int HCOLORSPACE;
+typedef long int HDC;
+typedef long int HGLRC;
+typedef long int HDESK;
+typedef long int HENHMETAFILE;
+typedef long int HFONT;
+typedef long int HICON;
+typedef long int HMENU;
+typedef long int HMETAFILE;
+typedef long int HINSTANCE;
+typedef long int HMODULE;
+typedef long int HPALETTE;
+typedef long int HPEN;
+typedef long int HRGN;
+typedef long int HRSRC;
+typedef long int HSTR;
+typedef long int HTASK;
+typedef long int HWINSTA;
+typedef long int HKL;
+typedef int HFILE;
+typedef long int HCURSOR;
+typedef long unsigned int COLORREF;
+typedef PDWORD LPCOLORREF;
+struct tagRECT { /* size 16 id 2 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagRECT /* id 2 */ RECT;
+typedef struct tagRECT /* id 2 */ *PRECT;
+typedef PRECT NPRECT;
+typedef PRECT LPRECT;
+typedef struct tagRECT /* id 2 */ *LPCRECT;
+struct _RECTL { /* size 16 id 3 */
+  long int left; /* bitsize 32, bitpos 0 */
+  long int top; /* bitsize 32, bitpos 32 */
+  long int right; /* bitsize 32, bitpos 64 */
+  long int bottom; /* bitsize 32, bitpos 96 */
+};
+typedef struct _RECTL /* id 3 */ RECTL;
+typedef struct _RECTL /* id 3 */ *PRECTL;
+typedef PRECTL LPRECTL;
+typedef struct _RECTL /* id 3 */ *LPCRECTL;
+struct tagPOINT { /* size 8 id 4 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagPOINT /* id 4 */ POINT;
+typedef struct tagPOINT /* id 4 */ *PPOINT;
+typedef PPOINT NPPOINT;
+typedef PPOINT LPPOINT;
+struct _POINTL { /* size 8 id 5 */
+  long int x; /* bitsize 32, bitpos 0 */
+  long int y; /* bitsize 32, bitpos 32 */
+};
+typedef struct _POINTL /* id 5 */ POINTL;
+typedef struct _POINTL /* id 5 */ *PPOINTL;
+struct tagSIZE { /* size 8 id 6 */
+  long int cx; /* bitsize 32, bitpos 0 */
+  long int cy; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSIZE /* id 6 */ SIZE;
+typedef struct tagSIZE /* id 6 */ *PSIZE;
+typedef PSIZE LPSIZE;
+typedef struct tagSIZE /* id 6 */ SIZEL;
+typedef struct tagSIZE /* id 6 */ *PSIZEL;
+typedef PSIZEL LPSIZEL;
+struct tagPOINTS { /* size 4 id 7 */
+  short int x; /* bitsize 16, bitpos 0 */
+  short int y; /* bitsize 16, bitpos 16 */
+};
+typedef struct tagPOINTS /* id 7 */ POINTS;
+typedef struct tagPOINTS /* id 7 */ *PPOINTS;
+typedef PPOINTS LPPOINTS;
+typedef LPCBYTE va_list;
+typedef long int HDWP;
+typedef void MENUTEMPLATEA;
+typedef void MENUTEMPLATEW;
+typedef void MENUTEMPLATE;
+typedef PVOID LPMENUTEMPLATEA;
+typedef PVOID LPMENUTEMPLATEW;
+typedef PVOID LPMENUTEMPLATE;
+typedef long int (*WNDPROC) (/* unknown */);
+typedef FARPROC DLGPROC;
+typedef FARPROC TIMERPROC;
+typedef FARPROC GRAYSTRINGPROC;
+typedef FARPROC WNDENUMPROC;
+typedef FARPROC HOOKPROC;
+typedef FARPROC SENDASYNCPROC;
+typedef FARPROC EDITWORDBREAKPROCA;
+typedef FARPROC EDITWORDBREAKPROCW;
+typedef FARPROC PROPENUMPROCA;
+typedef FARPROC PROPENUMPROCW;
+typedef FARPROC PROPENUMPROCEXA;
+typedef FARPROC PROPENUMPROCEXW;
+typedef FARPROC DRAWSTATEPROC;
+typedef FARPROC PROPENUMPROC;
+typedef FARPROC PROPENUMPROCEX;
+typedef FARPROC EDITWORDBREAKPROC;
+typedef FARPROC NAMEENUMPROCA;
+typedef FARPROC NAMEENUMPROCW;
+typedef FARPROC WINSTAENUMPROCA;
+typedef FARPROC DESKTOPENUMPROCA;
+typedef FARPROC WINSTAENUMPROCW;
+typedef FARPROC DESKTOPENUMPROCW;
+typedef FARPROC WINSTAENUMPROC;
+typedef FARPROC DESKTOPENUMPROC;
+int wsprintfA (PSTR dst /* 0x8 */, PSTR fmt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+ winuser.c:
+int wsprintfW (PWCHAR dst /* 0x8 */, PWCHAR fmt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagCBT_CREATEWNDA { /* size 8 id 8 */
+  struct tagCREATESTRUCTA /* id 9 */ *lpcs; /* bitsize 32, bitpos 0 */
+  long int hwndInsertAfter; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagCBT_CREATEWNDA /* id 8 */ CBT_CREATEWNDA;
+typedef struct tagCBT_CREATEWNDA /* id 8 */ *LPCBT_CREATEWNDA;
+struct tagCBT_CREATEWNDW { /* size 8 id 10 */
+  struct tagCREATESTRUCTW /* id 11 */ *lpcs; /* bitsize 32, bitpos 0 */
+  long int hwndInsertAfter; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagCBT_CREATEWNDW /* id 10 */ CBT_CREATEWNDW;
+typedef struct tagCBT_CREATEWNDW /* id 10 */ *LPCBT_CREATEWNDW;
+typedef struct tagCBT_CREATEWNDA /* id 8 */ CBT_CREATEWND;
+typedef LPCBT_CREATEWNDA LPCBT_CREATEWND;
+struct tagCBTACTIVATESTRUCT { /* size 8 id 12 */
+  int fMouse; /* bitsize 32, bitpos 0 */
+  long int hWndActive; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagCBTACTIVATESTRUCT /* id 12 */ CBTACTIVATESTRUCT;
+typedef struct tagCBTACTIVATESTRUCT /* id 12 */ *LPCBTACTIVATESTRUCT;
+struct tagEVENTMSG { /* size 20 id 13 */
+  unsigned int message; /* bitsize 32, bitpos 0 */
+  unsigned int paramL; /* bitsize 32, bitpos 32 */
+  unsigned int paramH; /* bitsize 32, bitpos 64 */
+  long unsigned int time; /* bitsize 32, bitpos 96 */
+  long int hwnd; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagEVENTMSG /* id 13 */ EVENTMSG;
+typedef struct tagEVENTMSG /* id 13 */ *PEVENTMSGMSG;
+typedef PEVENTMSGMSG NPEVENTMSGMSG;
+typedef PEVENTMSGMSG LPEVENTMSGMSG;
+typedef PEVENTMSGMSG PEVENTMSG;
+typedef PEVENTMSGMSG NPEVENTMSG;
+typedef PEVENTMSGMSG LPEVENTMSG;
+struct tagCWPSTRUCT { /* size 16 id 14 */
+  long int lParam; /* bitsize 32, bitpos 0 */
+  unsigned int wParam; /* bitsize 32, bitpos 32 */
+  unsigned int message; /* bitsize 32, bitpos 64 */
+  long int hwnd; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagCWPSTRUCT /* id 14 */ CWPSTRUCT;
+typedef struct tagCWPSTRUCT /* id 14 */ *PCWPSTRUCT;
+typedef PCWPSTRUCT NPCWPSTRUCT;
+typedef PCWPSTRUCT LPCWPSTRUCT;
+struct tagCWPRETSTRUCT { /* size 20 id 15 */
+  long int lResult; /* bitsize 32, bitpos 0 */
+  long int lParam; /* bitsize 32, bitpos 32 */
+  unsigned int wParam; /* bitsize 32, bitpos 64 */
+  unsigned int message; /* bitsize 32, bitpos 96 */
+  long int hwnd; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagCWPRETSTRUCT /* id 15 */ CWPRETSTRUCT;
+typedef struct tagCWPRETSTRUCT /* id 15 */ *PCWPRETSTRUCT;
+typedef PCWPRETSTRUCT NPCWPRETSTRUCT;
+typedef PCWPRETSTRUCT LPCWPRETSTRUCT;
+struct tagDEBUGHOOKINFO { /* size 20 id 16 */
+  long unsigned int idThread; /* bitsize 32, bitpos 0 */
+  long unsigned int idThreadInstaller; /* bitsize 32, bitpos 32 */
+  long int lParam; /* bitsize 32, bitpos 64 */
+  unsigned int wParam; /* bitsize 32, bitpos 96 */
+  int code; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagDEBUGHOOKINFO /* id 16 */ DEBUGHOOKINFO;
+typedef struct tagDEBUGHOOKINFO /* id 16 */ *PDEBUGHOOKINFO;
+typedef PDEBUGHOOKINFO NPDEBUGHOOKINFO;
+typedef PDEBUGHOOKINFO LPDEBUGHOOKINFO;
+struct tagMOUSEHOOKSTRUCT { /* size 20 id 17 */
+  struct tagPOINT /* id 4 */ pt; /* bitsize 64, bitpos 0 */
+  long int hwnd; /* bitsize 32, bitpos 64 */
+  unsigned int wHitTestCode; /* bitsize 32, bitpos 96 */
+  long unsigned int dwExtraInfo; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMOUSEHOOKSTRUCT /* id 17 */ MOUSEHOOKSTRUCT;
+typedef struct tagMOUSEHOOKSTRUCT /* id 17 */ *LPMOUSEHOOKSTRUCT;
+typedef LPMOUSEHOOKSTRUCT PMOUSEHOOKSTRUCT;
+struct tagHARDWAREHOOKSTRUCT { /* size 16 id 18 */
+  long int hwnd; /* bitsize 32, bitpos 0 */
+  unsigned int message; /* bitsize 32, bitpos 32 */
+  unsigned int wParam; /* bitsize 32, bitpos 64 */
+  long int lParam; /* bitsize 32, bitpos 96 */
+};
+typedef struct tagHARDWAREHOOKSTRUCT /* id 18 */ HARDWAREHOOKSTRUCT;
+typedef struct tagHARDWAREHOOKSTRUCT /* id 18 */ *LPHARDWAREHOOKSTRUCT;
+typedef LPHARDWAREHOOKSTRUCT PHARDWAREHOOKSTRUCT;
+long int LoadKeyboardLayoutA (PSTR pwszKLID /* 0x8 */, unsigned int Flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadKeyboardLayoutW (PWCHAR pwszKLID /* 0x8 */, unsigned int Flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ActivateKeyboardLayout (long int hkl /* 0x8 */, unsigned int Flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ToUnicodeEx (unsigned int wVirtKey /* 0x8 */, unsigned int wScanCode /* 0xc */, PBYTE lpKeyState /* 0x10 */, PWCHAR pwszBuff /* 0x14 */, int cchBuff /* 0x18 */, unsigned int wFlags /* 0x1c */, long int dwhkl /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnloadKeyboardLayout (long int hkl /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyboardLayoutNameA (PSTR pwszKLID /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyboardLayoutNameW (PWCHAR pwszKLID /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyboardLayoutList (int nBuff /* 0x8 */, long int *lpList /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetKeyboardLayout (long unsigned int dwLayout /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenDesktopA (PSTR lpszDesktop /* 0x8 */, long unsigned int dwFlags /* 0xc */, int fInherit /* 0x10 */, long unsigned int dwDesiredAccess /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenDesktopW (PWCHAR lpszDesktop /* 0x8 */, long unsigned int dwFlags /* 0xc */, int fInherit /* 0x10 */, long unsigned int dwDesiredAccess /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenInputDesktop (long unsigned int dwFlags /* 0x8 */, int fInherit /* 0xc */, long unsigned int dwDesiredAccess /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumDesktopsA (long int hwinsta /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumDesktopsW (long int hwinsta /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumDesktopWindows (long int hDesktop /* 0x8 */, FARPROC lpfn /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SwitchDesktop (long int hDesktop /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetThreadDesktop (long int hDesktop /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseDesktop (long int hDesktop /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetThreadDesktop (long unsigned int dwThreadId /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenWindowStationA (PSTR lpszWinSta /* 0x8 */, int fInherit /* 0xc */, long unsigned int dwDesiredAccess /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int OpenWindowStationW (PWCHAR lpszWinSta /* 0x8 */, int fInherit /* 0xc */, long unsigned int dwDesiredAccess /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumWindowStationsA (FARPROC lpEnumFunc /* 0x8 */, long int lParam /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumWindowStationsW (FARPROC lpEnumFunc /* 0x8 */, long int lParam /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseWindowStation (long int hWinSta /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetProcessWindowStation (long int hWinSta /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetProcessWindowStation ()
+{ /* 0x0 */
+} /* 0x0 */
+struct tagWNDCLASSEXA { /* size 48 id 19 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  unsigned int style; /* bitsize 32, bitpos 32 */
+  WNDPROC lpfnWndProc; /* bitsize 32, bitpos 64 */
+  int cbClsExtra; /* bitsize 32, bitpos 96 */
+  int cbWndExtra; /* bitsize 32, bitpos 128 */
+  long int hInstance; /* bitsize 32, bitpos 160 */
+  long int hIcon; /* bitsize 32, bitpos 192 */
+  long int hCursor; /* bitsize 32, bitpos 224 */
+  long int hbrBackground; /* bitsize 32, bitpos 256 */
+  PSTR lpszMenuName; /* bitsize 32, bitpos 288 */
+  PSTR lpszClassName; /* bitsize 32, bitpos 320 */
+  long int hIconSm; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagWNDCLASSEXA /* id 19 */ WNDCLASSEXA;
+typedef struct tagWNDCLASSEXA /* id 19 */ *PWNDCLASSEXA;
+typedef PWNDCLASSEXA NPWNDCLASSEXA;
+typedef PWNDCLASSEXA LPWNDCLASSEXA;
+struct tagWNDCLASSEXW { /* size 48 id 20 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  unsigned int style; /* bitsize 32, bitpos 32 */
+  WNDPROC lpfnWndProc; /* bitsize 32, bitpos 64 */
+  int cbClsExtra; /* bitsize 32, bitpos 96 */
+  int cbWndExtra; /* bitsize 32, bitpos 128 */
+  long int hInstance; /* bitsize 32, bitpos 160 */
+  long int hIcon; /* bitsize 32, bitpos 192 */
+  long int hCursor; /* bitsize 32, bitpos 224 */
+  long int hbrBackground; /* bitsize 32, bitpos 256 */
+  PWCHAR lpszMenuName; /* bitsize 32, bitpos 288 */
+  PWCHAR lpszClassName; /* bitsize 32, bitpos 320 */
+  long int hIconSm; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagWNDCLASSEXW /* id 20 */ WNDCLASSEXW;
+typedef struct tagWNDCLASSEXW /* id 20 */ *PWNDCLASSEXW;
+typedef PWNDCLASSEXW NPWNDCLASSEXW;
+typedef PWNDCLASSEXW LPWNDCLASSEXW;
+typedef struct tagWNDCLASSEXA /* id 19 */ WNDCLASSEX;
+typedef PWNDCLASSEXA PWNDCLASSEX;
+typedef PWNDCLASSEXA NPWNDCLASSEX;
+typedef PWNDCLASSEXA LPWNDCLASSEX;
+struct tagWNDCLASSA { /* size 40 id 21 */
+  unsigned int style; /* bitsize 32, bitpos 0 */
+  WNDPROC lpfnWndProc; /* bitsize 32, bitpos 32 */
+  int cbClsExtra; /* bitsize 32, bitpos 64 */
+  int cbWndExtra; /* bitsize 32, bitpos 96 */
+  long int hInstance; /* bitsize 32, bitpos 128 */
+  long int hIcon; /* bitsize 32, bitpos 160 */
+  long int hCursor; /* bitsize 32, bitpos 192 */
+  long int hbrBackground; /* bitsize 32, bitpos 224 */
+  PSTR lpszMenuName; /* bitsize 32, bitpos 256 */
+  PSTR lpszClassName; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagWNDCLASSA /* id 21 */ WNDCLASSA;
+typedef struct tagWNDCLASSA /* id 21 */ *PWNDCLASSA;
+typedef PWNDCLASSA NPWNDCLASSA;
+typedef PWNDCLASSA LPWNDCLASSA;
+struct tagWNDCLASSW { /* size 40 id 22 */
+  unsigned int style; /* bitsize 32, bitpos 0 */
+  WNDPROC lpfnWndProc; /* bitsize 32, bitpos 32 */
+  int cbClsExtra; /* bitsize 32, bitpos 64 */
+  int cbWndExtra; /* bitsize 32, bitpos 96 */
+  long int hInstance; /* bitsize 32, bitpos 128 */
+  long int hIcon; /* bitsize 32, bitpos 160 */
+  long int hCursor; /* bitsize 32, bitpos 192 */
+  long int hbrBackground; /* bitsize 32, bitpos 224 */
+  PWCHAR lpszMenuName; /* bitsize 32, bitpos 256 */
+  PWCHAR lpszClassName; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagWNDCLASSW /* id 22 */ WNDCLASSW;
+typedef struct tagWNDCLASSW /* id 22 */ *PWNDCLASSW;
+typedef PWNDCLASSW NPWNDCLASSW;
+typedef PWNDCLASSW LPWNDCLASSW;
+typedef struct tagWNDCLASSA /* id 21 */ WNDCLASS;
+typedef PWNDCLASSA PWNDCLASS;
+typedef PWNDCLASSA NPWNDCLASS;
+typedef PWNDCLASSA LPWNDCLASS;
+struct tagMSG { /* size 28 id 23 */
+  long int hwnd; /* bitsize 32, bitpos 0 */
+  unsigned int message; /* bitsize 32, bitpos 32 */
+  unsigned int wParam; /* bitsize 32, bitpos 64 */
+  long int lParam; /* bitsize 32, bitpos 96 */
+  long unsigned int time; /* bitsize 32, bitpos 128 */
+  struct tagPOINT /* id 4 */ pt; /* bitsize 64, bitpos 160 */
+};
+typedef struct tagMSG /* id 23 */ MSG;
+typedef struct tagMSG /* id 23 */ *PMSG;
+typedef PMSG NPMSG;
+typedef PMSG LPMSG;
+struct tagMINMAXINFO { /* size 40 id 24 */
+  struct tagPOINT /* id 4 */ ptReserved; /* bitsize 64, bitpos 0 */
+  struct tagPOINT /* id 4 */ ptMaxSize; /* bitsize 64, bitpos 64 */
+  struct tagPOINT /* id 4 */ ptMaxPosition; /* bitsize 64, bitpos 128 */
+  struct tagPOINT /* id 4 */ ptMinTrackSize; /* bitsize 64, bitpos 192 */
+  struct tagPOINT /* id 4 */ ptMaxTrackSize; /* bitsize 64, bitpos 256 */
+};
+typedef struct tagMINMAXINFO /* id 24 */ MINMAXINFO;
+typedef struct tagMINMAXINFO /* id 24 */ *PMINMAXINFO;
+typedef PMINMAXINFO LPMINMAXINFO;
+struct tagCOPYDATASTRUCT { /* size 12 id 25 */
+  long unsigned int dwData; /* bitsize 32, bitpos 0 */
+  long unsigned int cbData; /* bitsize 32, bitpos 32 */
+  PVOID lpData; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagCOPYDATASTRUCT /* id 25 */ COPYDATASTRUCT;
+typedef struct tagCOPYDATASTRUCT /* id 25 */ *PCOPYDATASTRUCT;
+struct tagMDINEXTMENU { /* size 12 id 26 */
+  long int hmenuIn; /* bitsize 32, bitpos 0 */
+  long int hmenuNext; /* bitsize 32, bitpos 32 */
+  long int hwndNext; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagMDINEXTMENU /* id 26 */ MDINEXTMENU;
+typedef struct tagMDINEXTMENU /* id 26 */ *PMDINEXTMENU;
+typedef PMDINEXTMENU LPMDINEXTMENU;
+unsigned int RegisterWindowMessageA (PSTR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int RegisterWindowMessageW (PWCHAR lpString /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagWINDOWPOS { /* size 28 id 27 */
+  long int hwnd; /* bitsize 32, bitpos 0 */
+  long int hwndInsertAfter; /* bitsize 32, bitpos 32 */
+  int x; /* bitsize 32, bitpos 64 */
+  int y; /* bitsize 32, bitpos 96 */
+  int cx; /* bitsize 32, bitpos 128 */
+  int cy; /* bitsize 32, bitpos 160 */
+  unsigned int flags; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagWINDOWPOS /* id 27 */ WINDOWPOS;
+typedef struct tagWINDOWPOS /* id 27 */ *LPWINDOWPOS;
+typedef LPWINDOWPOS PWINDOWPOS;
+struct tagNCCALCSIZE_PARAMS { /* size 52 id 28 */
+  struct tagRECT /* id 2 */ rgrc[3]; /* bitsize 384, bitpos 0 */
+  LPWINDOWPOS lppos; /* bitsize 32, bitpos 384 */
+};
+typedef struct tagNCCALCSIZE_PARAMS /* id 28 */ NCCALCSIZE_PARAMS;
+typedef struct tagNCCALCSIZE_PARAMS /* id 28 */ *LPNCCALCSIZE_PARAMS;
+int DrawEdge (long int hdc /* 0x8 */, PRECT qrc /* 0xc */, unsigned int edge /* 0x10 */, unsigned int grfFlags /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawFrameControl (long int hDC /* 0x8 */, PRECT pRect /* 0xc */, unsigned int v1 /* 0x10 */, unsigned int v2 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawCaption (long int hWnd /* 0x8 */, long int hDC /* 0xc */, struct tagRECT /* id 2 */ *pRect /* 0x10 */, unsigned int val /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawAnimatedRects (long int hwnd /* 0x8 */, int idAni /* 0xc */, struct tagRECT /* id 2 */ *lprcFrom /* 0x10 */, struct tagRECT /* id 2 */ *lprcTo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagACCEL { /* size 6 id 29 */
+  unsigned char fVirt; /* bitsize 8, bitpos 0 */
+  short unsigned int key; /* bitsize 16, bitpos 16 */
+  short unsigned int cmd; /* bitsize 16, bitpos 32 */
+};
+typedef struct tagACCEL /* id 29 */ ACCEL;
+typedef struct tagACCEL /* id 29 */ *LPACCEL;
+struct tagPAINTSTRUCT { /* size 64 id 30 */
+  long int hdc; /* bitsize 32, bitpos 0 */
+  int fErase; /* bitsize 32, bitpos 32 */
+  struct tagRECT /* id 2 */ rcPaint; /* bitsize 128, bitpos 64 */
+  int fRestore; /* bitsize 32, bitpos 192 */
+  int fIncUpdate; /* bitsize 32, bitpos 224 */
+  unsigned char rgbReserved[32]; /* bitsize 256, bitpos 256 */
+};
+typedef struct tagPAINTSTRUCT /* id 30 */ PAINTSTRUCT;
+typedef struct tagPAINTSTRUCT /* id 30 */ *PPAINTSTRUCT;
+typedef PPAINTSTRUCT NPPAINTSTRUCT;
+typedef PPAINTSTRUCT LPPAINTSTRUCT;
+struct tagCREATESTRUCTA { /* size 48 id 9 */
+  PVOID lpCreateParams; /* bitsize 32, bitpos 0 */
+  long int hInstance; /* bitsize 32, bitpos 32 */
+  long int hMenu; /* bitsize 32, bitpos 64 */
+  long int hwndParent; /* bitsize 32, bitpos 96 */
+  int cy; /* bitsize 32, bitpos 128 */
+  int cx; /* bitsize 32, bitpos 160 */
+  int y; /* bitsize 32, bitpos 192 */
+  int x; /* bitsize 32, bitpos 224 */
+  long int style; /* bitsize 32, bitpos 256 */
+  PSTR lpszName; /* bitsize 32, bitpos 288 */
+  PSTR lpszClass; /* bitsize 32, bitpos 320 */
+  long unsigned int dwExStyle; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagCREATESTRUCTA /* id 9 */ CREATESTRUCTA;
+typedef struct tagCREATESTRUCTA /* id 9 */ *LPCREATESTRUCTA;
+struct tagCREATESTRUCTW { /* size 48 id 11 */
+  PVOID lpCreateParams; /* bitsize 32, bitpos 0 */
+  long int hInstance; /* bitsize 32, bitpos 32 */
+  long int hMenu; /* bitsize 32, bitpos 64 */
+  long int hwndParent; /* bitsize 32, bitpos 96 */
+  int cy; /* bitsize 32, bitpos 128 */
+  int cx; /* bitsize 32, bitpos 160 */
+  int y; /* bitsize 32, bitpos 192 */
+  int x; /* bitsize 32, bitpos 224 */
+  long int style; /* bitsize 32, bitpos 256 */
+  PWCHAR lpszName; /* bitsize 32, bitpos 288 */
+  PWCHAR lpszClass; /* bitsize 32, bitpos 320 */
+  long unsigned int dwExStyle; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagCREATESTRUCTW /* id 11 */ CREATESTRUCTW;
+typedef struct tagCREATESTRUCTW /* id 11 */ *LPCREATESTRUCTW;
+typedef struct tagCREATESTRUCTA /* id 9 */ CREATESTRUCT;
+typedef struct tagCREATESTRUCTA /* id 9 */ *LPCREATESTRUCT;
+struct tagWINDOWPLACEMENT { /* size 44 id 31 */
+  unsigned int length; /* bitsize 32, bitpos 0 */
+  unsigned int flags; /* bitsize 32, bitpos 32 */
+  unsigned int showCmd; /* bitsize 32, bitpos 64 */
+  struct tagPOINT /* id 4 */ ptMinPosition; /* bitsize 64, bitpos 96 */
+  struct tagPOINT /* id 4 */ ptMaxPosition; /* bitsize 64, bitpos 160 */
+  struct tagRECT /* id 2 */ rcNormalPosition; /* bitsize 128, bitpos 224 */
+};
+typedef struct tagWINDOWPLACEMENT /* id 31 */ WINDOWPLACEMENT;
+typedef struct tagWINDOWPLACEMENT /* id 31 */ *PWINDOWPLACEMENT;
+typedef PWINDOWPLACEMENT LPWINDOWPLACEMENT;
+struct tagNMHDR { /* size 12 id 32 */
+  long int hwndFrom; /* bitsize 32, bitpos 0 */
+  unsigned int idFrom; /* bitsize 32, bitpos 32 */
+  unsigned int code; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagNMHDR /* id 32 */ NMHDR;
+typedef struct tagNMHDR /* id 32 */ *LPNMHDR;
+struct tagSTYLESTRUCT { /* size 8 id 33 */
+  long unsigned int styleOld; /* bitsize 32, bitpos 0 */
+  long unsigned int styleNew; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSTYLESTRUCT /* id 33 */ STYLESTRUCT;
+typedef struct tagSTYLESTRUCT /* id 33 */ *LPSTYLESTRUCT;
+struct tagMEASUREITEMSTRUCT { /* size 24 id 34 */
+  unsigned int CtlType; /* bitsize 32, bitpos 0 */
+  unsigned int CtlID; /* bitsize 32, bitpos 32 */
+  unsigned int itemID; /* bitsize 32, bitpos 64 */
+  unsigned int itemWidth; /* bitsize 32, bitpos 96 */
+  unsigned int itemHeight; /* bitsize 32, bitpos 128 */
+  long unsigned int itemData; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagMEASUREITEMSTRUCT /* id 34 */ MEASUREITEMSTRUCT;
+typedef struct tagMEASUREITEMSTRUCT /* id 34 */ *PMEASUREITEMSTRUCT;
+typedef PMEASUREITEMSTRUCT LPMEASUREITEMSTRUCT;
+struct tagDRAWITEMSTRUCT { /* size 48 id 35 */
+  unsigned int CtlType; /* bitsize 32, bitpos 0 */
+  unsigned int CtlID; /* bitsize 32, bitpos 32 */
+  unsigned int itemID; /* bitsize 32, bitpos 64 */
+  unsigned int itemAction; /* bitsize 32, bitpos 96 */
+  unsigned int itemState; /* bitsize 32, bitpos 128 */
+  long int hwndItem; /* bitsize 32, bitpos 160 */
+  long int hDC; /* bitsize 32, bitpos 192 */
+  struct tagRECT /* id 2 */ rcItem; /* bitsize 128, bitpos 224 */
+  long unsigned int itemData; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagDRAWITEMSTRUCT /* id 35 */ DRAWITEMSTRUCT;
+typedef struct tagDRAWITEMSTRUCT /* id 35 */ *PDRAWITEMSTRUCT;
+typedef PDRAWITEMSTRUCT LPDRAWITEMSTRUCT;
+struct tagDELETEITEMSTRUCT { /* size 20 id 36 */
+  unsigned int CtlType; /* bitsize 32, bitpos 0 */
+  unsigned int CtlID; /* bitsize 32, bitpos 32 */
+  unsigned int itemID; /* bitsize 32, bitpos 64 */
+  long int hwndItem; /* bitsize 32, bitpos 96 */
+  unsigned int itemData; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagDELETEITEMSTRUCT /* id 36 */ DELETEITEMSTRUCT;
+typedef struct tagDELETEITEMSTRUCT /* id 36 */ *PDELETEITEMSTRUCT;
+typedef PDELETEITEMSTRUCT LPDELETEITEMSTRUCT;
+struct tagCOMPAREITEMSTRUCT { /* size 32 id 37 */
+  unsigned int CtlType; /* bitsize 32, bitpos 0 */
+  unsigned int CtlID; /* bitsize 32, bitpos 32 */
+  long int hwndItem; /* bitsize 32, bitpos 64 */
+  unsigned int itemID1; /* bitsize 32, bitpos 96 */
+  long unsigned int itemData1; /* bitsize 32, bitpos 128 */
+  unsigned int itemID2; /* bitsize 32, bitpos 160 */
+  long unsigned int itemData2; /* bitsize 32, bitpos 192 */
+  long unsigned int dwLocaleId; /* bitsize 32, bitpos 224 */
+};
+typedef struct tagCOMPAREITEMSTRUCT /* id 37 */ COMPAREITEMSTRUCT;
+typedef struct tagCOMPAREITEMSTRUCT /* id 37 */ *PCOMPAREITEMSTRUCT;
+typedef PCOMPAREITEMSTRUCT LPCOMPAREITEMSTRUCT;
+int GetMessageA (PMSG lpMsg /* 0x8 */, long int hWnd /* 0xc */, unsigned int wMsgFilterMin /* 0x10 */, unsigned int wMsgFilterMax /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMessageW (PMSG lpMsg /* 0x8 */, long int hWnd /* 0xc */, unsigned int wMsgFilterMin /* 0x10 */, unsigned int wMsgFilterMax /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TranslateMessage (struct tagMSG /* id 23 */ *lpMsg /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DispatchMessageA (struct tagMSG /* id 23 */ *lpMsg /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DispatchMessageW (struct tagMSG /* id 23 */ *lpMsg /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMessageQueue (int cMessagesMax /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PeekMessageA (PMSG lpMsg /* 0x8 */, long int hWnd /* 0xc */, unsigned int wMsgFilterMin /* 0x10 */, unsigned int wMsgFilterMax /* 0x14 */, unsigned int wRemoveMsg /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PeekMessageW (PMSG lpMsg /* 0x8 */, long int hWnd /* 0xc */, unsigned int wMsgFilterMin /* 0x10 */, unsigned int wMsgFilterMax /* 0x14 */, unsigned int wRemoveMsg /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RegisterHotKey (long int hWnd /* 0x8 */, int id /* 0xc */, unsigned int fsModifiers /* 0x10 */, unsigned int vk /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnregisterHotKey (long int hWnd /* 0x8 */, int id /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExitWindowsEx (unsigned int uFlags /* 0x8 */, long unsigned int dwReserved /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SwapMouseButton (int fSwap /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetMessagePos ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMessageTime ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMessageExtraInfo ()
+{ /* 0x0 */
+} /* 0x0 */
+long int SetMessageExtraInfo (long int lParam /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendMessageA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendMessageW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendMessageTimeoutA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */, unsigned int fuFlags /* 0x18 */, unsigned int uTimeout /* 0x1c */, PDWORD lpdwResult /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendMessageTimeoutW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */, unsigned int fuFlags /* 0x18 */, unsigned int uTimeout /* 0x1c */, PDWORD lpdwResult /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SendNotifyMessageA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SendNotifyMessageW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SendMessageCallbackA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */, FARPROC lpResultCallBack /* 0x18 */, long unsigned int dwData /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int SendMessageCallbackW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */, FARPROC lpResultCallBack /* 0x18 */, long unsigned int dwData /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BroadcastSystemMessageA (long unsigned int v1 /* 0x8 */, PDWORD p1 /* 0xc */, unsigned int v3 /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BroadcastSystemMessageW (long unsigned int v1 /* 0x8 */, PDWORD p1 /* 0xc */, unsigned int v3 /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagBROADCASTSYSMSG { /* size 12 id 38 */
+  unsigned int uiMessage; /* bitsize 32, bitpos 0 */
+  unsigned int wParam; /* bitsize 32, bitpos 32 */
+  long int lParam; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagBROADCASTSYSMSG /* id 38 */ BROADCASTSYSMSG;
+typedef struct tagBROADCASTSYSMSG /* id 38 */ *LPBROADCASTSYSMSG;
+int PostMessageA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PostMessageW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PostThreadMessageA (long unsigned int idThread /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int PostThreadMessageW (long unsigned int idThread /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AttachThreadInput (long unsigned int idAttach /* 0x8 */, long unsigned int idAttachTo /* 0xc */, int fAttach /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReplyMessage (long int lResult /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WaitMessage ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int WaitForInputIdle (long int hProcess /* 0x8 */, long unsigned int dwMilliseconds /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefWindowProcA (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefWindowProcW (long int hWnd /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+void PostQuitMessage (int nExitCode /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CallWindowProcA (FARPROC lpPrevWndFunc /* 0x8 */, long int hWnd /* 0xc */, unsigned int Msg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CallWindowProcW (FARPROC lpPrevWndFunc /* 0x8 */, long int hWnd /* 0xc */, unsigned int Msg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InSendMessage ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDoubleClickTime ()
+{ /* 0x0 */
+} /* 0x0 */
+int SetDoubleClickTime (unsigned int tim /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int RegisterClassA (struct tagWNDCLASSA /* id 21 */ *lpWndClass /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int RegisterClassW (struct tagWNDCLASSW /* id 22 */ *lpWndClass /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnregisterClassA (PSTR lpClassName /* 0x8 */, long int hInstance /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnregisterClassW (PWCHAR lpClassName /* 0x8 */, long int hInstance /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassInfoA (long int hInstance /* 0x8 */, PSTR lpClassName /* 0xc */, PWNDCLASSA lpWndClass /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassInfoW (long int hInstance /* 0x8 */, PWCHAR lpClassName /* 0xc */, PWNDCLASSW lpWndClass /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int RegisterClassExA (struct tagWNDCLASSEXA /* id 19 */ *pclass /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int RegisterClassExW (struct tagWNDCLASSEXW /* id 20 */ *pclass /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassInfoExA (long int hInst /* 0x8 */, PSTR name /* 0xc */, PWNDCLASSEXA pclass /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassInfoExW (long int hInst /* 0x8 */, PWCHAR name /* 0xc */, PWNDCLASSEXW pclass /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateWindowExA (long unsigned int dwExStyle /* 0x8 */, PSTR lpClassName /* 0xc */, PSTR lpWindowName /* 0x10 */, long unsigned int dwStyle /* 0x14 */, int X /* 0x18 */, int Y /* 0x1c */, int nWidth /* 0x20 */, int nHeight /* 0x24 */, long int hWndParent /* 0x28 */, long int hMenu /* 0x2c */, long int hInstance /* 0x30 */, PVOID lpParam /* 0x34 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateWindowExW (long unsigned int dwExStyle /* 0x8 */, PWCHAR lpClassName /* 0xc */, PWCHAR lpWindowName /* 0x10 */, long unsigned int dwStyle /* 0x14 */, int X /* 0x18 */, int Y /* 0x1c */, int nWidth /* 0x20 */, int nHeight /* 0x24 */, long int hWndParent /* 0x28 */, long int hMenu /* 0x2c */, long int hInstance /* 0x30 */, PVOID lpParam /* 0x34 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsMenu (long int hMenu /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsChild (long int hWndParent /* 0x8 */, long int hWnd /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DestroyWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowWindow (long int hWnd /* 0x8 */, int nCmdShow /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowWindowAsync (long int hWnd /* 0x8 */, int nCmdShow /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FlashWindow (long int hWnd /* 0x8 */, int bInvert /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowOwnedPopups (long int hWnd /* 0x8 */, int fShow /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int OpenIcon (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MoveWindow (long int hWnd /* 0x8 */, int X /* 0xc */, int Y /* 0x10 */, int nWidth /* 0x14 */, int nHeight /* 0x18 */, int bRepaint /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowPos (long int hWnd /* 0x8 */, long int hWndInsertAfter /* 0xc */, int X /* 0x10 */, int Y /* 0x14 */, int cx /* 0x18 */, int cy /* 0x1c */, unsigned int uFlags /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowPlacement (long int hWnd /* 0x8 */, PWINDOWPLACEMENT lpwndpl /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowPlacement (long int hWnd /* 0x8 */, PWINDOWPLACEMENT lpwndpl /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BeginDeferWindowPos (int nNumWindows /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DeferWindowPos (long int hWinPosInfo /* 0x8 */, long int hWnd /* 0xc */, long int hWndInsertAfter /* 0x10 */, int x /* 0x14 */, int y /* 0x18 */, int cx /* 0x1c */, int cy /* 0x20 */, unsigned int uFlags /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndDeferWindowPos (long int hWinPosInfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsWindowVisible (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsIconic (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AnyPopup ()
+{ /* 0x0 */
+} /* 0x0 */
+int BringWindowToTop (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsZoomed (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef struct %anon39 { /* size 20 */
+  long unsigned int style; /* bitsize 32, bitpos 0 */
+  long unsigned int dwExtendedStyle; /* bitsize 32, bitpos 32 */
+  short unsigned int cdit; /* bitsize 16, bitpos 64 */
+  short int x; /* bitsize 16, bitpos 80 */
+  short int y; /* bitsize 16, bitpos 96 */
+  short int cx; /* bitsize 16, bitpos 112 */
+  short int cy; /* bitsize 16, bitpos 128 */
+} DLGTEMPLATE;
+typedef DLGTEMPLATE *LPDLGTEMPLATEA;
+typedef LPDLGTEMPLATEA LPDLGTEMPLATEW;
+typedef LPDLGTEMPLATEA LPDLGTEMPLATE;
+typedef LPDLGTEMPLATEA LPCDLGTEMPLATEA;
+typedef LPDLGTEMPLATEA LPCDLGTEMPLATEW;
+typedef LPDLGTEMPLATEA LPCDLGTEMPLATE;
+typedef struct %anon40 { /* size 20 */
+  long unsigned int style; /* bitsize 32, bitpos 0 */
+  long unsigned int dwExtendedStyle; /* bitsize 32, bitpos 32 */
+  short int x; /* bitsize 16, bitpos 64 */
+  short int y; /* bitsize 16, bitpos 80 */
+  short int cx; /* bitsize 16, bitpos 96 */
+  short int cy; /* bitsize 16, bitpos 112 */
+  short unsigned int id; /* bitsize 16, bitpos 128 */
+} DLGITEMTEMPLATE;
+typedef DLGITEMTEMPLATE *PDLGITEMTEMPLATEA;
+typedef PDLGITEMTEMPLATEA PDLGITEMTEMPLATEW;
+typedef PDLGITEMTEMPLATEA PDLGITEMTEMPLATE;
+typedef PDLGITEMTEMPLATEA LPDLGITEMTEMPLATEA;
+typedef PDLGITEMTEMPLATEA LPDLGITEMTEMPLATEW;
+typedef PDLGITEMTEMPLATEA LPDLGITEMTEMPLATE;
+long int CreateDialogParamA (long int hInstance /* 0x8 */, PSTR lpTemplateName /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDialogParamW (long int hInstance /* 0x8 */, PWCHAR lpTemplateName /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDialogIndirectParamA (long int hInstance /* 0x8 */, LPDLGTEMPLATEA lpTemplate /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateDialogIndirectParamW (long int hInstance /* 0x8 */, LPDLGTEMPLATEA lpTemplate /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DialogBoxParamA (long int hInstance /* 0x8 */, PSTR lpTemplateName /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DialogBoxParamW (long int hInstance /* 0x8 */, PWCHAR lpTemplateName /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DialogBoxIndirectParamA (long int hInstance /* 0x8 */, LPDLGTEMPLATEA hDialogTemplate /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DialogBoxIndirectParamW (long int hInstance /* 0x8 */, LPDLGTEMPLATEA hDialogTemplate /* 0xc */, long int hWndParent /* 0x10 */, FARPROC lpDialogFunc /* 0x14 */, long int dwInitParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndDialog (long int hDlg /* 0x8 */, int nResult /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDlgItem (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDlgItemInt (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, unsigned int uValue /* 0x10 */, int bSigned /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDlgItemInt (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, PBOOL lpTranslated /* 0x10 */, int bSigned /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDlgItemTextA (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, PSTR lpString /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetDlgItemTextW (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, PWCHAR lpString /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDlgItemTextA (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, PSTR lpString /* 0x10 */, int nMaxCount /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetDlgItemTextW (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, PWCHAR lpString /* 0x10 */, int nMaxCount /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CheckDlgButton (long int hDlg /* 0x8 */, int nIDButton /* 0xc */, unsigned int uCheck /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CheckRadioButton (long int hDlg /* 0x8 */, int nIDFirstButton /* 0xc */, int nIDLastButton /* 0x10 */, int nIDCheckButton /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int IsDlgButtonChecked (long int hDlg /* 0x8 */, int nIDButton /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendDlgItemMessageA (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, unsigned int Msg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SendDlgItemMessageW (long int hDlg /* 0x8 */, int nIDDlgItem /* 0xc */, unsigned int Msg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetNextDlgGroupItem (long int hDlg /* 0x8 */, long int hCtl /* 0xc */, int bPrevious /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetNextDlgTabItem (long int hDlg /* 0x8 */, long int hCtl /* 0xc */, int bPrevious /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetDlgCtrlID (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDialogBaseUnits ()
+{ /* 0x0 */
+} /* 0x0 */
+long int DefDlgProcA (long int hDlg /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefDlgProcW (long int hDlg /* 0x8 */, unsigned int Msg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CallMsgFilterA (PMSG lpMsg /* 0x8 */, int nCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CallMsgFilterW (PMSG lpMsg /* 0x8 */, int nCode /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int OpenClipboard (long int hWndNewOwner /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CloseClipboard ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GetClipboardOwner ()
+{ /* 0x0 */
+} /* 0x0 */
+long int SetClipboardViewer (long int hWndNewViewer /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetClipboardViewer ()
+{ /* 0x0 */
+} /* 0x0 */
+int ChangeClipboardChain (long int hWndRemove /* 0x8 */, long int hWndNewNext /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetClipboardData (unsigned int uFormat /* 0x8 */, long int hMem /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetClipboardData (unsigned int uFormat /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int RegisterClipboardFormatA (PSTR lpszFormat /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int RegisterClipboardFormatW (PWCHAR lpszFormat /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CountClipboardFormats ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int EnumClipboardFormats (unsigned int format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClipboardFormatNameA (unsigned int format /* 0x8 */, PSTR lpszFormatName /* 0xc */, int cchMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClipboardFormatNameW (unsigned int format /* 0x8 */, PWCHAR lpszFormatName /* 0xc */, int cchMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EmptyClipboard ()
+{ /* 0x0 */
+} /* 0x0 */
+int IsClipboardFormatAvailable (unsigned int format /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetPriorityClipboardFormat (unsigned int *paFormatPriorityList /* 0x8 */, int cFormats /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetOpenClipboardWindow ()
+{ /* 0x0 */
+} /* 0x0 */
+int CharToOemA (PSTR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CharToOemW (PWCHAR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int OemToCharA (PSTR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int OemToCharW (PSTR lpszSrc /* 0x8 */, PWCHAR lpszDst /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int CharToOemBuffA (PSTR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */, long unsigned int cchDstLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CharToOemBuffW (PWCHAR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */, long unsigned int cchDstLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OemToCharBuffA (PSTR lpszSrc /* 0x8 */, PSTR lpszDst /* 0xc */, long unsigned int cchDstLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OemToCharBuffW (PSTR lpszSrc /* 0x8 */, PWCHAR lpszDst /* 0xc */, long unsigned int cchDstLength /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR CharUpperA (PSTR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR CharUpperW (PWCHAR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CharUpperBuffA (PSTR lpsz /* 0x8 */, long unsigned int cchLength /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CharUpperBuffW (PWCHAR lpsz /* 0x8 */, long unsigned int cchLength /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR CharLowerA (PSTR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR CharLowerW (PWCHAR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CharLowerBuffA (PSTR lpsz /* 0x8 */, long unsigned int cchLength /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CharLowerBuffW (PWCHAR lpsz /* 0x8 */, long unsigned int cchLength /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR CharNextA (PSTR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR CharNextW (PWCHAR lpsz /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR CharPrevA (PSTR lpszStart /* 0x8 */, PSTR lpszCurrent /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PWCHAR CharPrevW (PWCHAR lpszStart /* 0x8 */, PWCHAR lpszCurrent /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+PSTR CharNextExA (int CodePage /* 0x8 */, PSTR lpCurrentChar /* 0xc */, long unsigned int dwFlags /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int CodePage /* 0xfffffffe */;
+} /* 0x0 */
+PSTR CharPrevExA (int CodePage /* 0x8 */, PSTR lpStart /* 0xc */, PSTR lpCurrentChar /* 0x10 */, long unsigned int dwFlags /* 0x14 */)
+{ /* 0x0 */
+  short unsigned int CodePage /* 0xfffffffe */;
+} /* 0x0 */
+int IsCharAlphaA (int ch /* 0x8 */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+int IsCharAlphaW (int ch /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+int IsCharAlphaNumericA (int ch /* 0x8 */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+int IsCharAlphaNumericW (int ch /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+int IsCharUpperA (int ch /* 0x8 */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+int IsCharUpperW (int ch /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+int IsCharLowerA (int ch /* 0x8 */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+int IsCharLowerW (int ch /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+long int SetFocus (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetActiveWindow ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GetFocus ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetKBCodePage ()
+{ /* 0x0 */
+} /* 0x0 */
+short int GetKeyState (int nVirtKey /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short int GetAsyncKeyState (int vKey /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyboardState (PBYTE lpKeyState /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetKeyboardState (PBYTE lpKeyState /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyNameTextA (long int lParam /* 0x8 */, PSTR lpString /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyNameTextW (long int lParam /* 0x8 */, PWCHAR lpString /* 0xc */, int nSize /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetKeyboardType (int nTypeFlag /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ToAscii (unsigned int uVirtKey /* 0x8 */, unsigned int uScanCode /* 0xc */, PBYTE lpKeyState /* 0x10 */, PWORD lpChar /* 0x14 */, unsigned int uFlags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ToAsciiEx (unsigned int uVirtKey /* 0x8 */, unsigned int uScanCode /* 0xc */, PBYTE lpKeyState /* 0x10 */, PWORD lpChar /* 0x14 */, unsigned int uFlags /* 0x18 */, long int dwhkl /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int ToUnicode (unsigned int wVirtKey /* 0x8 */, unsigned int wScanCode /* 0xc */, PBYTE lpKeyState /* 0x10 */, PWCHAR pwszBuff /* 0x14 */, int cchBuff /* 0x18 */, unsigned int wFlags /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int OemKeyScan (int wOemChar /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int wOemChar /* 0xfffffffe */;
+} /* 0x0 */
+short int VkKeyScanA (int ch /* 0x8 */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+short int VkKeyScanW (int ch /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+short int VkKeyScanExA (int ch /* 0x8 */, long int dwhkl /* 0xc */)
+{ /* 0x0 */
+  unsigned char ch /* 0xffffffff */;
+} /* 0x0 */
+short int VkKeyScanExW (int ch /* 0x8 */, long int dwhkl /* 0xc */)
+{ /* 0x0 */
+  short unsigned int ch /* 0xfffffffe */;
+} /* 0x0 */
+void keybd_event (int bVk /* 0x8 */, int bScan /* 0xc */, long unsigned int dwFlags /* 0x10 */, long unsigned int dwExtraInfo /* 0x14 */)
+{ /* 0x0 */
+  unsigned char bScan /* 0xfffffffe */;
+  unsigned char bVk /* 0xffffffff */;
+} /* 0x0 */
+void mouse_event (long unsigned int dwFlags /* 0x8 */, long unsigned int dx /* 0xc */, long unsigned int dy /* 0x10 */, long unsigned int dwData /* 0x14 */, long unsigned int dwExtraInfo /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int MapVirtualKeyA (unsigned int uCode /* 0x8 */, unsigned int uMapType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int MapVirtualKeyW (unsigned int uCode /* 0x8 */, unsigned int uMapType /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int MapVirtualKeyExA (unsigned int uCode /* 0x8 */, unsigned int uMapType /* 0xc */, long int dwhkl /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int MapVirtualKeyExW (unsigned int uCode /* 0x8 */, unsigned int uMapType /* 0xc */, long int dwhkl /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetInputState ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetQueueStatus (unsigned int flags /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetCapture ()
+{ /* 0x0 */
+} /* 0x0 */
+long int SetCapture (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReleaseCapture ()
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int MsgWaitForMultipleObjects (long unsigned int nCount /* 0x8 */, PHANDLE pHandles /* 0xc */, int fWaitAll /* 0x10 */, long unsigned int dwMilliseconds /* 0x14 */, long unsigned int dwWakeMask /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int MsgWaitForMultipleObjectsEx (long unsigned int nCount /* 0x8 */, PHANDLE pHandles /* 0xc */, long unsigned int dwMilliseconds /* 0x10 */, long unsigned int dwWakeMask /* 0x14 */, long unsigned int dwFlags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int SetTimer (long int hWnd /* 0x8 */, unsigned int nIDEvent /* 0xc */, unsigned int uElapse /* 0x10 */, FARPROC lpTimerFunc /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int KillTimer (long int hWnd /* 0x8 */, unsigned int uIDEvent /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsWindowUnicode (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnableWindow (long int hWnd /* 0x8 */, int bEnable /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsWindowEnabled (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadAcceleratorsA (long int hInstance /* 0x8 */, PSTR lpTableName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadAcceleratorsW (long int hInstance /* 0x8 */, PWCHAR lpTableName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateAcceleratorTableA (LPACCEL paccel /* 0x8 */, int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateAcceleratorTableW (LPACCEL paccel /* 0x8 */, int val /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DestroyAcceleratorTable (long int hAccel /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CopyAcceleratorTableA (long int hAccelSrc /* 0x8 */, LPACCEL lpAccelDst /* 0xc */, int cAccelEntries /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CopyAcceleratorTableW (long int hAccelSrc /* 0x8 */, LPACCEL lpAccelDst /* 0xc */, int cAccelEntries /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TranslateAcceleratorA (long int hWnd /* 0x8 */, long int hAccTable /* 0xc */, PMSG lpMsg /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TranslateAcceleratorW (long int hWnd /* 0x8 */, long int hAccTable /* 0xc */, PMSG lpMsg /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetSystemMetrics (int nIndex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadMenuA (long int hInstance /* 0x8 */, PSTR lpMenuName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadMenuW (long int hInstance /* 0x8 */, PWCHAR lpMenuName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadMenuIndirectA (void *lpMenuTemplate /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadMenuIndirectW (void *lpMenuTemplate /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMenu (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenu (long int hWnd /* 0x8 */, long int hMenu /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ChangeMenuA (long int hMenu /* 0x8 */, unsigned int cmd /* 0xc */, PSTR lpszNewItem /* 0x10 */, unsigned int cmdInsert /* 0x14 */, unsigned int flags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ChangeMenuW (long int hMenu /* 0x8 */, unsigned int cmd /* 0xc */, PWCHAR lpszNewItem /* 0x10 */, unsigned int cmdInsert /* 0x14 */, unsigned int flags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int HiliteMenuItem (long int hWnd /* 0x8 */, long int hMenu /* 0xc */, unsigned int uIDHiliteItem /* 0x10 */, unsigned int uHilite /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuStringA (long int hMenu /* 0x8 */, unsigned int uIDItem /* 0xc */, PSTR lpString /* 0x10 */, int nMaxCount /* 0x14 */, unsigned int uFlag /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuStringW (long int hMenu /* 0x8 */, unsigned int uIDItem /* 0xc */, PWCHAR lpString /* 0x10 */, int nMaxCount /* 0x14 */, unsigned int uFlag /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetMenuState (long int hMenu /* 0x8 */, unsigned int uId /* 0xc */, unsigned int uFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawMenuBar (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetSystemMenu (long int hWnd /* 0x8 */, int bRevert /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMenu ()
+{ /* 0x0 */
+} /* 0x0 */
+long int CreatePopupMenu ()
+{ /* 0x0 */
+} /* 0x0 */
+int DestroyMenu (long int hMenu /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int CheckMenuItem (long int hMenu /* 0x8 */, unsigned int uIDCheckItem /* 0xc */, unsigned int uCheck /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnableMenuItem (long int hMenu /* 0x8 */, unsigned int uIDEnableItem /* 0xc */, unsigned int uEnable /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetSubMenu (long int hMenu /* 0x8 */, int nPos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetMenuItemID (long int hMenu /* 0x8 */, int nPos /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuItemCount (long int hMenu /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InsertMenuA (long int hMenu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */, unsigned int uIDNewItem /* 0x14 */, PSTR lpNewItem /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InsertMenuW (long int hMenu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */, unsigned int uIDNewItem /* 0x14 */, PWCHAR lpNewItem /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AppendMenuA (long int hMenu /* 0x8 */, unsigned int uFlags /* 0xc */, unsigned int uIDNewItem /* 0x10 */, PSTR lpNewItem /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AppendMenuW (long int hMenu /* 0x8 */, unsigned int uFlags /* 0xc */, unsigned int uIDNewItem /* 0x10 */, PWCHAR lpNewItem /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ModifyMenuA (long int hMnu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */, unsigned int uIDNewItem /* 0x14 */, PSTR lpNewItem /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ModifyMenuW (long int hMnu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */, unsigned int uIDNewItem /* 0x14 */, PWCHAR lpNewItem /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int RemoveMenu (long int hMenu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DeleteMenu (long int hMenu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenuItemBitmaps (long int hMenu /* 0x8 */, unsigned int uPosition /* 0xc */, unsigned int uFlags /* 0x10 */, long int hBitmapUnchecked /* 0x14 */, long int hBitmapChecked /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetMenuCheckMarkDimensions ()
+{ /* 0x0 */
+} /* 0x0 */
+int TrackPopupMenu (long int hMenu /* 0x8 */, unsigned int uFlags /* 0xc */, int x /* 0x10 */, int y /* 0x14 */, int nReserved /* 0x18 */, long int hWnd /* 0x1c */, struct tagRECT /* id 2 */ *prcRect /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagTPMPARAMS { /* size 20 id 41 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  struct tagRECT /* id 2 */ rcExclude; /* bitsize 128, bitpos 32 */
+};
+typedef struct tagTPMPARAMS /* id 41 */ TPMPARAMS;
+typedef struct tagTPMPARAMS /* id 41 */ *LPTPMPARAMS;
+int TrackPopupMenuEx (long int hMenu /* 0x8 */, unsigned int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, long int hWnd /* 0x18 */, LPTPMPARAMS pParam /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMENUITEMINFOA { /* size 44 id 42 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  unsigned int fMask; /* bitsize 32, bitpos 32 */
+  unsigned int fType; /* bitsize 32, bitpos 64 */
+  unsigned int fState; /* bitsize 32, bitpos 96 */
+  unsigned int wID; /* bitsize 32, bitpos 128 */
+  long int hSubMenu; /* bitsize 32, bitpos 160 */
+  long int hbmpChecked; /* bitsize 32, bitpos 192 */
+  long int hbmpUnchecked; /* bitsize 32, bitpos 224 */
+  long unsigned int dwItemData; /* bitsize 32, bitpos 256 */
+  PSTR dwTypeData; /* bitsize 32, bitpos 288 */
+  unsigned int cch; /* bitsize 32, bitpos 320 */
+};
+typedef struct tagMENUITEMINFOA /* id 42 */ MENUITEMINFOA;
+typedef struct tagMENUITEMINFOA /* id 42 */ *LPMENUITEMINFOA;
+struct tagMENUITEMINFOW { /* size 44 id 43 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  unsigned int fMask; /* bitsize 32, bitpos 32 */
+  unsigned int fType; /* bitsize 32, bitpos 64 */
+  unsigned int fState; /* bitsize 32, bitpos 96 */
+  unsigned int wID; /* bitsize 32, bitpos 128 */
+  long int hSubMenu; /* bitsize 32, bitpos 160 */
+  long int hbmpChecked; /* bitsize 32, bitpos 192 */
+  long int hbmpUnchecked; /* bitsize 32, bitpos 224 */
+  long unsigned int dwItemData; /* bitsize 32, bitpos 256 */
+  PWCHAR dwTypeData; /* bitsize 32, bitpos 288 */
+  unsigned int cch; /* bitsize 32, bitpos 320 */
+};
+typedef struct tagMENUITEMINFOW /* id 43 */ MENUITEMINFOW;
+typedef struct tagMENUITEMINFOW /* id 43 */ *LPMENUITEMINFOW;
+typedef struct tagMENUITEMINFOA /* id 42 */ MENUITEMINFO;
+typedef LPMENUITEMINFOA LPMENUITEMINFO;
+typedef struct tagMENUITEMINFOA /* id 42 */ *LPCMENUITEMINFOA;
+typedef struct tagMENUITEMINFOW /* id 43 */ *LPCMENUITEMINFOW;
+typedef LPCMENUITEMINFOA LPCMENUITEMINFO;
+int InsertMenuItemA (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPCMENUITEMINFOA pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InsertMenuItemW (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPCMENUITEMINFOW pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuItemInfoA (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPMENUITEMINFOA pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuItemInfoW (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPMENUITEMINFOW pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenuItemInfoA (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPCMENUITEMINFOA pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenuItemInfoW (long int hMenu /* 0x8 */, unsigned int pos /* 0xc */, int bool /* 0x10 */, LPCMENUITEMINFOW pMenuInfo /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetMenuDefaultItem (long int hMenu /* 0x8 */, unsigned int fByPos /* 0xc */, unsigned int gmdiFlags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenuDefaultItem (long int hMenu /* 0x8 */, unsigned int uItem /* 0xc */, unsigned int fByPos /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetMenuItemRect (long int hWnd /* 0x8 */, long int hMenu /* 0xc */, unsigned int uItem /* 0x10 */, PRECT lprcItem /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MenuItemFromPoint (long int hWnd /* 0x8 */, long int hMenu /* 0xc */, struct tagPOINT /* id 4 */ ptScreen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagDROPSTRUCT { /* size 28 id 44 */
+  long int hwndSource; /* bitsize 32, bitpos 0 */
+  long int hwndSink; /* bitsize 32, bitpos 32 */
+  long unsigned int wFmt; /* bitsize 32, bitpos 64 */
+  long unsigned int dwData; /* bitsize 32, bitpos 96 */
+  struct tagPOINT /* id 4 */ ptDrop; /* bitsize 64, bitpos 128 */
+  long unsigned int dwControlData; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagDROPSTRUCT /* id 44 */ DROPSTRUCT;
+typedef struct tagDROPSTRUCT /* id 44 */ *PDROPSTRUCT;
+typedef PDROPSTRUCT LPDROPSTRUCT;
+long unsigned int DragObject (long int hWnd /* 0x8 */, long int hObj /* 0xc */, unsigned int val /* 0x10 */, long unsigned int dval /* 0x14 */, long int hCursor /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DragDetect (long int hWnd /* 0x8 */, struct tagPOINT /* id 4 */ pt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawIcon (long int hDC /* 0x8 */, int X /* 0xc */, int Y /* 0x10 */, long int hIcon /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagDRAWTEXTPARAMS { /* size 20 id 45 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  int iTabLength; /* bitsize 32, bitpos 32 */
+  int iLeftMargin; /* bitsize 32, bitpos 64 */
+  int iRightMargin; /* bitsize 32, bitpos 96 */
+  unsigned int uiLengthDrawn; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagDRAWTEXTPARAMS /* id 45 */ DRAWTEXTPARAMS;
+typedef struct tagDRAWTEXTPARAMS /* id 45 */ *LPDRAWTEXTPARAMS;
+int DrawTextA (long int hDC /* 0x8 */, PSTR lpString /* 0xc */, int nCount /* 0x10 */, PRECT lpRect /* 0x14 */, unsigned int uFormat /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawTextW (long int hDC /* 0x8 */, PWCHAR lpString /* 0xc */, int nCount /* 0x10 */, PRECT lpRect /* 0x14 */, unsigned int uFormat /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawTextExA (long int hDC /* 0x8 */, PSTR txt /* 0xc */, int len /* 0x10 */, PRECT rect /* 0x14 */, unsigned int val /* 0x18 */, LPDRAWTEXTPARAMS pTextParams /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawTextExW (long int hDC /* 0x8 */, PWCHAR txt /* 0xc */, int len /* 0x10 */, PRECT rect /* 0x14 */, unsigned int val /* 0x18 */, LPDRAWTEXTPARAMS pTextParams /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+int GrayStringA (long int hDC /* 0x8 */, long int hBrush /* 0xc */, FARPROC lpOutputFunc /* 0x10 */, long int lpData /* 0x14 */, int nCount /* 0x18 */, int X /* 0x1c */, int Y /* 0x20 */, int nWidth /* 0x24 */, int nHeight /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GrayStringW (long int hDC /* 0x8 */, long int hBrush /* 0xc */, FARPROC lpOutputFunc /* 0x10 */, long int lpData /* 0x14 */, int nCount /* 0x18 */, int X /* 0x1c */, int Y /* 0x20 */, int nWidth /* 0x24 */, int nHeight /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawStateA (long int hDc /* 0x8 */, long int hBrush /* 0xc */, FARPROC drawProc /* 0x10 */, long int lParam /* 0x14 */, unsigned int wParam /* 0x18 */, int v1 /* 0x1c */, int v2 /* 0x20 */, int v3 /* 0x24 */, int v4 /* 0x28 */, unsigned int v5 /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawStateW (long int hDc /* 0x8 */, long int hBrush /* 0xc */, FARPROC drawProc /* 0x10 */, long int lParam /* 0x14 */, unsigned int wParam /* 0x18 */, int v1 /* 0x1c */, int v2 /* 0x20 */, int v3 /* 0x24 */, int v4 /* 0x28 */, unsigned int v5 /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int TabbedTextOutA (long int hDC /* 0x8 */, int X /* 0xc */, int Y /* 0x10 */, PSTR lpString /* 0x14 */, int nCount /* 0x18 */, int nTabPositions /* 0x1c */, LPCWORD lpnTabStopPositions /* 0x20 */, int nTabOrigin /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int TabbedTextOutW (long int hDC /* 0x8 */, int X /* 0xc */, int Y /* 0x10 */, PWCHAR lpString /* 0x14 */, int nCount /* 0x18 */, int nTabPositions /* 0x1c */, LPCWORD lpnTabStopPositions /* 0x20 */, int nTabOrigin /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTabbedTextExtentA (long int hDC /* 0x8 */, PSTR lpString /* 0xc */, int nCount /* 0x10 */, int nTabPositions /* 0x14 */, LPCWORD lpnTabStopPositions /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetTabbedTextExtentW (long int hDC /* 0x8 */, PWCHAR lpString /* 0xc */, int nCount /* 0x10 */, int nTabPositions /* 0x14 */, LPCWORD lpnTabStopPositions /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UpdateWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetActiveWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetForegroundWindow ()
+{ /* 0x0 */
+} /* 0x0 */
+int PaintDesktop (long int hdc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetForegroundWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int WindowFromDC (long int hDC /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDC (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDCEx (long int hWnd /* 0x8 */, long int hrgnClip /* 0xc */, long unsigned int flags /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetWindowDC (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ReleaseDC (long int hWnd /* 0x8 */, long int hDC /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int BeginPaint (long int hWnd /* 0x8 */, PPAINTSTRUCT lpPaint /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EndPaint (long int hWnd /* 0x8 */, struct tagPAINTSTRUCT /* id 30 */ *lpPaint /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetUpdateRect (long int hWnd /* 0x8 */, PRECT lpRect /* 0xc */, int bErase /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetUpdateRgn (long int hWnd /* 0x8 */, long int hRgn /* 0xc */, int bErase /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowRgn (long int hWnd /* 0x8 */, long int hRgn /* 0xc */, int bRedraw /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowRgn (long int hWnd /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ExcludeUpdateRgn (long int hDC /* 0x8 */, long int hWnd /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int InvalidateRect (long int hWnd /* 0x8 */, struct tagRECT /* id 2 */ *lpRect /* 0xc */, int bErase /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ValidateRect (long int hWnd /* 0x8 */, struct tagRECT /* id 2 */ *lpRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int InvalidateRgn (long int hWnd /* 0x8 */, long int hRgn /* 0xc */, int bErase /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ValidateRgn (long int hWnd /* 0x8 */, long int hRgn /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int RedrawWindow (long int hWnd /* 0x8 */, struct tagRECT /* id 2 */ *lprcUpdate /* 0xc */, long int hrgnUpdate /* 0x10 */, unsigned int flags /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LockWindowUpdate (long int hWndLock /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScrollWindow (long int hWnd /* 0x8 */, int XAmount /* 0xc */, int YAmount /* 0x10 */, struct tagRECT /* id 2 */ *lpRect /* 0x14 */, struct tagRECT /* id 2 */ *lpClipRect /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScrollDC (long int hDC /* 0x8 */, int dx /* 0xc */, int dy /* 0x10 */, struct tagRECT /* id 2 */ *lprcScroll /* 0x14 */, struct tagRECT /* id 2 */ *lprcClip /* 0x18 */, long int hrgnUpdate /* 0x1c */, PRECT lprcUpdate /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScrollWindowEx (long int hWnd /* 0x8 */, int dx /* 0xc */, int dy /* 0x10 */, struct tagRECT /* id 2 */ *prcScroll /* 0x14 */, struct tagRECT /* id 2 */ *prcClip /* 0x18 */, long int hrgnUpdate /* 0x1c */, PRECT prcUpdate /* 0x20 */, unsigned int flags /* 0x24 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetScrollPos (long int hWnd /* 0x8 */, int nBar /* 0xc */, int nPos /* 0x10 */, int bRedraw /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetScrollPos (long int hWnd /* 0x8 */, int nBar /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetScrollRange (long int hWnd /* 0x8 */, int nBar /* 0xc */, int nMinPos /* 0x10 */, int nMaxPos /* 0x14 */, int bRedraw /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetScrollRange (long int hWnd /* 0x8 */, int nBar /* 0xc */, LPCWORD lpMinPos /* 0x10 */, LPCWORD lpMaxPos /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowScrollBar (long int hWnd /* 0x8 */, int wBar /* 0xc */, int bShow /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnableScrollBar (long int hWnd /* 0x8 */, unsigned int wSBflags /* 0xc */, unsigned int wArrows /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPropA (long int hWnd /* 0x8 */, PSTR lpString /* 0xc */, long int hData /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetPropW (long int hWnd /* 0x8 */, PWCHAR lpString /* 0xc */, long int hData /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetPropA (long int hWnd /* 0x8 */, PSTR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetPropW (long int hWnd /* 0x8 */, PWCHAR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int RemovePropA (long int hWnd /* 0x8 */, PSTR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int RemovePropW (long int hWnd /* 0x8 */, PWCHAR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumPropsExA (long int hWnd /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumPropsExW (long int hWnd /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumPropsA (long int hWnd /* 0x8 */, FARPROC lpEnumFunc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumPropsW (long int hWnd /* 0x8 */, FARPROC lpEnumFunc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowTextA (long int hWnd /* 0x8 */, PSTR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetWindowTextW (long int hWnd /* 0x8 */, PWCHAR lpString /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowTextA (long int hWnd /* 0x8 */, PSTR lpString /* 0xc */, int nMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowTextW (long int hWnd /* 0x8 */, PWCHAR lpString /* 0xc */, int nMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowTextLengthA (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowTextLengthW (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClientRect (long int hWnd /* 0x8 */, PRECT lpRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetWindowRect (long int hWnd /* 0x8 */, PRECT lpRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int AdjustWindowRect (PRECT lpRect /* 0x8 */, long unsigned int dwStyle /* 0xc */, int bMenu /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int AdjustWindowRectEx (PRECT lpRect /* 0x8 */, long unsigned int dwStyle /* 0xc */, int bMenu /* 0x10 */, long unsigned int dwExStyle /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagHELPINFO { /* size 28 id 46 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  int iContextType; /* bitsize 32, bitpos 32 */
+  int iCtrlId; /* bitsize 32, bitpos 64 */
+  long int hItemHandle; /* bitsize 32, bitpos 96 */
+  long unsigned int dwContextId; /* bitsize 32, bitpos 128 */
+  struct tagPOINT /* id 4 */ MousePos; /* bitsize 64, bitpos 160 */
+};
+typedef struct tagHELPINFO /* id 46 */ HELPINFO;
+typedef struct tagHELPINFO /* id 46 */ *LPHELPINFO;
+int SetWindowContextHelpId (long int hWnd /* 0x8 */, long unsigned int id /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetWindowContextHelpId (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetMenuContextHelpId (long int hMenu /* 0x8 */, long unsigned int id /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetMenuContextHelpId (long int hMenu /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MessageBoxA (long int hWnd /* 0x8 */, PSTR lpText /* 0xc */, PSTR lpCaption /* 0x10 */, unsigned int uType /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MessageBoxW (long int hWnd /* 0x8 */, PWCHAR lpText /* 0xc */, PWCHAR lpCaption /* 0x10 */, unsigned int uType /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MessageBoxExA (long int hWnd /* 0x8 */, PSTR lpText /* 0xc */, PSTR lpCaption /* 0x10 */, unsigned int uType /* 0x14 */, int wLanguageId /* 0x18 */)
+{ /* 0x0 */
+  short unsigned int wLanguageId /* 0xfffffffe */;
+} /* 0x0 */
+int MessageBoxExW (long int hWnd /* 0x8 */, PWCHAR lpText /* 0xc */, PWCHAR lpCaption /* 0x10 */, unsigned int uType /* 0x14 */, int wLanguageId /* 0x18 */)
+{ /* 0x0 */
+  short unsigned int wLanguageId /* 0xfffffffe */;
+} /* 0x0 */
+typedef void (*MSGBOXCALLBACK) (/* unknown */);
+struct tagMSGBOXPARAMSA { /* size 40 id 47 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long int hwndOwner; /* bitsize 32, bitpos 32 */
+  long int hInstance; /* bitsize 32, bitpos 64 */
+  PSTR lpszText; /* bitsize 32, bitpos 96 */
+  PSTR lpszCaption; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  PSTR lpszIcon; /* bitsize 32, bitpos 192 */
+  long unsigned int dwContextHelpId; /* bitsize 32, bitpos 224 */
+  MSGBOXCALLBACK lpfnMsgBoxCallback; /* bitsize 32, bitpos 256 */
+  long unsigned int dwLanguageId; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagMSGBOXPARAMSA /* id 47 */ MSGBOXPARAMSA;
+typedef struct tagMSGBOXPARAMSA /* id 47 */ *PMSGBOXPARAMSA;
+typedef PMSGBOXPARAMSA LPMSGBOXPARAMSA;
+struct tagMSGBOXPARAMSW { /* size 40 id 48 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long int hwndOwner; /* bitsize 32, bitpos 32 */
+  long int hInstance; /* bitsize 32, bitpos 64 */
+  PWCHAR lpszText; /* bitsize 32, bitpos 96 */
+  PWCHAR lpszCaption; /* bitsize 32, bitpos 128 */
+  long unsigned int dwStyle; /* bitsize 32, bitpos 160 */
+  PWCHAR lpszIcon; /* bitsize 32, bitpos 192 */
+  long unsigned int dwContextHelpId; /* bitsize 32, bitpos 224 */
+  MSGBOXCALLBACK lpfnMsgBoxCallback; /* bitsize 32, bitpos 256 */
+  long unsigned int dwLanguageId; /* bitsize 32, bitpos 288 */
+};
+typedef struct tagMSGBOXPARAMSW /* id 48 */ MSGBOXPARAMSW;
+typedef struct tagMSGBOXPARAMSW /* id 48 */ *PMSGBOXPARAMSW;
+typedef PMSGBOXPARAMSW LPMSGBOXPARAMSW;
+typedef struct tagMSGBOXPARAMSA /* id 47 */ MSGBOXPARAMS;
+typedef PMSGBOXPARAMSA PMSGBOXPARAMS;
+typedef PMSGBOXPARAMSA LPMSGBOXPARAMS;
+int MessageBoxIndirectA (PMSGBOXPARAMSA pMsgBox /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MessageBoxIndirectW (PMSGBOXPARAMSW pMsgBox /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int MessageBeep (unsigned int uType /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowCursor (int bShow /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCursorPos (int X /* 0x8 */, int Y /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetCursor (long int hCursor /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCursorPos (PPOINT lpPoint /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClipCursor (struct tagRECT /* id 2 */ *lpRect /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClipCursor (PRECT lpRect /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetCursor ()
+{ /* 0x0 */
+} /* 0x0 */
+int CreateCaret (long int hWnd /* 0x8 */, long int hBitmap /* 0xc */, int nWidth /* 0x10 */, int nHeight /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int GetCaretBlinkTime ()
+{ /* 0x0 */
+} /* 0x0 */
+int SetCaretBlinkTime (unsigned int uMSeconds /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DestroyCaret ()
+{ /* 0x0 */
+} /* 0x0 */
+int HideCaret (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ShowCaret (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetCaretPos (int X /* 0x8 */, int Y /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetCaretPos (PPOINT lpPoint /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ClientToScreen (long int hWnd /* 0x8 */, PPOINT lpPoint /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ScreenToClient (long int hWnd /* 0x8 */, PPOINT lpPoint /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int MapWindowPoints (long int hWndFrom /* 0x8 */, long int hWndTo /* 0xc */, PPOINT lpPoints /* 0x10 */, unsigned int cPoints /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int WindowFromPoint (struct tagPOINT /* id 4 */ Point /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ChildWindowFromPoint (long int hWndParent /* 0x8 */, struct tagPOINT /* id 4 */ Point /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ChildWindowFromPointEx (long int hWnd /* 0x8 */, struct tagPOINT /* id 4 */ pt /* 0xc */, unsigned int v /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetSysColor (int nIndex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetSysColorBrush (int nIndex /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetSysColors (int cElements /* 0x8 */, int *lpaElements /* 0xc */, long unsigned int *lpaRgbValues /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawFocusRect (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *lprc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int FillRect (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *lprc /* 0xc */, long int hbr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int FrameRect (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *lprc /* 0xc */, long int hbr /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int InvertRect (long int hDC /* 0x8 */, struct tagRECT /* id 2 */ *lprc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetRect (PRECT lprc /* 0x8 */, int xLeft /* 0xc */, int yTop /* 0x10 */, int xRight /* 0x14 */, int yBottom /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetRectEmpty (PRECT lprc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CopyRect (PRECT lprcDst /* 0x8 */, struct tagRECT /* id 2 */ *lprcSrc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int InflateRect (PRECT lprc /* 0x8 */, int dx /* 0xc */, int dy /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IntersectRect (PRECT lprcDst /* 0x8 */, struct tagRECT /* id 2 */ *lprcSrc1 /* 0xc */, struct tagRECT /* id 2 */ *lprcSrc2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnionRect (PRECT lprcDst /* 0x8 */, struct tagRECT /* id 2 */ *lprcSrc1 /* 0xc */, struct tagRECT /* id 2 */ *lprcSrc2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SubtractRect (PRECT lprcDst /* 0x8 */, struct tagRECT /* id 2 */ *lprcSrc1 /* 0xc */, struct tagRECT /* id 2 */ *lprcSrc2 /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int OffsetRect (PRECT lprc /* 0x8 */, int dx /* 0xc */, int dy /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsRectEmpty (struct tagRECT /* id 2 */ *lprc /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EqualRect (struct tagRECT /* id 2 */ *lprc1 /* 0x8 */, struct tagRECT /* id 2 */ *lprc2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int PtInRect (struct tagRECT /* id 2 */ *lprc /* 0x8 */, struct tagPOINT /* id 4 */ pt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GetWindowWord (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int SetWindowWord (long int hWnd /* 0x8 */, int nIndex /* 0xc */, int wNewWord /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int wNewWord /* 0xfffffffe */;
+} /* 0x0 */
+long int GetWindowLongA (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetWindowLongW (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetWindowLongA (long int hWnd /* 0x8 */, int nIndex /* 0xc */, long int dwNewLong /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetWindowLongW (long int hWnd /* 0x8 */, int nIndex /* 0xc */, long int dwNewLong /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int GetClassWord (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int SetClassWord (long int hWnd /* 0x8 */, int nIndex /* 0xc */, int wNewWord /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int wNewWord /* 0xfffffffe */;
+} /* 0x0 */
+long unsigned int GetClassLongA (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetClassLongW (long int hWnd /* 0x8 */, int nIndex /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetClassLongA (long int hWnd /* 0x8 */, int nIndex /* 0xc */, long int dwNewLong /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int SetClassLongW (long int hWnd /* 0x8 */, int nIndex /* 0xc */, long int dwNewLong /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetDesktopWindow ()
+{ /* 0x0 */
+} /* 0x0 */
+long int GetParent (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetParent (long int hWndChild /* 0x8 */, long int hWndNewParent /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumChildWindows (long int hWndParent /* 0x8 */, FARPROC lpEnumFunc /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindWindowA (PSTR lpClassName /* 0x8 */, PSTR lpWindowName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindWindowW (PWCHAR lpClassName /* 0x8 */, PWCHAR lpWindowName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindWindowExA (long int hWnd /* 0x8 */, long int hWnd1 /* 0xc */, PSTR str /* 0x10 */, PSTR str1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int FindWindowExW (long int hWnd /* 0x8 */, long int hWnd1 /* 0xc */, PWCHAR str /* 0x10 */, PWCHAR str1 /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumWindows (FARPROC lpEnumFunc /* 0x8 */, long int lParam /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int EnumThreadWindows (long unsigned int dwThreadId /* 0x8 */, FARPROC lpfn /* 0xc */, long int lParam /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassNameA (long int hWnd /* 0x8 */, PSTR lpClassName /* 0xc */, int nMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetClassNameW (long int hWnd /* 0x8 */, PWCHAR lpClassName /* 0xc */, int nMaxCount /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetTopWindow (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int GetWindowThreadProcessId (long int hWnd /* 0x8 */, PDWORD lpdwProcessId /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetLastActivePopup (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int GetWindow (long int hWnd /* 0x8 */, unsigned int uCmd /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+FARPROC SetWindowsHookA (int nFilterType /* 0x8 */, FARPROC pfnFilterProc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+FARPROC SetWindowsHookW (int nFilterType /* 0x8 */, FARPROC pfnFilterProc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnhookWindowsHook (int nCode /* 0x8 */, FARPROC pfnFilterProc /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetWindowsHookExA (int idHook /* 0x8 */, FARPROC lpfn /* 0xc */, long int hmod /* 0x10 */, long unsigned int dwThreadId /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int SetWindowsHookExW (int idHook /* 0x8 */, FARPROC lpfn /* 0xc */, long int hmod /* 0x10 */, long unsigned int dwThreadId /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int UnhookWindowsHookEx (long int hhk /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CallNextHookEx (long int hhk /* 0x8 */, int nCode /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int CheckMenuRadioItem (long int hmenu /* 0x8 */, unsigned int v1 /* 0xc */, unsigned int v2 /* 0x10 */, unsigned int v3 /* 0x14 */, unsigned int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef struct %anon49 { /* size 4 */
+  short unsigned int versionNumber; /* bitsize 16, bitpos 0 */
+  short unsigned int offset; /* bitsize 16, bitpos 16 */
+} MENUITEMTEMPLATEHEADER;
+typedef MENUITEMTEMPLATEHEADER *PMENUITEMTEMPLATEHEADER;
+typedef struct %anon50 { /* size 6 */
+  short unsigned int mtOption; /* bitsize 16, bitpos 0 */
+  short unsigned int mtID; /* bitsize 16, bitpos 16 */
+  short unsigned int mtString[1]; /* bitsize 16, bitpos 32 */
+} MENUITEMTEMPLATE;
+typedef MENUITEMTEMPLATE *PMENUITEMTEMPLATE;
+long int LoadBitmapA (long int hInstance /* 0x8 */, PSTR lpBitmapName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadBitmapW (long int hInstance /* 0x8 */, PWCHAR lpBitmapName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadCursorA (long int hInstance /* 0x8 */, PSTR lpCursorName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadCursorW (long int hInstance /* 0x8 */, PWCHAR lpCursorName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadCursorFromFileA (PSTR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadCursorFromFileW (PWCHAR lpFileName /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateCursor (long int hInst /* 0x8 */, int xHotSpot /* 0xc */, int yHotSpot /* 0x10 */, int nWidth /* 0x14 */, int nHeight /* 0x18 */, void *pvANDPlane /* 0x1c */, void *pvXORPlane /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DestroyCursor (long int hCursor /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SetSystemCursor (long int hcur /* 0x8 */, long unsigned int id /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct _ICONINFO { /* size 20 id 51 */
+  int fIcon; /* bitsize 32, bitpos 0 */
+  long unsigned int xHotspot; /* bitsize 32, bitpos 32 */
+  long unsigned int yHotspot; /* bitsize 32, bitpos 64 */
+  long int hbmMask; /* bitsize 32, bitpos 96 */
+  long int hbmColor; /* bitsize 32, bitpos 128 */
+};
+typedef struct _ICONINFO /* id 51 */ ICONINFO;
+typedef struct _ICONINFO /* id 51 */ *PICONINFO;
+long int LoadIconA (long int hInstance /* 0x8 */, PSTR lpIconName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadIconW (long int hInstance /* 0x8 */, PWCHAR lpIconName /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateIcon (long int hInstance /* 0x8 */, int nWidth /* 0xc */, int nHeight /* 0x10 */, int cPlanes /* 0x14 */, int cBitsPixel /* 0x18 */, PBYTE lpbANDbits /* 0x1c */, PBYTE lpbXORbits /* 0x20 */)
+{ /* 0x0 */
+  unsigned char cBitsPixel /* 0xfffffffe */;
+  unsigned char cPlanes /* 0xffffffff */;
+} /* 0x0 */
+int DestroyIcon (long int hIcon /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LookupIconIdFromDirectory (PBYTE presbits /* 0x8 */, int fIcon /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int LookupIconIdFromDirectoryEx (PBYTE presbits /* 0x8 */, int fIcon /* 0xc */, int cxDesired /* 0x10 */, int cyDesired /* 0x14 */, unsigned int Flags /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateIconFromResource (PBYTE presbits /* 0x8 */, long unsigned int dwResSize /* 0xc */, int fIcon /* 0x10 */, long unsigned int dwVer /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateIconFromResourceEx (PBYTE presbits /* 0x8 */, long unsigned int dwResSize /* 0xc */, int fIcon /* 0x10 */, long unsigned int dwVer /* 0x14 */, int cxDesired /* 0x18 */, int cyDesired /* 0x1c */, unsigned int Flags /* 0x20 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagCURSORSHAPE { /* size 24 id 52 */
+  int xHotSpot; /* bitsize 32, bitpos 0 */
+  int yHotSpot; /* bitsize 32, bitpos 32 */
+  int cx; /* bitsize 32, bitpos 64 */
+  int cy; /* bitsize 32, bitpos 96 */
+  int cbWidth; /* bitsize 32, bitpos 128 */
+  unsigned char Planes; /* bitsize 8, bitpos 160 */
+  unsigned char BitsPixel; /* bitsize 8, bitpos 168 */
+};
+typedef struct tagCURSORSHAPE /* id 52 */ CURSORSHAPE;
+typedef struct tagCURSORSHAPE /* id 52 */ *LPCURSORSHAPE;
+long int LoadImageA (long int hInst /* 0x8 */, PSTR str /* 0xc */, unsigned int v1 /* 0x10 */, int v2 /* 0x14 */, int v3 /* 0x18 */, unsigned int v4 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int LoadImageW (long int hInst /* 0x8 */, PWCHAR str /* 0xc */, unsigned int v1 /* 0x10 */, int v2 /* 0x14 */, int v3 /* 0x18 */, unsigned int v4 /* 0x1c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyImage (long int hInst /* 0x8 */, unsigned int v1 /* 0xc */, int v2 /* 0x10 */, int v3 /* 0x14 */, unsigned int v4 /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DrawIconEx (long int hdc /* 0x8 */, int xLeft /* 0xc */, int yTop /* 0x10 */, long int hIcon /* 0x14 */, int cxWidth /* 0x18 */, int cyWidth /* 0x1c */, unsigned int istepIfAniCur /* 0x20 */, long int hbrFlickerFreeDraw /* 0x24 */, unsigned int diFlags /* 0x28 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateIconIndirect (PICONINFO piconinfo /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CopyIcon (long int hIcon /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetIconInfo (long int hIcon /* 0x8 */, PICONINFO piconinfo /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int LoadStringA (long int hInstance /* 0x8 */, unsigned int uID /* 0xc */, PSTR lpBuffer /* 0x10 */, int nBufferMax /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int LoadStringW (long int hInstance /* 0x8 */, unsigned int uID /* 0xc */, PWCHAR lpBuffer /* 0x10 */, int nBufferMax /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsDialogMessageA (long int hDlg /* 0x8 */, PMSG lpMsg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int IsDialogMessageW (long int hDlg /* 0x8 */, PMSG lpMsg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int MapDialogRect (long int hDlg /* 0x8 */, PRECT lpRect /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirListA (long int hDlg /* 0x8 */, PSTR lpPathSpec /* 0xc */, int nIDListBox /* 0x10 */, int nIDStaticPath /* 0x14 */, unsigned int uFileType /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirListW (long int hDlg /* 0x8 */, PWCHAR lpPathSpec /* 0xc */, int nIDListBox /* 0x10 */, int nIDStaticPath /* 0x14 */, unsigned int uFileType /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirSelectExA (long int hDlg /* 0x8 */, PSTR lpString /* 0xc */, int nCount /* 0x10 */, int nIDListBox /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirSelectExW (long int hDlg /* 0x8 */, PWCHAR lpString /* 0xc */, int nCount /* 0x10 */, int nIDListBox /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirListComboBoxA (long int hDlg /* 0x8 */, PSTR lpPathSpec /* 0xc */, int nIDComboBox /* 0x10 */, int nIDStaticPath /* 0x14 */, unsigned int uFiletype /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirListComboBoxW (long int hDlg /* 0x8 */, PWCHAR lpPathSpec /* 0xc */, int nIDComboBox /* 0x10 */, int nIDStaticPath /* 0x14 */, unsigned int uFiletype /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirSelectComboBoxExA (long int hDlg /* 0x8 */, PSTR lpString /* 0xc */, int nCount /* 0x10 */, int nIDComboBox /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int DlgDirSelectComboBoxExW (long int hDlg /* 0x8 */, PWCHAR lpString /* 0xc */, int nCount /* 0x10 */, int nIDComboBox /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagSCROLLINFO { /* size 28 id 53 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  unsigned int fMask; /* bitsize 32, bitpos 32 */
+  int nMin; /* bitsize 32, bitpos 64 */
+  int nMax; /* bitsize 32, bitpos 96 */
+  unsigned int nPage; /* bitsize 32, bitpos 128 */
+  int nPos; /* bitsize 32, bitpos 160 */
+  int nTrackPos; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagSCROLLINFO /* id 53 */ SCROLLINFO;
+typedef struct tagSCROLLINFO /* id 53 */ *LPSCROLLINFO;
+typedef struct tagSCROLLINFO /* id 53 */ *LPCSCROLLINFO;
+int SetScrollInfo (long int hWnd /* 0x8 */, int v /* 0xc */, LPCSCROLLINFO pScroll /* 0x10 */, int flag /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int GetScrollInfo (long int hWnd /* 0x8 */, int v /* 0xc */, LPSCROLLINFO pScroll /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMDICREATESTRUCTA { /* size 36 id 54 */
+  PSTR szClass; /* bitsize 32, bitpos 0 */
+  PSTR szTitle; /* bitsize 32, bitpos 32 */
+  long int hOwner; /* bitsize 32, bitpos 64 */
+  int x; /* bitsize 32, bitpos 96 */
+  int y; /* bitsize 32, bitpos 128 */
+  int cx; /* bitsize 32, bitpos 160 */
+  int cy; /* bitsize 32, bitpos 192 */
+  long unsigned int style; /* bitsize 32, bitpos 224 */
+  long int lParam; /* bitsize 32, bitpos 256 */
+};
+typedef struct tagMDICREATESTRUCTA /* id 54 */ MDICREATESTRUCTA;
+typedef struct tagMDICREATESTRUCTA /* id 54 */ *LPMDICREATESTRUCTA;
+struct tagMDICREATESTRUCTW { /* size 36 id 55 */
+  PWCHAR szClass; /* bitsize 32, bitpos 0 */
+  PWCHAR szTitle; /* bitsize 32, bitpos 32 */
+  long int hOwner; /* bitsize 32, bitpos 64 */
+  int x; /* bitsize 32, bitpos 96 */
+  int y; /* bitsize 32, bitpos 128 */
+  int cx; /* bitsize 32, bitpos 160 */
+  int cy; /* bitsize 32, bitpos 192 */
+  long unsigned int style; /* bitsize 32, bitpos 224 */
+  long int lParam; /* bitsize 32, bitpos 256 */
+};
+typedef struct tagMDICREATESTRUCTW /* id 55 */ MDICREATESTRUCTW;
+typedef struct tagMDICREATESTRUCTW /* id 55 */ *LPMDICREATESTRUCTW;
+typedef struct tagMDICREATESTRUCTA /* id 54 */ MDICREATESTRUCT;
+typedef LPMDICREATESTRUCTA LPMDICREATESTRUCT;
+struct tagCLIENTCREATESTRUCT { /* size 8 id 56 */
+  long int hWindowMenu; /* bitsize 32, bitpos 0 */
+  unsigned int idFirstChild; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagCLIENTCREATESTRUCT /* id 56 */ CLIENTCREATESTRUCT;
+typedef struct tagCLIENTCREATESTRUCT /* id 56 */ *LPCLIENTCREATESTRUCT;
+long int DefFrameProcA (long int hWnd /* 0x8 */, long int hWndMDIClient /* 0xc */, unsigned int uMsg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefFrameProcW (long int hWnd /* 0x8 */, long int hWndMDIClient /* 0xc */, unsigned int uMsg /* 0x10 */, unsigned int wParam /* 0x14 */, long int lParam /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefMDIChildProcA (long int hWnd /* 0x8 */, unsigned int uMsg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int DefMDIChildProcW (long int hWnd /* 0x8 */, unsigned int uMsg /* 0xc */, unsigned int wParam /* 0x10 */, long int lParam /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int TranslateMDISysAccel (long int hWndClient /* 0x8 */, PMSG lpMsg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int ArrangeIconicWindows (long int hWnd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMDIWindowA (PSTR lpClassName /* 0x8 */, PSTR lpWindowName /* 0xc */, long unsigned int dwStyle /* 0x10 */, int X /* 0x14 */, int Y /* 0x18 */, int nWidth /* 0x1c */, int nHeight /* 0x20 */, long int hWndParent /* 0x24 */, long int hInstance /* 0x28 */, long int lParam /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+long int CreateMDIWindowW (PWCHAR lpClassName /* 0x8 */, PWCHAR lpWindowName /* 0xc */, long unsigned int dwStyle /* 0x10 */, int X /* 0x14 */, int Y /* 0x18 */, int nWidth /* 0x1c */, int nHeight /* 0x20 */, long int hWndParent /* 0x24 */, long int hInstance /* 0x28 */, long int lParam /* 0x2c */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int TileWindows (long int hwndParent /* 0x8 */, unsigned int wHow /* 0xc */, struct tagRECT /* id 2 */ *lpRect /* 0x10 */, unsigned int cKids /* 0x14 */, long int *lpKids /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int CascadeWindows (long int hwndParent /* 0x8 */, unsigned int wHow /* 0xc */, struct tagRECT /* id 2 */ *lpRect /* 0x10 */, unsigned int cKids /* 0x14 */, long int *lpKids /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef long unsigned int HELPPOLY;
+struct tagMULTIKEYHELPA { /* size 8 id 57 */
+  long unsigned int mkSize; /* bitsize 32, bitpos 0 */
+  unsigned char mkKeylist; /* bitsize 8, bitpos 32 */
+  unsigned char szKeyphrase[1]; /* bitsize 8, bitpos 40 */
+};
+typedef struct tagMULTIKEYHELPA /* id 57 */ MULTIKEYHELPA;
+typedef struct tagMULTIKEYHELPA /* id 57 */ *PMULTIKEYHELPA;
+typedef PMULTIKEYHELPA LPMULTIKEYHELPA;
+struct tagMULTIKEYHELPW { /* size 8 id 58 */
+  long unsigned int mkSize; /* bitsize 32, bitpos 0 */
+  short unsigned int mkKeylist; /* bitsize 16, bitpos 32 */
+  short unsigned int szKeyphrase[1]; /* bitsize 16, bitpos 48 */
+};
+typedef struct tagMULTIKEYHELPW /* id 58 */ MULTIKEYHELPW;
+typedef struct tagMULTIKEYHELPW /* id 58 */ *PMULTIKEYHELPW;
+typedef PMULTIKEYHELPW LPMULTIKEYHELPW;
+typedef struct tagMULTIKEYHELPA /* id 57 */ MULTIKEYHELP;
+typedef PMULTIKEYHELPA PMULTIKEYHELP;
+typedef PMULTIKEYHELPA LPMULTIKEYHELP;
+struct tagHELPWININFOA { /* size 28 id 59 */
+  int wStructSize; /* bitsize 32, bitpos 0 */
+  int x; /* bitsize 32, bitpos 32 */
+  int y; /* bitsize 32, bitpos 64 */
+  int dx; /* bitsize 32, bitpos 96 */
+  int dy; /* bitsize 32, bitpos 128 */
+  int wMax; /* bitsize 32, bitpos 160 */
+  unsigned char rgchMember[2]; /* bitsize 16, bitpos 192 */
+};
+typedef struct tagHELPWININFOA /* id 59 */ HELPWININFOA;
+typedef struct tagHELPWININFOA /* id 59 */ *PHELPWININFOA;
+typedef PHELPWININFOA LPHELPWININFOA;
+struct tagHELPWININFOW { /* size 28 id 60 */
+  int wStructSize; /* bitsize 32, bitpos 0 */
+  int x; /* bitsize 32, bitpos 32 */
+  int y; /* bitsize 32, bitpos 64 */
+  int dx; /* bitsize 32, bitpos 96 */
+  int dy; /* bitsize 32, bitpos 128 */
+  int wMax; /* bitsize 32, bitpos 160 */
+  short unsigned int rgchMember[2]; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagHELPWININFOW /* id 60 */ HELPWININFOW;
+typedef struct tagHELPWININFOW /* id 60 */ *PHELPWININFOW;
+typedef PHELPWININFOW LPHELPWININFOW;
+typedef struct tagHELPWININFOA /* id 59 */ HELPWININFO;
+typedef PHELPWININFOA PHELPWININFO;
+typedef PHELPWININFOA LPHELPWININFO;
+int WinHelpA (long int hWndMain /* 0x8 */, PSTR lpszHelp /* 0xc */, unsigned int uCommand /* 0x10 */, long unsigned int dwData /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int WinHelpW (long int hWndMain /* 0x8 */, PWCHAR lpszHelp /* 0xc */, unsigned int uCommand /* 0x10 */, long unsigned int dwData /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagMINIMIZEDMETRICS { /* size 20 id 61 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  int iWidth; /* bitsize 32, bitpos 32 */
+  int iHorzGap; /* bitsize 32, bitpos 64 */
+  int iVertGap; /* bitsize 32, bitpos 96 */
+  int iArrange; /* bitsize 32, bitpos 128 */
+};
+typedef struct tagMINIMIZEDMETRICS /* id 61 */ MINIMIZEDMETRICS;
+typedef struct tagMINIMIZEDMETRICS /* id 61 */ *PMINIMIZEDMETRICS;
+typedef PMINIMIZEDMETRICS LPMINIMIZEDMETRICS;
+struct tagANIMATIONINFO { /* size 8 id 62 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  int iMinAnimate; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagANIMATIONINFO /* id 62 */ ANIMATIONINFO;
+typedef struct tagANIMATIONINFO /* id 62 */ *LPANIMATIONINFO;
+struct tagSERIALKEYSA { /* size 28 id 63 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  PSTR lpszActivePort; /* bitsize 32, bitpos 64 */
+  PSTR lpszPort; /* bitsize 32, bitpos 96 */
+  unsigned int iBaudRate; /* bitsize 32, bitpos 128 */
+  unsigned int iPortState; /* bitsize 32, bitpos 160 */
+  unsigned int iActive; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagSERIALKEYSA /* id 63 */ SERIALKEYSA;
+typedef struct tagSERIALKEYSA /* id 63 */ *LPSERIALKEYSA;
+struct tagSERIALKEYSW { /* size 28 id 64 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  PWCHAR lpszActivePort; /* bitsize 32, bitpos 64 */
+  PWCHAR lpszPort; /* bitsize 32, bitpos 96 */
+  unsigned int iBaudRate; /* bitsize 32, bitpos 128 */
+  unsigned int iPortState; /* bitsize 32, bitpos 160 */
+  unsigned int iActive; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagSERIALKEYSW /* id 64 */ SERIALKEYSW;
+typedef struct tagSERIALKEYSW /* id 64 */ *LPSERIALKEYSW;
+typedef struct tagSERIALKEYSA /* id 63 */ SERIALKEYS;
+typedef LPSERIALKEYSA LPSERIALKEYS;
+struct tagHIGHCONTRASTA { /* size 12 id 65 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  PSTR lpszDefaultScheme; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagHIGHCONTRASTA /* id 65 */ HIGHCONTRASTA;
+typedef struct tagHIGHCONTRASTA /* id 65 */ *LPHIGHCONTRASTA;
+struct tagHIGHCONTRASTW { /* size 12 id 66 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  PWCHAR lpszDefaultScheme; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagHIGHCONTRASTW /* id 66 */ HIGHCONTRASTW;
+typedef struct tagHIGHCONTRASTW /* id 66 */ *LPHIGHCONTRASTW;
+typedef struct tagHIGHCONTRASTA /* id 65 */ HIGHCONTRAST;
+typedef LPHIGHCONTRASTA LPHIGHCONTRAST;
+int SystemParametersInfoA (unsigned int uiAction /* 0x8 */, unsigned int uiParam /* 0xc */, PVOID pvParam /* 0x10 */, unsigned int fWinIni /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int SystemParametersInfoW (unsigned int uiAction /* 0x8 */, unsigned int uiParam /* 0xc */, PVOID pvParam /* 0x10 */, unsigned int fWinIni /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct tagFILTERKEYS { /* size 24 id 67 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int iWaitMSec; /* bitsize 32, bitpos 64 */
+  long unsigned int iDelayMSec; /* bitsize 32, bitpos 96 */
+  long unsigned int iRepeatMSec; /* bitsize 32, bitpos 128 */
+  long unsigned int iBounceMSec; /* bitsize 32, bitpos 160 */
+};
+typedef struct tagFILTERKEYS /* id 67 */ FILTERKEYS;
+typedef struct tagFILTERKEYS /* id 67 */ *LPFILTERKEYS;
+struct tagSTICKYKEYS { /* size 8 id 68 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagSTICKYKEYS /* id 68 */ STICKYKEYS;
+typedef struct tagSTICKYKEYS /* id 68 */ *LPSTICKYKEYS;
+struct tagMOUSEKEYS { /* size 28 id 69 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int iMaxSpeed; /* bitsize 32, bitpos 64 */
+  long unsigned int iTimeToMaxSpeed; /* bitsize 32, bitpos 96 */
+  long unsigned int iCtrlSpeed; /* bitsize 32, bitpos 128 */
+  long unsigned int dwReserved1; /* bitsize 32, bitpos 160 */
+  long unsigned int dwReserved2; /* bitsize 32, bitpos 192 */
+};
+typedef struct tagMOUSEKEYS /* id 69 */ MOUSEKEYS;
+typedef struct tagMOUSEKEYS /* id 69 */ *LPMOUSEKEYS;
+struct tagACCESSTIMEOUT { /* size 12 id 70 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int iTimeOutMSec; /* bitsize 32, bitpos 64 */
+};
+typedef struct tagACCESSTIMEOUT /* id 70 */ ACCESSTIMEOUT;
+typedef struct tagACCESSTIMEOUT /* id 70 */ *LPACCESSTIMEOUT;
+struct tagSOUNDSENTRYA { /* size 48 id 71 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int iFSTextEffect; /* bitsize 32, bitpos 64 */
+  long unsigned int iFSTextEffectMSec; /* bitsize 32, bitpos 96 */
+  long unsigned int iFSTextEffectColorBits; /* bitsize 32, bitpos 128 */
+  long unsigned int iFSGrafEffect; /* bitsize 32, bitpos 160 */
+  long unsigned int iFSGrafEffectMSec; /* bitsize 32, bitpos 192 */
+  long unsigned int iFSGrafEffectColor; /* bitsize 32, bitpos 224 */
+  long unsigned int iWindowsEffect; /* bitsize 32, bitpos 256 */
+  long unsigned int iWindowsEffectMSec; /* bitsize 32, bitpos 288 */
+  PSTR lpszWindowsEffectDLL; /* bitsize 32, bitpos 320 */
+  long unsigned int iWindowsEffectOrdinal; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagSOUNDSENTRYA /* id 71 */ SOUNDSENTRYA;
+typedef struct tagSOUNDSENTRYA /* id 71 */ *LPSOUNDSENTRYA;
+struct tagSOUNDSENTRYW { /* size 48 id 72 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+  long unsigned int iFSTextEffect; /* bitsize 32, bitpos 64 */
+  long unsigned int iFSTextEffectMSec; /* bitsize 32, bitpos 96 */
+  long unsigned int iFSTextEffectColorBits; /* bitsize 32, bitpos 128 */
+  long unsigned int iFSGrafEffect; /* bitsize 32, bitpos 160 */
+  long unsigned int iFSGrafEffectMSec; /* bitsize 32, bitpos 192 */
+  long unsigned int iFSGrafEffectColor; /* bitsize 32, bitpos 224 */
+  long unsigned int iWindowsEffect; /* bitsize 32, bitpos 256 */
+  long unsigned int iWindowsEffectMSec; /* bitsize 32, bitpos 288 */
+  PWCHAR lpszWindowsEffectDLL; /* bitsize 32, bitpos 320 */
+  long unsigned int iWindowsEffectOrdinal; /* bitsize 32, bitpos 352 */
+};
+typedef struct tagSOUNDSENTRYW /* id 72 */ SOUNDSENTRYW;
+typedef struct tagSOUNDSENTRYW /* id 72 */ *LPSOUNDSENTRYW;
+typedef struct tagSOUNDSENTRYA /* id 71 */ SOUNDSENTRY;
+typedef LPSOUNDSENTRYA LPSOUNDSENTRY;
+struct tagTOGGLEKEYS { /* size 8 id 73 */
+  unsigned int cbSize; /* bitsize 32, bitpos 0 */
+  long unsigned int dwFlags; /* bitsize 32, bitpos 32 */
+};
+typedef struct tagTOGGLEKEYS /* id 73 */ TOGGLEKEYS;
+typedef struct tagTOGGLEKEYS /* id 73 */ *LPTOGGLEKEYS;
+void SetDebugErrorLevel (long unsigned int dwLevel /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void SetLastErrorEx (long unsigned int dwErrCode /* 0x8 */, long unsigned int dwType /* 0xc */)
+{ /* 0x0 */
+  /* file w95types.h line 94 addr 0x0 */
+  /* file w95types.h line 94 addr 0x3 */
+  /* file w95types.h line 103 addr 0x0 */
+  /* file w95types.h line 103 addr 0x3 */
+  /* file w95types.h line 112 addr 0x0 */
+  /* file w95types.h line 112 addr 0x3 */
+  /* file w95types.h line 121 addr 0x0 */
+  /* file w95types.h line 121 addr 0x3 */
+  /* file w95types.h line 130 addr 0x0 */
+  /* file w95types.h line 130 addr 0xc */
+  /* file w95types.h line 138 addr 0x0 */
+  /* file w95types.h line 138 addr 0x3 */
+  /* file winuser.c line 202 addr 0x0 */
+  /* file winuser.c line 202 addr 0x3 */
+  /* file winuser.c line 203 addr 0x0 */
+  /* file winuser.c line 203 addr 0x3 */
+  /* file winuser.c line 633 addr 0x0 */
+  /* file winuser.c line 633 addr 0x3 */
+  /* file winuser.c line 639 addr 0x0 */
+  /* file winuser.c line 639 addr 0x3 */
+  /* file winuser.c line 653 addr 0x0 */
+  /* file winuser.c line 653 addr 0x3 */
+  /* file winuser.c line 674 addr 0x0 */
+  /* file winuser.c line 674 addr 0x3 */
+  /* file winuser.c line 681 addr 0x0 */
+  /* file winuser.c line 681 addr 0x3 */
+  /* file winuser.c line 687 addr 0x0 */
+  /* file winuser.c line 687 addr 0x3 */
+  /* file winuser.c line 692 addr 0x0 */
+  /* file winuser.c line 692 addr 0x3 */
+  /* file winuser.c line 705 addr 0x0 */
+  /* file winuser.c line 705 addr 0x3 */
+  /* file winuser.c line 712 addr 0x0 */
+  /* file winuser.c line 712 addr 0x3 */
+  /* file winuser.c line 773 addr 0x0 */
+  /* file winuser.c line 773 addr 0x3 */
+  /* file winuser.c line 781 addr 0x0 */
+  /* file winuser.c line 781 addr 0x3 */
+  /* file winuser.c line 794 addr 0x0 */
+  /* file winuser.c line 794 addr 0x3 */
+  /* file winuser.c line 802 addr 0x0 */
+  /* file winuser.c line 802 addr 0x3 */
+  /* file winuser.c line 809 addr 0x0 */
+  /* file winuser.c line 809 addr 0x3 */
+  /* file winuser.c line 822 addr 0x0 */
+  /* file winuser.c line 822 addr 0x3 */
+  /* file winuser.c line 828 addr 0x0 */
+  /* file winuser.c line 828 addr 0x3 */
+  /* file winuser.c line 834 addr 0x0 */
+  /* file winuser.c line 834 addr 0x3 */
+  /* file winuser.c line 840 addr 0x0 */
+  /* file winuser.c line 840 addr 0x3 */
+  /* file winuser.c line 846 addr 0x0 */
+  /* file winuser.c line 846 addr 0x3 */
+  /* file winuser.c line 899 addr 0x0 */
+  /* file winuser.c line 899 addr 0x3 */
+  /* file winuser.c line 906 addr 0x0 */
+  /* file winuser.c line 906 addr 0x3 */
+  /* file winuser.c line 918 addr 0x0 */
+  /* file winuser.c line 918 addr 0x3 */
+  /* file winuser.c line 924 addr 0x0 */
+  /* file winuser.c line 924 addr 0x3 */
+  /* file winuser.c line 935 addr 0x0 */
+  /* file winuser.c line 935 addr 0x3 */
+  /* file winuser.c line 941 addr 0x0 */
+  /* file winuser.c line 941 addr 0x3 */
+  /* file winuser.c line 947 addr 0x0 */
+  /* file winuser.c line 947 addr 0x3 */
+  /* file winuser.c line 1593 addr 0x0 */
+  /* file winuser.c line 1593 addr 0x3 */
+  /* file winuser.c line 1598 addr 0x0 */
+  /* file winuser.c line 1598 addr 0x3 */
+  /* file winuser.c line 1873 addr 0x0 */
+  /* file winuser.c line 1873 addr 0x3 */
+  /* file winuser.c line 1915 addr 0x0 */
+  /* file winuser.c line 1915 addr 0x3 */
+  /* file winuser.c line 1925 addr 0x0 */
+  /* file winuser.c line 1925 addr 0x3 */
+  /* file winuser.c line 1932 addr 0x0 */
+  /* file winuser.c line 1932 addr 0x3 */
+  /* file winuser.c line 2172 addr 0x0 */
+  /* file winuser.c line 2172 addr 0x3 */
+  /* file winuser.c line 2180 addr 0x0 */
+  /* file winuser.c line 2180 addr 0x3 */
+  /* file winuser.c line 2191 addr 0x0 */
+  /* file winuser.c line 2191 addr 0x3 */
+  /* file winuser.c line 2197 addr 0x0 */
+  /* file winuser.c line 2197 addr 0x3 */
+  /* file winuser.c line 2202 addr 0x0 */
+  /* file winuser.c line 2202 addr 0x3 */
+  /* file winuser.c line 2214 addr 0x0 */
+  /* file winuser.c line 2214 addr 0x3 */
+  /* file winuser.c line 2224 addr 0x0 */
+  /* file winuser.c line 2224 addr 0x3 */
+  /* file winuser.c line 2233 addr 0x0 */
+  /* file winuser.c line 2233 addr 0x3 */
+  /* file winuser.c line 2256 addr 0x0 */
+  /* file winuser.c line 2256 addr 0x3 */
+  /* file winuser.c line 2263 addr 0x0 */
+  /* file winuser.c line 2263 addr 0x3 */
+  /* file winuser.c line 2305 addr 0x0 */
+  /* file winuser.c line 2305 addr 0x3 */
+  /* file winuser.c line 2311 addr 0x0 */
+  /* file winuser.c line 2311 addr 0x3 */
+  /* file winuser.c line 2317 addr 0x0 */
+  /* file winuser.c line 2317 addr 0x3 */
+  /* file winuser.c line 2323 addr 0x0 */
+  /* file winuser.c line 2323 addr 0x3 */
+  /* file winuser.c line 2329 addr 0x0 */
+  /* file winuser.c line 2329 addr 0x3 */
+  /* file winuser.c line 2336 addr 0x0 */
+  /* file winuser.c line 2336 addr 0x3 */
+  /* file winuser.c line 2346 addr 0x0 */
+  /* file winuser.c line 2346 addr 0x3 */
+  /* file winuser.c line 2354 addr 0x0 */
+  /* file winuser.c line 2354 addr 0x3 */
+  /* file winuser.c line 2371 addr 0x0 */
+  /* file winuser.c line 2371 addr 0x3 */
+  /* file winuser.c line 2382 addr 0x0 */
+  /* file winuser.c line 2382 addr 0x3 */
+  /* file winuser.c line 2396 addr 0x0 */
+  /* file winuser.c line 2396 addr 0x3 */
+  /* file winuser.c line 2404 addr 0x0 */
+  /* file winuser.c line 2404 addr 0x3 */
+  /* file winuser.c line 2420 addr 0x0 */
+  /* file winuser.c line 2420 addr 0x3 */
+  /* file winuser.c line 2430 addr 0x0 */
+  /* file winuser.c line 2430 addr 0x3 */
+  /* file winuser.c line 2438 addr 0x0 */
+  /* file winuser.c line 2438 addr 0x3 */
+  /* file winuser.c line 2439 addr 0x0 */
+  /* file winuser.c line 2439 addr 0x3 */
+  /* file winuser.c line 2480 addr 0x0 */
+  /* file winuser.c line 2480 addr 0x3 */
+  /* file winuser.c line 2488 addr 0x0 */
+  /* file winuser.c line 2488 addr 0x3 */
+  /* file winuser.c line 2502 addr 0x0 */
+  /* file winuser.c line 2502 addr 0x3 */
+  /* file winuser.c line 2510 addr 0x0 */
+  /* file winuser.c line 2510 addr 0x3 */
+  /* file winuser.c line 2538 addr 0x0 */
+  /* file winuser.c line 2538 addr 0x3 */
+  /* file winuser.c line 2545 addr 0x0 */
+  /* file winuser.c line 2545 addr 0x3 */
+  /* file winuser.c line 2551 addr 0x0 */
+  /* file winuser.c line 2551 addr 0x3 */
+  /* file winuser.c line 2558 addr 0x0 */
+  /* file winuser.c line 2558 addr 0x3 */
+  /* file winuser.c line 2567 addr 0x0 */
+  /* file winuser.c line 2567 addr 0x3 */
+  /* file winuser.c line 2575 addr 0x0 */
+  /* file winuser.c line 2575 addr 0x3 */
+  /* file winuser.c line 2586 addr 0x0 */
+  /* file winuser.c line 2586 addr 0x3 */
+  /* file winuser.c line 2624 addr 0x0 */
+  /* file winuser.c line 2624 addr 0x3 */
+  /* file winuser.c line 2633 addr 0x0 */
+  /* file winuser.c line 2633 addr 0x3 */
+  /* file winuser.c line 2646 addr 0x0 */
+  /* file winuser.c line 2646 addr 0x3 */
+  /* file winuser.c line 2652 addr 0x0 */
+  /* file winuser.c line 2652 addr 0x3 */
+  /* file winuser.c line 2658 addr 0x0 */
+  /* file winuser.c line 2658 addr 0x3 */
+  /* file winuser.c line 2664 addr 0x0 */
+  /* file winuser.c line 2664 addr 0x3 */
+  /* file winuser.c line 2669 addr 0x0 */
+  /* file winuser.c line 2669 addr 0x3 */
+  /* file winuser.c line 2681 addr 0x0 */
+  /* file winuser.c line 2681 addr 0x3 */
+  /* file winuser.c line 2687 addr 0x0 */
+  /* file winuser.c line 2687 addr 0x3 */
+  /* file winuser.c line 2700 addr 0x0 */
+  /* file winuser.c line 2700 addr 0x3 */
+  /* file winuser.c line 2707 addr 0x0 */
+  /* file winuser.c line 2707 addr 0x3 */
+  /* file winuser.c line 2718 addr 0x0 */
+  /* file winuser.c line 2718 addr 0x3 */
+  /* file winuser.c line 2722 addr 0x0 */
+  /* file winuser.c line 2722 addr 0x3 */
+  /* file winuser.c line 2732 addr 0x0 */
+  /* file winuser.c line 2732 addr 0x3 */
+  /* file winuser.c line 2736 addr 0x0 */
+  /* file winuser.c line 2736 addr 0x3 */
+  /* file winuser.c line 2767 addr 0x0 */
+  /* file winuser.c line 2767 addr 0x3 */
+  /* file winuser.c line 2783 addr 0x0 */
+  /* file winuser.c line 2783 addr 0x3 */
+  /* file winuser.c line 2808 addr 0x0 */
+  /* file winuser.c line 2808 addr 0x3 */
+  /* file winuser.c line 2814 addr 0x0 */
+  /* file winuser.c line 2814 addr 0x3 */
+  /* file winuser.c line 2821 addr 0x0 */
+  /* file winuser.c line 2821 addr 0x3 */
+  /* file winuser.c line 2827 addr 0x0 */
+  /* file winuser.c line 2827 addr 0x3 */
+  /* file winuser.c line 2834 addr 0x0 */
+  /* file winuser.c line 2834 addr 0x3 */
+  /* file winuser.c line 2842 addr 0x0 */
+  /* file winuser.c line 2842 addr 0x3 */
+  /* file winuser.c line 2850 addr 0x0 */
+  /* file winuser.c line 2850 addr 0x3 */
+  /* file winuser.c line 2857 addr 0x0 */
+  /* file winuser.c line 2857 addr 0x3 */
+  /* file winuser.c line 2863 addr 0x0 */
+  /* file winuser.c line 2863 addr 0x3 */
+  /* file winuser.c line 2869 addr 0x0 */
+  /* file winuser.c line 2869 addr 0x3 */
+  /* file winuser.c line 2880 addr 0x0 */
+  /* file winuser.c line 2880 addr 0x3 */
+  /* file winuser.c line 2892 addr 0x0 */
+  /* file winuser.c line 2892 addr 0x3 */
+  /* file winuser.c line 2899 addr 0x0 */
+  /* file winuser.c line 2899 addr 0x3 */
+  /* file winuser.c line 2906 addr 0x0 */
+  /* file winuser.c line 2906 addr 0x3 */
+  /* file winuser.c line 2915 addr 0x0 */
+  /* file winuser.c line 2915 addr 0x3 */
+  /* file winuser.c line 2928 addr 0x0 */
+  /* file winuser.c line 2928 addr 0x3 */
+  /* file winuser.c line 2934 addr 0x0 */
+  /* file winuser.c line 2934 addr 0x3 */
+  /* file winuser.c line 2942 addr 0x0 */
+  /* file winuser.c line 2942 addr 0x3 */
+  /* file winuser.c line 2948 addr 0x0 */
+  /* file winuser.c line 2948 addr 0x3 */
+  /* file winuser.c line 2954 addr 0x0 */
+  /* file winuser.c line 2954 addr 0x3 */
+  /* file winuser.c line 2960 addr 0x0 */
+  /* file winuser.c line 2960 addr 0x3 */
+  /* file winuser.c line 2966 addr 0x0 */
+  /* file winuser.c line 2966 addr 0x3 */
+  /* file winuser.c line 3072 addr 0x0 */
+  /* file winuser.c line 3072 addr 0x3 */
+  /* file winuser.c line 3081 addr 0x0 */
+  /* file winuser.c line 3081 addr 0x3 */
+  /* file winuser.c line 3096 addr 0x0 */
+  /* file winuser.c line 3096 addr 0x3 */
+  /* file winuser.c line 3105 addr 0x0 */
+  /* file winuser.c line 3105 addr 0x3 */
+  /* file winuser.c line 3140 addr 0x0 */
+  /* file winuser.c line 3140 addr 0x3 */
+  /* file winuser.c line 3149 addr 0x0 */
+  /* file winuser.c line 3149 addr 0x3 */
+  /* file winuser.c line 3164 addr 0x0 */
+  /* file winuser.c line 3164 addr 0x3 */
+  /* file winuser.c line 3173 addr 0x0 */
+  /* file winuser.c line 3173 addr 0x3 */
+  /* file winuser.c line 3205 addr 0x0 */
+  /* file winuser.c line 3205 addr 0x3 */
+  /* file winuser.c line 3212 addr 0x0 */
+  /* file winuser.c line 3212 addr 0x3 */
+  /* file winuser.c line 3221 addr 0x0 */
+  /* file winuser.c line 3221 addr 0x3 */
+  /* file winuser.c line 3230 addr 0x0 */
+  /* file winuser.c line 3230 addr 0x3 */
+  /* file winuser.c line 3238 addr 0x0 */
+  /* file winuser.c line 3238 addr 0x3 */
+  /* file winuser.c line 3245 addr 0x0 */
+  /* file winuser.c line 3245 addr 0x3 */
+  /* file winuser.c line 3259 addr 0x0 */
+  /* file winuser.c line 3259 addr 0x3 */
+  /* file winuser.c line 3267 addr 0x0 */
+  /* file winuser.c line 3267 addr 0x3 */
+  /* file winuser.c line 3280 addr 0x0 */
+  /* file winuser.c line 3280 addr 0x3 */
+  /* file winuser.c line 3289 addr 0x0 */
+  /* file winuser.c line 3289 addr 0x3 */
+  /* file winuser.c line 3296 addr 0x0 */
+  /* file winuser.c line 3296 addr 0x3 */
+  /* file winuser.c line 3306 addr 0x0 */
+  /* file winuser.c line 3306 addr 0x3 */
+  /* file winuser.c line 3315 addr 0x0 */
+  /* file winuser.c line 3315 addr 0x3 */
+  /* file winuser.c line 3328 addr 0x0 */
+  /* file winuser.c line 3328 addr 0x3 */
+  /* file winuser.c line 3336 addr 0x0 */
+  /* file winuser.c line 3336 addr 0x3 */
+  /* file winuser.c line 3342 addr 0x0 */
+  /* file winuser.c line 3342 addr 0x3 */
+  /* file winuser.c line 3347 addr 0x0 */
+  /* file winuser.c line 3347 addr 0x3 */
+  /* file winuser.c line 3356 addr 0x0 */
+  /* file winuser.c line 3356 addr 0x3 */
+  /* file winuser.c line 3364 addr 0x0 */
+  /* file winuser.c line 3364 addr 0x3 */
+  /* file winuser.c line 3385 addr 0x0 */
+  /* file winuser.c line 3385 addr 0x3 */
+  /* file winuser.c line 3391 addr 0x0 */
+  /* file winuser.c line 3391 addr 0x3 */
+  /* file winuser.c line 3410 addr 0x0 */
+  /* file winuser.c line 3410 addr 0x3 */
+  /* file winuser.c line 3416 addr 0x0 */
+  /* file winuser.c line 3416 addr 0x3 */
+  /* file winuser.c line 3422 addr 0x0 */
+  /* file winuser.c line 3422 addr 0x3 */
+  /* file winuser.c line 3428 addr 0x0 */
+  /* file winuser.c line 3428 addr 0x3 */
+  /* file winuser.c line 3434 addr 0x0 */
+  /* file winuser.c line 3434 addr 0x3 */
+  /* file winuser.c line 3441 addr 0x0 */
+  /* file winuser.c line 3441 addr 0x3 */
+  /* file winuser.c line 3448 addr 0x0 */
+  /* file winuser.c line 3448 addr 0x3 */
+  /* file winuser.c line 3454 addr 0x0 */
+  /* file winuser.c line 3454 addr 0x3 */
+  /* file winuser.c line 3460 addr 0x0 */
+  /* file winuser.c line 3460 addr 0x3 */
+  /* file winuser.c line 3465 addr 0x0 */
+  /* file winuser.c line 3465 addr 0x3 */
+  /* file winuser.c line 3476 addr 0x0 */
+  /* file winuser.c line 3476 addr 0x3 */
+  /* file winuser.c line 3482 addr 0x0 */
+  /* file winuser.c line 3482 addr 0x3 */
+  /* file winuser.c line 3490 addr 0x0 */
+  /* file winuser.c line 3490 addr 0x3 */
+  /* file winuser.c line 3497 addr 0x0 */
+  /* file winuser.c line 3497 addr 0x3 */
+  /* file winuser.c line 3508 addr 0x0 */
+  /* file winuser.c line 3508 addr 0x3 */
+  /* file winuser.c line 3514 addr 0x0 */
+  /* file winuser.c line 3514 addr 0x3 */
+  /* file winuser.c line 3521 addr 0x0 */
+  /* file winuser.c line 3521 addr 0x3 */
+  /* file winuser.c line 3527 addr 0x0 */
+  /* file winuser.c line 3527 addr 0x3 */
+  /* file winuser.c line 3540 addr 0x0 */
+  /* file winuser.c line 3540 addr 0x3 */
+  /* file winuser.c line 3546 addr 0x0 */
+  /* file winuser.c line 3546 addr 0x3 */
+  /* file winuser.c line 3558 addr 0x0 */
+  /* file winuser.c line 3558 addr 0x3 */
+  /* file winuser.c line 3564 addr 0x0 */
+  /* file winuser.c line 3564 addr 0x3 */
+  /* file winuser.c line 3577 addr 0x0 */
+  /* file winuser.c line 3577 addr 0x3 */
+  /* file winuser.c line 3584 addr 0x0 */
+  /* file winuser.c line 3584 addr 0x3 */
+  /* file winuser.c line 3597 addr 0x0 */
+  /* file winuser.c line 3597 addr 0x3 */
+  /* file winuser.c line 3604 addr 0x0 */
+  /* file winuser.c line 3604 addr 0x3 */
+  /* file winuser.c line 3615 addr 0x0 */
+  /* file winuser.c line 3615 addr 0x3 */
+  /* file winuser.c line 3620 addr 0x0 */
+  /* file winuser.c line 3620 addr 0x3 */
+  /* file winuser.c line 3632 addr 0x0 */
+  /* file winuser.c line 3632 addr 0x3 */
+  /* file winuser.c line 3638 addr 0x0 */
+  /* file winuser.c line 3638 addr 0x3 */
+  /* file winuser.c line 3649 addr 0x0 */
+  /* file winuser.c line 3649 addr 0x3 */
+  /* file winuser.c line 3654 addr 0x0 */
+  /* file winuser.c line 3654 addr 0x3 */
+  /* file winuser.c line 3666 addr 0x0 */
+  /* file winuser.c line 3666 addr 0x3 */
+  /* file winuser.c line 3672 addr 0x0 */
+  /* file winuser.c line 3672 addr 0x3 */
+  /* file winuser.c line 3683 addr 0x0 */
+  /* file winuser.c line 3683 addr 0x3 */
+  /* file winuser.c line 3688 addr 0x0 */
+  /* file winuser.c line 3688 addr 0x3 */
+  /* file winuser.c line 3700 addr 0x0 */
+  /* file winuser.c line 3700 addr 0x3 */
+  /* file winuser.c line 3706 addr 0x0 */
+  /* file winuser.c line 3706 addr 0x3 */
+  /* file winuser.c line 3720 addr 0x0 */
+  /* file winuser.c line 3720 addr 0xd */
+  /* file winuser.c line 3729 addr 0x0 */
+  /* file winuser.c line 3729 addr 0xd */
+  /* file winuser.c line 3755 addr 0x0 */
+  /* file winuser.c line 3755 addr 0xc */
+  /* file winuser.c line 3760 addr 0x0 */
+  /* file winuser.c line 3760 addr 0xd */
+  /* file winuser.c line 3771 addr 0x0 */
+  /* file winuser.c line 3771 addr 0xc */
+  /* file winuser.c line 3776 addr 0x0 */
+  /* file winuser.c line 3776 addr 0xd */
+  /* file winuser.c line 3787 addr 0x0 */
+  /* file winuser.c line 3787 addr 0xc */
+  /* file winuser.c line 3792 addr 0x0 */
+  /* file winuser.c line 3792 addr 0xd */
+  /* file winuser.c line 3803 addr 0x0 */
+  /* file winuser.c line 3803 addr 0xc */
+  /* file winuser.c line 3808 addr 0x0 */
+  /* file winuser.c line 3808 addr 0xd */
+  /* file winuser.c line 3821 addr 0x0 */
+  /* file winuser.c line 3821 addr 0x3 */
+  /* file winuser.c line 3827 addr 0x0 */
+  /* file winuser.c line 3827 addr 0x3 */
+  /* file winuser.c line 3833 addr 0x0 */
+  /* file winuser.c line 3833 addr 0x3 */
+  /* file winuser.c line 3839 addr 0x0 */
+  /* file winuser.c line 3839 addr 0x3 */
+  /* file winuser.c line 3845 addr 0x0 */
+  /* file winuser.c line 3845 addr 0x3 */
+  /* file winuser.c line 3851 addr 0x0 */
+  /* file winuser.c line 3851 addr 0x3 */
+  /* file winuser.c line 3857 addr 0x0 */
+  /* file winuser.c line 3857 addr 0x3 */
+  /* file winuser.c line 3863 addr 0x0 */
+  /* file winuser.c line 3863 addr 0x3 */
+  /* file winuser.c line 3872 addr 0x0 */
+  /* file winuser.c line 3872 addr 0x3 */
+  /* file winuser.c line 3880 addr 0x0 */
+  /* file winuser.c line 3880 addr 0x3 */
+  /* file winuser.c line 3891 addr 0x0 */
+  /* file winuser.c line 3891 addr 0x3 */
+  /* file winuser.c line 3901 addr 0x0 */
+  /* file winuser.c line 3901 addr 0x3 */
+  /* file winuser.c line 3913 addr 0x0 */
+  /* file winuser.c line 3913 addr 0x3 */
+  /* file winuser.c line 3925 addr 0x0 */
+  /* file winuser.c line 3925 addr 0x3 */
+  /* file winuser.c line 3931 addr 0x0 */
+  /* file winuser.c line 3931 addr 0xd */
+  /* file winuser.c line 3937 addr 0x0 */
+  /* file winuser.c line 3937 addr 0xc */
+  /* file winuser.c line 3942 addr 0x0 */
+  /* file winuser.c line 3942 addr 0xd */
+  /* file winuser.c line 3954 addr 0x0 */
+  /* file winuser.c line 3954 addr 0xc */
+  /* file winuser.c line 3959 addr 0x0 */
+  /* file winuser.c line 3959 addr 0xd */
+  /* file winuser.c line 3976 addr 0x0 */
+  /* file winuser.c line 3976 addr 0x12 */
+  /* file winuser.c line 3996 addr 0x0 */
+  /* file winuser.c line 3996 addr 0x3 */
+  /* file winuser.c line 4003 addr 0x0 */
+  /* file winuser.c line 4003 addr 0x3 */
+  /* file winuser.c line 4009 addr 0x0 */
+  /* file winuser.c line 4009 addr 0x3 */
+  /* file winuser.c line 4023 addr 0x0 */
+  /* file winuser.c line 4023 addr 0x3 */
+  /* file winuser.c line 4030 addr 0x0 */
+  /* file winuser.c line 4030 addr 0x3 */
+  /* file winuser.c line 4042 addr 0x0 */
+  /* file winuser.c line 4042 addr 0x3 */
+  /* file winuser.c line 4048 addr 0x0 */
+  /* file winuser.c line 4048 addr 0x3 */
+  /* file winuser.c line 4054 addr 0x0 */
+  /* file winuser.c line 4054 addr 0x3 */
+  /* file winuser.c line 4060 addr 0x0 */
+  /* file winuser.c line 4060 addr 0x3 */
+  /* file winuser.c line 4066 addr 0x0 */
+  /* file winuser.c line 4066 addr 0x3 */
+  /* file winuser.c line 4076 addr 0x0 */
+  /* file winuser.c line 4076 addr 0x3 */
+  /* file winuser.c line 4086 addr 0x0 */
+  /* file winuser.c line 4086 addr 0x3 */
+  /* file winuser.c line 4137 addr 0x0 */
+  /* file winuser.c line 4137 addr 0x3 */
+  /* file winuser.c line 4144 addr 0x0 */
+  /* file winuser.c line 4144 addr 0x3 */
+  /* file winuser.c line 4150 addr 0x0 */
+  /* file winuser.c line 4150 addr 0x3 */
+  /* file winuser.c line 4157 addr 0x0 */
+  /* file winuser.c line 4157 addr 0x3 */
+  /* file winuser.c line 4163 addr 0x0 */
+  /* file winuser.c line 4163 addr 0x3 */
+  /* file winuser.c line 4170 addr 0x0 */
+  /* file winuser.c line 4170 addr 0x3 */
+  /* file winuser.c line 4176 addr 0x0 */
+  /* file winuser.c line 4176 addr 0x3 */
+  /* file winuser.c line 4187 addr 0x0 */
+  /* file winuser.c line 4187 addr 0x3 */
+  /* file winuser.c line 4192 addr 0x0 */
+  /* file winuser.c line 4192 addr 0x3 */
+  /* file winuser.c line 4203 addr 0x0 */
+  /* file winuser.c line 4203 addr 0x3 */
+  /* file winuser.c line 4211 addr 0x0 */
+  /* file winuser.c line 4211 addr 0x3 */
+  /* file winuser.c line 4218 addr 0x0 */
+  /* file winuser.c line 4218 addr 0x3 */
+  /* file winuser.c line 4233 addr 0x0 */
+  /* file winuser.c line 4233 addr 0x3 */
+  /* file winuser.c line 4240 addr 0x0 */
+  /* file winuser.c line 4240 addr 0x3 */
+  /* file winuser.c line 4351 addr 0x0 */
+  /* file winuser.c line 4351 addr 0x3 */
+  /* file winuser.c line 4362 addr 0x0 */
+  /* file winuser.c line 4362 addr 0x3 */
+  /* file winuser.c line 4368 addr 0x0 */
+  /* file winuser.c line 4368 addr 0x3 */
+  /* file winuser.c line 4379 addr 0x0 */
+  /* file winuser.c line 4379 addr 0x3 */
+  /* file winuser.c line 4384 addr 0x0 */
+  /* file winuser.c line 4384 addr 0x3 */
+  /* file winuser.c line 4395 addr 0x0 */
+  /* file winuser.c line 4395 addr 0x3 */
+  /* file winuser.c line 4402 addr 0x0 */
+  /* file winuser.c line 4402 addr 0x3 */
+  /* file winuser.c line 4412 addr 0x0 */
+  /* file winuser.c line 4412 addr 0x3 */
+  /* file winuser.c line 4421 addr 0x0 */
+  /* file winuser.c line 4421 addr 0x3 */
+  /* file winuser.c line 4435 addr 0x0 */
+  /* file winuser.c line 4435 addr 0x3 */
+  /* file winuser.c line 4445 addr 0x0 */
+  /* file winuser.c line 4445 addr 0x3 */
+  /* file winuser.c line 4454 addr 0x0 */
+  /* file winuser.c line 4454 addr 0x3 */
+  /* file winuser.c line 4467 addr 0x0 */
+  /* file winuser.c line 4467 addr 0x3 */
+  /* file winuser.c line 4473 addr 0x0 */
+  /* file winuser.c line 4473 addr 0x3 */
+  /* file winuser.c line 4481 addr 0x0 */
+  /* file winuser.c line 4481 addr 0x3 */
+  /* file winuser.c line 4489 addr 0x0 */
+  /* file winuser.c line 4489 addr 0x3 */
+  /* file winuser.c line 4495 addr 0x0 */
+  /* file winuser.c line 4495 addr 0x3 */
+  /* file winuser.c line 4501 addr 0x0 */
+  /* file winuser.c line 4501 addr 0x3 */
+  /* file winuser.c line 4509 addr 0x0 */
+  /* file winuser.c line 4509 addr 0x3 */
+  /* file winuser.c line 4517 addr 0x0 */
+  /* file winuser.c line 4517 addr 0x3 */
+  /* file winuser.c line 4524 addr 0x0 */
+  /* file winuser.c line 4524 addr 0x3 */
+  /* file winuser.c line 4531 addr 0x0 */
+  /* file winuser.c line 4531 addr 0x3 */
+  /* file winuser.c line 4537 addr 0x0 */
+  /* file winuser.c line 4537 addr 0x3 */
+  /* file winuser.c line 4548 addr 0x0 */
+  /* file winuser.c line 4548 addr 0x3 */
+  /* file winuser.c line 4558 addr 0x0 */
+  /* file winuser.c line 4558 addr 0x3 */
+  /* file winuser.c line 4573 addr 0x0 */
+  /* file winuser.c line 4573 addr 0x3 */
+  /* file winuser.c line 4582 addr 0x0 */
+  /* file winuser.c line 4582 addr 0x3 */
+  /* file winuser.c line 4598 addr 0x0 */
+  /* file winuser.c line 4598 addr 0x3 */
+  /* file winuser.c line 4608 addr 0x0 */
+  /* file winuser.c line 4608 addr 0x3 */
+  /* file winuser.c line 4620 addr 0x0 */
+  /* file winuser.c line 4620 addr 0x3 */
+  /* file winuser.c line 4628 addr 0x0 */
+  /* file winuser.c line 4628 addr 0x3 */
+  /* file winuser.c line 4638 addr 0x0 */
+  /* file winuser.c line 4638 addr 0x3 */
+  /* file winuser.c line 4644 addr 0x0 */
+  /* file winuser.c line 4644 addr 0x3 */
+  /* file winuser.c line 4656 addr 0x0 */
+  /* file winuser.c line 4656 addr 0x3 */
+  /* file winuser.c line 4672 addr 0x0 */
+  /* file winuser.c line 4672 addr 0x3 */
+  /* file winuser.c line 4738 addr 0x0 */
+  /* file winuser.c line 4738 addr 0x3 */
+  /* file winuser.c line 4747 addr 0x0 */
+  /* file winuser.c line 4747 addr 0x3 */
+  /* file winuser.c line 4762 addr 0x0 */
+  /* file winuser.c line 4762 addr 0x3 */
+  /* file winuser.c line 4771 addr 0x0 */
+  /* file winuser.c line 4771 addr 0x3 */
+  /* file winuser.c line 4786 addr 0x0 */
+  /* file winuser.c line 4786 addr 0x3 */
+  /* file winuser.c line 4795 addr 0x0 */
+  /* file winuser.c line 4795 addr 0x3 */
+  /* file winuser.c line 4806 addr 0x0 */
+  /* file winuser.c line 4806 addr 0x3 */
+  /* file winuser.c line 4807 addr 0x0 */
+  /* file winuser.c line 4807 addr 0x3 */
+  /* file winuser.c line 4809 addr 0x0 */
+  /* file winuser.c line 4809 addr 0x3 */
+  /* file winuser.c line 4810 addr 0x0 */
+  /* file winuser.c line 4810 addr 0x3 */
+  /* file winuser.c line 4864 addr 0x0 */
+  /* file winuser.c line 4864 addr 0x3 */
+  /* file winuser.c line 4869 addr 0x0 */
+  /* file winuser.c line 4869 addr 0x3 */
+  /* file winuser.c line 4879 addr 0x0 */
+  /* file winuser.c line 4879 addr 0x3 */
+  /* file winuser.c line 4934 addr 0x0 */
+  /* file winuser.c line 4934 addr 0x3 */
+  /* file winuser.c line 4943 addr 0x0 */
+  /* file winuser.c line 4943 addr 0x3 */
+  /* file winuser.c line 4955 addr 0x0 */
+  /* file winuser.c line 4955 addr 0x3 */
+  /* file winuser.c line 4959 addr 0x0 */
+  /* file winuser.c line 4959 addr 0x3 */
+  /* file winuser.c line 4981 addr 0x0 */
+  /* file winuser.c line 4981 addr 0x3 */
+  /* file winuser.c line 4994 addr 0x0 */
+  /* file winuser.c line 4994 addr 0x3 */
+  /* file winuser.c line 5017 addr 0x0 */
+  /* file winuser.c line 5017 addr 0x3 */
+  /* file winuser.c line 5018 addr 0x0 */
+  /* file winuser.c line 5018 addr 0x3 */
+  /* file winuser.c line 5038 addr 0x0 */
+  /* file winuser.c line 5038 addr 0x3 */
+  /* file winuser.c line 5050 addr 0x0 */
+  /* file winuser.c line 5050 addr 0x3 */
+  /* file winuser.c line 5065 addr 0x0 */
+  /* file winuser.c line 5065 addr 0x3 */
+  /* file winuser.c line 5074 addr 0x0 */
+  /* file winuser.c line 5074 addr 0x3 */
+  /* file winuser.c line 5085 addr 0x0 */
+  /* file winuser.c line 5085 addr 0x3 */
+  /* file winuser.c line 5091 addr 0x0 */
+  /* file winuser.c line 5091 addr 0x3 */
+  /* file winuser.c line 5097 addr 0x0 */
+  /* file winuser.c line 5097 addr 0x3 */
+  /* file winuser.c line 5100 addr 0x0 */
+  /* file winuser.c line 5100 addr 0x3 */
+  /* file winuser.c line 5108 addr 0x0 */
+  /* file winuser.c line 5108 addr 0x3 */
+  /* file winuser.c line 5114 addr 0x0 */
+  /* file winuser.c line 5114 addr 0x3 */
+  /* file winuser.c line 5120 addr 0x0 */
+  /* file winuser.c line 5120 addr 0x3 */
+  /* file winuser.c line 5128 addr 0x0 */
+  /* file winuser.c line 5128 addr 0x3 */
+  /* file winuser.c line 5157 addr 0x0 */
+  /* file winuser.c line 5157 addr 0x3 */
+  /* file winuser.c line 5164 addr 0x0 */
+  /* file winuser.c line 5164 addr 0x3 */
+  /* file winuser.c line 5171 addr 0x0 */
+  /* file winuser.c line 5171 addr 0x3 */
+  /* file winuser.c line 5178 addr 0x0 */
+  /* file winuser.c line 5178 addr 0x3 */
+  /* file winuser.c line 5186 addr 0x0 */
+  /* file winuser.c line 5186 addr 0x3 */
+  /* file winuser.c line 5194 addr 0x0 */
+  /* file winuser.c line 5194 addr 0x3 */
+  /* file winuser.c line 5202 addr 0x0 */
+  /* file winuser.c line 5202 addr 0x3 */
+  /* file winuser.c line 5209 addr 0x0 */
+  /* file winuser.c line 5209 addr 0x3 */
+  /* file winuser.c line 5216 addr 0x0 */
+  /* file winuser.c line 5216 addr 0x3 */
+  /* file winuser.c line 5224 addr 0x0 */
+  /* file winuser.c line 5224 addr 0x3 */
+  /* file winuser.c line 5231 addr 0x0 */
+  /* file winuser.c line 5231 addr 0x3 */
+  /* file winuser.c line 5239 addr 0x0 */
+  /* file winuser.c line 5239 addr 0x3 */
+  /* file winuser.c line 5246 addr 0x0 */
+  /* file winuser.c line 5246 addr 0x3 */
+  /* file winuser.c line 5256 addr 0x0 */
+  /* file winuser.c line 5256 addr 0x3 */
+  /* file winuser.c line 5288 addr 0x0 */
+  /* file winuser.c line 5288 addr 0x3 */
+  /* file winuser.c line 5298 addr 0x0 */
+  /* file winuser.c line 5298 addr 0x3 */
+  /* file winuser.c line 5310 addr 0x0 */
+  /* file winuser.c line 5310 addr 0x3 */
+  /* file winuser.c line 5323 addr 0x0 */
+  /* file winuser.c line 5323 addr 0x3 */
+  /* file winuser.c line 5340 addr 0x0 */
+  /* file winuser.c line 5340 addr 0x3 */
+  /* file winuser.c line 5347 addr 0x0 */
+  /* file winuser.c line 5347 addr 0x3 */
+  /* file winuser.c line 5357 addr 0x0 */
+  /* file winuser.c line 5357 addr 0x3 */
+  /* file winuser.c line 5366 addr 0x0 */
+  /* file winuser.c line 5366 addr 0x3 */
+  /* file winuser.c line 5374 addr 0x0 */
+  /* file winuser.c line 5374 addr 0x3 */
+  /* file winuser.c line 5382 addr 0x0 */
+  /* file winuser.c line 5382 addr 0x3 */
+  /* file winuser.c line 5409 addr 0x0 */
+  /* file winuser.c line 5409 addr 0x3 */
+  /* file winuser.c line 5416 addr 0x0 */
+  /* file winuser.c line 5416 addr 0x3 */
+  /* file winuser.c line 5428 addr 0x0 */
+  /* file winuser.c line 5428 addr 0x3 */
+  /* file winuser.c line 5434 addr 0x0 */
+  /* file winuser.c line 5434 addr 0x3 */
+  /* file winuser.c line 5446 addr 0x0 */
+  /* file winuser.c line 5446 addr 0x3 */
+  /* file winuser.c line 5452 addr 0x0 */
+  /* file winuser.c line 5452 addr 0x3 */
+  /* file winuser.c line 5465 addr 0x0 */
+  /* file winuser.c line 5465 addr 0x3 */
+  /* file winuser.c line 5472 addr 0x0 */
+  /* file winuser.c line 5472 addr 0x3 */
+  /* file winuser.c line 5484 addr 0x0 */
+  /* file winuser.c line 5484 addr 0x3 */
+  /* file winuser.c line 5490 addr 0x0 */
+  /* file winuser.c line 5490 addr 0x3 */
+  /* file winuser.c line 5502 addr 0x0 */
+  /* file winuser.c line 5502 addr 0x3 */
+  /* file winuser.c line 5508 addr 0x0 */
+  /* file winuser.c line 5508 addr 0x3 */
+  /* file winuser.c line 5521 addr 0x0 */
+  /* file winuser.c line 5521 addr 0x3 */
+  /* file winuser.c line 5528 addr 0x0 */
+  /* file winuser.c line 5528 addr 0x3 */
+  /* file winuser.c line 5539 addr 0x0 */
+  /* file winuser.c line 5539 addr 0x3 */
+  /* file winuser.c line 5544 addr 0x0 */
+  /* file winuser.c line 5544 addr 0x3 */
+  /* file winuser.c line 5556 addr 0x0 */
+  /* file winuser.c line 5556 addr 0x3 */
+  /* file winuser.c line 5563 addr 0x0 */
+  /* file winuser.c line 5563 addr 0x3 */
+  /* file winuser.c line 5571 addr 0x0 */
+  /* file winuser.c line 5571 addr 0x3 */
+  /* file winuser.c line 5580 addr 0x0 */
+  /* file winuser.c line 5580 addr 0x3 */
+  /* file winuser.c line 5595 addr 0x0 */
+  /* file winuser.c line 5595 addr 0x3 */
+  /* file winuser.c line 5596 addr 0x0 */
+  /* file winuser.c line 5596 addr 0x3 */
+  /* file winuser.c line 5597 addr 0x0 */
+  /* file winuser.c line 5597 addr 0x3 */
+  /* file winuser.c line 5598 addr 0x0 */
+  /* file winuser.c line 5598 addr 0x3 */
+  /* file winuser.c line 5680 addr 0x0 */
+  /* file winuser.c line 5680 addr 0x3 */
+  /* file winuser.c line 5688 addr 0x0 */
+  /* file winuser.c line 5688 addr 0x3 */
+  /* file winuser.c line 5703 addr 0x0 */
+  /* file winuser.c line 5703 addr 0xd */
+  /* file winuser.c line 5712 addr 0x0 */
+  /* file winuser.c line 5712 addr 0xd */
+  /* file winuser.c line 5760 addr 0x0 */
+  /* file winuser.c line 5760 addr 0x3 */
+  /* file winuser.c line 5761 addr 0x0 */
+  /* file winuser.c line 5761 addr 0x3 */
+  /* file winuser.c line 5775 addr 0x0 */
+  /* file winuser.c line 5775 addr 0x3 */
+  /* file winuser.c line 5783 addr 0x0 */
+  /* file winuser.c line 5783 addr 0x3 */
+  /* file winuser.c line 5790 addr 0x0 */
+  /* file winuser.c line 5790 addr 0x3 */
+  /* file winuser.c line 5796 addr 0x0 */
+  /* file winuser.c line 5796 addr 0x3 */
+  /* file winuser.c line 5802 addr 0x0 */
+  /* file winuser.c line 5802 addr 0x3 */
+  /* file winuser.c line 5808 addr 0x0 */
+  /* file winuser.c line 5808 addr 0x3 */
+  /* file winuser.c line 5814 addr 0x0 */
+  /* file winuser.c line 5814 addr 0x3 */
+  /* file winuser.c line 5820 addr 0x0 */
+  /* file winuser.c line 5820 addr 0x3 */
+  /* file winuser.c line 5829 addr 0x0 */
+  /* file winuser.c line 5829 addr 0x3 */
+  /* file winuser.c line 5835 addr 0x0 */
+  /* file winuser.c line 5835 addr 0x3 */
+  /* file winuser.c line 5841 addr 0x0 */
+  /* file winuser.c line 5841 addr 0x3 */
+  /* file winuser.c line 5847 addr 0x0 */
+  /* file winuser.c line 5847 addr 0x3 */
+  /* file winuser.c line 5853 addr 0x0 */
+  /* file winuser.c line 5853 addr 0x3 */
+  /* file winuser.c line 5859 addr 0x0 */
+  /* file winuser.c line 5859 addr 0x3 */
+  /* file winuser.c line 5866 addr 0x0 */
+  /* file winuser.c line 5866 addr 0x3 */
+  /* file winuser.c line 5872 addr 0x0 */
+  /* file winuser.c line 5872 addr 0x3 */
+  /* file winuser.c line 5879 addr 0x0 */
+  /* file winuser.c line 5879 addr 0x3 */
+  /* file winuser.c line 5886 addr 0x0 */
+  /* file winuser.c line 5886 addr 0x3 */
+  /* file winuser.c line 5895 addr 0x0 */
+  /* file winuser.c line 5895 addr 0x3 */
+  /* file winuser.c line 5901 addr 0x0 */
+  /* file winuser.c line 5901 addr 0x3 */
+  /* file winuser.c line 5908 addr 0x0 */
+  /* file winuser.c line 5908 addr 0x3 */
+  /* file winuser.c line 5916 addr 0x0 */
+  /* file winuser.c line 5916 addr 0x3 */
+  /* file winuser.c line 5974 addr 0x0 */
+  /* file winuser.c line 5974 addr 0x3 */
+  /* file winuser.c line 5981 addr 0x0 */
+  /* file winuser.c line 5981 addr 0x3 */
+  /* file winuser.c line 5992 addr 0x0 */
+  /* file winuser.c line 5992 addr 0x3 */
+  /* file winuser.c line 6001 addr 0x0 */
+  /* file winuser.c line 6001 addr 0x3 */
+  /* file winuser.c line 6009 addr 0x0 */
+  /* file winuser.c line 6009 addr 0x3 */
+  /* file winuser.c line 6017 addr 0x0 */
+  /* file winuser.c line 6017 addr 0x3 */
+  /* file winuser.c line 6024 addr 0x0 */
+  /* file winuser.c line 6024 addr 0x3 */
+  /* file winuser.c line 6034 addr 0x0 */
+  /* file winuser.c line 6034 addr 0x3 */
+  /* file winuser.c line 6040 addr 0x0 */
+  /* file winuser.c line 6040 addr 0x3 */
+  /* file winuser.c line 6047 addr 0x0 */
+  /* file winuser.c line 6047 addr 0x3 */
+  /* file winuser.c line 6055 addr 0x0 */
+  /* file winuser.c line 6055 addr 0x3 */
+  /* file winuser.c line 6063 addr 0x0 */
+  /* file winuser.c line 6063 addr 0x3 */
+  /* file winuser.c line 6071 addr 0x0 */
+  /* file winuser.c line 6071 addr 0x3 */
+  /* file winuser.c line 6079 addr 0x0 */
+  /* file winuser.c line 6079 addr 0x3 */
+  /* file winuser.c line 6087 addr 0x0 */
+  /* file winuser.c line 6087 addr 0x3 */
+  /* file winuser.c line 6093 addr 0x0 */
+  /* file winuser.c line 6093 addr 0x3 */
+  /* file winuser.c line 6100 addr 0x0 */
+  /* file winuser.c line 6100 addr 0x3 */
+  /* file winuser.c line 6107 addr 0x0 */
+  /* file winuser.c line 6107 addr 0x3 */
+  /* file winuser.c line 6116 addr 0x0 */
+  /* file winuser.c line 6116 addr 0x3 */
+  /* file winuser.c line 6124 addr 0x0 */
+  /* file winuser.c line 6124 addr 0xd */
+  /* file winuser.c line 6131 addr 0x0 */
+  /* file winuser.c line 6131 addr 0x3 */
+  /* file winuser.c line 6137 addr 0x0 */
+  /* file winuser.c line 6137 addr 0x3 */
+  /* file winuser.c line 6150 addr 0x0 */
+  /* file winuser.c line 6150 addr 0x3 */
+  /* file winuser.c line 6157 addr 0x0 */
+  /* file winuser.c line 6157 addr 0x3 */
+  /* file winuser.c line 6169 addr 0x0 */
+  /* file winuser.c line 6169 addr 0x3 */
+  /* file winuser.c line 6177 addr 0x0 */
+  /* file winuser.c line 6177 addr 0xd */
+  /* file winuser.c line 6184 addr 0x0 */
+  /* file winuser.c line 6184 addr 0x3 */
+  /* file winuser.c line 6190 addr 0x0 */
+  /* file winuser.c line 6190 addr 0x3 */
+  /* file winuser.c line 6203 addr 0x0 */
+  /* file winuser.c line 6203 addr 0x3 */
+  /* file winuser.c line 6210 addr 0x0 */
+  /* file winuser.c line 6210 addr 0x3 */
+  /* file winuser.c line 6223 addr 0x0 */
+  /* file winuser.c line 6223 addr 0x3 */
+  /* file winuser.c line 6230 addr 0x0 */
+  /* file winuser.c line 6230 addr 0x3 */
+  /* file winuser.c line 6237 addr 0x0 */
+  /* file winuser.c line 6237 addr 0x3 */
+  /* file winuser.c line 6245 addr 0x0 */
+  /* file winuser.c line 6245 addr 0x3 */
+  /* file winuser.c line 6252 addr 0x0 */
+  /* file winuser.c line 6252 addr 0x3 */
+  /* file winuser.c line 6258 addr 0x0 */
+  /* file winuser.c line 6258 addr 0x3 */
+  /* file winuser.c line 6266 addr 0x0 */
+  /* file winuser.c line 6266 addr 0x3 */
+  /* file winuser.c line 6267 addr 0x0 */
+  /* file winuser.c line 6267 addr 0x3 */
+  /* file winuser.c line 6282 addr 0x0 */
+  /* file winuser.c line 6282 addr 0x3 */
+  /* file winuser.c line 6290 addr 0x0 */
+  /* file winuser.c line 6290 addr 0x3 */
+  /* file winuser.c line 6300 addr 0x0 */
+  /* file winuser.c line 6300 addr 0x3 */
+  /* file winuser.c line 6307 addr 0x0 */
+  /* file winuser.c line 6307 addr 0x3 */
+  /* file winuser.c line 6318 addr 0x0 */
+  /* file winuser.c line 6318 addr 0x3 */
+  /* file winuser.c line 6329 addr 0x0 */
+  /* file winuser.c line 6329 addr 0x3 */
+  /* file winuser.c line 6338 addr 0x0 */
+  /* file winuser.c line 6338 addr 0x3 */
+  /* file winuser.c line 6356 addr 0x0 */
+  /* file winuser.c line 6356 addr 0x3 */
+  /* file winuser.c line 6389 addr 0x0 */
+  /* file winuser.c line 6389 addr 0x3 */
+  /* file winuser.c line 6395 addr 0x0 */
+  /* file winuser.c line 6395 addr 0x3 */
+  /* file winuser.c line 6409 addr 0x0 */
+  /* file winuser.c line 6409 addr 0x3 */
+  /* file winuser.c line 6418 addr 0x0 */
+  /* file winuser.c line 6418 addr 0x3 */
+  /* file winuser.c line 6426 addr 0x0 */
+  /* file winuser.c line 6426 addr 0x3 */
+  /* file winuser.c line 6437 addr 0x0 */
+  /* file winuser.c line 6437 addr 0x3 */
+  /* file winuser.c line 6446 addr 0x0 */
+  /* file winuser.c line 6446 addr 0x3 */
+  /* file winuser.c line 6546 addr 0x0 */
+  /* file winuser.c line 6546 addr 0x3 */
+  /* file winuser.c line 6614 addr 0x0 */
+  /* file winuser.c line 6614 addr 0x3 */
+  /* file winuser.c line 6620 addr 0x0 */
+  /* file winuser.c line 6620 addr 0x3 */
+  /* file winuser.c line 6632 addr 0x0 */
+  /* file winuser.c line 6632 addr 0x3 */
+  /* file winuser.c line 6638 addr 0x0 */
+  /* file winuser.c line 6638 addr 0x3 */
+  /* file winuser.c line 6649 addr 0x0 */
+  /* file winuser.c line 6649 addr 0x3 */
+  /* file winuser.c line 6654 addr 0x0 */
+  /* file winuser.c line 6654 addr 0x3 */
+  /* file winuser.c line 6671 addr 0x0 */
+  /* file winuser.c line 6671 addr 0x3 */
+  /* file winuser.c line 6677 addr 0x0 */
+  /* file winuser.c line 6677 addr 0x3 */
+  /* file winuser.c line 6707 addr 0x0 */
+  /* file winuser.c line 6707 addr 0x3 */
+  /* file winuser.c line 6723 addr 0x0 */
+  /* file winuser.c line 6723 addr 0x3 */
+  /* file winuser.c line 6729 addr 0x0 */
+  /* file winuser.c line 6729 addr 0x3 */
+  /* file winuser.c line 6747 addr 0x0 */
+  /* file winuser.c line 6747 addr 0x12 */
+  /* file winuser.c line 6753 addr 0x0 */
+  /* file winuser.c line 6753 addr 0x3 */
+  /* file winuser.c line 6760 addr 0x0 */
+  /* file winuser.c line 6760 addr 0x3 */
+  /* file winuser.c line 6771 addr 0x0 */
+  /* file winuser.c line 6771 addr 0x3 */
+  /* file winuser.c line 6781 addr 0x0 */
+  /* file winuser.c line 6781 addr 0x3 */
+  /* file winuser.c line 6794 addr 0x0 */
+  /* file winuser.c line 6794 addr 0x3 */
+  /* file winuser.c line 6838 addr 0x0 */
+  /* file winuser.c line 6838 addr 0x3 */
+  /* file winuser.c line 6848 addr 0x0 */
+  /* file winuser.c line 6848 addr 0x3 */
+  /* file winuser.c line 6863 addr 0x0 */
+  /* file winuser.c line 6863 addr 0x3 */
+  /* file winuser.c line 6874 addr 0x0 */
+  /* file winuser.c line 6874 addr 0x3 */
+  /* file winuser.c line 6881 addr 0x0 */
+  /* file winuser.c line 6881 addr 0x3 */
+  /* file winuser.c line 6887 addr 0x0 */
+  /* file winuser.c line 6887 addr 0x3 */
+  /* file winuser.c line 6894 addr 0x0 */
+  /* file winuser.c line 6894 addr 0x3 */
+  /* file winuser.c line 7028 addr 0x0 */
+  /* file winuser.c line 7028 addr 0x3 */
+  /* file winuser.c line 7036 addr 0x0 */
+  /* file winuser.c line 7036 addr 0x3 */
+  /* file winuser.c line 7325 addr 0x0 */
+  /* file winuser.c line 7325 addr 0x3 */
+  /* file winuser.c line 7331 addr 0x0 */
+  /* file winuser.c line 7331 addr 0x3 */
+  /* file winuser.c line 7345 addr 0x0 */
+  /* file winuser.c line 7345 addr 0x3 */
+  /* file winuser.c line 7355 addr 0x0 */
+  /* file winuser.c line 7355 addr 0x3 */
+  /* file winuser.c line 7364 addr 0x0 */
+  /* file winuser.c line 7364 addr 0x3 */
+  /* file winuser.c line 7392 addr 0x0 */
+  /* file winuser.c line 7392 addr 0x3 */
+  /* file winuser.c line 7400 addr 0x0 */
+  /* file winuser.c line 7400 addr 0x3 */
+  /* file winuser.c line 7415 addr 0x0 */
+  /* file winuser.c line 7415 addr 0x3 */
+  /* file winuser.c line 7424 addr 0x0 */
+  /* file winuser.c line 7424 addr 0x3 */
+  /* file winuser.c line 7438 addr 0x0 */
+  /* file winuser.c line 7438 addr 0x3 */
+  /* file winuser.c line 7446 addr 0x0 */
+  /* file winuser.c line 7446 addr 0x3 */
+  /* file winuser.c line 7794 addr 0x0 */
+  /* file winuser.c line 7794 addr 0x3 */
+  /* file winuser.c line 7795 addr 0x0 */
+  /* file winuser.c line 7795 addr 0x3 */
+  /* file winuser.c line 7857 addr 0x0 */
+  /* file winuser.c line 7857 addr 0x3 */
+  /* file winuser.c line 7866 addr 0x0 */
+  /* file winuser.c line 7866 addr 0x3 */
+  /* file winuser.c line 7880 addr 0x0 */
+  /* file winuser.c line 7880 addr 0x3 */
+  /* file winuser.c line 7888 addr 0x0 */
+  /* file winuser.c line 7888 addr 0x3 */
+  /* file winuser.c line 7902 addr 0x0 */
+  /* file winuser.c line 7902 addr 0x3 */
+  /* file winuser.c line 7910 addr 0x0 */
+  /* file winuser.c line 7910 addr 0x3 */
+  /* file winuser.c line 7926 addr 0x0 */
+  /* file winuser.c line 7926 addr 0x3 */
+  /* file winuser.c line 7941 addr 0x0 */
+  /* file winuser.c line 7941 addr 0x3 */
+  /* file winuser.c line 7949 addr 0x0 */
+  /* file winuser.c line 7949 addr 0x3 */
+  /* file winuser.c line 7950 addr 0x0 */
+  /* file winuser.c line 7950 addr 0x3 */
+  /* file winuser.c line 8059 addr 0x0 */
+  /* file winuser.c line 8059 addr 0x3 */
+  /* file winuser.c line 8068 addr 0x0 */
+  /* file winuser.c line 8068 addr 0x3 */
+  /* file winuser.c line 8477 addr 0x0 */
+  /* file winuser.c line 8477 addr 0x3 */
+  /* file winuser.c line 8485 addr 0x0 */
+  /* file winuser.c line 8485 addr 0x3 */
+  /* file winuser.c line 8663 addr 0x0 */
+  /* file winuser.c line 8663 addr 0x3 */
+  /* file winuser.c line 8679 addr 0x0 */
+  /* file winuser.c line 8679 addr 0x3 */
+} /* 0x1fa7 */

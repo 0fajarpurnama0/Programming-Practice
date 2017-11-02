@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Documents/Programming/eclipse/daoSimple.java.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="java">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #ff00ff; }
+.Identifier { color: #008b8b; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.PreProc { color: #800080; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Special { color: #6a5acd; }
+.Comment { color: #0000ff; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">package</span> dao; <span class="Comment">// Data Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services.</span>
+<span class="PreProc">import</span> java.util.*; <span class="Comment">// Java.util package contains the collections framework, legacy collection classes, event model, date and time facilities, internationalization, and miscellaneous utility classes. (* is a wild card, here calls all package starting with java.util)</span>
+<span class="PreProc">import</span> java.sql.*; <span class="Comment">// Provides the API for accessing and processing data stored in a data source (usually a relational database) using the JavaTM programming language.</span>
+
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special"> Very simple sample class for data access object</span>
+<span class="Comment"> </span><span class="Comment">* </span><span class="Special">@author</span><span class="Comment"> nakano@cc.kumamoto-u.ac.jp</span>
+<span class="Comment"> * </span><span class="Special">@version</span><span class="Comment"> 20140617</span>
+<span class="Comment"> */</span>
+<span class="Type">public</span> <span class="Type">class</span> DaoSimple { <span class="Comment">// Creates a public class DaoSimple.</span>
+	<span class="Comment">// these three parameters are set at the external file sys.properties / これらの3変数は、外部ファイル sys.properties で決まる</span>
+	<span class="Type">private</span> String dbDriver = <span class="Constant">null</span>; <span class="Comment">// Initialize database driver variable.</span>
+	<span class="Type">private</span> String dbUri = <span class="Constant">null</span>; <span class="Comment">// Initialize database uri variable.</span>
+	<span class="Type">private</span> Properties dbProps = <span class="Constant">null</span>; <span class="Comment">// Initialize database properties variable.</span>
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 *</span><span class="Special"> Constructor</span>
+<span class="Comment">	 *</span><span class="Special"> read parameters for db access from external file</span>
+<span class="Special">	 </span><span class="Comment">*/</span>
+	<span class="Type">public</span> DaoSimple() { <span class="Comment">// The try and catch is used to deal with exceptions (i.e. wrong user or password input)</span>
+		<span class="Statement">try</span> { <span class="Comment">// Try the following:</span>
+			ResourceBundle bundle = ResourceBundle.getBundle(<span class="Constant">&quot;sys&quot;</span>); <span class="Comment">// set config file as &quot;src/sys.property&quot; / 設定ファイルは&quot;src/sys.property&quot;</span>
+			<span class="Comment">// get following parameters from above file / 上記ファイルから以下のパラメータを読み込む</span>
+			dbDriver = bundle.getString(<span class="Constant">&quot;driver&quot;</span>); <span class="Comment">// From this resource bundle gets the strings from &quot;driver&quot; key.</span>
+			dbUri = bundle.getString(<span class="Constant">&quot;uri&quot;</span>); <span class="Comment">// From this resource bundle gets the strings from &quot;uri&quot; key.</span>
+			dbProps = <span class="Statement">new</span> Properties(); <span class="Comment">// Creating an object dbProps from the constructor Properties().</span>
+			dbProps.put(<span class="Constant">&quot;user&quot;</span>, bundle.getString(<span class="Constant">&quot;user&quot;</span>)); <span class="Comment">// On dbProps put the key &quot;user&quot; from &quot;user&quot; string on sys.property.</span>
+			dbProps.put(<span class="Constant">&quot;password&quot;</span>, bundle.getString(<span class="Constant">&quot;password&quot;</span>)); <span class="Comment">// On dbProps put the key &quot;password&quot; from &quot;password&quot; on sys.property.</span>
+			dbProps.put(<span class="Constant">&quot;characterEncoding&quot;</span>, <span class="Constant">&quot;UTF8&quot;</span>); <span class="Comment">// need for multibyte chars, set the key as UTF8. / 日本語等ではこれが必要</span>
+		} <span class="Statement">catch</span> (MissingResourceException e) { <span class="Comment">// If above fails execute this MissingResourceException.</span>
+			e.printStackTrace(); <span class="Comment">// Prints the default error stream.</span>
+		}
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 *</span><span class="Special"> getAll() method</span>
+<span class="Comment">	 *</span><span class="Special"> get all data from &quot;comment&quot; table</span>
+<span class="Special">	 </span><span class="Comment">*/</span>
+	<span class="Type">public</span> ArrayList&lt;LinkedHashMap&lt;String,Object&gt;&gt; getAll() { <span class="Comment">// Creates an ArrayList with link list hash map string object, using getAll() to retrieve an enumeration of the attributes in the attribute set.</span>
+		ArrayList&lt;LinkedHashMap&lt;String,Object&gt;&gt; ret = <span class="Statement">new</span> ArrayList&lt;LinkedHashMap&lt;String,Object&gt;&gt;(); <span class="Comment">// Creates an object ret.</span>
+		String queryStr = <span class="Constant">&quot;select * from comment order by last desc&quot;</span>; <span class="Comment">// Set queryStr variable as an sql command to query all from comment in order by last desc.</span>
+		Connection conn = <span class="Constant">null</span>; <span class="Comment">// these three variables for db connection, connection variable / ここからの3変数はDB接続に使用</span>
+		Statement state = <span class="Constant">null</span>; <span class="Comment">// Initialize statement variable.</span>
+		ResultSet rs = <span class="Constant">null</span>; <span class="Comment">// Initialize result set variable.</span>
+		<span class="Statement">try</span> {
+			Class.forName(dbDriver).newInstance(); <span class="Comment">// Instantiation of mySQL jdbc driver, instance and object are the same. / mySQLのjdbcドライバのインスタンス化</span>
+			System.out.println(<span class="Constant">&quot;Class.forName(dbDriver).newInstance().toString()=&quot;</span>+Class.forName(dbDriver).newInstance().toString()); <span class="Comment">// Print command.</span>
+			conn = DriverManager.getConnection(dbUri, dbProps); <span class="Comment">// From java.sql.DriverManager, connect and get uri and props of database.</span>
+			conn.setAutoCommit(<span class="Constant">true</span>); <span class="Comment">// Prevents explicitly commit other transaction from java.</span>
+			state = conn.createStatement(); <span class="Comment">// Creates an interface that represents a SQL statement.</span>
+			rs = state.executeQuery(queryStr); <span class="Comment">// executing query / queryの実行</span>
+			ArrayList&lt;String&gt; key = <span class="Statement">new</span> ArrayList&lt;String&gt;(); <span class="Comment">// Creates an object.</span>
+			<span class="Comment">// obtain column name / カラム名の取得</span>
+			<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">1</span>; i &lt;= rs.getMetaData().getColumnCount(); i++) {
+				key.add(rs.getMetaData().getColumnName(i)); <span class="Comment">// add column names to keys / カラム名のリストをキーに追加</span>
+			}
+			<span class="Comment">// obtain query results / queryの結果を得る</span>
+			LinkedHashMap&lt;String,Object&gt; line; <span class="Comment">// for restoring 1 line (row) data / 1行分のデータ記憶用</span>
+			<span class="Statement">while</span> (rs.next()) { <span class="Comment">// While there is a next row on the database table.</span>
+				line = <span class="Statement">new</span> LinkedHashMap&lt;String,Object&gt;(); <span class="Comment">// Create a new object.</span>
+				<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">1</span>; i &lt;= rs.getMetaData().getColumnCount(); i++) {
+					line.put(key.get(i-<span class="Constant">1</span>), rs.getObject(i)); <span class="Comment">// Put key and value to line.</span>
+				}
+				ret.add(line); <span class="Comment">// Protected so only static method can create new object, add to line.</span>
+			}
+			<span class="Comment">//for exception</span>
+		} <span class="Statement">catch</span> (Exception ex) {
+			ex.printStackTrace();
+		} <span class="Statement">finally</span> { <span class="Comment">// Close the connection.</span>
+			<span class="Statement">try</span> {
+				rs.close();
+				state.close();
+				conn.close();
+			} <span class="Statement">catch</span> (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		System.out.println(<span class="Constant">&quot;ret=&quot;</span> + ret.toString());
+		<span class="Statement">return</span> ret;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 *</span><span class="Special"> addLine() method</span>
+<span class="Comment">	 *</span><span class="Special"> add a line to &quot;comment&quot; table</span>
+<span class="Special">	 </span><span class="Comment">*/</span>
+	<span class="Type">public</span> LinkedHashMap&lt;String,Object&gt; addLine(LinkedHashMap&lt;String,Object&gt; line) {
+		LinkedHashMap&lt;String,Object&gt; ret = <span class="Statement">new</span> LinkedHashMap&lt;String,Object&gt;();
+		Connection conn = <span class="Constant">null</span>; <span class="Comment">// these two variables for db connection / ここからの2変数はDB接続に使用</span>
+		Statement state = <span class="Constant">null</span>;
+		<span class="Statement">try</span> {
+			Class.forName(dbDriver).newInstance(); <span class="Comment">// Instantiation of mySQL jdbc driver. / mySQLのjdbcドライバのインスタンス化</span>
+			conn = DriverManager.getConnection(dbUri, dbProps);
+			conn.setAutoCommit(<span class="Constant">true</span>);
+			state = conn.createStatement();
+			PreparedStatement pStr = <span class="Constant">null</span>;
+			String sStr = <span class="Constant">null</span>;
+			sStr = <span class="Constant">&quot;insert into comment (name, text, ip, last) values (?, ?, ?, ?)&quot;</span>; <span class="Comment">// An sql statement to insert value into column.</span>
+			pStr = conn.prepareStatement(sStr);
+			pStr.setString(<span class="Constant">1</span>, line.get(<span class="Constant">&quot;name&quot;</span>).toString()); <span class="Comment">// Set key &quot;1&quot; as name string.</span>
+			pStr.setString(<span class="Constant">2</span>, line.get(<span class="Constant">&quot;text&quot;</span>).toString()); <span class="Comment">// Set key &quot;2&quot; as text string.</span>
+			pStr.setString(<span class="Constant">3</span>, line.get(<span class="Constant">&quot;ip&quot;</span>).toString()); <span class="Comment">// Set key &quot;3&quot; as ip string.</span>
+			pStr.setTimestamp(<span class="Constant">4</span>, java.sql.Timestamp.valueOf(line.get(<span class="Constant">&quot;last&quot;</span>).toString())); <span class="Comment">// Set key &quot;4&quot; as time stamp.</span>
+			pStr.execute(); <span class="Comment">// Execute statement.</span>
+			ret.put(<span class="Constant">&quot;number of added lines&quot;</span>, pStr.getUpdateCount());
+			<span class="Comment">//for exception</span>
+		} <span class="Statement">catch</span> (Exception ex) {
+			ex.printStackTrace();
+		} <span class="Statement">finally</span> {
+			<span class="Statement">try</span> {
+				state.close();
+				conn.close();
+			} <span class="Statement">catch</span> (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		<span class="Statement">return</span> ret;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 *</span><span class="Special"> main method for check</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> args</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
+		DaoSimple dao = <span class="Statement">new</span> DaoSimple(); <span class="Comment">// new object</span>
+		LinkedHashMap&lt;String,Object&gt; line = <span class="Statement">new</span> LinkedHashMap&lt;String,Object&gt;(); <span class="Comment">// new object</span>
+		line.put(<span class="Constant">&quot;name&quot;</span>, <span class="Constant">&quot;名前&quot;</span>); line.put(<span class="Constant">&quot;text&quot;</span>, <span class="Constant">&quot;文章よ&quot;</span>); line.put(<span class="Constant">&quot;ip&quot;</span>, <span class="Constant">&quot;133.95.45.1&quot;</span>); line.put(<span class="Constant">&quot;last&quot;</span>, <span class="Constant">&quot;2014-02-03 18:42:00&quot;</span>);
+		System.out.println(<span class="Constant">&quot;add = &quot;</span> + dao.addLine(line));
+		ArrayList&lt;LinkedHashMap&lt;String,Object&gt;&gt;  all = dao.getAll();
+		<span class="Statement">for</span>(LinkedHashMap&lt;String,Object&gt; l : all) {
+			<span class="Statement">for</span>(String key : l.keySet()) {
+				System.out.print(key+<span class="Constant">&quot;:&quot;</span>+l.get(key)+<span class="Constant">&quot;, &quot;</span>);
+			}
+			System.out.println(<span class="Constant">&quot;&quot;</span>);
+		}
+	}
+
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

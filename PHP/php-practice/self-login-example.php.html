@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/home/fajarpurnama/Programs/Google-App/google_appengine/appengine-php-practice/self-login-example.php.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="php">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #ff00ff; }
+.PreProc { color: #800080; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.Title { color: #ff00ff; font-weight: bold; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Special { color: #6a5acd; }
+.Identifier { color: #008b8b; }
+.Comment { color: #0000ff; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Identifier">&lt;</span><span class="Statement">html</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">title</span><span class="Identifier">&gt;</span><span class="Title">Practice PHP</span><span class="Identifier">&lt;/</span><span class="Statement">title</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+
+<span class="Identifier">&lt;</span><span class="Statement">form</span><span class="Identifier"> </span><span class="Type">method</span><span class="Identifier">=</span><span class="Constant">&quot;post&quot;</span><span class="Identifier"> </span><span class="Type">action</span><span class="Identifier">=</span><span class="Constant">&quot;</span><span class="Special">&lt;?php</span> <span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">_SERVER</span><span class="Special">[</span>'<span class="Constant">PHP_SELF</span>'<span class="Special">]</span>;<span class="Special">?&gt;</span><span class="Constant">&quot;</span><span class="Identifier">&gt;</span>
+  Username: <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;text&quot;</span><span class="Identifier"> </span><span class="Type">name</span><span class="Identifier">=</span><span class="Constant">&quot;user&quot;</span><span class="Identifier">&gt;&lt;</span><span class="Statement">br</span><span class="Identifier">&gt;</span>
+  Password: <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;text&quot;</span><span class="Identifier"> </span><span class="Type">name</span><span class="Identifier">=</span><span class="Constant">&quot;pass&quot;</span><span class="Identifier">&gt;&lt;</span><span class="Statement">br</span><span class="Identifier">&gt;</span>
+  <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;submit&quot;</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">form</span><span class="Identifier">&gt;</span>
+
+<span class="Special">&lt;?php</span>
+<span class="Statement">$</span><span class="Identifier">username</span> <span class="Statement">=</span> <span class="Type">array</span><span class="Special">(</span>&quot;<span class="Constant">Fajar</span>&quot;,&quot;<span class="Constant">John</span>&quot;,&quot;<span class="Constant">emanresu</span>&quot;<span class="Special">)</span>;
+<span class="Statement">$</span><span class="Identifier">password</span> <span class="Statement">=</span> <span class="Type">array</span><span class="Special">(</span>&quot;<span class="Constant">Purnama</span>&quot;,&quot;<span class="Constant">Doe</span>&quot;,&quot;<span class="Constant">drowssap</span>&quot;<span class="Special">)</span>;
+
+<span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">_SERVER</span><span class="Special">[</span>&quot;<span class="Constant">REQUEST_METHOD</span>&quot;<span class="Special">]</span> <span class="Statement">==</span> &quot;<span class="Constant">POST</span>&quot;<span class="Special">)</span> <span class="Special">{</span>
+<span class="Statement">$</span><span class="Identifier">user</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">_POST</span><span class="Special">[</span>'<span class="Constant">user</span>'<span class="Special">]</span>;
+<span class="Statement">$</span><span class="Identifier">pass</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">_POST</span><span class="Special">[</span>'<span class="Constant">pass</span>'<span class="Special">]</span>;
+
+<span class="Comment">//var_dump($username[0] == $user and $password[1] == $pass);</span>
+
+<span class="Statement">for</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">c</span> <span class="Statement">=</span> <span class="Constant">0</span>; <span class="Statement">$</span><span class="Identifier">c</span> <span class="Statement">&lt;=</span> <span class="Identifier">count</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">username</span><span class="Special">)</span><span class="Constant">-1</span>; <span class="Statement">$</span><span class="Identifier">c</span><span class="Statement">++</span><span class="Special">)</span> <span class="Special">{</span>
+
+<span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">user</span> <span class="Statement">==</span> <span class="Statement">$</span><span class="Identifier">username</span><span class="Special">[</span><span class="Statement">$</span><span class="Identifier">c</span><span class="Special">]</span> <span class="Statement">and</span> <span class="Statement">$</span><span class="Identifier">pass</span> <span class="Statement">==</span> <span class="Statement">$</span><span class="Identifier">password</span><span class="Special">[</span><span class="Statement">$</span><span class="Identifier">c</span><span class="Special">])</span> <span class="Special">{</span>
+<span class="PreProc">echo</span> &quot;<span class="Constant">Welcome!</span>&quot;;
+<span class="Statement">break</span>;
+<span class="Special">}</span> <span class="Statement">elseif</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">c</span> <span class="Statement">&lt;</span> <span class="Identifier">count</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">username</span><span class="Special">)</span><span class="Constant">-1</span><span class="Special">)</span> <span class="Special">{</span>
+<span class="Statement">continue</span>;
+<span class="Special">}</span> <span class="Statement">else</span> <span class="Special">{</span>
+<span class="PreProc">echo</span> &quot;<span class="Constant">Wrong username or password</span>&quot;;
+<span class="Special">}</span>
+<span class="Special">}</span>
+<span class="Special">}</span>
+
+<span class="Special">?&gt;</span>
+
+<span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

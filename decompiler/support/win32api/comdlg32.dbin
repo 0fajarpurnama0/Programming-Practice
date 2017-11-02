@@ -1,0 +1,53 @@
+Microsoft (R) COFF Binary File Dumper Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+Dump of file c:/windows/system32/comdlg32.dll
+
+File Type: DLL
+
+  Section contains the following exports for comdlg32.dll
+
+           0 characteristics
+    41107EF0 time date stamp Tue Aug 03 23:15:12 2004
+        0.00 version
+         100 ordinal base
+          27 number of functions
+          26 number of names
+
+    ordinal hint RVA      name
+
+        101    0 0000EECE ChooseColorA
+        102    1 0000EFE1 ChooseColorW
+        103    2 0001C289 ChooseFontA
+        104    3 0001C4A9 ChooseFontW
+        105    4 000100CE CommDlgExtendedError
+        106    5 0001867C FindTextA
+        107    6 00018696 FindTextW
+        108    7 00002533 GetFileTitleA
+        109    8 00001986 GetFileTitleW
+        110    9 0000311E GetOpenFileNameA
+        111    A 00017C65 GetOpenFileNameW
+        112    B 00017CD8 GetSaveFileNameA
+        113    C 00017CF3 GetSaveFileNameW
+        114    D 0001037A LoadAlterBitmap
+        115    E 000247B1 PageSetupDlgA
+        116    F 000248D6 PageSetupDlgW
+        117   10 000246CD PrintDlgA
+        118   11 00029CD0 PrintDlgExA
+        119   12 00029D29 PrintDlgExW
+        120   13 0002475D PrintDlgW
+        121   14 000186B0 ReplaceTextA
+        122   15 000186CA ReplaceTextW
+        123   16 0001015D Ssync_ANSI_UNICODE_Struct_For_WOW
+        124   17 0000D3E1 WantArrows
+        125   18 0001148C dwLBSubclass
+        126   19 00011418 dwOKSubclass
+        100      0001BCE0 [NONAME]
+
+  Summary
+
+        4000 .data
+        3000 .reloc
+       11000 .rsrc
+       30000 .text

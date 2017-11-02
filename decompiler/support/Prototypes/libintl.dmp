@@ -1,0 +1,86 @@
+
+libintl.o:     file format elf32-i386
+
+libintl.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float0 complex float;
+typedef complex float0 complex double;
+typedef complex float0 complex long double;
+typedef char *__builtin_va_list;
+typedef enum { False, True } _Bool;
+#pragma cconv _cdecl
+__builtin_va_list gettext (char *__msgid /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list dgettext (char *__domainname /* 0x8 */, char *__msgid /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list __dgettext (char *__domainname /* 0x8 */, char *__msgid /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list dcgettext (char *__domainname /* 0x8 */, char *__msgid /* 0xc */, int __category /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list __dcgettext (char *__domainname /* 0x8 */, char *__msgid /* 0xc */, int __category /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list ngettext (char *__msgid1 /* 0x8 */, char *__msgid2 /* 0xc */, long unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list dngettext (char *__domainname /* 0x8 */, char *__msgid1 /* 0xc */, char *__msgid2 /* 0x10 */, long unsigned int __n /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list dcngettext (char *__domainname /* 0x8 */, char *__msgid1 /* 0xc */, char *__msgid2 /* 0x10 */, long unsigned int __n /* 0x14 */, int __category /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list textdomain (char *__domainname /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list bindtextdomain (char *__domainname /* 0x8 */, char *__dirname /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__builtin_va_list bind_textdomain_codeset (char *__domainname /* 0x8 */, char *__codeset /* 0xc */)
+{ /* 0x0 */
+  /* file libintl.c line 40 addr 0x0 */
+  /* file libintl.c line 40 addr 0x3 */
+  /* file libintl.c line 45 addr 0x0 */
+  /* file libintl.c line 45 addr 0x3 */
+  /* file libintl.c line 47 addr 0x0 */
+  /* file libintl.c line 47 addr 0x3 */
+  /* file libintl.c line 52 addr 0x0 */
+  /* file libintl.c line 52 addr 0x3 */
+  /* file libintl.c line 55 addr 0x0 */
+  /* file libintl.c line 55 addr 0x3 */
+  /* file libintl.c line 62 addr 0x0 */
+  /* file libintl.c line 62 addr 0x3 */
+  /* file libintl.c line 68 addr 0x0 */
+  /* file libintl.c line 68 addr 0x3 */
+  /* file libintl.c line 75 addr 0x0 */
+  /* file libintl.c line 75 addr 0x3 */
+  /* file libintl.c line 81 addr 0x0 */
+  /* file libintl.c line 81 addr 0x3 */
+  /* file libintl.c line 86 addr 0x0 */
+  /* file libintl.c line 86 addr 0x3 */
+  /* file libintl.c line 91 addr 0x0 */
+  /* file libintl.c line 91 addr 0x3 */
+} /* 0x37 */
+ /usr/include/features.h:
+ /usr/include/sys/cdefs.h:
+ /usr/include/gnu/stubs.h:

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<title>JSON REST Sample 01 using jsonic (ver. 2015-06-11)</title>
+<script type="text/javascript">
+/**
+ * jQuery: Processes after loading html (whole this file)
+ * jQuery: html(このファイルの末尾まで)が読み込まれた後で実行されるプロセス
+ */
+$(function() {
+  jsonTest();
+  jsonpTest();
+  jsonProxyTest();
+  jsonpProxyTest();
+})
+/**
+ * Function: get JSON data by Restful api / REST型のAPIで同期的にJSON型データを取得する
+ * call find() method in rest.sample.sampleService class (defined in web.xml)
+ * / rest.sample.sampleServiceクラスのfind()メソッドを呼びます (web.xmlに定義)
+ */
+ function jsonTest() {
+	 var uri = "sample/sample.json?par=JSONTest";
+   $('#json').append("uri="+uri+"<br />");
+	 $.getJSON(uri, function(data) {
+     for (var key in data) {
+       $('#json').append("data."+key+"="+data[key]+"<br />");
+     }
+   });
+ }
+ /**
+  * Function: get JSONP data by Restful api / REST型のAPIで同期的にJSONP型データを取得する
+  * call find() method in rest.sample.sampleService class (defined in web.xml)
+  * / rest.sample.sampleServiceクラスのfind()メソッドを呼びます (web.xmlに定義)
+  */
+  function jsonpTest() {
+    var uri = "http://localhost:8080/jsonRestSample01/sample/sample.json?callback=?&par=JSONPTest";
+    $('#jsonp').append("uri="+uri+"<br />");
+    $.getJSON(uri, function(data) {
+      for (var key in data) {
+        $('#jsonp').append("data."+key+"="+data[key]+"<br />");
+      }
+    });
+  }
+  /**
+   * Function: get external JSON data through server by Restful JSON api 
+   * / 外部のJSONサービスをサーバ経由でJSONとしてアクセスする。
+   * call find() method in rest.sample.ProxySampleService class (defined in web.xml)
+   * / rest.sample.ProxySampleServiceクラスのfind()メソッドを呼びます (web.xmlに定義)
+   */
+   function jsonProxyTest() {
+     var uri = "sample/proxySample.json?"
+         +"&uri=http://weather.livedoor.com/forecast/webservice/json/v1?city=430010";
+     $('#jsonProxy').append("uri="+uri+"<br />");
+     $.getJSON(uri, function(data) {
+       $('#jsonProxy').append("json="+JSON.stringify(data)+"<br />");
+     });
+   }
+  /**
+   * Function: get external JSON data through server by Restful JSONP api 
+   * / 外部のJSONサービスをサーバ経由でJSONPとしてアクセスする。
+   * call find() method in rest.sample.ProxySampleService class (defined in web.xml)
+   * / rest.sample.ProxySampleServiceクラスのfind()メソッドを呼びます (web.xmlに定義)
+   */
+   function jsonpProxyTest() {
+     var uri = "http://localhost:8080/jsonRestSample01/sample/proxySample.json?callback=?"
+    		 +"&uri=http://weather.livedoor.com/forecast/webservice/json/v1?city=430010";
+     $('#jsonpProxy').append("uri="+uri+"<br />");
+     $.getJSON(uri, function(data) {
+       $('#jsonpProxy').append("json="+JSON.stringify(data)+"<br />");
+     });
+   }
+</script>
+</head>
+<body>
+  <h2>JSON REST Sample 01 using 
+    <a target="_blank" href="http://jsonic.sourceforge.jp/">jsonic</a> (ver. 2015-06-11)</h2>
+  <h4>JSON Sample</h4>
+  <div id="json"></div>
+  <h4>JSONP Sample</h4>
+  <div id="jsonp"></div>
+  <h4>JSON Proxy Sample</h4>
+  <div id="jsonProxy"></div>
+  <h4>JSONP Proxy Sample</h4>
+  <div id="jsonpProxy"></div>
+</body>
+</html>

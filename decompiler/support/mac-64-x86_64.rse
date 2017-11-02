@@ -1,0 +1,12 @@
+Name: mac-64-x86_64
+Cpu: x86_64
+OS: MacOS
+Type: ../Prototypes/asciifun.dmp
+Type: ../Prototypes/fcntl.dmp
+Type: ../Prototypes/stdio.dmp
+Type: ../Prototypes/stdlib.dmp
+Type: ../Prototypes/stdlib.dmp
+Type: ../Prototypes/unistd.dmp
+
+
+

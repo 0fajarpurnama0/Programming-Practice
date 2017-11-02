@@ -1,0 +1,16 @@
+application: customizeable-program-to-php
+module: default
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /customizeable-program-to-php
+  static_dir: customizeable-program-to-php/
+
+- url: /.*
+  script: Editor.php
+
+- url: /.*
+  script: action.php
+

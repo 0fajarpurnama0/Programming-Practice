@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>cae-webapi01</display-name>
+  <welcome-file-list>
+<!--   公開用ページ -->
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+<!-- jsoncの設定 (RESTful service) -->
+  <servlet>
+    <servlet-name>restServlet</servlet-name>
+    <servlet-class>net.arnx.jsonic.web.RESTServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>
+	     {
+	       "debug": true,
+	       "encoding": "UTF-8",
+	       "mappings": {
+	         "/{package}/{class}.json": {
+	           "target": "rest.${package}.${class}Service",
+	           "verb": [ "GET" ]
+	          }
+	        }
+	       }
+	       </param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>restServlet</servlet-name>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
+</web-app>

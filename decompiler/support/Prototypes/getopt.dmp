@@ -1,0 +1,117 @@
+
+getopt.o:     file format elf32-i386
+
+getopt.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float0 complex float;
+typedef complex float0 complex double;
+typedef complex float0 complex long double;
+typedef char *__builtin_va_list;
+typedef enum { False, True } _Bool;
+#pragma cconv _cdecl
+struct option { /* size 16 id 2 */
+  char *name; /* bitsize 32, bitpos 0 */
+  int has_arg; /* bitsize 32, bitpos 32 */
+  int *flag; /* bitsize 32, bitpos 64 */
+  int val; /* bitsize 32, bitpos 96 */
+};
+int getopt (int ___argc /* 0x8 */, __builtin_va_list *___argv /* 0xc */, char *__shortopts /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getopt_long (int ___argc /* 0x8 */, __builtin_va_list *___argv /* 0xc */, char *__shortopts /* 0x10 */, struct option /* id 2 */ *__longopts /* 0x14 */, int *__longind /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getopt_long_only (int ___argc /* 0x8 */, __builtin_va_list *___argv /* 0xc */, char *__shortopts /* 0x10 */, struct option /* id 2 */ *__longopts /* 0x14 */, int *__longind /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _getopt_internal (int ___argc /* 0x8 */, __builtin_va_list *___argv /* 0xc */, char *__shortopts /* 0x10 */, struct option /* id 2 */ *__longopts /* 0x14 */, int *__longind /* 0x18 */, int __long_only /* 0x1c */)
+{ /* 0x0 */
+  /* file getopt.c line 154 addr 0x0 */
+  /* file getopt.c line 154 addr 0x3 */
+  /* file getopt.c line 163 addr 0x0 */
+  /* file getopt.c line 163 addr 0x3 */
+  /* file getopt.c line 167 addr 0x0 */
+  /* file getopt.c line 167 addr 0x3 */
+  /* file getopt.c line 173 addr 0x0 */
+  /* file getopt.c line 173 addr 0x3 */
+} /* 0x14 */
+ /usr/include/ctype.h:
+ /usr/include/features.h:
+ /usr/include/sys/cdefs.h:
+ /usr/include/gnu/stubs.h:
+ /usr/include/bits/types.h:
+typedef unsigned char __u_char;
+typedef short unsigned int __u_short;
+typedef unsigned int __u_int;
+typedef long unsigned int __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short int __int16_t;
+typedef short unsigned int __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long long int __int64_t;
+typedef long long unsigned int __uint64_t;
+typedef long long int __quad_t;
+typedef long long unsigned int __u_quad_t;
+typedef long long unsigned int __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef long unsigned int __ino_t;
+typedef long long unsigned int __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned int __nlink_t;
+typedef long int __off_t;
+typedef long long int __off64_t;
+typedef int __pid_t;
+typedef struct %anon3 { /* size 8 */
+  int __val[2]:uint32; /* bitsize 64, bitpos 0 */
+} __fsid_t;
+typedef long int __clock_t;
+typedef long unsigned int __rlim_t;
+typedef long long unsigned int __rlim64_t;
+typedef unsigned int __id_t;
+typedef long int __time_t;
+typedef unsigned int __useconds_t;
+typedef long int __suseconds_t;
+typedef int __daddr_t;
+typedef long int __swblk_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef int __timer_t;
+typedef long int __blksize_t;
+typedef long int __blkcnt_t;
+typedef long long int __blkcnt64_t;
+typedef long unsigned int __fsblkcnt_t;
+typedef long long unsigned int __fsblkcnt64_t;
+typedef long unsigned int __fsfilcnt_t;
+typedef long long unsigned int __fsfilcnt64_t;
+typedef int __ssize_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef __builtin_va_list __caddr_t;
+typedef int __intptr_t;
+typedef unsigned int __socklen_t;
+ /usr/include/bits/wordsize.h:
+ /usr/lib/gcc-lib/i386-redhat-linux/3.2.3/include/stddef.h:
+typedef unsigned int size_t;
+ /usr/include/bits/typesizes.h:
+ /usr/include/endian.h:
+ /usr/include/bits/endian.h:

@@ -1,0 +1,669 @@
+
+STDLIB.O:     file format elf32-i386
+
+/home/cg/usr/src/cmd/wrec/supp/stdlib.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef long double __long_double_t;
+typedef unsigned int size_t;
+typedef long int wchar_t;
+typedef struct %anon2 { /* size 8 */
+  int quot; /* bitsize 32, bitpos 0 */
+  int rem; /* bitsize 32, bitpos 32 */
+} div_t;
+typedef struct %anon2 { /* size 8 */
+  long int quot; /* bitsize 32, bitpos 0 */
+  long int rem; /* bitsize 32, bitpos 32 */
+} ldiv_t;
+#pragma cconv _cdecl
+double atof (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int atoi (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int atol (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int atoq (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+float strtof (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+double strtod (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long double strtold (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int strtol (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int strtoul (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int strtoq (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long unsigned int strtouq (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int rand ()
+{ /* 0x0 */
+} /* 0x0 */
+void srand (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int __random ()
+{ /* 0x0 */
+} /* 0x0 */
+void __srandom (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *__initstate (unsigned int __seed /* 0x8 */, void *__statebuf /* 0xc */, unsigned int __statelen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *__setstate (void *__statebuf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int random ()
+{ /* 0x0 */
+} /* 0x0 */
+void srandom (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *initstate (unsigned int __seed /* 0x8 */, void *__statebuf /* 0xc */, unsigned int __statelen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *setstate (void *__statebuf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *malloc (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *realloc (void *__ptr /* 0x8 */, unsigned int __size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void *calloc (unsigned int __nmemb /* 0x8 */, unsigned int __size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void free (void *__ptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void cfree (void *__ptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *__alloca (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ /usr/include/alloca.h:
+void *valloc (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ stdlib.c:
+void abort ()
+{ /* 0x0 */
+} /* 0x0 */
+int atexit (void (*__func) (/* unknown */) /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int on_exit (void (*__func) (/* unknown */) /* 0x8 */, void *__arg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void exit (int __status /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *getenv (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int putenv (char *__string /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int system (char *__command /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+typedef int (*__compar_fn_t) (/* unknown */);
+typedef __compar_fn_t comparison_fn_t;
+void *bsearch (void *__key /* 0x8 */, void *__base /* 0xc */, unsigned int __nmemb /* 0x10 */, unsigned int __size /* 0x14 */, __compar_fn_t __compar /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+void qsort (void *__base /* 0x8 */, unsigned int __nmemb /* 0xc */, unsigned int __size /* 0x10 */, __compar_fn_t __compar /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int abs (int __x /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int labs (long int __x /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+div_t div (int __numer /* 0xc */, int __denom /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ldiv_t ldiv (long int __numer /* 0xc */, long int __denom /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int mblen (char *__s /* 0x8 */, unsigned int __n /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int mbtowc (long int *__pwc /* 0x8 */, char *__s /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int wctomb (char *__s /* 0x8 */, long int __wchar /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int mbstowcs (long int *__pwcs /* 0x8 */, char *__s /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int wcstombs (char *__s /* 0x8 */, long int *__pwcs /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *ecvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, int *__decpt /* 0x14 */, int *__sign /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *fcvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, int *__decpt /* 0x14 */, int *__sign /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *gcvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, char *__buf /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+double drand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+double erand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int lrand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+long int nrand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int mrand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+long int jrand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void srand48 (long int __seedval /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int *seed48 (short unsigned int *__seed16v /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void lcong48 (short unsigned int *__param /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int setenv (char *__name /* 0x8 */, char *__value /* 0xc */, int __overwrite /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void unsetenv (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct qelem { /* size 12 id 3 */
+  struct qelem /* id 3 */ *q_forw; /* bitsize 32, bitpos 0 */
+  struct qelem /* id 3 */ *q_back; /* bitsize 32, bitpos 32 */
+  char q_data[1]; /* bitsize 8, bitpos 64 */
+};
+void insque (struct qelem /* id 3 */ *__elem /* 0x8 */, struct qelem /* id 3 */ *__prev /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void remque (struct qelem /* id 3 */ *__elem /* 0x8 */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 82 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 82 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 84 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 84 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 86 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 86 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 89 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 89 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 93 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 93 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 95 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 95 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 98 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 98 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 102 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 102 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 105 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 105 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 109 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 109 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 112 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 112 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 177 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 177 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 179 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 179 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 186 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 186 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 188 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 188 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 195 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 195 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 198 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 198 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 201 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 201 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 202 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 202 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 204 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 204 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 205 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 205 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 222 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 222 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 225 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 225 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 227 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 227 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 229 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 229 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 233 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 233 addr 0x3 */
+  /* file /usr/include/alloca.h line 33 addr 0x0 */
+  /* file /usr/include/alloca.h line 33 addr 0x3 */
+  /* file stdlib.c line 242 addr 0x0 */
+  /* file stdlib.c line 242 addr 0x3 */
+  /* file stdlib.c line 247 addr 0x0 */
+  /* file stdlib.c line 247 addr 0x3 */
+  /* file stdlib.c line 251 addr 0x0 */
+  /* file stdlib.c line 251 addr 0x3 */
+  /* file stdlib.c line 257 addr 0x0 */
+  /* file stdlib.c line 257 addr 0x3 */
+  /* file stdlib.c line 263 addr 0x0 */
+  /* file stdlib.c line 263 addr 0x3 */
+  /* file stdlib.c line 267 addr 0x0 */
+  /* file stdlib.c line 267 addr 0x3 */
+  /* file stdlib.c line 273 addr 0x0 */
+  /* file stdlib.c line 273 addr 0x3 */
+  /* file stdlib.c line 277 addr 0x0 */
+  /* file stdlib.c line 277 addr 0x3 */
+  /* file stdlib.c line 294 addr 0x0 */
+  /* file stdlib.c line 294 addr 0x3 */
+  /* file stdlib.c line 299 addr 0x0 */
+  /* file stdlib.c line 299 addr 0x3 */
+  /* file stdlib.c line 313 addr 0x0 */
+  /* file stdlib.c line 313 addr 0x3 */
+  /* file stdlib.c line 314 addr 0x0 */
+  /* file stdlib.c line 314 addr 0x3 */
+  /* file stdlib.c line 320 addr 0x0 */
+  /* file stdlib.c line 320 addr 0x6 */
+  /* file stdlib.c line 321 addr 0x0 */
+  /* file stdlib.c line 321 addr 0x6 */
+  /* file stdlib.c line 326 addr 0x0 */
+  /* file stdlib.c line 326 addr 0x3 */
+  /* file stdlib.c line 329 addr 0x0 */
+  /* file stdlib.c line 329 addr 0x3 */
+  /* file stdlib.c line 332 addr 0x0 */
+  /* file stdlib.c line 332 addr 0x3 */
+  /* file stdlib.c line 341 addr 0x0 */
+  /* file stdlib.c line 341 addr 0x3 */
+  /* file stdlib.c line 343 addr 0x0 */
+  /* file stdlib.c line 343 addr 0x3 */
+  /* file stdlib.c line 380 addr 0x0 */
+  /* file stdlib.c line 380 addr 0x3 */
+  /* file stdlib.c line 382 addr 0x0 */
+  /* file stdlib.c line 382 addr 0x3 */
+  /* file stdlib.c line 383 addr 0x0 */
+  /* file stdlib.c line 383 addr 0x3 */
+  /* file stdlib.c line 385 addr 0x0 */
+  /* file stdlib.c line 385 addr 0x3 */
+  /* file stdlib.c line 386 addr 0x0 */
+  /* file stdlib.c line 386 addr 0x3 */
+  /* file stdlib.c line 387 addr 0x0 */
+  /* file stdlib.c line 387 addr 0x3 */
+  /* file stdlib.c line 388 addr 0x0 */
+  /* file stdlib.c line 388 addr 0x3 */
+  /* file stdlib.c line 389 addr 0x0 */
+  /* file stdlib.c line 389 addr 0x3 */
+  /* file stdlib.c line 390 addr 0x0 */
+  /* file stdlib.c line 390 addr 0x3 */
+  /* file stdlib.c line 391 addr 0x0 */
+  /* file stdlib.c line 391 addr 0x3 */
+  /* file stdlib.c line 393 addr 0x0 */
+  /* file stdlib.c line 393 addr 0x3 */
+  /* file stdlib.c line 394 addr 0x0 */
+  /* file stdlib.c line 394 addr 0x3 */
+  /* file stdlib.c line 397 addr 0x0 */
+  /* file stdlib.c line 397 addr 0x3 */
+  /* file stdlib.c line 398 addr 0x0 */
+  /* file stdlib.c line 398 addr 0x3 */
+  /* file stdlib.c line 406 addr 0x0 */
+  /* file stdlib.c line 406 addr 0x3 */
+  /* file stdlib.c line 407 addr 0x0 */
+  /* file stdlib.c line 407 addr 0x3 */
+} /* 0x1f7 */
+double _atof (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _atoi (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _atol (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int _atoq (char *__nptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+float _strtof (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+double _strtod (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long double _strtold (char *__nptr /* 0x8 */, char **__endptr /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _strtol (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long unsigned int _strtoul (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int _strtoq (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long unsigned int _strtouq (char *__nptr /* 0x8 */, char **__endptr /* 0xc */, int __base /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _rand ()
+{ /* 0x0 */
+} /* 0x0 */
+void _srand (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int ___random ()
+{ /* 0x0 */
+} /* 0x0 */
+void ___srandom (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *___initstate (unsigned int __seed /* 0x8 */, void *__statebuf /* 0xc */, unsigned int __statelen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *___setstate (void *__statebuf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _random ()
+{ /* 0x0 */
+} /* 0x0 */
+void _srandom (unsigned int __seed /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_initstate (unsigned int __seed /* 0x8 */, void *__statebuf /* 0xc */, unsigned int __statelen /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_setstate (void *__statebuf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_malloc (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_realloc (void *__ptr /* 0x8 */, unsigned int __size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_calloc (unsigned int __nmemb /* 0x8 */, unsigned int __size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _free (void *__ptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _cfree (void *__ptr /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *___alloca (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ /usr/include/alloca.h:
+void *_valloc (unsigned int __size /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+ stdlib.c:
+void _abort ()
+{ /* 0x0 */
+} /* 0x0 */
+int _atexit (void (*__func) (/* unknown */) /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _on_exit (void (*__func) (/* unknown */) /* 0x8 */, void *__arg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _exit (int __status /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_getenv (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _putenv (char *__string /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _system (char *__command /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *_bsearch (void *__key /* 0x8 */, void *__base /* 0xc */, unsigned int __nmemb /* 0x10 */, unsigned int __size /* 0x14 */, __compar_fn_t __compar /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _qsort (void *__base /* 0x8 */, unsigned int __nmemb /* 0xc */, unsigned int __size /* 0x10 */, __compar_fn_t __compar /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _abs (int __x /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _labs (long int __x /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+div_t _div (int __numer /* 0xc */, int __denom /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+ldiv_t _ldiv (long int __numer /* 0xc */, long int __denom /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _mblen (char *__s /* 0x8 */, unsigned int __n /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int _mbtowc (long int *__pwc /* 0x8 */, char *__s /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _wctomb (char *__s /* 0x8 */, long int __wchar /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _mbstowcs (long int *__pwcs /* 0x8 */, char *__s /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int _wcstombs (char *__s /* 0x8 */, long int *__pwcs /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_ecvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, int *__decpt /* 0x14 */, int *__sign /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_fcvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, int *__decpt /* 0x14 */, int *__sign /* 0x18 */)
+{ /* 0x0 */
+} /* 0x0 */
+char *_gcvt (double __value /* 0x8 */, unsigned int __ndigit /* 0x10 */, char *__buf /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+double _drand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+double _erand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _lrand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+long int _nrand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int _mrand48 ()
+{ /* 0x0 */
+} /* 0x0 */
+long int _jrand48 (short unsigned int *__xsubi /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _srand48 (long int __seedval /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int *_seed48 (short unsigned int *__seed16v /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _lcong48 (short unsigned int *__param /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _setenv (char *__name /* 0x8 */, char *__value /* 0xc */, int __overwrite /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _unsetenv (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void _insque (struct qelem /* id 3 */ *__elem /* 0x8 */, struct qelem /* id 3 */ *__prev /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _remque (struct qelem /* id 3 */ *__elem /* 0x8 */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 82 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 82 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 84 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 84 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 86 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 86 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 89 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 89 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 93 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 93 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 95 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 95 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 98 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 98 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 102 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 102 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 105 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 105 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 109 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 109 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 112 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 112 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 177 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 177 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 179 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 179 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 186 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 186 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 188 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 188 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 195 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 195 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 198 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 198 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 201 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 201 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 202 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 202 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 204 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 204 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 205 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 205 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 222 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 222 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 225 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 225 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 227 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 227 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 229 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 229 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 233 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/stdlib.c line 233 addr 0x3 */
+  /* file /usr/include/alloca.h line 33 addr 0x0 */
+  /* file /usr/include/alloca.h line 33 addr 0x3 */
+  /* file stdlib.c line 242 addr 0x0 */
+  /* file stdlib.c line 242 addr 0x3 */
+  /* file stdlib.c line 247 addr 0x0 */
+  /* file stdlib.c line 247 addr 0x3 */
+  /* file stdlib.c line 251 addr 0x0 */
+  /* file stdlib.c line 251 addr 0x3 */
+  /* file stdlib.c line 257 addr 0x0 */
+  /* file stdlib.c line 257 addr 0x3 */
+  /* file stdlib.c line 263 addr 0x0 */
+  /* file stdlib.c line 263 addr 0x3 */
+  /* file stdlib.c line 267 addr 0x0 */
+  /* file stdlib.c line 267 addr 0x3 */
+  /* file stdlib.c line 273 addr 0x0 */
+  /* file stdlib.c line 273 addr 0x3 */
+  /* file stdlib.c line 277 addr 0x0 */
+  /* file stdlib.c line 277 addr 0x3 */
+  /* file stdlib.c line 294 addr 0x0 */
+  /* file stdlib.c line 294 addr 0x3 */
+  /* file stdlib.c line 299 addr 0x0 */
+  /* file stdlib.c line 299 addr 0x3 */
+  /* file stdlib.c line 313 addr 0x0 */
+  /* file stdlib.c line 313 addr 0x3 */
+  /* file stdlib.c line 314 addr 0x0 */
+  /* file stdlib.c line 314 addr 0x3 */
+  /* file stdlib.c line 320 addr 0x0 */
+  /* file stdlib.c line 320 addr 0x6 */
+  /* file stdlib.c line 321 addr 0x0 */
+  /* file stdlib.c line 321 addr 0x6 */
+  /* file stdlib.c line 326 addr 0x0 */
+  /* file stdlib.c line 326 addr 0x3 */
+  /* file stdlib.c line 329 addr 0x0 */
+  /* file stdlib.c line 329 addr 0x3 */
+  /* file stdlib.c line 332 addr 0x0 */
+  /* file stdlib.c line 332 addr 0x3 */
+  /* file stdlib.c line 341 addr 0x0 */
+  /* file stdlib.c line 341 addr 0x3 */
+  /* file stdlib.c line 343 addr 0x0 */
+  /* file stdlib.c line 343 addr 0x3 */
+  /* file stdlib.c line 380 addr 0x0 */
+  /* file stdlib.c line 380 addr 0x3 */
+  /* file stdlib.c line 382 addr 0x0 */
+  /* file stdlib.c line 382 addr 0x3 */
+  /* file stdlib.c line 383 addr 0x0 */
+  /* file stdlib.c line 383 addr 0x3 */
+  /* file stdlib.c line 385 addr 0x0 */
+  /* file stdlib.c line 385 addr 0x3 */
+  /* file stdlib.c line 386 addr 0x0 */
+  /* file stdlib.c line 386 addr 0x3 */
+  /* file stdlib.c line 387 addr 0x0 */
+  /* file stdlib.c line 387 addr 0x3 */
+  /* file stdlib.c line 388 addr 0x0 */
+  /* file stdlib.c line 388 addr 0x3 */
+  /* file stdlib.c line 389 addr 0x0 */
+  /* file stdlib.c line 389 addr 0x3 */
+  /* file stdlib.c line 390 addr 0x0 */
+  /* file stdlib.c line 390 addr 0x3 */
+  /* file stdlib.c line 391 addr 0x0 */
+  /* file stdlib.c line 391 addr 0x3 */
+  /* file stdlib.c line 393 addr 0x0 */
+  /* file stdlib.c line 393 addr 0x3 */
+  /* file stdlib.c line 394 addr 0x0 */
+  /* file stdlib.c line 394 addr 0x3 */
+  /* file stdlib.c line 397 addr 0x0 */
+  /* file stdlib.c line 397 addr 0x3 */
+  /* file stdlib.c line 398 addr 0x0 */
+  /* file stdlib.c line 398 addr 0x3 */
+  /* file stdlib.c line 406 addr 0x0 */
+  /* file stdlib.c line 406 addr 0x3 */
+  /* file stdlib.c line 407 addr 0x0 */
+  /* file stdlib.c line 407 addr 0x3 */
+} /* 0x1f7 */

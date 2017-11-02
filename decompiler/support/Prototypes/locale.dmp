@@ -1,0 +1,69 @@
+
+locale.o:     file format elf32-i386
+
+locale.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float0 complex float;
+typedef complex float0 complex double;
+typedef complex float0 complex long double;
+typedef char *__builtin_va_list;
+typedef enum { False, True } _Bool;
+#pragma cconv _cdecl
+struct lconv { /* size 56 id 2 */
+  __builtin_va_list decimal_point; /* bitsize 32, bitpos 0 */
+  __builtin_va_list thousands_sep; /* bitsize 32, bitpos 32 */
+  __builtin_va_list grouping; /* bitsize 32, bitpos 64 */
+  __builtin_va_list int_curr_symbol; /* bitsize 32, bitpos 96 */
+  __builtin_va_list currency_symbol; /* bitsize 32, bitpos 128 */
+  __builtin_va_list mon_decimal_point; /* bitsize 32, bitpos 160 */
+  __builtin_va_list mon_thousands_sep; /* bitsize 32, bitpos 192 */
+  __builtin_va_list mon_grouping; /* bitsize 32, bitpos 224 */
+  __builtin_va_list positive_sign; /* bitsize 32, bitpos 256 */
+  __builtin_va_list negative_sign; /* bitsize 32, bitpos 288 */
+  char int_frac_digits; /* bitsize 8, bitpos 320 */
+  char frac_digits; /* bitsize 8, bitpos 328 */
+  char p_cs_precedes; /* bitsize 8, bitpos 336 */
+  char p_sep_by_space; /* bitsize 8, bitpos 344 */
+  char n_cs_precedes; /* bitsize 8, bitpos 352 */
+  char n_sep_by_space; /* bitsize 8, bitpos 360 */
+  char p_sign_posn; /* bitsize 8, bitpos 368 */
+  char n_sign_posn; /* bitsize 8, bitpos 376 */
+  char __int_p_cs_precedes; /* bitsize 8, bitpos 384 */
+  char __int_p_sep_by_space; /* bitsize 8, bitpos 392 */
+  char __int_n_cs_precedes; /* bitsize 8, bitpos 400 */
+  char __int_n_sep_by_space; /* bitsize 8, bitpos 408 */
+  char __int_p_sign_posn; /* bitsize 8, bitpos 416 */
+  char __int_n_sign_posn; /* bitsize 8, bitpos 424 */
+};
+__builtin_va_list setlocale (int __category /* 0x8 */, char *__locale /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+struct lconv /* id 2 */ *localeconv ()
+{ /* 0x0 */
+  /* file locale.c line 125 addr 0x0 */
+  /* file locale.c line 125 addr 0x3 */
+  /* file locale.c line 128 addr 0x0 */
+  /* file locale.c line 128 addr 0x3 */
+} /* 0xa */
+ /usr/include/features.h:
+ /usr/include/sys/cdefs.h:
+ /usr/include/gnu/stubs.h:
+ /usr/lib/gcc-lib/i386-redhat-linux/3.2.3/include/stddef.h:
+ /usr/include/bits/locale.h:

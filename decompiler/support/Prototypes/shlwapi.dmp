@@ -1,0 +1,1457 @@
+
+shlwapi.o:     file format pe-i386
+
+shlwapi.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef void void;
+typedef int DWORD;
+typedef long int LONG;
+typedef long long unsigned int ULONGLONG;
+typedef long long int LONGLONG;
+typedef unsigned int UINT;
+typedef int INT;
+typedef short int WORD;
+typedef unsigned char UCHAR;
+typedef short int WCHAR;
+typedef unsigned char BOOL;
+typedef char *LPSTR;
+typedef short int *LPWSTR;
+typedef char *LPCSTR;
+typedef short int *LPCWSTR;
+typedef void *HANDLE;
+typedef HANDLE HKEY;
+typedef DWORD *LPDWORD;
+typedef void *LPVOID;
+typedef void *LPCVOID;
+typedef char *LPBYTE;
+typedef void *HWND;
+typedef void *HDC;
+typedef void *CLSID;
+typedef void (*LPTHREAD_START_ROUTINE) (/* unknown */);
+typedef int REGSAM;
+typedef int COLORREF;
+typedef int IID;
+typedef struct IStream /* id 0 */ strIStream;
+struct _DllVersionInfo { /* size 20 id 1 */
+  DWORD cbSize; /* bitsize 32, bitpos 0 */
+  DWORD dwMajorVersion; /* bitsize 32, bitpos 32 */
+  DWORD dwMinorVersion; /* bitsize 32, bitpos 64 */
+  DWORD dwBuildNumber; /* bitsize 32, bitpos 96 */
+  DWORD dwPlatformID; /* bitsize 32, bitpos 128 */
+};
+typedef struct _DllVersionInfo /* id 1 */ DLLVERSIONINFO;
+struct _DLLVERSIONINFO2 { /* size 32 id 2 */
+  DLLVERSIONINFO info1; /* bitsize 160, bitpos 0 */
+  DWORD dwFlags; /* bitsize 32, bitpos 160 */
+  ULONGLONG ullVersion; /* bitsize 64, bitpos 192 */
+};
+typedef struct _DLLVERSIONINFO2 /* id 2 */ DLLVERSIONINFO2;
+typedef enum { ASSOCSTR_COMMAND = 1, ASSOCSTR_EXECUTABLE, ASSOCSTR_FRIENDLYDOCNAME, ASSOCSTR_FRIENDLYAPPNAME, ASSOCSTR_NOOPEN, ASSOCSTR_SHELLNEWVALUE, ASSOCSTR_DDECOMMAND, ASSOCSTR_DDEIFEXEC, ASSOCSTR_DDEAPPLICATION, ASSOCSTR_DDETOPIC, ASSOCSTR_INFOTIP, ASSOCSTR_QUICKTIP, ASSOCSTR_TILEINFO, ASSOCSTR_CONTENTTYPE, ASSOCSTR_DEFAULTICON, ASSOCSTR_SHELLEXTENSION } ASSOCSTR;
+typedef enum { ASSOCKEY_SHELLEXECCLASS = 1, ASSOCKEY_APP, ASSOCKEY_CLASS, ASSOCKEY_BASECLASS } ASSOCKEY;
+typedef enum { ASSOCDATA_MSIDESCRIPTOR = 1, ASSOCDATA_NOACTIVATEHANDLER, ASSOCDATA_QUERYCLASSSTORE, ASSOCDATA_HASPERUSERASSOC, ASSOCDATA_EDITFLAGS, ASSOCDATA_VALUE } ASSOCDATA;
+typedef enum { ASSOCF_INIT_NOREMAPCLSID = 1, ASSOCF_INIT_BYEXENAME, ASSOCF_OPEN_BYEXENAME = 2, ASSOCF_INIT_DEFAULTTOSTAR = 4, ASSOCF_INIT_DEFAULTTOFOLDER = 8, ASSOCF_NOUSERSETTINGS = 16, ASSOCF_NOTRUNCATE = 32, ASSOCF_VERIFY = 64, ASSOCF_REMAPRUNDLL = 128, ASSOCF_NOFIXUPS = 256, ASSOCF_IGNOREBASECLASS = 512, ASSOCF_INIT_IGNOREUNKNOWN = 1024 } ASSOCF;
+typedef enum { SHREGDEL_DEFAULT, SHREGDEL_HKCU, SHREGDEL_HKLM = 16, SHREGDEL_BOTH } SHREGDEL_FLAGS;
+typedef enum { SHREGENUM_DEFAULT, SHREGENUM_HKCU, SHREGENUM_HKLM = 16, SHREGENUM_BOTH } SHREGENUM_FLAGS;
+typedef enum { URLIS_URL, URLIS_OPAQUE, URLIS_NOHISTORY, URLIS_FILEURL, URLIS_APPLIABLE, URLIS_DIRECTORY, URLIS_HASQUERY } URLIS;
+typedef HANDLE HINSTANCE;
+typedef HANDLE HUSKEY;
+typedef HANDLE HRESULT;
+typedef HANDLE HPALETTE;
+typedef HUSKEY *PHUSKEY;
+typedef HRESULT (*DLLGETVERSIONPROC) (/* unknown */);
+BOOL ChrCmpIA (int w1 /* 0x8 */, int w2 /* 0xc */)
+{ /* 0x0 */
+  WORD w2 /* 0xfffffff8 */;
+  WORD w1 /* 0xfffffffc */;
+  /* file shlwapi.c line 136 addr 0x0 */
+  /* file shlwapi.c line 136 addr 0x14 */
+} /* 0x16 */
+BOOL ChrCmpIW (int w1 /* 0x8 */, int w2 /* 0xc */)
+{ /* 0x16 */
+  WCHAR w2 /* 0xfffffff8 */;
+  WCHAR w1 /* 0xfffffffc */;
+  /* file shlwapi.c line 137 addr 0x16 */
+  /* file shlwapi.c line 137 addr 0x2a */
+} /* 0x2c */
+BOOL IntlStrEqWorkerA (int b1 /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x2c */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 142 addr 0x2c */
+  /* file shlwapi.c line 142 addr 0x38 */
+} /* 0x3a */
+BOOL IntlStrEqWorkerW (int b1 /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x3a */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 143 addr 0x3a */
+  /* file shlwapi.c line 143 addr 0x46 */
+} /* 0x48 */
+HRESULT SHStrDupA (LPCSTR s1 /* 0x8 */, LPWSTR *s2 /* 0xc */)
+{ /* 0x48 */
+  /* file shlwapi.c line 144 addr 0x48 */
+  /* file shlwapi.c line 144 addr 0x4b */
+} /* 0x4d */
+HRESULT SHStrDupW (LPCWSTR s1 /* 0x8 */, LPWSTR *s2 /* 0xc */)
+{ /* 0x4d */
+  /* file shlwapi.c line 145 addr 0x4d */
+  /* file shlwapi.c line 145 addr 0x50 */
+} /* 0x52 */
+LPSTR StrCatA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x52 */
+  /* file shlwapi.c line 146 addr 0x52 */
+  /* file shlwapi.c line 146 addr 0x55 */
+} /* 0x57 */
+LPWSTR StrCatW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x57 */
+  /* file shlwapi.c line 147 addr 0x57 */
+  /* file shlwapi.c line 147 addr 0x5a */
+} /* 0x5c */
+LPSTR StrCatBuffA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x5c */
+  /* file shlwapi.c line 148 addr 0x5c */
+  /* file shlwapi.c line 148 addr 0x5f */
+} /* 0x61 */
+LPWSTR StrCatBuffW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x61 */
+  /* file shlwapi.c line 149 addr 0x61 */
+  /* file shlwapi.c line 149 addr 0x64 */
+} /* 0x66 */
+DWORD StrCatChainW (LPWSTR s1 /* 0x8 */, DWORD w1 /* 0xc */, DWORD w2 /* 0x10 */, LPCWSTR s2 /* 0x14 */)
+{ /* 0x66 */
+  /* file shlwapi.c line 150 addr 0x66 */
+  /* file shlwapi.c line 150 addr 0x69 */
+} /* 0x6b */
+LPSTR StrChrA (LPCSTR s1 /* 0x8 */, int c1 /* 0xc */)
+{ /* 0x6b */
+  WORD c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 151 addr 0x6b */
+  /* file shlwapi.c line 151 addr 0x78 */
+} /* 0x7a */
+LPWSTR StrChrW (LPCWSTR s1 /* 0x8 */, int c1 /* 0xc */)
+{ /* 0x7a */
+  WCHAR c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 152 addr 0x7a */
+  /* file shlwapi.c line 152 addr 0x87 */
+} /* 0x89 */
+LPSTR StrChrIA (LPCSTR s1 /* 0x8 */, int c1 /* 0xc */)
+{ /* 0x89 */
+  WORD c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 153 addr 0x89 */
+  /* file shlwapi.c line 153 addr 0x96 */
+} /* 0x98 */
+LPWSTR StrChrIW (LPCWSTR s1 /* 0x8 */, int c1 /* 0xc */)
+{ /* 0x98 */
+  WCHAR c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 154 addr 0x98 */
+  /* file shlwapi.c line 154 addr 0xa5 */
+} /* 0xa7 */
+int StrCmpIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0xa7 */
+  /* file shlwapi.c line 159 addr 0xa7 */
+  /* file shlwapi.c line 159 addr 0xaa */
+} /* 0xac */
+int StrCmpW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0xac */
+  /* file shlwapi.c line 160 addr 0xac */
+  /* file shlwapi.c line 160 addr 0xaf */
+} /* 0xb1 */
+LPWSTR StrCpyW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0xb1 */
+  /* file shlwapi.c line 161 addr 0xb1 */
+  /* file shlwapi.c line 161 addr 0xb4 */
+} /* 0xb6 */
+LPWSTR StrCpyNW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0xb6 */
+  /* file shlwapi.c line 162 addr 0xb6 */
+  /* file shlwapi.c line 162 addr 0xb9 */
+} /* 0xbb */
+int StrCmpNA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0xbb */
+  /* file shlwapi.c line 163 addr 0xbb */
+  /* file shlwapi.c line 163 addr 0xbe */
+} /* 0xc0 */
+int StrCmpNW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0xc0 */
+  /* file shlwapi.c line 164 addr 0xc0 */
+  /* file shlwapi.c line 164 addr 0xc3 */
+} /* 0xc5 */
+int StrCmpNIA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0xc5 */
+  /* file shlwapi.c line 165 addr 0xc5 */
+  /* file shlwapi.c line 165 addr 0xc8 */
+} /* 0xca */
+int StrCmpNIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0xca */
+  /* file shlwapi.c line 166 addr 0xca */
+  /* file shlwapi.c line 166 addr 0xcd */
+} /* 0xcf */
+int StrCSpnA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0xcf */
+  /* file shlwapi.c line 167 addr 0xcf */
+  /* file shlwapi.c line 167 addr 0xd2 */
+} /* 0xd4 */
+int StrCSpnW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0xd4 */
+  /* file shlwapi.c line 168 addr 0xd4 */
+  /* file shlwapi.c line 168 addr 0xd7 */
+} /* 0xd9 */
+int StrCSpnIA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0xd9 */
+  /* file shlwapi.c line 169 addr 0xd9 */
+  /* file shlwapi.c line 169 addr 0xdc */
+} /* 0xde */
+int StrCSpnIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0xde */
+  /* file shlwapi.c line 170 addr 0xde */
+  /* file shlwapi.c line 170 addr 0xe1 */
+} /* 0xe3 */
+LPSTR StrDupA (LPCSTR s1 /* 0x8 */)
+{ /* 0xe3 */
+  /* file shlwapi.c line 171 addr 0xe3 */
+  /* file shlwapi.c line 171 addr 0xe6 */
+} /* 0xe8 */
+LPWSTR StrDupW (LPCWSTR s1 /* 0x8 */)
+{ /* 0xe8 */
+  /* file shlwapi.c line 172 addr 0xe8 */
+  /* file shlwapi.c line 172 addr 0xeb */
+} /* 0xed */
+LPSTR StrFormatByteSize64A (LONGLONG ll1 /* 0x8 */, LPSTR s1 /* 0x10 */, UINT i1 /* 0x14 */)
+{ /* 0xed */
+  LONGLONG ll1 /* 0xfffffff8 */;
+  /* file shlwapi.c line 173 addr 0xed */
+  /* file shlwapi.c line 173 addr 0xff */
+} /* 0x101 */
+LPSTR StrFormatByteSizeA (DWORD w1 /* 0x8 */, LPSTR s1 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x101 */
+  /* file shlwapi.c line 174 addr 0x101 */
+  /* file shlwapi.c line 174 addr 0x104 */
+} /* 0x106 */
+LPWSTR StrFormatByteSizeW (LONGLONG ll1 /* 0x8 */, LPWSTR s1 /* 0x10 */, UINT i1 /* 0x14 */)
+{ /* 0x106 */
+  LONGLONG ll1 /* 0xfffffff8 */;
+  /* file shlwapi.c line 175 addr 0x106 */
+  /* file shlwapi.c line 175 addr 0x118 */
+} /* 0x11a */
+LPSTR StrFormatKBSizeA (LONGLONG ll1 /* 0x8 */, LPSTR s1 /* 0x10 */, UINT i1 /* 0x14 */)
+{ /* 0x11a */
+  LONGLONG ll1 /* 0xfffffff8 */;
+  /* file shlwapi.c line 176 addr 0x11a */
+  /* file shlwapi.c line 176 addr 0x12c */
+} /* 0x12e */
+LPWSTR StrFormatKBSizeW (LONGLONG ll1 /* 0x8 */, LPWSTR s1 /* 0x10 */, UINT i1 /* 0x14 */)
+{ /* 0x12e */
+  LONGLONG ll1 /* 0xfffffff8 */;
+  /* file shlwapi.c line 177 addr 0x12e */
+  /* file shlwapi.c line 177 addr 0x140 */
+} /* 0x142 */
+int StrFromTimeIntervalA (LPSTR s1 /* 0x8 */, UINT u1 /* 0xc */, DWORD w1 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x142 */
+  /* file shlwapi.c line 178 addr 0x142 */
+  /* file shlwapi.c line 178 addr 0x145 */
+} /* 0x147 */
+int StrFromTimeIntervalW (LPWSTR s1 /* 0x8 */, UINT u1 /* 0xc */, DWORD w1 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x147 */
+  /* file shlwapi.c line 179 addr 0x147 */
+  /* file shlwapi.c line 179 addr 0x14a */
+} /* 0x14c */
+BOOL StrIsIntlEqualA (int b1 /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x14c */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 180 addr 0x14c */
+  /* file shlwapi.c line 180 addr 0x158 */
+} /* 0x15a */
+BOOL StrIsIntlEqualW (int b1 /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, int i1 /* 0x14 */)
+{ /* 0x15a */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 181 addr 0x15a */
+  /* file shlwapi.c line 181 addr 0x166 */
+} /* 0x168 */
+LPSTR StrNCatA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x168 */
+  /* file shlwapi.c line 182 addr 0x168 */
+  /* file shlwapi.c line 182 addr 0x16b */
+} /* 0x16d */
+LPWSTR StrNCatW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x16d */
+  /* file shlwapi.c line 183 addr 0x16d */
+  /* file shlwapi.c line 183 addr 0x170 */
+} /* 0x172 */
+LPSTR StrPBrkA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x172 */
+  /* file shlwapi.c line 184 addr 0x172 */
+  /* file shlwapi.c line 184 addr 0x175 */
+} /* 0x177 */
+LPWSTR StrPBrkW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x177 */
+  /* file shlwapi.c line 185 addr 0x177 */
+  /* file shlwapi.c line 185 addr 0x17a */
+} /* 0x17c */
+LPSTR StrRChrA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int w1 /* 0x10 */)
+{ /* 0x17c */
+  WORD w1 /* 0xfffffffc */;
+  /* file shlwapi.c line 186 addr 0x17c */
+  /* file shlwapi.c line 186 addr 0x189 */
+} /* 0x18b */
+LPWSTR StrRChrW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int c1 /* 0x10 */)
+{ /* 0x18b */
+  WCHAR c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 187 addr 0x18b */
+  /* file shlwapi.c line 187 addr 0x198 */
+} /* 0x19a */
+LPSTR StrRChrIA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int w1 /* 0x10 */)
+{ /* 0x19a */
+  WORD w1 /* 0xfffffffc */;
+  /* file shlwapi.c line 188 addr 0x19a */
+  /* file shlwapi.c line 188 addr 0x1a7 */
+} /* 0x1a9 */
+LPWSTR StrRChrIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int c1 /* 0x10 */)
+{ /* 0x1a9 */
+  WCHAR c1 /* 0xfffffffc */;
+  /* file shlwapi.c line 189 addr 0x1a9 */
+  /* file shlwapi.c line 189 addr 0x1b6 */
+} /* 0x1b8 */
+LPSTR StrRStrIA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, LPCSTR s3 /* 0x10 */)
+{ /* 0x1b8 */
+  /* file shlwapi.c line 196 addr 0x1b8 */
+  /* file shlwapi.c line 196 addr 0x1bb */
+} /* 0x1bd */
+LPWSTR StrRStrIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, LPCWSTR s3 /* 0x10 */)
+{ /* 0x1bd */
+  /* file shlwapi.c line 197 addr 0x1bd */
+  /* file shlwapi.c line 197 addr 0x1c0 */
+} /* 0x1c2 */
+int StrSpnA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x1c2 */
+  /* file shlwapi.c line 198 addr 0x1c2 */
+  /* file shlwapi.c line 198 addr 0x1c5 */
+} /* 0x1c7 */
+int StrSpnW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x1c7 */
+  /* file shlwapi.c line 199 addr 0x1c7 */
+  /* file shlwapi.c line 199 addr 0x1ca */
+} /* 0x1cc */
+LPSTR StrStrA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x1cc */
+  /* file shlwapi.c line 200 addr 0x1cc */
+  /* file shlwapi.c line 200 addr 0x1cf */
+} /* 0x1d1 */
+LPSTR StrStrIA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x1d1 */
+  /* file shlwapi.c line 201 addr 0x1d1 */
+  /* file shlwapi.c line 201 addr 0x1d4 */
+} /* 0x1d6 */
+LPWSTR StrStrIW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x1d6 */
+  /* file shlwapi.c line 202 addr 0x1d6 */
+  /* file shlwapi.c line 202 addr 0x1d9 */
+} /* 0x1db */
+LPWSTR StrStrW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x1db */
+  /* file shlwapi.c line 203 addr 0x1db */
+  /* file shlwapi.c line 203 addr 0x1de */
+} /* 0x1e0 */
+int StrToIntA (LPCSTR s1 /* 0x8 */)
+{ /* 0x1e0 */
+  /* file shlwapi.c line 204 addr 0x1e0 */
+  /* file shlwapi.c line 204 addr 0x1e3 */
+} /* 0x1e5 */
+int StrToIntW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x1e5 */
+  /* file shlwapi.c line 205 addr 0x1e5 */
+  /* file shlwapi.c line 205 addr 0x1e8 */
+} /* 0x1ea */
+BOOL StrToIntExA (LPCSTR s1 /* 0x8 */, DWORD w1 /* 0xc */, int *i1 /* 0x10 */)
+{ /* 0x1ea */
+  /* file shlwapi.c line 208 addr 0x1ea */
+  /* file shlwapi.c line 208 addr 0x1ed */
+} /* 0x1ef */
+BOOL StrToIntExW (LPCWSTR s1 /* 0x8 */, DWORD w1 /* 0xc */, int *i1 /* 0x10 */)
+{ /* 0x1ef */
+  /* file shlwapi.c line 209 addr 0x1ef */
+  /* file shlwapi.c line 209 addr 0x1f2 */
+} /* 0x1f4 */
+BOOL StrTrimA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x1f4 */
+  /* file shlwapi.c line 210 addr 0x1f4 */
+  /* file shlwapi.c line 210 addr 0x1f7 */
+} /* 0x1f9 */
+BOOL StrTrimW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x1f9 */
+  /* file shlwapi.c line 211 addr 0x1f9 */
+  /* file shlwapi.c line 211 addr 0x1fc */
+} /* 0x1fe */
+LPSTR PathAddBackslashA (LPSTR s1 /* 0x8 */)
+{ /* 0x1fe */
+  /* file shlwapi.c line 212 addr 0x1fe */
+  /* file shlwapi.c line 212 addr 0x201 */
+} /* 0x203 */
+LPWSTR PathAddBackslashW (LPWSTR s1 /* 0x8 */)
+{ /* 0x203 */
+  /* file shlwapi.c line 213 addr 0x203 */
+  /* file shlwapi.c line 213 addr 0x206 */
+} /* 0x208 */
+BOOL PathAddExtensionA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x208 */
+  /* file shlwapi.c line 214 addr 0x208 */
+  /* file shlwapi.c line 214 addr 0x20b */
+} /* 0x20d */
+BOOL PathAddExtensionW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x20d */
+  /* file shlwapi.c line 215 addr 0x20d */
+  /* file shlwapi.c line 215 addr 0x210 */
+} /* 0x212 */
+BOOL PathAppendA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x212 */
+  /* file shlwapi.c line 216 addr 0x212 */
+  /* file shlwapi.c line 216 addr 0x215 */
+} /* 0x217 */
+BOOL PathAppendW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x217 */
+  /* file shlwapi.c line 217 addr 0x217 */
+  /* file shlwapi.c line 217 addr 0x21a */
+} /* 0x21c */
+LPSTR PathBuildRootA (LPSTR s1 /* 0x8 */, int i1 /* 0xc */)
+{ /* 0x21c */
+  /* file shlwapi.c line 218 addr 0x21c */
+  /* file shlwapi.c line 218 addr 0x21f */
+} /* 0x221 */
+LPWSTR PathBuildRootW (LPWSTR s1 /* 0x8 */, int i1 /* 0xc */)
+{ /* 0x221 */
+  /* file shlwapi.c line 219 addr 0x221 */
+  /* file shlwapi.c line 219 addr 0x224 */
+} /* 0x226 */
+BOOL PathCanonicalizeA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x226 */
+  /* file shlwapi.c line 220 addr 0x226 */
+  /* file shlwapi.c line 220 addr 0x229 */
+} /* 0x22b */
+BOOL PathCanonicalizeW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x22b */
+  /* file shlwapi.c line 221 addr 0x22b */
+  /* file shlwapi.c line 221 addr 0x22e */
+} /* 0x230 */
+LPSTR PathCombineA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, LPCSTR s3 /* 0x10 */)
+{ /* 0x230 */
+  /* file shlwapi.c line 222 addr 0x230 */
+  /* file shlwapi.c line 222 addr 0x233 */
+} /* 0x235 */
+LPWSTR PathCombineW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, LPCWSTR s3 /* 0x10 */)
+{ /* 0x235 */
+  /* file shlwapi.c line 223 addr 0x235 */
+  /* file shlwapi.c line 223 addr 0x238 */
+} /* 0x23a */
+int PathCommonPrefixA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, LPSTR s3 /* 0x10 */)
+{ /* 0x23a */
+  /* file shlwapi.c line 224 addr 0x23a */
+  /* file shlwapi.c line 224 addr 0x23d */
+} /* 0x23f */
+int PathCommonPrefixW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, LPWSTR s3 /* 0x10 */)
+{ /* 0x23f */
+  /* file shlwapi.c line 225 addr 0x23f */
+  /* file shlwapi.c line 225 addr 0x242 */
+} /* 0x244 */
+BOOL PathCompactPathA (HDC hDc /* 0x8 */, LPSTR s1 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x244 */
+  /* file shlwapi.c line 226 addr 0x244 */
+  /* file shlwapi.c line 226 addr 0x247 */
+} /* 0x249 */
+BOOL PathCompactPathW (HDC hDc /* 0x8 */, LPWSTR s1 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x249 */
+  /* file shlwapi.c line 227 addr 0x249 */
+  /* file shlwapi.c line 227 addr 0x24c */
+} /* 0x24e */
+BOOL PathCompactPathExA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, UINT i1 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x24e */
+  /* file shlwapi.c line 228 addr 0x24e */
+  /* file shlwapi.c line 228 addr 0x251 */
+} /* 0x253 */
+BOOL PathCompactPathExW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, UINT i1 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x253 */
+  /* file shlwapi.c line 229 addr 0x253 */
+  /* file shlwapi.c line 229 addr 0x256 */
+} /* 0x258 */
+HRESULT PathCreateFromUrlA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD i1 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x258 */
+  /* file shlwapi.c line 230 addr 0x258 */
+  /* file shlwapi.c line 230 addr 0x25b */
+} /* 0x25d */
+HRESULT PathCreateFromUrlW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD i1 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x25d */
+  /* file shlwapi.c line 231 addr 0x25d */
+  /* file shlwapi.c line 231 addr 0x260 */
+} /* 0x262 */
+BOOL PathFileExistsA (LPCSTR s1 /* 0x8 */)
+{ /* 0x262 */
+  /* file shlwapi.c line 232 addr 0x262 */
+  /* file shlwapi.c line 232 addr 0x265 */
+} /* 0x267 */
+BOOL PathFileExistsW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x267 */
+  /* file shlwapi.c line 233 addr 0x267 */
+  /* file shlwapi.c line 233 addr 0x26a */
+} /* 0x26c */
+LPSTR PathFindExtensionA (LPCSTR s1 /* 0x8 */)
+{ /* 0x26c */
+  /* file shlwapi.c line 234 addr 0x26c */
+  /* file shlwapi.c line 234 addr 0x26f */
+} /* 0x271 */
+LPWSTR PathFindExtensionW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x271 */
+  /* file shlwapi.c line 235 addr 0x271 */
+  /* file shlwapi.c line 235 addr 0x274 */
+} /* 0x276 */
+LPSTR PathFindFileNameA (LPCSTR s1 /* 0x8 */)
+{ /* 0x276 */
+  /* file shlwapi.c line 236 addr 0x276 */
+  /* file shlwapi.c line 236 addr 0x279 */
+} /* 0x27b */
+LPWSTR PathFindNextComponentW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x27b */
+  /* file shlwapi.c line 239 addr 0x27b */
+  /* file shlwapi.c line 239 addr 0x27e */
+} /* 0x280 */
+BOOL PathFindOnPathA (LPSTR s1 /* 0x8 */, LPCSTR *s2 /* 0xc */)
+{ /* 0x280 */
+  /* file shlwapi.c line 240 addr 0x280 */
+  /* file shlwapi.c line 240 addr 0x283 */
+} /* 0x285 */
+BOOL PathFindOnPathW (LPWSTR s1 /* 0x8 */, LPCWSTR *s2 /* 0xc */)
+{ /* 0x285 */
+  /* file shlwapi.c line 241 addr 0x285 */
+  /* file shlwapi.c line 241 addr 0x288 */
+} /* 0x28a */
+LPCSTR PathFindSuffixArrayA (LPCSTR s1 /* 0x8 */, LPCSTR *s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x28a */
+  /* file shlwapi.c line 242 addr 0x28a */
+  /* file shlwapi.c line 242 addr 0x28d */
+} /* 0x28f */
+LPCWSTR PathFindSuffixArrayW (LPCWSTR s1 /* 0x8 */, LPCWSTR *s2 /* 0xc */, int i1 /* 0x10 */)
+{ /* 0x28f */
+  /* file shlwapi.c line 243 addr 0x28f */
+  /* file shlwapi.c line 243 addr 0x292 */
+} /* 0x294 */
+LPSTR PathGetArgsA (LPCSTR s1 /* 0x8 */)
+{ /* 0x294 */
+  /* file shlwapi.c line 244 addr 0x294 */
+  /* file shlwapi.c line 244 addr 0x297 */
+} /* 0x299 */
+LPWSTR PathGetArgsW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x299 */
+  /* file shlwapi.c line 245 addr 0x299 */
+  /* file shlwapi.c line 245 addr 0x29c */
+} /* 0x29e */
+UINT PathGetCharTypeA (int ch /* 0x8 */)
+{ /* 0x29e */
+  UCHAR ch /* 0xfffffffc */;
+  /* file shlwapi.c line 246 addr 0x29e */
+  /* file shlwapi.c line 246 addr 0x2aa */
+} /* 0x2ac */
+UINT PathGetCharTypeW (int ch /* 0x8 */)
+{ /* 0x2ac */
+  WCHAR ch /* 0xfffffffc */;
+  /* file shlwapi.c line 247 addr 0x2ac */
+  /* file shlwapi.c line 247 addr 0x2b9 */
+} /* 0x2bb */
+int PathGetDriveNumberA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2bb */
+  /* file shlwapi.c line 248 addr 0x2bb */
+  /* file shlwapi.c line 248 addr 0x2be */
+} /* 0x2c0 */
+int PathGetDriveNumberW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2c0 */
+  /* file shlwapi.c line 249 addr 0x2c0 */
+  /* file shlwapi.c line 249 addr 0x2c3 */
+} /* 0x2c5 */
+BOOL PathIsContentTypeA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x2c5 */
+  /* file shlwapi.c line 250 addr 0x2c5 */
+  /* file shlwapi.c line 250 addr 0x2c8 */
+} /* 0x2ca */
+BOOL PathIsContentTypeW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x2ca */
+  /* file shlwapi.c line 251 addr 0x2ca */
+  /* file shlwapi.c line 251 addr 0x2cd */
+} /* 0x2cf */
+BOOL PathIsDirectoryA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2cf */
+  /* file shlwapi.c line 252 addr 0x2cf */
+  /* file shlwapi.c line 252 addr 0x2d2 */
+} /* 0x2d4 */
+BOOL PathIsDirectoryEmptyA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2d4 */
+  /* file shlwapi.c line 253 addr 0x2d4 */
+  /* file shlwapi.c line 253 addr 0x2d7 */
+} /* 0x2d9 */
+BOOL PathIsDirectoryEmptyW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2d9 */
+  /* file shlwapi.c line 254 addr 0x2d9 */
+  /* file shlwapi.c line 254 addr 0x2dc */
+} /* 0x2de */
+BOOL PathIsDirectoryW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2de */
+  /* file shlwapi.c line 255 addr 0x2de */
+  /* file shlwapi.c line 255 addr 0x2e1 */
+} /* 0x2e3 */
+BOOL PathIsFileSpecA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2e3 */
+  /* file shlwapi.c line 256 addr 0x2e3 */
+  /* file shlwapi.c line 256 addr 0x2e6 */
+} /* 0x2e8 */
+BOOL PathIsFileSpecW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2e8 */
+  /* file shlwapi.c line 257 addr 0x2e8 */
+  /* file shlwapi.c line 257 addr 0x2eb */
+} /* 0x2ed */
+BOOL PathIsLFNFileSpecA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2ed */
+  /* file shlwapi.c line 258 addr 0x2ed */
+  /* file shlwapi.c line 258 addr 0x2f0 */
+} /* 0x2f2 */
+BOOL PathIsLFNFileSpecW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2f2 */
+  /* file shlwapi.c line 259 addr 0x2f2 */
+  /* file shlwapi.c line 259 addr 0x2f5 */
+} /* 0x2f7 */
+BOOL PathIsNetworkPathA (LPCSTR s1 /* 0x8 */)
+{ /* 0x2f7 */
+  /* file shlwapi.c line 260 addr 0x2f7 */
+  /* file shlwapi.c line 260 addr 0x2fa */
+} /* 0x2fc */
+BOOL PathIsNetworkPathW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x2fc */
+  /* file shlwapi.c line 261 addr 0x2fc */
+  /* file shlwapi.c line 261 addr 0x2ff */
+} /* 0x301 */
+BOOL PathIsPrefixA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x301 */
+  /* file shlwapi.c line 262 addr 0x301 */
+  /* file shlwapi.c line 262 addr 0x304 */
+} /* 0x306 */
+BOOL PathIsPrefixW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x306 */
+  /* file shlwapi.c line 263 addr 0x306 */
+  /* file shlwapi.c line 263 addr 0x309 */
+} /* 0x30b */
+BOOL PathIsRelativeA (LPCSTR s1 /* 0x8 */)
+{ /* 0x30b */
+  /* file shlwapi.c line 264 addr 0x30b */
+  /* file shlwapi.c line 264 addr 0x30e */
+} /* 0x310 */
+BOOL PathIsRelativeW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x310 */
+  /* file shlwapi.c line 265 addr 0x310 */
+  /* file shlwapi.c line 265 addr 0x313 */
+} /* 0x315 */
+BOOL PathIsRootA (LPCSTR s1 /* 0x8 */)
+{ /* 0x315 */
+  /* file shlwapi.c line 266 addr 0x315 */
+  /* file shlwapi.c line 266 addr 0x318 */
+} /* 0x31a */
+BOOL PathIsRootW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x31a */
+  /* file shlwapi.c line 267 addr 0x31a */
+  /* file shlwapi.c line 267 addr 0x31d */
+} /* 0x31f */
+BOOL PathIsSameRootA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x31f */
+  /* file shlwapi.c line 268 addr 0x31f */
+  /* file shlwapi.c line 268 addr 0x322 */
+} /* 0x324 */
+BOOL PathIsSameRootW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x324 */
+  /* file shlwapi.c line 269 addr 0x324 */
+  /* file shlwapi.c line 269 addr 0x327 */
+} /* 0x329 */
+BOOL PathIsSystemFolderA (LPCSTR s1 /* 0x8 */, DWORD w1 /* 0xc */)
+{ /* 0x329 */
+  /* file shlwapi.c line 270 addr 0x329 */
+  /* file shlwapi.c line 270 addr 0x32c */
+} /* 0x32e */
+BOOL PathIsSystemFolderW (LPCWSTR s1 /* 0x8 */, DWORD w1 /* 0xc */)
+{ /* 0x32e */
+  /* file shlwapi.c line 271 addr 0x32e */
+  /* file shlwapi.c line 271 addr 0x331 */
+} /* 0x333 */
+BOOL PathIsUNCA (LPCSTR s1 /* 0x8 */)
+{ /* 0x333 */
+  /* file shlwapi.c line 272 addr 0x333 */
+  /* file shlwapi.c line 272 addr 0x336 */
+} /* 0x338 */
+BOOL PathIsUNCServerA (LPCSTR s1 /* 0x8 */)
+{ /* 0x338 */
+  /* file shlwapi.c line 273 addr 0x338 */
+  /* file shlwapi.c line 273 addr 0x33b */
+} /* 0x33d */
+BOOL PathIsUNCServerShareA (LPCSTR s1 /* 0x8 */)
+{ /* 0x33d */
+  /* file shlwapi.c line 274 addr 0x33d */
+  /* file shlwapi.c line 274 addr 0x340 */
+} /* 0x342 */
+BOOL PathIsUNCServerShareW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x342 */
+  /* file shlwapi.c line 275 addr 0x342 */
+  /* file shlwapi.c line 275 addr 0x345 */
+} /* 0x347 */
+BOOL PathIsUNCServerW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x347 */
+  /* file shlwapi.c line 276 addr 0x347 */
+  /* file shlwapi.c line 276 addr 0x34a */
+} /* 0x34c */
+BOOL PathIsUNCW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x34c */
+  /* file shlwapi.c line 277 addr 0x34c */
+  /* file shlwapi.c line 277 addr 0x34f */
+} /* 0x351 */
+BOOL PathIsURLA (LPCSTR s1 /* 0x8 */)
+{ /* 0x351 */
+  /* file shlwapi.c line 278 addr 0x351 */
+  /* file shlwapi.c line 278 addr 0x354 */
+} /* 0x356 */
+BOOL PathIsURLW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x356 */
+  /* file shlwapi.c line 279 addr 0x356 */
+  /* file shlwapi.c line 279 addr 0x359 */
+} /* 0x35b */
+BOOL PathMakePrettyA (LPSTR s1 /* 0x8 */)
+{ /* 0x35b */
+  /* file shlwapi.c line 280 addr 0x35b */
+  /* file shlwapi.c line 280 addr 0x35e */
+} /* 0x360 */
+BOOL PathMakePrettyW (LPWSTR s1 /* 0x8 */)
+{ /* 0x360 */
+  /* file shlwapi.c line 281 addr 0x360 */
+  /* file shlwapi.c line 281 addr 0x363 */
+} /* 0x365 */
+BOOL PathMakeSystemFolderA (LPSTR s1 /* 0x8 */)
+{ /* 0x365 */
+  /* file shlwapi.c line 282 addr 0x365 */
+  /* file shlwapi.c line 282 addr 0x368 */
+} /* 0x36a */
+BOOL PathMakeSystemFolderW (LPWSTR s1 /* 0x8 */)
+{ /* 0x36a */
+  /* file shlwapi.c line 283 addr 0x36a */
+  /* file shlwapi.c line 283 addr 0x36d */
+} /* 0x36f */
+BOOL PathMatchSpecA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x36f */
+  /* file shlwapi.c line 284 addr 0x36f */
+  /* file shlwapi.c line 284 addr 0x372 */
+} /* 0x374 */
+BOOL PathMatchSpecW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x374 */
+  /* file shlwapi.c line 285 addr 0x374 */
+  /* file shlwapi.c line 285 addr 0x377 */
+} /* 0x379 */
+int PathParseIconLocationA (LPSTR s1 /* 0x8 */)
+{ /* 0x379 */
+  /* file shlwapi.c line 286 addr 0x379 */
+  /* file shlwapi.c line 286 addr 0x37c */
+} /* 0x37e */
+int PathParseIconLocationW (LPWSTR s1 /* 0x8 */)
+{ /* 0x37e */
+  /* file shlwapi.c line 287 addr 0x37e */
+  /* file shlwapi.c line 287 addr 0x381 */
+} /* 0x383 */
+void PathQuoteSpacesA (LPSTR s1 /* 0x8 */)
+{ /* 0x383 */
+  /* file shlwapi.c line 288 addr 0x383 */
+  /* file shlwapi.c line 288 addr 0x386 */
+} /* 0x388 */
+void PathQuoteSpacesW (LPWSTR s1 /* 0x8 */)
+{ /* 0x388 */
+  /* file shlwapi.c line 289 addr 0x388 */
+  /* file shlwapi.c line 289 addr 0x38b */
+} /* 0x38d */
+BOOL PathRelativePathToA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, DWORD w1 /* 0x10 */, LPCSTR s3 /* 0x14 */, DWORD w2 /* 0x18 */)
+{ /* 0x38d */
+  /* file shlwapi.c line 290 addr 0x38d */
+  /* file shlwapi.c line 290 addr 0x390 */
+} /* 0x392 */
+BOOL PathRelativePathToW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, DWORD w1 /* 0x10 */, LPCWSTR s3 /* 0x14 */, DWORD w2 /* 0x18 */)
+{ /* 0x392 */
+  /* file shlwapi.c line 291 addr 0x392 */
+  /* file shlwapi.c line 291 addr 0x395 */
+} /* 0x397 */
+void PathRemoveArgsA (LPSTR s1 /* 0x8 */)
+{ /* 0x397 */
+  /* file shlwapi.c line 292 addr 0x397 */
+  /* file shlwapi.c line 292 addr 0x39a */
+} /* 0x39c */
+void PathRemoveArgsW (LPWSTR s1 /* 0x8 */)
+{ /* 0x39c */
+  /* file shlwapi.c line 293 addr 0x39c */
+  /* file shlwapi.c line 293 addr 0x39f */
+} /* 0x3a1 */
+LPSTR PathRemoveBackslashA (LPSTR s1 /* 0x8 */)
+{ /* 0x3a1 */
+  /* file shlwapi.c line 294 addr 0x3a1 */
+  /* file shlwapi.c line 294 addr 0x3a4 */
+} /* 0x3a6 */
+LPWSTR PathRemoveBackslashW (LPWSTR s1 /* 0x8 */)
+{ /* 0x3a6 */
+  /* file shlwapi.c line 295 addr 0x3a6 */
+  /* file shlwapi.c line 295 addr 0x3a9 */
+} /* 0x3ab */
+void PathRemoveBlanksA (LPSTR s1 /* 0x8 */)
+{ /* 0x3ab */
+  /* file shlwapi.c line 296 addr 0x3ab */
+  /* file shlwapi.c line 296 addr 0x3ae */
+} /* 0x3b0 */
+void PathRemoveBlanksW (LPWSTR s1 /* 0x8 */)
+{ /* 0x3b0 */
+  /* file shlwapi.c line 297 addr 0x3b0 */
+  /* file shlwapi.c line 297 addr 0x3b3 */
+} /* 0x3b5 */
+void PathRemoveExtensionA (LPSTR s1 /* 0x8 */)
+{ /* 0x3b5 */
+  /* file shlwapi.c line 298 addr 0x3b5 */
+  /* file shlwapi.c line 298 addr 0x3b8 */
+} /* 0x3ba */
+void PathRemoveExtensionW (LPWSTR s1 /* 0x8 */)
+{ /* 0x3ba */
+  /* file shlwapi.c line 299 addr 0x3ba */
+  /* file shlwapi.c line 299 addr 0x3bd */
+} /* 0x3bf */
+BOOL PathRemoveFileSpecA (LPSTR s1 /* 0x8 */)
+{ /* 0x3bf */
+  /* file shlwapi.c line 300 addr 0x3bf */
+  /* file shlwapi.c line 300 addr 0x3c2 */
+} /* 0x3c4 */
+BOOL PathRemoveFileSpecW (LPWSTR s1 /* 0x8 */)
+{ /* 0x3c4 */
+  /* file shlwapi.c line 301 addr 0x3c4 */
+  /* file shlwapi.c line 301 addr 0x3c7 */
+} /* 0x3c9 */
+BOOL PathRenameExtensionA (LPSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */)
+{ /* 0x3c9 */
+  /* file shlwapi.c line 302 addr 0x3c9 */
+  /* file shlwapi.c line 302 addr 0x3cc */
+} /* 0x3ce */
+BOOL PathRenameExtensionW (LPWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */)
+{ /* 0x3ce */
+  /* file shlwapi.c line 303 addr 0x3ce */
+  /* file shlwapi.c line 303 addr 0x3d1 */
+} /* 0x3d3 */
+BOOL PathSearchAndQualifyA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x3d3 */
+  /* file shlwapi.c line 304 addr 0x3d3 */
+  /* file shlwapi.c line 304 addr 0x3d6 */
+} /* 0x3d8 */
+BOOL PathSearchAndQualifyW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x3d8 */
+  /* file shlwapi.c line 305 addr 0x3d8 */
+  /* file shlwapi.c line 305 addr 0x3db */
+} /* 0x3dd */
+void PathSetDlgItemPathA (HWND hWnd /* 0x8 */, int i1 /* 0xc */, LPCSTR s2 /* 0x10 */)
+{ /* 0x3dd */
+  /* file shlwapi.c line 306 addr 0x3dd */
+  /* file shlwapi.c line 306 addr 0x3e0 */
+} /* 0x3e2 */
+void PathSetDlgItemPathW (HWND hWnd /* 0x8 */, int i1 /* 0xc */, LPCWSTR s2 /* 0x10 */)
+{ /* 0x3e2 */
+  /* file shlwapi.c line 307 addr 0x3e2 */
+  /* file shlwapi.c line 307 addr 0x3e5 */
+} /* 0x3e7 */
+LPSTR PathSkipRootA (LPCSTR s1 /* 0x8 */)
+{ /* 0x3e7 */
+  /* file shlwapi.c line 308 addr 0x3e7 */
+  /* file shlwapi.c line 308 addr 0x3ea */
+} /* 0x3ec */
+LPWSTR PathSkipRootW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x3ec */
+  /* file shlwapi.c line 309 addr 0x3ec */
+  /* file shlwapi.c line 309 addr 0x3ef */
+} /* 0x3f1 */
+void PathStripPathA (LPSTR s1 /* 0x8 */)
+{ /* 0x3f1 */
+  /* file shlwapi.c line 310 addr 0x3f1 */
+  /* file shlwapi.c line 310 addr 0x3f4 */
+} /* 0x3f6 */
+void PathStripPathW (LPWSTR s1 /* 0x8 */)
+{ /* 0x3f6 */
+  /* file shlwapi.c line 311 addr 0x3f6 */
+  /* file shlwapi.c line 311 addr 0x3f9 */
+} /* 0x3fb */
+BOOL PathStripToRootA (LPSTR s1 /* 0x8 */)
+{ /* 0x3fb */
+  /* file shlwapi.c line 312 addr 0x3fb */
+  /* file shlwapi.c line 312 addr 0x3fe */
+} /* 0x400 */
+BOOL PathStripToRootW (LPWSTR s1 /* 0x8 */)
+{ /* 0x400 */
+  /* file shlwapi.c line 313 addr 0x400 */
+  /* file shlwapi.c line 313 addr 0x403 */
+} /* 0x405 */
+void PathUndecorateA (LPSTR s1 /* 0x8 */)
+{ /* 0x405 */
+  /* file shlwapi.c line 314 addr 0x405 */
+  /* file shlwapi.c line 314 addr 0x408 */
+} /* 0x40a */
+void PathUndecorateW (LPWSTR s1 /* 0x8 */)
+{ /* 0x40a */
+  /* file shlwapi.c line 315 addr 0x40a */
+  /* file shlwapi.c line 315 addr 0x40d */
+} /* 0x40f */
+BOOL PathUnExpandEnvStringsA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x40f */
+  /* file shlwapi.c line 316 addr 0x40f */
+  /* file shlwapi.c line 316 addr 0x412 */
+} /* 0x414 */
+BOOL PathUnExpandEnvStringsW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, UINT i1 /* 0x10 */)
+{ /* 0x414 */
+  /* file shlwapi.c line 317 addr 0x414 */
+  /* file shlwapi.c line 317 addr 0x417 */
+} /* 0x419 */
+BOOL PathUnmakeSystemFolderA (LPSTR s1 /* 0x8 */)
+{ /* 0x419 */
+  /* file shlwapi.c line 318 addr 0x419 */
+  /* file shlwapi.c line 318 addr 0x41c */
+} /* 0x41e */
+BOOL PathUnmakeSystemFolderW (LPWSTR s1 /* 0x8 */)
+{ /* 0x41e */
+  /* file shlwapi.c line 319 addr 0x41e */
+  /* file shlwapi.c line 319 addr 0x421 */
+} /* 0x423 */
+void PathUnquoteSpacesA (LPSTR s1 /* 0x8 */)
+{ /* 0x423 */
+  /* file shlwapi.c line 320 addr 0x423 */
+  /* file shlwapi.c line 320 addr 0x426 */
+} /* 0x428 */
+void PathUnquoteSpacesW (LPWSTR s1 /* 0x8 */)
+{ /* 0x428 */
+  /* file shlwapi.c line 321 addr 0x428 */
+  /* file shlwapi.c line 321 addr 0x42b */
+} /* 0x42d */
+HRESULT SHAutoComplete (HWND hWnd /* 0x8 */, DWORD w1 /* 0xc */)
+{ /* 0x42d */
+  /* file shlwapi.c line 322 addr 0x42d */
+  /* file shlwapi.c line 322 addr 0x430 */
+} /* 0x432 */
+HRESULT SHCreateStreamOnFileA (LPCSTR s1 /* 0x8 */, DWORD w /* 0xc */, strIStream **iStream /* 0x10 */)
+{ /* 0x432 */
+  /* file shlwapi.c line 324 addr 0x432 */
+  /* file shlwapi.c line 324 addr 0x435 */
+} /* 0x437 */
+HRESULT SHCreateStreamOnFileW (LPCWSTR s1 /* 0x8 */, DWORD w /* 0xc */, strIStream **iStream /* 0x10 */)
+{ /* 0x437 */
+  /* file shlwapi.c line 325 addr 0x437 */
+  /* file shlwapi.c line 325 addr 0x43a */
+} /* 0x43c */
+struct IStream /* id 0 */ *SHOpenRegStream2A (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x43c */
+  /* file shlwapi.c line 326 addr 0x43c */
+  /* file shlwapi.c line 326 addr 0x43f */
+} /* 0x441 */
+struct IStream /* id 0 */ *SHOpenRegStream2W (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x441 */
+  /* file shlwapi.c line 327 addr 0x441 */
+  /* file shlwapi.c line 327 addr 0x444 */
+} /* 0x446 */
+struct IStream /* id 0 */ *SHOpenRegStreamA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x446 */
+  /* file shlwapi.c line 328 addr 0x446 */
+  /* file shlwapi.c line 328 addr 0x449 */
+} /* 0x44b */
+struct IStream /* id 0 */ *SHOpenRegStreamW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x44b */
+  /* file shlwapi.c line 329 addr 0x44b */
+  /* file shlwapi.c line 329 addr 0x44e */
+} /* 0x450 */
+BOOL SHCreateThread (LPTHREAD_START_ROUTINE start /* 0x8 */, void *ptr /* 0xc */, DWORD w1 /* 0x10 */, LPTHREAD_START_ROUTINE routine /* 0x14 */)
+{ /* 0x450 */
+  /* file shlwapi.c line 331 addr 0x450 */
+  /* file shlwapi.c line 331 addr 0x453 */
+} /* 0x455 */
+DWORD SHCopyKeyA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, HKEY hKey2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x455 */
+  /* file shlwapi.c line 332 addr 0x455 */
+  /* file shlwapi.c line 332 addr 0x458 */
+} /* 0x45a */
+DWORD SHCopyKeyW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, HKEY hKey2 /* 0x10 */, DWORD w1 /* 0x14 */)
+{ /* 0x45a */
+  /* file shlwapi.c line 333 addr 0x45a */
+  /* file shlwapi.c line 333 addr 0x45d */
+} /* 0x45f */
+DWORD SHDeleteEmptyKeyA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */)
+{ /* 0x45f */
+  /* file shlwapi.c line 334 addr 0x45f */
+  /* file shlwapi.c line 334 addr 0x462 */
+} /* 0x464 */
+DWORD SHDeleteEmptyKeyW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */)
+{ /* 0x464 */
+  /* file shlwapi.c line 335 addr 0x464 */
+  /* file shlwapi.c line 335 addr 0x467 */
+} /* 0x469 */
+DWORD SHDeleteKeyA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */)
+{ /* 0x469 */
+  /* file shlwapi.c line 336 addr 0x469 */
+  /* file shlwapi.c line 336 addr 0x46c */
+} /* 0x46e */
+DWORD SHDeleteKeyW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */)
+{ /* 0x46e */
+  /* file shlwapi.c line 337 addr 0x46e */
+  /* file shlwapi.c line 337 addr 0x471 */
+} /* 0x473 */
+DWORD SHEnumKeyExA (HKEY hKey /* 0x8 */, DWORD w1 /* 0xc */, LPSTR s1 /* 0x10 */, LPDWORD w2 /* 0x14 */)
+{ /* 0x473 */
+  /* file shlwapi.c line 338 addr 0x473 */
+  /* file shlwapi.c line 338 addr 0x476 */
+} /* 0x478 */
+DWORD SHEnumKeyExW (HKEY hKey /* 0x8 */, DWORD w1 /* 0xc */, LPWSTR s1 /* 0x10 */, LPDWORD w2 /* 0x14 */)
+{ /* 0x478 */
+  /* file shlwapi.c line 339 addr 0x478 */
+  /* file shlwapi.c line 339 addr 0x47b */
+} /* 0x47d */
+DWORD SHQueryInfoKeyA (HKEY hKey /* 0x8 */, LPDWORD w1 /* 0xc */, LPDWORD w2 /* 0x10 */, LPDWORD w3 /* 0x14 */, LPDWORD w4 /* 0x18 */)
+{ /* 0x47d */
+  /* file shlwapi.c line 340 addr 0x47d */
+  /* file shlwapi.c line 340 addr 0x480 */
+} /* 0x482 */
+DWORD SHQueryInfoKeyW (HKEY hKey /* 0x8 */, LPDWORD w1 /* 0xc */, LPDWORD w2 /* 0x10 */, LPDWORD w3 /* 0x14 */, LPDWORD w4 /* 0x18 */)
+{ /* 0x482 */
+  /* file shlwapi.c line 341 addr 0x482 */
+  /* file shlwapi.c line 341 addr 0x485 */
+} /* 0x487 */
+DWORD SHQueryValueExA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPDWORD w1 /* 0x10 */, LPDWORD w2 /* 0x14 */, LPVOID p1 /* 0x18 */, LPDWORD w3 /* 0x1c */)
+{ /* 0x487 */
+  /* file shlwapi.c line 342 addr 0x487 */
+  /* file shlwapi.c line 342 addr 0x48a */
+} /* 0x48c */
+DWORD SHQueryValueExW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPDWORD w1 /* 0x10 */, LPDWORD w2 /* 0x14 */, LPVOID p1 /* 0x18 */, LPDWORD w3 /* 0x1c */)
+{ /* 0x48c */
+  /* file shlwapi.c line 343 addr 0x48c */
+  /* file shlwapi.c line 343 addr 0x48f */
+} /* 0x491 */
+DWORD SHEnumValueA (HKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPDWORD w2 /* 0x18 */, LPVOID p1 /* 0x1c */, LPDWORD w3 /* 0x20 */)
+{ /* 0x491 */
+  /* file shlwapi.c line 349 addr 0x491 */
+  /* file shlwapi.c line 349 addr 0x494 */
+} /* 0x496 */
+DWORD SHEnumValueW (HKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPWSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPDWORD w2 /* 0x18 */, LPVOID p1 /* 0x1c */, LPDWORD w3 /* 0x20 */)
+{ /* 0x496 */
+  /* file shlwapi.c line 350 addr 0x496 */
+  /* file shlwapi.c line 350 addr 0x499 */
+} /* 0x49b */
+DWORD SHGetValueA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPVOID p1 /* 0x18 */, LPDWORD w2 /* 0x1c */)
+{ /* 0x49b */
+  /* file shlwapi.c line 351 addr 0x49b */
+  /* file shlwapi.c line 351 addr 0x49e */
+} /* 0x4a0 */
+DWORD SHGetValueW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPVOID p1 /* 0x18 */, LPDWORD w2 /* 0x1c */)
+{ /* 0x4a0 */
+  /* file shlwapi.c line 352 addr 0x4a0 */
+  /* file shlwapi.c line 352 addr 0x4a3 */
+} /* 0x4a5 */
+DWORD SHSetValueA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */, LPCVOID p1 /* 0x18 */, DWORD w2 /* 0x1c */)
+{ /* 0x4a5 */
+  /* file shlwapi.c line 353 addr 0x4a5 */
+  /* file shlwapi.c line 353 addr 0x4a8 */
+} /* 0x4aa */
+DWORD SHSetValueW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, DWORD w1 /* 0x14 */, LPCVOID p1 /* 0x18 */, DWORD w2 /* 0x1c */)
+{ /* 0x4aa */
+  /* file shlwapi.c line 354 addr 0x4aa */
+  /* file shlwapi.c line 354 addr 0x4ad */
+} /* 0x4af */
+DWORD SHDeleteValueA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */)
+{ /* 0x4af */
+  /* file shlwapi.c line 355 addr 0x4af */
+  /* file shlwapi.c line 355 addr 0x4b2 */
+} /* 0x4b4 */
+DWORD SHDeleteValueW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */)
+{ /* 0x4b4 */
+  /* file shlwapi.c line 356 addr 0x4b4 */
+  /* file shlwapi.c line 356 addr 0x4b7 */
+} /* 0x4b9 */
+HRESULT AssocCreate (CLSID clsId /* 0x8 */, IID *iid /* 0xc */, LPVOID *p1 /* 0x10 */)
+{ /* 0x4b9 */
+  /* file shlwapi.c line 357 addr 0x4b9 */
+  /* file shlwapi.c line 357 addr 0x4bc */
+} /* 0x4be */
+HRESULT AssocQueryKeyA (ASSOCF assocf /* 0x8 */, ASSOCKEY key /* 0xc */, LPCSTR s1 /* 0x10 */, LPCSTR s2 /* 0x14 */, HKEY *hkey /* 0x18 */)
+{ /* 0x4be */
+  /* file shlwapi.c line 358 addr 0x4be */
+  /* file shlwapi.c line 358 addr 0x4c1 */
+} /* 0x4c3 */
+HRESULT AssocQueryKeyW (ASSOCF assocf /* 0x8 */, ASSOCKEY key /* 0xc */, LPCWSTR s1 /* 0x10 */, LPCWSTR s2 /* 0x14 */, HKEY *hkey /* 0x18 */)
+{ /* 0x4c3 */
+  /* file shlwapi.c line 359 addr 0x4c3 */
+  /* file shlwapi.c line 359 addr 0x4c6 */
+} /* 0x4c8 */
+HRESULT AssocQueryStringA (ASSOCF assocf /* 0x8 */, ASSOCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, LPCSTR s3 /* 0x14 */, LPSTR s4 /* 0x18 */, DWORD *w1 /* 0x1c */)
+{ /* 0x4c8 */
+  /* file shlwapi.c line 360 addr 0x4c8 */
+  /* file shlwapi.c line 360 addr 0x4cb */
+} /* 0x4cd */
+HRESULT AssocQueryStringByKeyA (ASSOCF assocf /* 0x8 */, ASSOCSTR s1 /* 0xc */, HKEY hKey /* 0x10 */, LPCSTR s2 /* 0x14 */, LPSTR s3 /* 0x18 */, DWORD *w /* 0x1c */)
+{ /* 0x4cd */
+  /* file shlwapi.c line 361 addr 0x4cd */
+  /* file shlwapi.c line 361 addr 0x4d0 */
+} /* 0x4d2 */
+HRESULT AssocQueryStringByKeyW (ASSOCF assocf /* 0x8 */, ASSOCSTR s1 /* 0xc */, HKEY hKey /* 0x10 */, LPCWSTR s2 /* 0x14 */, LPWSTR s3 /* 0x18 */, DWORD *w /* 0x1c */)
+{ /* 0x4d2 */
+  /* file shlwapi.c line 362 addr 0x4d2 */
+  /* file shlwapi.c line 362 addr 0x4d5 */
+} /* 0x4d7 */
+HRESULT AssocQueryStringW (ASSOCF assocf /* 0x8 */, ASSOCSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, LPCWSTR s3 /* 0x14 */, LPWSTR s4 /* 0x18 */, DWORD *w /* 0x1c */)
+{ /* 0x4d7 */
+  /* file shlwapi.c line 363 addr 0x4d7 */
+  /* file shlwapi.c line 363 addr 0x4da */
+} /* 0x4dc */
+HRESULT UrlApplySchemeA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x4dc */
+  /* file shlwapi.c line 365 addr 0x4dc */
+  /* file shlwapi.c line 365 addr 0x4df */
+} /* 0x4e1 */
+HRESULT UrlApplySchemeW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x4e1 */
+  /* file shlwapi.c line 366 addr 0x4e1 */
+  /* file shlwapi.c line 366 addr 0x4e4 */
+} /* 0x4e6 */
+HRESULT UrlCanonicalizeA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x4e6 */
+  /* file shlwapi.c line 367 addr 0x4e6 */
+  /* file shlwapi.c line 367 addr 0x4e9 */
+} /* 0x4eb */
+HRESULT UrlCanonicalizeW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x4eb */
+  /* file shlwapi.c line 368 addr 0x4eb */
+  /* file shlwapi.c line 368 addr 0x4ee */
+} /* 0x4f0 */
+HRESULT UrlCombineA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, LPSTR s3 /* 0x10 */, LPDWORD w1 /* 0x14 */, DWORD w2 /* 0x18 */)
+{ /* 0x4f0 */
+  /* file shlwapi.c line 369 addr 0x4f0 */
+  /* file shlwapi.c line 369 addr 0x4f3 */
+} /* 0x4f5 */
+HRESULT UrlCombineW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, LPWSTR s3 /* 0x10 */, LPDWORD w1 /* 0x14 */, DWORD w2 /* 0x18 */)
+{ /* 0x4f5 */
+  /* file shlwapi.c line 370 addr 0x4f5 */
+  /* file shlwapi.c line 370 addr 0x4f8 */
+} /* 0x4fa */
+int UrlCompareA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int b1 /* 0x10 */)
+{ /* 0x4fa */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 371 addr 0x4fa */
+  /* file shlwapi.c line 371 addr 0x506 */
+} /* 0x508 */
+int UrlCompareW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int b1 /* 0x10 */)
+{ /* 0x508 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 372 addr 0x508 */
+  /* file shlwapi.c line 372 addr 0x514 */
+} /* 0x516 */
+HRESULT UrlCreateFromPathA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x516 */
+  /* file shlwapi.c line 373 addr 0x516 */
+  /* file shlwapi.c line 373 addr 0x519 */
+} /* 0x51b */
+HRESULT UrlCreateFromPathW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x51b */
+  /* file shlwapi.c line 374 addr 0x51b */
+  /* file shlwapi.c line 374 addr 0x51e */
+} /* 0x520 */
+HRESULT UrlEscapeA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x520 */
+  /* file shlwapi.c line 375 addr 0x520 */
+  /* file shlwapi.c line 375 addr 0x523 */
+} /* 0x525 */
+HRESULT UrlEscapeW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x525 */
+  /* file shlwapi.c line 376 addr 0x525 */
+  /* file shlwapi.c line 376 addr 0x528 */
+} /* 0x52a */
+LPCSTR UrlGetLocationA (LPCSTR s1 /* 0x8 */)
+{ /* 0x52a */
+  /* file shlwapi.c line 377 addr 0x52a */
+  /* file shlwapi.c line 377 addr 0x52d */
+} /* 0x52f */
+LPCWSTR UrlGetLocationW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x52f */
+  /* file shlwapi.c line 378 addr 0x52f */
+  /* file shlwapi.c line 378 addr 0x532 */
+} /* 0x534 */
+HRESULT UrlGetPartA (LPCSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */, DWORD w3 /* 0x18 */)
+{ /* 0x534 */
+  /* file shlwapi.c line 379 addr 0x534 */
+  /* file shlwapi.c line 379 addr 0x537 */
+} /* 0x539 */
+HRESULT UrlGetPartW (LPCWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */, DWORD w3 /* 0x18 */)
+{ /* 0x539 */
+  /* file shlwapi.c line 380 addr 0x539 */
+  /* file shlwapi.c line 380 addr 0x53c */
+} /* 0x53e */
+HRESULT UrlHashA (LPCSTR s1 /* 0x8 */, LPBYTE p1 /* 0xc */, DWORD w1 /* 0x10 */)
+{ /* 0x53e */
+  /* file shlwapi.c line 381 addr 0x53e */
+  /* file shlwapi.c line 381 addr 0x541 */
+} /* 0x543 */
+HRESULT UrlHashW (LPCWSTR s1 /* 0x8 */, LPBYTE p1 /* 0xc */, DWORD w1 /* 0x10 */)
+{ /* 0x543 */
+  /* file shlwapi.c line 382 addr 0x543 */
+  /* file shlwapi.c line 382 addr 0x546 */
+} /* 0x548 */
+BOOL UrlIsA (LPCSTR s1 /* 0x8 */, URLIS url1 /* 0xc */)
+{ /* 0x548 */
+  /* file shlwapi.c line 383 addr 0x548 */
+  /* file shlwapi.c line 383 addr 0x54b */
+} /* 0x54d */
+BOOL UrlIsW (LPCWSTR s1 /* 0x8 */, URLIS url1 /* 0xc */)
+{ /* 0x54d */
+  /* file shlwapi.c line 384 addr 0x54d */
+  /* file shlwapi.c line 384 addr 0x550 */
+} /* 0x552 */
+BOOL UrlIsNoHistoryA (LPCSTR s1 /* 0x8 */)
+{ /* 0x552 */
+  /* file shlwapi.c line 387 addr 0x552 */
+  /* file shlwapi.c line 387 addr 0x555 */
+} /* 0x557 */
+BOOL UrlIsNoHistoryW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x557 */
+  /* file shlwapi.c line 388 addr 0x557 */
+  /* file shlwapi.c line 388 addr 0x55a */
+} /* 0x55c */
+BOOL UrlIsOpaqueA (LPCSTR s1 /* 0x8 */)
+{ /* 0x55c */
+  /* file shlwapi.c line 389 addr 0x55c */
+  /* file shlwapi.c line 389 addr 0x55f */
+} /* 0x561 */
+BOOL UrlIsOpaqueW (LPCWSTR s1 /* 0x8 */)
+{ /* 0x561 */
+  /* file shlwapi.c line 390 addr 0x561 */
+  /* file shlwapi.c line 390 addr 0x564 */
+} /* 0x566 */
+HRESULT UrlUnescapeA (LPSTR s1 /* 0x8 */, LPSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x566 */
+  /* file shlwapi.c line 391 addr 0x566 */
+  /* file shlwapi.c line 391 addr 0x569 */
+} /* 0x56b */
+HRESULT UrlUnescapeW (LPWSTR s1 /* 0x8 */, LPWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x56b */
+  /* file shlwapi.c line 392 addr 0x56b */
+  /* file shlwapi.c line 392 addr 0x56e */
+} /* 0x570 */
+LONG SHRegCreateUSKeyA (LPCSTR s1 /* 0x8 */, REGSAM rs1 /* 0xc */, HUSKEY hKey1 /* 0x10 */, PHUSKEY hKey2 /* 0x14 */, DWORD w1 /* 0x18 */)
+{ /* 0x570 */
+  /* file shlwapi.c line 398 addr 0x570 */
+  /* file shlwapi.c line 398 addr 0x573 */
+} /* 0x575 */
+LONG SHRegCreateUSKeyW (LPCWSTR s1 /* 0x8 */, REGSAM rs1 /* 0xc */, HUSKEY hKey1 /* 0x10 */, PHUSKEY hKey2 /* 0x14 */, DWORD w1 /* 0x18 */)
+{ /* 0x575 */
+  /* file shlwapi.c line 399 addr 0x575 */
+  /* file shlwapi.c line 399 addr 0x578 */
+} /* 0x57a */
+LONG SHRegDeleteEmptyUSKeyA (HUSKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, SHREGDEL_FLAGS flags /* 0x10 */)
+{ /* 0x57a */
+  /* file shlwapi.c line 400 addr 0x57a */
+  /* file shlwapi.c line 400 addr 0x57d */
+} /* 0x57f */
+LONG SHRegDeleteEmptyUSKeyW (HUSKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, SHREGDEL_FLAGS flags /* 0x10 */)
+{ /* 0x57f */
+  /* file shlwapi.c line 401 addr 0x57f */
+  /* file shlwapi.c line 401 addr 0x582 */
+} /* 0x584 */
+LONG SHRegDeleteUSValueA (HUSKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, SHREGDEL_FLAGS flags /* 0x10 */)
+{ /* 0x584 */
+  /* file shlwapi.c line 402 addr 0x584 */
+  /* file shlwapi.c line 402 addr 0x587 */
+} /* 0x589 */
+LONG SHRegDeleteUSValueW (HUSKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, SHREGDEL_FLAGS flags /* 0x10 */)
+{ /* 0x589 */
+  /* file shlwapi.c line 403 addr 0x589 */
+  /* file shlwapi.c line 403 addr 0x58c */
+} /* 0x58e */
+HKEY SHRegDuplicateHKey (HKEY hKey /* 0x8 */)
+{ /* 0x58e */
+  /* file shlwapi.c line 404 addr 0x58e */
+  /* file shlwapi.c line 404 addr 0x591 */
+} /* 0x593 */
+DWORD SHRegEnumUSKeyA (HUSKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, SHREGENUM_FLAGS flags /* 0x18 */)
+{ /* 0x593 */
+  /* file shlwapi.c line 405 addr 0x593 */
+  /* file shlwapi.c line 405 addr 0x596 */
+} /* 0x598 */
+DWORD SHRegEnumUSKeyW (HUSKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPWSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, SHREGENUM_FLAGS flags /* 0x18 */)
+{ /* 0x598 */
+  /* file shlwapi.c line 406 addr 0x598 */
+  /* file shlwapi.c line 406 addr 0x59b */
+} /* 0x59d */
+DWORD SHRegEnumUSValueA (HUSKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPDWORD w2 /* 0x18 */, LPVOID ptr /* 0x1c */, LPDWORD w3 /* 0x20 */, SHREGENUM_FLAGS flags /* 0x24 */)
+{ /* 0x59d */
+  /* file shlwapi.c line 407 addr 0x59d */
+  /* file shlwapi.c line 407 addr 0x5a0 */
+} /* 0x5a2 */
+DWORD SHRegEnumUSValueW (HUSKEY hKey /* 0x8 */, DWORD w0 /* 0xc */, LPWSTR s1 /* 0x10 */, LPDWORD w1 /* 0x14 */, LPDWORD w2 /* 0x18 */, LPVOID ptr /* 0x1c */, LPDWORD w3 /* 0x20 */, SHREGENUM_FLAGS flags /* 0x24 */)
+{ /* 0x5a2 */
+  /* file shlwapi.c line 408 addr 0x5a2 */
+  /* file shlwapi.c line 408 addr 0x5a5 */
+} /* 0x5a7 */
+BOOL SHRegGetBoolUSValueA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, int b1 /* 0x10 */, int b2 /* 0x14 */)
+{ /* 0x5a7 */
+  BOOL b2 /* 0xfffffff8 */;
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 409 addr 0x5a7 */
+  /* file shlwapi.c line 409 addr 0x5b9 */
+} /* 0x5bb */
+BOOL SHRegGetBoolUSValueW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, int b1 /* 0x10 */, int b2 /* 0x14 */)
+{ /* 0x5bb */
+  BOOL b2 /* 0xfffffff8 */;
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 410 addr 0x5bb */
+  /* file shlwapi.c line 410 addr 0x5cd */
+} /* 0x5cf */
+DWORD SHRegGetPathA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, LPSTR s3 /* 0x14 */, DWORD w1 /* 0x18 */)
+{ /* 0x5cf */
+  /* file shlwapi.c line 411 addr 0x5cf */
+  /* file shlwapi.c line 411 addr 0x5d2 */
+} /* 0x5d4 */
+DWORD SHRegGetPathW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, LPWSTR s3 /* 0x14 */, DWORD w1 /* 0x18 */)
+{ /* 0x5d4 */
+  /* file shlwapi.c line 412 addr 0x5d4 */
+  /* file shlwapi.c line 412 addr 0x5d7 */
+} /* 0x5d9 */
+LONG SHRegGetUSValueA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, LPDWORD p1 /* 0x10 */, LPVOID p2 /* 0x14 */, LPDWORD w2 /* 0x18 */, int b1 /* 0x1c */, LPVOID p3 /* 0x20 */, DWORD w3 /* 0x24 */)
+{ /* 0x5d9 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 413 addr 0x5d9 */
+  /* file shlwapi.c line 413 addr 0x5e5 */
+} /* 0x5e7 */
+LONG SHRegGetUSValueW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, LPDWORD w1 /* 0x10 */, LPVOID p2 /* 0x14 */, LPDWORD w2 /* 0x18 */, int b1 /* 0x1c */, LPVOID p3 /* 0x20 */, DWORD w3 /* 0x24 */)
+{ /* 0x5e7 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 414 addr 0x5e7 */
+  /* file shlwapi.c line 414 addr 0x5f3 */
+} /* 0x5f5 */
+LONG SHRegOpenUSKeyA (LPCSTR s1 /* 0x8 */, REGSAM rs1 /* 0xc */, HUSKEY hKey /* 0x10 */, PHUSKEY hKey2 /* 0x14 */, int b1 /* 0x18 */)
+{ /* 0x5f5 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 415 addr 0x5f5 */
+  /* file shlwapi.c line 415 addr 0x601 */
+} /* 0x603 */
+LONG SHRegOpenUSKeyW (LPCWSTR s1 /* 0x8 */, REGSAM rs1 /* 0xc */, HUSKEY hKey /* 0x10 */, PHUSKEY hKey2 /* 0x14 */, int b1 /* 0x18 */)
+{ /* 0x603 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 416 addr 0x603 */
+  /* file shlwapi.c line 416 addr 0x60f */
+} /* 0x611 */
+DWORD SHRegQueryInfoUSKeyA (HUSKEY hKey /* 0x8 */, LPDWORD w1 /* 0xc */, LPDWORD w2 /* 0x10 */, LPDWORD w3 /* 0x14 */, LPDWORD w4 /* 0x18 */, SHREGENUM_FLAGS flags /* 0x1c */)
+{ /* 0x611 */
+  /* file shlwapi.c line 417 addr 0x611 */
+  /* file shlwapi.c line 417 addr 0x614 */
+} /* 0x616 */
+DWORD SHRegQueryInfoUSKeyW (HUSKEY hKey /* 0x8 */, LPDWORD w1 /* 0xc */, LPDWORD w2 /* 0x10 */, LPDWORD w3 /* 0x14 */, LPDWORD w4 /* 0x18 */, SHREGENUM_FLAGS flags /* 0x1c */)
+{ /* 0x616 */
+  /* file shlwapi.c line 418 addr 0x616 */
+  /* file shlwapi.c line 418 addr 0x619 */
+} /* 0x61b */
+LONG SHRegQueryUSValueA (HUSKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPDWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, LPDWORD w2 /* 0x18 */, int b1 /* 0x1c */, LPVOID p2 /* 0x20 */, DWORD w3 /* 0x24 */)
+{ /* 0x61b */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 419 addr 0x61b */
+  /* file shlwapi.c line 419 addr 0x627 */
+} /* 0x629 */
+LONG SHRegQueryUSValueW (HUSKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPDWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, LPDWORD w2 /* 0x18 */, int b1 /* 0x1c */, LPVOID p2 /* 0x20 */, DWORD w3 /* 0x24 */)
+{ /* 0x629 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 420 addr 0x629 */
+  /* file shlwapi.c line 420 addr 0x635 */
+} /* 0x637 */
+DWORD SHRegSetPathA (HKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, LPCSTR s2 /* 0x10 */, LPCSTR s3 /* 0x14 */, DWORD w1 /* 0x18 */)
+{ /* 0x637 */
+  /* file shlwapi.c line 421 addr 0x637 */
+  /* file shlwapi.c line 421 addr 0x63a */
+} /* 0x63c */
+DWORD SHRegSetPathW (HKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, LPCWSTR s2 /* 0x10 */, LPCWSTR s3 /* 0x14 */, DWORD w2 /* 0x18 */)
+{ /* 0x63c */
+  /* file shlwapi.c line 422 addr 0x63c */
+  /* file shlwapi.c line 422 addr 0x63f */
+} /* 0x641 */
+LONG SHRegSetUSValueA (LPCSTR s1 /* 0x8 */, LPCSTR s2 /* 0xc */, DWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, DWORD w2 /* 0x18 */, DWORD w3 /* 0x1c */)
+{ /* 0x641 */
+  /* file shlwapi.c line 423 addr 0x641 */
+  /* file shlwapi.c line 423 addr 0x644 */
+} /* 0x646 */
+LONG SHRegSetUSValueW (LPCWSTR s1 /* 0x8 */, LPCWSTR s2 /* 0xc */, DWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, DWORD w2 /* 0x18 */, DWORD w3 /* 0x1c */)
+{ /* 0x646 */
+  /* file shlwapi.c line 424 addr 0x646 */
+  /* file shlwapi.c line 424 addr 0x649 */
+} /* 0x64b */
+LONG SHRegWriteUSValueA (HUSKEY hKey /* 0x8 */, LPCSTR s1 /* 0xc */, DWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, DWORD w2 /* 0x18 */, DWORD w3 /* 0x1c */)
+{ /* 0x64b */
+  /* file shlwapi.c line 425 addr 0x64b */
+  /* file shlwapi.c line 425 addr 0x64e */
+} /* 0x650 */
+LONG SHRegWriteUSValueW (HUSKEY hKey /* 0x8 */, LPCWSTR s1 /* 0xc */, DWORD w1 /* 0x10 */, LPVOID p1 /* 0x14 */, DWORD w2 /* 0x18 */, DWORD w3 /* 0x1c */)
+{ /* 0x650 */
+  /* file shlwapi.c line 426 addr 0x650 */
+  /* file shlwapi.c line 426 addr 0x653 */
+} /* 0x655 */
+HRESULT HashData (LPBYTE lpByte1 /* 0x8 */, DWORD w1 /* 0xc */, LPBYTE lpByte2 /* 0x10 */, DWORD w2 /* 0x14 */)
+{ /* 0x655 */
+  /* file shlwapi.c line 427 addr 0x655 */
+  /* file shlwapi.c line 427 addr 0x658 */
+} /* 0x65a */
+HPALETTE SHCreateShellPalette (HDC hDc /* 0x8 */)
+{ /* 0x65a */
+  /* file shlwapi.c line 428 addr 0x65a */
+  /* file shlwapi.c line 428 addr 0x65d */
+} /* 0x65f */
+COLORREF ColorHLSToRGB (int w1 /* 0x8 */, int w2 /* 0xc */, int w3 /* 0x10 */)
+{ /* 0x65f */
+  WORD w3 /* 0xfffffff4 */;
+  WORD w2 /* 0xfffffff8 */;
+  WORD w1 /* 0xfffffffc */;
+  /* file shlwapi.c line 429 addr 0x65f */
+  /* file shlwapi.c line 429 addr 0x67a */
+} /* 0x67c */
+COLORREF ColorAdjustLuma (COLORREF colorRef /* 0x8 */, int i1 /* 0xc */, int b1 /* 0x10 */)
+{ /* 0x67c */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 430 addr 0x67c */
+  /* file shlwapi.c line 430 addr 0x688 */
+} /* 0x68a */
+void ColorRGBToHLS (COLORREF colorRef /* 0x8 */, WORD *w1 /* 0xc */, WORD *w2 /* 0x10 */, WORD *w3 /* 0x14 */)
+{ /* 0x68a */
+  /* file shlwapi.c line 431 addr 0x68a */
+  /* file shlwapi.c line 431 addr 0x68d */
+} /* 0x68f */
+int wnsprintfA (LPSTR s1 /* 0x8 */, int i1 /* 0xc */, LPCSTR s2 /* 0x10 */)
+{ /* 0x68f */
+  /* file shlwapi.c line 432 addr 0x68f */
+  /* file shlwapi.c line 432 addr 0x692 */
+} /* 0x694 */
+int wnsprintfW (LPWSTR s1 /* 0x8 */, int i1 /* 0xc */, LPCWSTR s2 /* 0x10 */)
+{ /* 0x694 */
+  /* file shlwapi.c line 433 addr 0x694 */
+  /* file shlwapi.c line 433 addr 0x697 */
+} /* 0x699 */
+HINSTANCE MLLoadLibraryA (LPCSTR s1 /* 0x8 */, HANDLE hndl /* 0xc */, DWORD w1 /* 0x10 */, LPCSTR s2 /* 0x14 */, int b1 /* 0x18 */)
+{ /* 0x699 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 437 addr 0x699 */
+  /* file shlwapi.c line 437 addr 0x6a5 */
+} /* 0x6a7 */
+HINSTANCE MLLoadLibraryW (LPCWSTR s1 /* 0x8 */, HANDLE hndl /* 0xc */, DWORD w1 /* 0x10 */, LPCWSTR s2 /* 0x14 */, int b1 /* 0x18 */)
+{ /* 0x6a7 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 438 addr 0x6a7 */
+  /* file shlwapi.c line 438 addr 0x6b3 */
+} /* 0x6b5 */
+HRESULT DllInstall (int b1 /* 0x8 */, LPCWSTR s1 /* 0xc */)
+{ /* 0x6b5 */
+  BOOL b1 /* 0xfffffffc */;
+  /* file shlwapi.c line 440 addr 0x6b5 */
+  /* file shlwapi.c line 440 addr 0x6c1 */
+} /* 0x6c3 */
+struct IStream { /* id 0 */
+};

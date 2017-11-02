@@ -1,0 +1,8 @@
+INDEX VERSION 1.122+/home/fajarpurnama/Documents/Programming/eclipse/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2406363426.index
+2476957516.index
+1625540247.index
+759752735.index
+2652369136.index
+2118941434.index
+440060439.index

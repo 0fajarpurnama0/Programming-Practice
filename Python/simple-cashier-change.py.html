@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/home/fajarpurnama/Documents/Python/simple-cashier-change.py.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.Constant { color: #ff00ff; }
+.Identifier { color: #008b8b; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+currency_japan = [<span class="Constant">10000</span>, <span class="Constant">1000</span>, <span class="Constant">500</span>, <span class="Constant">100</span>, <span class="Constant">50</span>, <span class="Constant">10</span>, <span class="Constant">5</span>, <span class="Constant">1</span>]
+currency = <span class="Identifier">sorted</span>(currency_japan, reverse=<span class="Identifier">True</span>)
+price = <span class="Identifier">input</span>(<span class="Constant">'Enter the price: '</span>)
+change = []
+
+<span class="Statement">while</span> price &gt; <span class="Constant">0</span>:
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">xrange</span>(<span class="Identifier">len</span>(currency)):
+        <span class="Statement">if</span> price &gt;= currency[i]:
+            price -= currency[i]
+            change.append(currency[i])
+            <span class="Statement">break</span>
+
+<span class="Identifier">print</span> <span class="Constant">&quot;Your change is:&quot;</span>
+<span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">xrange</span>(<span class="Identifier">len</span>(change)):
+    <span class="Identifier">print</span> <span class="Constant">&quot;Y %d&quot;</span> % (change[i])
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

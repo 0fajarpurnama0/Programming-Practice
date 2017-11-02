@@ -1,0 +1,910 @@
+
+UNISTD.O:     file format elf32-i386
+
+/home/cg/usr/src/cmd/wrec/supp/unistd.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef long double __long_double_t;
+typedef unsigned char __u_char;
+typedef short unsigned int __u_short;
+typedef unsigned int __u_int;
+typedef long unsigned int __u_long;
+typedef struct %anon2 { /* size 8 */
+  long int val[2]; /* bitsize 64, bitpos 0 */
+} __quad;
+typedef struct %anon3 { /* size 8 */
+  long unsigned int val[2]; /* bitsize 64, bitpos 0 */
+} __u_quad;
+typedef short unsigned int __dev_t;
+typedef short unsigned int __gid_t;
+typedef short unsigned int __uid_t;
+typedef short unsigned int __mode_t;
+typedef long int __daddr_t;
+typedef long int __off_t;
+typedef long long int __loff_t;
+typedef long unsigned int __ino_t;
+typedef short unsigned int __nlink_t;
+typedef long int __time_t;
+typedef int __pid_t;
+typedef int __ssize_t;
+typedef __quad __fsid_t;
+typedef char *__caddr_t;
+typedef long int __swblk_t;
+struct __fd_set { /* size 32 id 4 */
+  long unsigned int fds_bits[8]; /* bitsize 256, bitpos 0 */
+};
+typedef struct __fd_set /* id 4 */ __fd_set;
+typedef unsigned int size_t;
+int __access (char *__name /* 0x8 */, int __type /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int access (char *__name /* 0x8 */, int __type /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int __lseek (int __fd /* 0x8 */, long int __offset /* 0xc */, int __whence /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int lseek (int __fd /* 0x8 */, long int __offset /* 0xc */, int __whence /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int __llseek (int __fd /* 0x8 */, long long int __offset /* 0xc */, int __whence /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+long long int llseek (int __fd /* 0x8 */, long long int __offset /* 0xc */, int __whence /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __close (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int close (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __read (int __fd /* 0x8 */, void *__buf /* 0xc */, unsigned int __nbytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int read (int __fd /* 0x8 */, void *__buf /* 0xc */, unsigned int __nbytes /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __write (int __fd /* 0x8 */, void *__buf /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int write (int __fd /* 0x8 */, void *__buf /* 0xc */, unsigned int __n /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __pipe (int *__pipedes /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int pipe (int *__pipedes /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int alarm (unsigned int __seconds /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int sleep (unsigned int __seconds /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int pause ()
+{ /* 0x0 */
+} /* 0x0 */
+int __chown (char *__file /* 0x8 */, int __owner /* 0xc */, int __group /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int __group /* 0xfffffffc */;
+  short unsigned int __owner /* 0xfffffffe */;
+} /* 0x0 */
+int chown (char *__file /* 0x8 */, int __owner /* 0xc */, int __group /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int __group /* 0xfffffffc */;
+  short unsigned int __owner /* 0xfffffffe */;
+} /* 0x0 */
+int __fchown (int __fd /* 0x8 */, int __owner /* 0xc */, int __group /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int __group /* 0xfffffffc */;
+  short unsigned int __owner /* 0xfffffffe */;
+} /* 0x0 */
+int fchown (int __fd /* 0x8 */, int __owner /* 0xc */, int __group /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int __group /* 0xfffffffc */;
+  short unsigned int __owner /* 0xfffffffe */;
+} /* 0x0 */
+int __fchdir (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fchdir (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __chdir (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int chdir (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t getcwd (__caddr_t __buf /* 0x8 */, unsigned int __size /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t get_current_dir_name ()
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t getwd (__caddr_t __buf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __dup (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int dup (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __dup2 (int __fd /* 0x8 */, int __fd2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int dup2 (int __fd /* 0x8 */, int __fd2 /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __execve (char *__path /* 0x8 */, __caddr_t *__argv /* 0xc */, __caddr_t *__envp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int execve (char *__path /* 0x8 */, __caddr_t *__argv /* 0xc */, __caddr_t *__envp /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int execv (char *__path /* 0x8 */, __caddr_t *__argv /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int execle (char *__path /* 0x8 */, char *__arg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int execl (char *__path /* 0x8 */, char *__arg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int execvp (char *__file /* 0x8 */, __caddr_t *__argv /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int execlp (char *__file /* 0x8 */, char *arg /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void _exit (int __status /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int __pathconf (char *__path /* 0x8 */, int __name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int pathconf (char *__path /* 0x8 */, int __name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int __fpathconf (int __fd /* 0x8 */, int __name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int fpathconf (int __fd /* 0x8 */, int __name /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int __sysconf (int __name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+long int sysconf (int __name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int confstr (int __name /* 0x8 */, __caddr_t __buf /* 0xc */, unsigned int __len /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __getpid ()
+{ /* 0x0 */
+} /* 0x0 */
+int getpid ()
+{ /* 0x0 */
+} /* 0x0 */
+int __getppid ()
+{ /* 0x0 */
+} /* 0x0 */
+int getppid ()
+{ /* 0x0 */
+} /* 0x0 */
+int getpgid (int __pid /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getpgrp ()
+{ /* 0x0 */
+} /* 0x0 */
+int setpgid (int __pid /* 0x8 */, int __pgid /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int setpgrp ()
+{ /* 0x0 */
+} /* 0x0 */
+int __setsid ()
+{ /* 0x0 */
+} /* 0x0 */
+int setsid ()
+{ /* 0x0 */
+} /* 0x0 */
+int __getsid (int __pid /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getsid (int __pid /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int __getuid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int getuid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int __geteuid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int geteuid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int __getgid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int getgid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int __getegid ()
+{ /* 0x0 */
+} /* 0x0 */
+short unsigned int getegid ()
+{ /* 0x0 */
+} /* 0x0 */
+int __getgroups (int __size /* 0x8 */, short unsigned int *__list /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int getgroups (int __size /* 0x8 */, short unsigned int *__list /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __setuid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int setuid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int __setreuid (int __ruid /* 0x8 */, int __euid /* 0xc */)
+{ /* 0x0 */
+  short unsigned int __euid /* 0xfffffffc */;
+  short unsigned int __ruid /* 0xfffffffe */;
+} /* 0x0 */
+int setreuid (int __ruid /* 0x8 */, int __euid /* 0xc */)
+{ /* 0x0 */
+  short unsigned int __euid /* 0xfffffffc */;
+  short unsigned int __ruid /* 0xfffffffe */;
+} /* 0x0 */
+int seteuid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int __setgid (int __gid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __gid /* 0xfffffffe */;
+} /* 0x0 */
+int setgid (int __gid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __gid /* 0xfffffffe */;
+} /* 0x0 */
+int __setregid (int __rgid /* 0x8 */, int __egid /* 0xc */)
+{ /* 0x0 */
+  short unsigned int __egid /* 0xfffffffc */;
+  short unsigned int __rgid /* 0xfffffffe */;
+} /* 0x0 */
+int setregid (int __rgid /* 0x8 */, int __egid /* 0xc */)
+{ /* 0x0 */
+  short unsigned int __egid /* 0xfffffffc */;
+  short unsigned int __rgid /* 0xfffffffe */;
+} /* 0x0 */
+int setegid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int __setfsuid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int setfsuid (int __uid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __uid /* 0xfffffffe */;
+} /* 0x0 */
+int __setfsgid (int __gid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __gid /* 0xfffffffe */;
+} /* 0x0 */
+int setfsgid (int __gid /* 0x8 */)
+{ /* 0x0 */
+  short unsigned int __gid /* 0xfffffffe */;
+} /* 0x0 */
+int __fork ()
+{ /* 0x0 */
+} /* 0x0 */
+int fork ()
+{ /* 0x0 */
+} /* 0x0 */
+int __vfork ()
+{ /* 0x0 */
+} /* 0x0 */
+int vfork ()
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t cuserid (__caddr_t __buf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t ctermid (__caddr_t __buf /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t ttyname (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __isatty (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int isatty (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __link (char *__from /* 0x8 */, char *__to /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int link (char *__from /* 0x8 */, char *__to /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __symlink (char *__from /* 0x8 */, char *__to /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int symlink (char *__from /* 0x8 */, char *__to /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __readlink (char *__path /* 0x8 */, __caddr_t __buf /* 0xc */, unsigned int __len /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int readlink (char *__path /* 0x8 */, __caddr_t __buf /* 0xc */, unsigned int __len /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __unlink (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int unlink (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __rmdir (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int rmdir (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int tcgetpgrp (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int tcsetpgrp (int __fd /* 0x8 */, int __pgrp_id /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t getlogin ()
+{ /* 0x0 */
+} /* 0x0 */
+int setlogin (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getopt (int __argc /* 0x8 */, __caddr_t *__argv /* 0xc */, char *__opts /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int __gethostname (__caddr_t __name /* 0x8 */, unsigned int __len /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int gethostname (__caddr_t __name /* 0x8 */, unsigned int __len /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int sethostname (char *__name /* 0x8 */, unsigned int __len /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+long int gethostid ()
+{ /* 0x0 */
+} /* 0x0 */
+int sethostid (long int __id /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int __getpagesize ()
+{ /* 0x0 */
+} /* 0x0 */
+unsigned int getpagesize ()
+{ /* 0x0 */
+} /* 0x0 */
+int __getdtablesize ()
+{ /* 0x0 */
+} /* 0x0 */
+int getdtablesize ()
+{ /* 0x0 */
+} /* 0x0 */
+int fdatasync (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int fsync (int __fd /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int sync ()
+{ /* 0x0 */
+} /* 0x0 */
+int vhangup ()
+{ /* 0x0 */
+} /* 0x0 */
+int acct (char *__name /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int chroot (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int swapon (char *__path /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t getusershell ()
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t getpass (char *__prompt /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int lockf (int __fd /* 0x8 */, int __cmd /* 0xc */, long int __len /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+struct fd_set { /* size 128 id 5 */
+  long unsigned int fds_bits[32]; /* bitsize 1024, bitpos 0 */
+};
+typedef struct fd_set /* id 5 */ __kernel_fd_set;
+typedef short unsigned int __kernel_dev_t;
+typedef long unsigned int __kernel_ino_t;
+typedef short unsigned int __kernel_mode_t;
+typedef short unsigned int __kernel_nlink_t;
+typedef long int __kernel_off_t;
+typedef int __kernel_pid_t;
+typedef short unsigned int __kernel_uid_t;
+typedef short unsigned int __kernel_gid_t;
+typedef unsigned int __kernel_size_t;
+typedef int __kernel_ssize_t;
+typedef int __kernel_ptrdiff_t;
+typedef long int __kernel_time_t;
+typedef long int __kernel_clock_t;
+typedef int __kernel_daddr_t;
+typedef __caddr_t __kernel_caddr_t;
+typedef long long int __kernel_loff_t;
+typedef struct %anon6 { /* size 8 */
+  int __val[2]; /* bitsize 64, bitpos 0 */
+} __kernel_fsid_t;
+typedef short unsigned int umode_t;
+typedef signed char __s8;
+typedef unsigned char __u8;
+typedef short int __s16;
+typedef short unsigned int __u16;
+typedef int __s32;
+typedef unsigned int __u32;
+typedef long long int __s64;
+typedef long long unsigned int __u64;
+typedef struct fd_set /* id 5 */ fd_set;
+typedef short unsigned int dev_t;
+typedef long unsigned int ino_t;
+typedef short unsigned int mode_t;
+typedef short unsigned int nlink_t;
+typedef long int off_t;
+typedef int pid_t;
+typedef short unsigned int uid_t;
+typedef short unsigned int gid_t;
+typedef int daddr_t;
+typedef long long int loff_t;
+typedef int ptrdiff_t;
+typedef long int time_t;
+typedef long int clock_t;
+typedef __caddr_t caddr_t;
+typedef unsigned char u_char;
+typedef short unsigned int u_short;
+typedef unsigned int u_int;
+typedef long unsigned int u_long;
+typedef unsigned char unchar;
+typedef short unsigned int ushort;
+typedef unsigned int uint;
+typedef long unsigned int ulong;
+struct ustat { /* size 20 id 7 */
+  int f_tfree; /* bitsize 32, bitpos 0 */
+  long unsigned int f_tinode; /* bitsize 32, bitpos 32 */
+  char f_fname[6]; /* bitsize 48, bitpos 64 */
+  char f_fpack[6]; /* bitsize 48, bitpos 112 */
+};
+typedef char int8_t;
+typedef unsigned char u_int8_t;
+typedef short int int16_t;
+typedef short unsigned int u_int16_t;
+typedef int int32_t;
+typedef unsigned int u_int32_t;
+typedef long long int int64_t;
+typedef long long unsigned int u_int64_t;
+typedef long unsigned int fd_mask;
+int __brk (void *__end_data_segment /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int brk (void *__end_data_segment /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *__sbrk (int __increment /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+void *sbrk (int __increment /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t crypt (char *__key /* 0x8 */, char *__salt /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void encrypt (__caddr_t __block /* 0x8 */, int __edflag /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+void setkey (char *__key /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int ftruncate (int __fildes /* 0x8 */, unsigned int __length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int truncate (char *__path /* 0x8 */, unsigned int __length /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int ioperm (long unsigned int __from /* 0x8 */, long unsigned int __num /* 0xc */, int __turn_on /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int iopl (int __level /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t mktemp (__caddr_t __template /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int mkstemp (__caddr_t __template /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int nice (int __val /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int profil (__caddr_t __buf /* 0x8 */, int __bufsiz /* 0xc */, int __offset /* 0x10 */, int __scale /* 0x14 */)
+{ /* 0x0 */
+} /* 0x0 */
+void usleep (long unsigned int __usec /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int _xustat (int __ver /* 0x8 */, int __dev /* 0xc */, struct ustat /* id 7 */ *__ubuf /* 0x10 */)
+{ /* 0x0 */
+  short unsigned int __dev /* 0xfffffffe */;
+} /* 0x0 */
+int idle ()
+{ /* 0x0 */
+} /* 0x0 */
+int reboot (int __magic /* 0x8 */, int __magic_too /* 0xc */, int __flag /* 0x10 */)
+{ /* 0x0 */
+} /* 0x0 */
+int swapoff (char *__specialfile /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int uselib (char *__filename /* 0x8 */)
+{ /* 0x0 */
+} /* 0x0 */
+int getdomainname (__caddr_t __name /* 0x8 */, unsigned int __len /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int setdomainname (char *__name /* 0x8 */, unsigned int __len /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+__caddr_t realpath (char *__path /* 0x8 */, __caddr_t __resolved_path /* 0xc */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 249 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 249 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 250 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 250 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 265 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 265 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 266 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 266 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 270 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 270 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 271 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 271 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 275 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 275 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 276 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 276 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 280 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 280 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 281 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 281 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 284 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 284 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 285 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 285 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 292 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 292 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 293 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 293 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 302 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 302 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 311 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 311 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 316 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 316 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 321 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 321 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 323 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 323 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 328 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 328 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 330 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 330 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 333 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 333 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 334 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 334 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 338 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 338 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 339 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 339 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 348 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 348 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 354 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 354 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 361 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 361 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 366 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 366 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 367 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 367 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 370 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 370 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 371 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 371 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 381 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 381 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 383 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 383 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 386 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 386 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 390 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 390 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 394 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 394 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 398 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 398 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 403 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 403 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 407 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 407 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 417 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 417 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 418 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 418 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 421 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 421 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 422 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 422 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 426 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 426 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 427 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 427 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 431 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 431 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 436 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 436 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 437 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 437 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 440 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 440 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 441 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 441 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 448 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 448 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 451 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 451 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 456 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 456 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 458 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 458 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 489 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 489 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 490 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 490 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 492 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 492 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 493 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 493 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 496 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 496 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 497 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 497 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 500 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 500 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 501 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 501 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 504 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 504 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 505 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 505 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 508 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 508 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 509 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 509 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 514 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 514 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 515 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 515 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 521 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 521 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 522 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 522 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 527 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 527 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 528 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 528 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 531 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 531 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 538 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 538 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 539 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 539 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 544 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 544 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 545 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 545 addr 0x14 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 548 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 548 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 552 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 552 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 553 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 553 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 556 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 556 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 557 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 557 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 563 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 563 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 564 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 564 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 571 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 571 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 572 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 572 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 577 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 577 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 580 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 580 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 584 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 584 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 588 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 588 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 589 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 589 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 593 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 593 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 594 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 594 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 598 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 598 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 599 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 599 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 604 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 604 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 605 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 605 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 610 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 610 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 611 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 611 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 614 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 614 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 615 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 615 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 619 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 619 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 622 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 622 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 626 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 626 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 630 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 630 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 660 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 660 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 673 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 673 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 674 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 674 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 678 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 678 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 681 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 681 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 685 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 685 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 690 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 690 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 691 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 691 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 696 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 696 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 697 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 697 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 701 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 701 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 704 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 704 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 707 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 707 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 713 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 713 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 719 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 719 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 723 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 723 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 727 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 727 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 730 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 730 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 736 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 736 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 754 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 754 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 762 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 762 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 763 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 763 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 764 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 764 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 765 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 765 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 767 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 767 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 768 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 768 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 769 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 769 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 771 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 771 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 772 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 772 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 775 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 775 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 776 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 776 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 778 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 778 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 779 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 779 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 781 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 781 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 784 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 784 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 786 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 786 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 790 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 790 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 797 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 797 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 799 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 799 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 801 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 801 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 803 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 803 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 805 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 805 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 806 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 806 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 808 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/unistd.c line 808 addr 0x3 */
+} /* 0x5b3 */
+__caddr_t *__environ /* 0x4 */;
+__caddr_t *environ /* 0x4 */;
+int opterr /* 0x4 */;
+int optind /* 0x4 */;
+int optopt /* 0x4 */;
+__caddr_t optarg /* 0x4 */;

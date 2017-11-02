@@ -1,0 +1,218 @@
+<html>
+<head>
+<title> Section Page View Prototype </title>
+</head>
+<body onload="CheckCookieExist()">
+
+<form action="section_page_view_prototype_api_show" method="GET">
+<input type="text" id="first_name" name="first_name">
+<input type="text" id="last_name" name="last_name">
+<input type="submit" name="submit" value="records">
+</form>
+
+<iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+
+<form id="1" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction(1)">
+<div onmouseenter="startCount(1)" onmouseleave="stopCount(1)">
+<h1> 1.1 Background Change</h1> <br>
+
+<input type="text" id="first_name1" name="first_name">
+<input type="text" id="last_name1" name="last_name">
+<input type="text" id="section1" name="section" value="section1">
+<input type="text" id="current_date1" name="current_date">
+<input type="text" id="duration_accumulated1" name="duration_accumulated">
+<input type="text" id="duration_discrete1" name="duration_discrete">
+
+<p>
+With the bursting growth of information communication technology (ICT) a new phase has now taken place in education. Nowadays, almost every students and teachers own a computer device innovates the learning and teaching to be taken online. This made it possible to keep records electronically that opens more possibility for more analysis. By mining, these data analysis of students’ learning process can be made which gave birth to the term learning analytics. On this work is more focused on the student monitoring side. 
+</p>
+</div>
+</form>
+
+<form id="2" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction(2)">
+<div onmouseenter="startCount(2)" onmouseleave="stopCount(2)">
+<h1> 1.2 Problem Identification </h1> <br>
+
+<input type="text" id="first_name2" name="first_name">
+<input type="text" id="last_name2" name="last_name">
+<input type="text" id="section2" name="section" value="section2">
+<input type="text" id="current_date2" name="current_date">
+<input type="text" id="duration_accumulated2" name="duration_accumulated">
+<input type="text" id="duration_discrete2" name="duration_discrete">
+
+<p>
+Students data in general are attempts, pageviews, and scores. Though many studies showed great statistical analysis with these data there are still limitations to how far it can be relevant. For page views can answer what / had been viewed or not, how many times it was viewed, and when it was viewed, but cannot answer how it was viewed. For example, when a student is following an online course can open another tab like Youtube at the same time making his/her status idle on the course. Another example is when students are viewing a material, it can be seen that they are viewing the materials, but it cannot show how they are viewing the materials. 
+</p>
+</div>
+</form>
+
+<form id="3" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction(3)">
+<div onmouseenter="startCount(3)" onmouseleave="stopCount(3)">
+<h1> 1.3 Hypothesis/Proposed </h1> <br>
+
+<input type="text" id="first_name3" name="first_name">
+<input type="text" id="last_name3" name="last_name">
+<input type="text" id="section3" name="section" value="section3">
+<input type="text" id="current_date3" name="current_date">
+<input type="text" id="duration_accumulated3" name="duration_accumulated">
+<input type="text" id="duration_discrete3" name="duration_discrete">
+
+<p>
+This introductory work will be general to all people than focusing on students. As a starting point to show how people view pages, this work proposed browser-level monitoring tool that further monitors up to the section of the page that is viewed with the timeline (duration and timestamp) provided, in other words, real time. To elaborate it can show which parts the person looked at first and in what order, and how long they spent on those sections. With browser-level monitoring, it can show whether the person strays to another place (opened a new tab and which tab is currently active). This work also adds some user interactions, which are the keyboard buttons pressed, mouse clicks, and scrolls. Ultimately this tool can replay how a person used their browser, close to screen record.  
+</p>
+</div>
+</form>
+
+<form id="4" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction(4)">
+<div onmouseenter="startCount(4)" onmouseleave="stopCount(4)">
+<h1> 1.4 Significance </h1> <br>
+
+<input type="text" id="first_name4" name="first_name">
+<input type="text" id="last_name4" name="last_name">
+<input type="text" id="section4" name="section" value="section4">
+<input type="text" id="current_date4" name="current_date">
+<input type="text" id="duration_accumulated4" name="duration_accumulated">
+<input type="text" id="duration_discrete4" name="duration_discrete">
+
+<p>
+The information that a student had viewed a certain page does not wholly represent the learning process of that student. This also applied to the physical world, for example when a person is reading a newspaper, he/she might take long reading certain parts and chose to scheme the rest of the newspaper. A whole information can be achieved another person is thoroughly observing the person, which this tool is trying to do.
+</p>
+</div>
+</form>
+
+<form id="5" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction(5)">
+<div onmouseenter="startCount(5)" onmouseleave="stopCount(5)">
+<h1> 1.5 Objective </h1> <br>
+
+<input type="text" id="first_name5" name="first_name">
+<input type="text" id="last_name5" name="last_name">
+<input type="text" id="section5" name="section" value="section5">
+<input type="text" id="current_date5" name="current_date">
+<input type="text" id="duration_accumulated5" name="duration_accumulated">
+<input type="text" id="duration_discrete5" name="duration_discrete">
+
+<p>
+To build a browser-level monitoring tool to capture active tabs (site currently view).
+To build a more detailed page monitoring tool that captures the page’s section views and timeline information in order to give information of how a person views a page.
+Additionally add user interactions which on this work are keyboard buttons pressed, mouse tabs clicked, and mouse scroll scrolled.
+</p>
+</div>
+</form>
+
+<script>
+
+var time_spent_accumulated = [];
+var time_spent_discrete = [];
+var t;
+var timer_is_on = 0;
+var current_date = [];
+var first_name = getCookie("first_name");
+var last_name = getCookie("last_name");
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+function CookieExist(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+} 
+
+function CheckCookieExist() {
+  var myCookie1 = CookieExist("first_name");
+  var myCookie2 = CookieExist("last_name");
+
+  if ((myCookie1 == null) || (myCookie2 == null)) {
+      alert("Firstname or Lastname empty");
+      document.location = "identify.html";
+  } else {
+      alert("Welcome " + first_name + " " + last_name);
+      document.getElementById("first_name").value = first_name;
+      document.getElementById("last_name").value = last_name;
+  }
+}
+
+function timedCount(id) {
+    if (time_spent_accumulated[id] == null){
+      time_spent_accumulated[id] = 0;
+    }
+    if (time_spent_discrete[id] == null){
+      time_spent_discrete[id] = 0;
+    }
+    document.getElementById("duration_accumulated"+id).value = time_spent_accumulated[id];
+    time_spent_accumulated[id] = time_spent_accumulated[id] + 1;
+    document.getElementById("duration_discrete"+id).value = time_spent_discrete[id];
+    time_spent_discrete[id] = time_spent_discrete[id] + 1
+    t = setTimeout(function(){ timedCount(id) }, 1000);
+}
+
+function get_current_date(id) {
+    current_date[id] = new Date();
+    document.getElementById("current_date"+id).value = current_date[id];
+}
+
+function startCount(id) {
+    if (!timer_is_on) {
+        timer_is_on = 1;
+        timedCount(id);
+        get_current_date(id);
+    }
+    document.getElementById("first_name"+id).value = first_name;
+    document.getElementById("last_name"+id).value = last_name;
+}
+
+function stopCount(id) {
+    clearTimeout(t);
+    timer_is_on = 0;
+    time_spent_accumulated[id] = time_spent_accumulated[id] - 1; //accuracy
+    time_spent_discrete[id] = 0; //reset
+}
+
+function submitFunction(id) {
+    document.getElementById(id).submit();
+}
+
+//document.getElementsByTagName("body")[0].innerHTML = "<form> <div>"+document.getElementsByTagName("body")[0].innerHTML+"</div> </form>";
+
+//for (i = 0; i < document.getElementsByTagName("h1").length; i++) { 
+//    document.getElementsByTagName("h1")[i].innerHTML = '</div> </form><form id="'+(i+1)+'" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction('+(i+1)+')"> <div onmouseenter="startCount('+(i+1)+')" onmouseleave="stopCount('+(i+1)+')">'+document.getElementsByTagName("h1")[i].innerHTML;
+    //document.getElementsByTagName("h1")[i].innerHTML = document.getElementsByTagName("h1")[i].innerHTML;
+//}
+
+for (i = 0; i < document.getElementsByTagName("h1").length; i++) { 
+var text = document.createTextNode('</div> </form><form id="'+(i+1)+'" action="section_page_view_prototype_api_store" target="dummyframe" method="GET" onmouseleave="submitFunction('+(i+1)+')"> <div onmouseenter="startCount('+(i+1)+')" onmouseleave="stopCount('+(i+1)+')">');
+var child = document.getElementsByTagName("h1")[i];
+child.parentNode.insertBefore(text, child);
+]
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+
+FCNTL.O:     file format elf32-i386
+
+/home/cg/usr/src/cmd/wrec/supp/fcntl.c:
+typedef int32 int;
+typedef int8 char;
+typedef int32 long int;
+typedef uint32 unsigned int;
+typedef uint32 long unsigned int;
+typedef int64 long long int;
+typedef uint64 long long unsigned int;
+typedef int16 short int;
+typedef uint16 short unsigned int;
+typedef int8 signed char;
+typedef uint8 unsigned char;
+typedef float float;
+typedef double double;
+typedef float96 long double;
+typedef struct %anon1 { /* size 8 */
+  int real; /* bitsize 32, bitpos 0 */
+  int imag; /* bitsize 32, bitpos 32 */
+} complex int;
+typedef complex float complex float;
+typedef complex double complex double;
+typedef complex float96 complex long double;
+typedef void void;
+typedef long double __long_double_t;
+struct fd_set { /* size 128 id 2 */
+  long unsigned int fds_bits[32]; /* bitsize 1024, bitpos 0 */
+};
+typedef struct fd_set /* id 2 */ __kernel_fd_set;
+typedef short unsigned int __kernel_dev_t;
+typedef long unsigned int __kernel_ino_t;
+typedef short unsigned int __kernel_mode_t;
+typedef short unsigned int __kernel_nlink_t;
+typedef long int __kernel_off_t;
+typedef int __kernel_pid_t;
+typedef short unsigned int __kernel_uid_t;
+typedef short unsigned int __kernel_gid_t;
+typedef unsigned int __kernel_size_t;
+typedef int __kernel_ssize_t;
+typedef int __kernel_ptrdiff_t;
+typedef long int __kernel_time_t;
+typedef long int __kernel_clock_t;
+typedef int __kernel_daddr_t;
+typedef char *__kernel_caddr_t;
+typedef long long int __kernel_loff_t;
+typedef struct %anon3 { /* size 8 */
+  int __val[2]; /* bitsize 64, bitpos 0 */
+} __kernel_fsid_t;
+typedef short unsigned int umode_t;
+typedef signed char __s8;
+typedef unsigned char __u8;
+typedef short int __s16;
+typedef short unsigned int __u16;
+typedef int __s32;
+typedef unsigned int __u32;
+typedef long long int __s64;
+typedef long long unsigned int __u64;
+typedef struct fd_set /* id 2 */ fd_set;
+typedef short unsigned int dev_t;
+typedef long unsigned int ino_t;
+typedef short unsigned int mode_t;
+typedef short unsigned int nlink_t;
+typedef long int off_t;
+typedef int pid_t;
+typedef short unsigned int uid_t;
+typedef short unsigned int gid_t;
+typedef int daddr_t;
+typedef long long int loff_t;
+typedef unsigned int size_t;
+typedef int ssize_t;
+typedef int ptrdiff_t;
+typedef long int time_t;
+typedef long int clock_t;
+typedef __kernel_caddr_t caddr_t;
+typedef unsigned char u_char;
+typedef short unsigned int u_short;
+typedef unsigned int u_int;
+typedef long unsigned int u_long;
+typedef unsigned char unchar;
+typedef short unsigned int ushort;
+typedef unsigned int uint;
+typedef long unsigned int ulong;
+struct ustat { /* size 20 id 4 */
+  int f_tfree; /* bitsize 32, bitpos 0 */
+  long unsigned int f_tinode; /* bitsize 32, bitpos 32 */
+  char f_fname[6]; /* bitsize 48, bitpos 64 */
+  char f_fpack[6]; /* bitsize 48, bitpos 112 */
+};
+typedef char int8_t;
+typedef unsigned char u_int8_t;
+typedef short int int16_t;
+typedef short unsigned int u_int16_t;
+typedef int int32_t;
+typedef unsigned int u_int32_t;
+typedef long long int int64_t;
+typedef long long unsigned int u_int64_t;
+typedef long unsigned int fd_mask;
+typedef unsigned char __u_char;
+typedef short unsigned int __u_short;
+typedef unsigned int __u_int;
+typedef long unsigned int __u_long;
+typedef struct %anon5 { /* size 8 */
+  long int val[2]; /* bitsize 64, bitpos 0 */
+} __quad;
+typedef struct %anon6 { /* size 8 */
+  long unsigned int val[2]; /* bitsize 64, bitpos 0 */
+} __u_quad;
+typedef short unsigned int __dev_t;
+typedef short unsigned int __gid_t;
+typedef short unsigned int __uid_t;
+typedef short unsigned int __mode_t;
+typedef long int __daddr_t;
+typedef long int __off_t;
+typedef long long int __loff_t;
+typedef long unsigned int __ino_t;
+typedef short unsigned int __nlink_t;
+typedef long int __time_t;
+typedef int __pid_t;
+typedef int __ssize_t;
+typedef __quad __fsid_t;
+typedef __kernel_caddr_t __caddr_t;
+typedef long int __swblk_t;
+struct __fd_set { /* size 128 id 7 */
+  long unsigned int fds_bits[32]; /* bitsize 1024, bitpos 0 */
+};
+typedef struct __fd_set /* id 7 */ __fd_set;
+struct flock { /* size 16 id 8 */
+  short int l_type; /* bitsize 16, bitpos 0 */
+  short int l_whence; /* bitsize 16, bitpos 16 */
+  long int l_start; /* bitsize 32, bitpos 32 */
+  long int l_len; /* bitsize 32, bitpos 64 */
+  int l_pid; /* bitsize 32, bitpos 96 */
+};
+#pragma cconv _cdecl
+int creat (char *__filename /* 0x8 */, int __mode /* 0xc */)
+{ /* 0x0 */
+  short unsigned int __mode /* 0xfffffffe */;
+} /* 0x0 */
+int fcntl (int __fildes /* 0x8 */, int __cmd /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __fcntl (int __fildes /* 0x8 */, int __cmd /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int open (char *__filename /* 0x8 */, int __flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int __open (char *__filename /* 0x8 */, int __flags /* 0xc */)
+{ /* 0x0 */
+} /* 0x0 */
+int lockf (int __fd /* 0x8 */, int __cmd /* 0xc */, long int __len /* 0x10 */)
+{ /* 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 43 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 43 addr 0xd */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 47 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 47 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 48 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 48 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 53 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 53 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 54 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 54 addr 0x3 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 70 addr 0x0 */
+  /* file /home/cg/usr/src/cmd/wrec/supp/fcntl.c line 70 addr 0x3 */
+} /* 0x3b */
