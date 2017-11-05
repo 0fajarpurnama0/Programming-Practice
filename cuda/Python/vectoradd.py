@@ -3,7 +3,7 @@ from timeit import default_timer as timer
 
 def VectorAdd(a, b, c):
   for i in xrange(a.size):
-  c[i] = a[i] + b[i]
+    c[i] = a[i] + b[i]
 
 def main():
   N = 32000000 # Number of elements per Array
