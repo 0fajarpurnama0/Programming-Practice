@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "/lab/hicc/fajar/fajar_imp/clock24.xst" -ofn "/lab/hicc/fajar/fajar_imp/clock24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 clock24.ngc clock24.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clock24_map.ncd clock24.ngd clock24.pcf 
+par -w -intstyle ise -ol high -mt off clock24_map.ncd clock24.ncd clock24.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml clock24.twx clock24.ncd -o clock24.twr clock24.pcf 
+bitgen -intstyle ise -f clock24.ut clock24.ncd 
+xst -intstyle ise -ifn "/lab/hicc/fajar/fajar_imp/clock24.xst" -ofn "/lab/hicc/fajar/fajar_imp/clock24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 clock24.ngc clock24.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clock24_map.ncd clock24.ngd clock24.pcf 
+par -w -intstyle ise -ol high -mt off clock24_map.ncd clock24.ncd clock24.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml clock24.twx clock24.ncd -o clock24.twr clock24.pcf 
+bitgen -intstyle ise -f clock24.ut clock24.ncd 
+xst -intstyle ise -ifn "/lab/hicc/fajar/fajar_imp/clock24.xst" -ofn "/lab/hicc/fajar/fajar_imp/clock24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /lab/hicc/fajar/Documents/src/clock24.ucf -p xc7a100t-csg324-1 clock24.ngc clock24.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clock24_map.ncd clock24.ngd clock24.pcf 
+par -w -intstyle ise -ol high -mt off clock24_map.ncd clock24.ncd clock24.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml clock24.twx clock24.ncd -o clock24.twr clock24.pcf 
+bitgen -intstyle ise -f clock24.ut clock24.ncd 

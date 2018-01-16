@@ -1,0 +1,4 @@
+#!bin/bash
+
+verilog clock24_test.v clock24.v counter12.v counter60.v counter24.v counter100.v led_drv.v seven_seg.v clock.v 
+

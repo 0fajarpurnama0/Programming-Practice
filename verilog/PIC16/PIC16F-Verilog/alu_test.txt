@@ -1,0 +1,32 @@
+# input 
+CB[4:0]
+B[2:0]
+FI[7:0]
+WE
+
+# clock
+CLK 20	# 20ns (50MHz)
+
+# testvector
+#  CB[4:0] B[2:0] FI[7:0] WE 
+10 `IPSF   0      8'hFF   0  # Pass F
+20 `IPSF   0      8'h55   0  # Pass F
+20 `IPSF   0      8'hAA   0  # Pass F
+20 `ICLR   0      8'hAA   0  # Clear F
+20 `IINC1  0      8'h00   1  # Increment F, W=1
+20 `ISUB   0      8'h01   0  # Subtract 1 from F=1
+20 `IDEC1  0      8'h01   1  # Decrement F, W=0
+20 `IPSF   0      8'h55   1  # Pass F, W=0x55
+20 `IAND   0      8'h55   0  # 0x55 & 0x55
+20 `IAND   0      8'hAA   0  # 0xAA & 0x55
+20 `IOR    0      8'h55   0  # 0x55 |  0x55
+20 `IOR    0      8'hAA   0  # 0xAA | 0x55
+20 `IXOR   0      8'h55   0  # 0x55 ^ 0x55
+20 `IXOR   0      8'hAA   0  # 0xAA ^ 0x55
+20 `IPSW   0      8'h00   0  # Pass W, FO<=W
+20 `IRRF   0      8'h55   1  # Rotate Right 0x55, W<= result
+20 `IRLF   0      8'hAA   0  # Rotate Left 0xAA
+20 `IBSF   2      8'hAA   0  # Bit Set 2
+20 `IBCF   1      8'hAA   0  # Bit Clear 1
+20 `IBTF   4      8'hAA   0  # Bit Test 4, Check Z flag
+20 `IBTF   5      8'hAA   0  # Bit Test 5, Check Z flag

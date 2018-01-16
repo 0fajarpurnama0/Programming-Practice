@@ -1,0 +1,113 @@
+integer i0;
+initial
+begin
+  CLK = 1'b1;
+  for( i0=0 ; i0<43 ; i0=i0+1 )
+      CLK = #10 ~CLK;
+  $finish;
+end
+
+initial
+begin
+    CB[4:0] = # 10 `IPSF;	//  Pass F 
+    CB[4:0] = # 20 `IPSF;	//  Pass F 
+    CB[4:0] = # 20 `IPSF;	//  Pass F 
+    CB[4:0] = # 20 `ICLR;	//  Clear F 
+    CB[4:0] = # 20 `IINC1;	//  Increment F, W=1 
+    CB[4:0] = # 20 `ISUB;	//  Subtract 1 from F=1 
+    CB[4:0] = # 20 `IDEC1;	//  Decrement F, W=0 
+    CB[4:0] = # 20 `IPSF;	//  Pass F, W=0x55 
+    CB[4:0] = # 20 `IAND;	//  0x55 & 0x55 
+    CB[4:0] = # 20 `IAND;	//  0xAA & 0x55 
+    CB[4:0] = # 20 `IOR;	//  0x55 |  0x55 
+    CB[4:0] = # 20 `IOR;	//  0xAA | 0x55 
+    CB[4:0] = # 20 `IXOR;	//  0x55 ^ 0x55 
+    CB[4:0] = # 20 `IXOR;	//  0xAA ^ 0x55 
+    CB[4:0] = # 20 `IPSW;	//  Pass W, FO<=W 
+    CB[4:0] = # 20 `IRRF;	//  Rotate Right 0x55, W<= result 
+    CB[4:0] = # 20 `IRLF;	//  Rotate Left 0xAA 
+    CB[4:0] = # 20 `IBSF;	//  Bit Set 2 
+    CB[4:0] = # 20 `IBCF;	//  Bit Clear 1 
+    CB[4:0] = # 20 `IBTF;	//  Bit Test 4, Check Z flag 
+    CB[4:0] = # 20 `IBTF;	//  Bit Test 5, Check Z flag 
+    CB[4:0] = # 20 `IBTF;	//  Bit Test 5, Check Z flag 
+end
+
+initial
+begin
+    B[2:0] = # 10 0;	//  Pass F 
+    B[2:0] = # 20 0;	//  Pass F 
+    B[2:0] = # 20 0;	//  Pass F 
+    B[2:0] = # 20 0;	//  Clear F 
+    B[2:0] = # 20 0;	//  Increment F, W=1 
+    B[2:0] = # 20 0;	//  Subtract 1 from F=1 
+    B[2:0] = # 20 0;	//  Decrement F, W=0 
+    B[2:0] = # 20 0;	//  Pass F, W=0x55 
+    B[2:0] = # 20 0;	//  0x55 & 0x55 
+    B[2:0] = # 20 0;	//  0xAA & 0x55 
+    B[2:0] = # 20 0;	//  0x55 |  0x55 
+    B[2:0] = # 20 0;	//  0xAA | 0x55 
+    B[2:0] = # 20 0;	//  0x55 ^ 0x55 
+    B[2:0] = # 20 0;	//  0xAA ^ 0x55 
+    B[2:0] = # 20 0;	//  Pass W, FO<=W 
+    B[2:0] = # 20 0;	//  Rotate Right 0x55, W<= result 
+    B[2:0] = # 20 0;	//  Rotate Left 0xAA 
+    B[2:0] = # 20 2;	//  Bit Set 2 
+    B[2:0] = # 20 1;	//  Bit Clear 1 
+    B[2:0] = # 20 4;	//  Bit Test 4, Check Z flag 
+    B[2:0] = # 20 5;	//  Bit Test 5, Check Z flag 
+    B[2:0] = # 20 5;	//  Bit Test 5, Check Z flag 
+end
+
+initial
+begin
+    FI[7:0] = # 10 8'hFF;	//  Pass F 
+    FI[7:0] = # 20 8'h55;	//  Pass F 
+    FI[7:0] = # 20 8'hAA;	//  Pass F 
+    FI[7:0] = # 20 8'hAA;	//  Clear F 
+    FI[7:0] = # 20 8'h00;	//  Increment F, W=1 
+    FI[7:0] = # 20 8'h01;	//  Subtract 1 from F=1 
+    FI[7:0] = # 20 8'h01;	//  Decrement F, W=0 
+    FI[7:0] = # 20 8'h55;	//  Pass F, W=0x55 
+    FI[7:0] = # 20 8'h55;	//  0x55 & 0x55 
+    FI[7:0] = # 20 8'hAA;	//  0xAA & 0x55 
+    FI[7:0] = # 20 8'h55;	//  0x55 |  0x55 
+    FI[7:0] = # 20 8'hAA;	//  0xAA | 0x55 
+    FI[7:0] = # 20 8'h55;	//  0x55 ^ 0x55 
+    FI[7:0] = # 20 8'hAA;	//  0xAA ^ 0x55 
+    FI[7:0] = # 20 8'h00;	//  Pass W, FO<=W 
+    FI[7:0] = # 20 8'h55;	//  Rotate Right 0x55, W<= result 
+    FI[7:0] = # 20 8'hAA;	//  Rotate Left 0xAA 
+    FI[7:0] = # 20 8'hAA;	//  Bit Set 2 
+    FI[7:0] = # 20 8'hAA;	//  Bit Clear 1 
+    FI[7:0] = # 20 8'hAA;	//  Bit Test 4, Check Z flag 
+    FI[7:0] = # 20 8'hAA;	//  Bit Test 5, Check Z flag 
+    FI[7:0] = # 20 8'hAA;	//  Bit Test 5, Check Z flag 
+end
+
+initial
+begin
+    WE = # 10 0;	//  Pass F 
+    WE = # 20 0;	//  Pass F 
+    WE = # 20 0;	//  Pass F 
+    WE = # 20 0;	//  Clear F 
+    WE = # 20 1;	//  Increment F, W=1 
+    WE = # 20 0;	//  Subtract 1 from F=1 
+    WE = # 20 1;	//  Decrement F, W=0 
+    WE = # 20 1;	//  Pass F, W=0x55 
+    WE = # 20 0;	//  0x55 & 0x55 
+    WE = # 20 0;	//  0xAA & 0x55 
+    WE = # 20 0;	//  0x55 |  0x55 
+    WE = # 20 0;	//  0xAA | 0x55 
+    WE = # 20 0;	//  0x55 ^ 0x55 
+    WE = # 20 0;	//  0xAA ^ 0x55 
+    WE = # 20 0;	//  Pass W, FO<=W 
+    WE = # 20 1;	//  Rotate Right 0x55, W<= result 
+    WE = # 20 0;	//  Rotate Left 0xAA 
+    WE = # 20 0;	//  Bit Set 2 
+    WE = # 20 0;	//  Bit Clear 1 
+    WE = # 20 0;	//  Bit Test 4, Check Z flag 
+    WE = # 20 0;	//  Bit Test 5, Check Z flag 
+    WE = # 20 0;	//  Bit Test 5, Check Z flag 
+end
+

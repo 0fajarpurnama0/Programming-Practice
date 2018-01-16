@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ~kuga/creative2015
+~kuga/bin.linux/

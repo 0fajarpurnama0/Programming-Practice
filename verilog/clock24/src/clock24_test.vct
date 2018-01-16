@@ -1,0 +1,45 @@
+integer i0;
+initial
+begin
+  CLK = 1'b1;
+  for( i0=0 ; i0<2000007 ; i0=i0+1 )
+      CLK = #5 ~CLK;
+  $finish;
+end
+
+initial
+begin
+    RSTN = # 5 1;
+    RSTN = # 10 0;
+    RSTN = # 10 1;
+    RSTN = # 10000000 1;
+    RSTN = # 10000000 1;
+end
+
+initial
+begin
+    SETH = # 5 0;
+    SETH = # 10 0;
+    SETH = # 10 0;
+    SETH = # 10000000 0;
+    SETH = # 10000000 0;
+end
+
+initial
+begin
+    SETM = # 5 0;
+    SETM = # 10 0;
+    SETM = # 10 0;
+    SETM = # 10000000 0;
+    SETM = # 10000000 0;
+end
+
+initial
+begin
+    SCLR = # 5 0;
+    SCLR = # 10 0;
+    SCLR = # 10 0;
+    SCLR = # 10000000 0;
+    SCLR = # 10000000 0;
+end
+

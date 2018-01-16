@@ -1,0 +1,15 @@
+# input
+RSTN
+SETH
+SETM
+SCLR
+
+# clock
+CLK 10
+
+# testvector
+# RSTN SETH SETM SCLR
+5  1       0    0    0
+10 0       0    0    0
+10 1       0    0    0
+10000000 1 0    0    0

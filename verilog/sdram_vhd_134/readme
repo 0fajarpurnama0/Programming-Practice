@@ -1,0 +1,110 @@
+-- Copyright(C) 2009 by Xilinx, Inc. All rights reserved. 
+-- The files included in this design directory contain proprietary, confidential information of 
+-- Xilinx, Inc., are distributed under license from Xilinx, Inc., and may be used, copied 
+-- and/or disclosed only pursuant to the terms of a valid license agreement with Xilinx, Inc. 
+-- This copyright notice must be retained as part of this text at all times. 
+
+
+Design Description: The SDRAM controller is designed for a Virtex device.
+It's simulated with Micron SDRAM models. The design is verified with 
+backannotated simulation at 125MHz.
+
+Design Type: ISE (chip 4VSX25 FF668 -12)
+	
+Design Hierarchy:
+
+sdrm			(top level)
+ sdrm_tb.vhd	(Test Bench)
+  sys_int		(system interface)
+  sdrm_t		(SDRAM controller)
+    sdrmc_state 	(state machine)
+    brst_cntr 		(burst counter)
+    rcd_cntr 		(ras-cas-delay counter)
+    ref_cntr 		(refresh counter)
+    cslt_cntr 		(cas-latency counter)
+    ki_cntr		(keep-idle-during-refresh-active counter)
+
+Simulation:
+Simulation of this project uses sdrm_tb.vhd for both functional and timing simulation.
+
+The initial timing violations can be safely ignored. They are caused while the ram is
+being initialized.
+
+
+Warning: The File->Save Project As... operation of Project Navigator does not copy 
+	files Which are not actual project or source files.  If this example is saved to a new 
+	location, the user should manually copy the following files to the new location.
+
+	For synthesis: 	
+	For Simulation: Files withing the micron sub-folder.
+
+
+Design  Notes:
+
+- NOTE: Simplicity users still need to remove use std.textio.all in all vhd files
+
+- DLL:  (in sdrm module)
+  . dll0: use for clock mirror, provide the clock for the external SDRAM
+  . dll1: use for deskewing clock signal inside the FPGA (Clk_j), also provide clk2x (Clk_i)
+
+- Use global clock buffers for clock signals:
+  .  Using global clock resources provides low-skew high-fanout routings.
+
+- Use LUT Shift Register to delay signals by certain number of clock cycles
+
+  . delay DLL lock signal (in sdrm_t module)
+  . delay data (in sys_int module) 
+
+- Registering all inputs and ouputs to SDRAM: (in sdrm module)
+  . All signals going to the SDRAM are registered in the IOB 
+    This makes it easy to calculate timings b/t the FPGA and SDRAM
+    For write cycles, add FPGA Tiockp to SDRAM Tsu
+    For read cycles, add SDRAM Tac to FPGA Tsu and
+  . The tristate signal for the data lines are also registered in the IOB 
+  . Instead of 1 tristate signal for the Data lines, 
+    we duplicate it to 4 signals, each having 8 loads.  
+    This was done to reduce net delays on that tristate signal.  
+    The tristate signal is sd_doe_n in sdrm 
+
+- Use IODELAY=None mode for input buffers: (in ucf constraint file)
+  . The default IBUF has additional delay to give negative hold time.  This 
+    eliminates pad-to-pad hold time
+  . Set IODELAY=NONE attribute on inputs to reduce IBUF delay by about 1.5ns
+
+- Set timing constraints for place & route tool: (in ucf constraint file)
+   . set clock period on input clock (Clkp)
+   . set periods b/t clk1x and clk2x (Clk_j, Clk_i)
+   . set OFFSET constraint for inputs and outputs 
+
+Frequently asked questions:
+
+1. Is RAS to CAS delay programmable?
+  . No, the data registers has a fixed number of pipeline stages.  This 
+    reference design supports RAS-to-CAS delay of 2 clock cycles.  If you 
+    need to adjust to a different RAS-to-CAS delay, change the SRL16 Address 
+    values in sys_int.v.  The address value should be (Trcd/Tck) +1
+  . Note, you still need to write the RAS-to-CAS value to the Controller's 
+    Mode Reg during PRECHARGE command.  The value should be (Trcd/Tck) -2
+
+2. How do I modify the design to support 128Mb/256Mb SDRAM parts with a 64-bit data bus?
+  . You'll need to add more IO buffers for the extra data and address signals (in sdrm.v) 
+  . You'll need to change ADDR_MSB and DATA_MSB (in define.v) 
+  . In the current design, instead of 1 tristate signal for the Data lines, 
+    we duplicate it to 4 signals, each having 8 loads.  
+    This was done to reduce net delays on that tristate signal.  
+    You may need to add 4 more tristate lines if you're going to 64-bit.  
+    The tristate signal is sd_doe_n in sdrm.v 
+
+
+NOTE: If you are trying to run this example in a read-only location,    
+the design hierachy will not display properly. Please copy the example  
+project to a new location by using either Project Save As... from the File menu
+pulldown in ISE or some other method of your choice. Copy the example to a location
+where you have write permissions and the hiearchy will display properly. 
+
+
+For support information and contacts please see:
+
+	http://www.xilinx.com/support
+or
+	http://www.xilinx.com/support/services/contact_info.htm

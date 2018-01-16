@@ -1,0 +1,46 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 11 17:39:49 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RSTN" LOCATE = SITE "C12" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "AN<0>" LOCATE = SITE "N6" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "M6" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "M3" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "N5" LEVEL 1;
+COMP "AN<4>" LOCATE = SITE "N2" LEVEL 1;
+COMP "AN<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "AN<6>" LOCATE = SITE "L1" LEVEL 1;
+COMP "SCLR" LOCATE = SITE "E16" LEVEL 1;
+COMP "AN<7>" LOCATE = SITE "M1" LEVEL 1;
+COMP "SETH" LOCATE = SITE "F15" LEVEL 1;
+COMP "SETM" LOCATE = SITE "V10" LEVEL 1;
+COMP "SEGN<0>" LOCATE = SITE "M4" LEVEL 1;
+COMP "SEGN<1>" LOCATE = SITE "L6" LEVEL 1;
+COMP "SEGN<2>" LOCATE = SITE "M2" LEVEL 1;
+COMP "SEGN<3>" LOCATE = SITE "K3" LEVEL 1;
+COMP "SEGN<4>" LOCATE = SITE "L4" LEVEL 1;
+COMP "CLK" LOCATE = SITE "E3" LEVEL 1;
+COMP "SEGN<5>" LOCATE = SITE "L5" LEVEL 1;
+COMP "SEGN<6>" LOCATE = SITE "N1" LEVEL 1;
+COMP "SEGN<7>" LOCATE = SITE "L3" LEVEL 1;
+TIMEGRP CLK_pin = BEL "C2/cnt_0" BEL "C2/cnt_1" BEL "C2/cnt_2" BEL "C0/cnt2_3"
+        BEL "C0/cnt2_2" BEL "C0/cnt1_16" BEL "C0/cnt2_1" BEL "C0/cnt1_14" BEL
+        "C0/cnt1_13" BEL "C0/cnt1_15" BEL "C0/cnt1_11" BEL "C0/cnt1_10" BEL
+        "C0/cnt1_12" BEL "C0/cnt1_9" BEL "C0/cnt1_8" BEL "C0/cnt1_6" BEL
+        "C0/cnt1_5" BEL "C0/cnt1_7" BEL "C0/cnt1_3" BEL "C0/cnt1_2" BEL
+        "C0/cnt1_4" BEL "C0/cnt1_0" BEL "C0/cnt1_1" BEL "C1/c60M/d0_3" BEL
+        "C1/c60M/d0_2" BEL "C1/c60M/d0_1" BEL "C1/c60M/d0_0" BEL
+        "C1/c60s/d0_3" BEL "C1/c60s/d0_2" BEL "C1/c60s/d0_1" BEL
+        "C1/c60s/d0_0" BEL "C1/c60s/d1_3" BEL "C1/c60s/d1_2" BEL
+        "C1/c60s/d1_1" BEL "C1/c60s/d1_0" BEL "C1/c60M/d1_2" BEL
+        "C1/c60M/d1_1" BEL "C1/c60M/d1_0" BEL "C1/c100/d0_3" BEL
+        "C1/c100/d0_2" BEL "C1/c100/d0_1" BEL "C1/c100/d0_0" BEL
+        "C1/c100/d1_3" BEL "C1/c100/d1_2" BEL "C1/c100/d1_1" BEL
+        "C1/c100/d1_0" BEL "C1/c24/d1_3" BEL "C1/c24/d1_2" BEL "C1/c24/d1_1"
+        BEL "C1/c24/d1_0" BEL "C1/c24/d0_3" BEL "C1/c24/d0_1" BEL
+        "C1/c24/d0_0" BEL "C1/c24/d0_2" BEL "CLK_BUFGP/BUFG";
+TS_CLK_pin = PERIOD TIMEGRP "CLK_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,8 @@
+verilog work "../Documents/src/counter60.v"
+verilog work "../Documents/src/counter12.v"
+verilog work "../Documents/src/counter100.v"
+verilog work "../Documents/src/seven_seg.v"
+verilog work "../Documents/src/led_drv.v"
+verilog work "../Documents/src/counter24.v"
+verilog work "../Documents/src/clock.v"
+verilog work "../Documents/src/clock24.v"
