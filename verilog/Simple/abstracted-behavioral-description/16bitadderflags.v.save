@@ -1,0 +1,6 @@
+module adder ( A, B, Y )
+ 
+  wire [15:0] A, B, Y;
+  output [15:0] S;
+  assign S = A + B;
+endmodule
