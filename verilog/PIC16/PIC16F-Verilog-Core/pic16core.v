@@ -33,7 +33,7 @@ module pic16core ( CLK, RST, RA, RB );
    reg  [7:0] 	PORTA,  TRISA;          // 05 85
    reg  [7:0] 	PORTB,  TRISB;	        // 06 86
    reg  [4:0] 	PCLATH;		        // 0A 8A
-   reg  [7:0] 	RAM[   :    ];	        // 0C-7F
+   reg  [7:0] 	RAM[ 12 : 127 ];	        // 0C-7F
 
    // DATA bus
    reg  [7:0] 	SDATA; // for special register
@@ -217,12 +217,12 @@ module pic16core ( CLK, RST, RA, RB );
 	     if(    nTO_S     ) nTO  = 1'b1;
 	     if(    nTO_C     ) nTO  = 1'b0;
              // Register Write
-	     if(    W_W     )
-               casex( RP [1:0]   )
+	     if(    F_W     )
+               casex( EA   )
 //		 9'b?0_000_0001: TMR0    = WDATA;      // 01    101      Described TMR0 part
 //		 9'b?1_000_0001:`OPTION  = WDATA;      //    81     181
 //		 9'b??_000_0010: PCL     = WDATA;      // 02 82 102 182  Described PC part
-		 9'b??_000_0011: STATUS  = WDATA;      // 03 83 103 183
+		 9'b??_000_0011:`STATUS  = WDATA;      // 03 83 103 183
 		 9'b??_000_0100: FS      = WDATA;      // 04 84 104 184
 		 9'b00_000_0101: PORTA   = WDATA;      // 05
 		 9'b01_000_0101: TRISA   = WDATA;      //    85
@@ -231,7 +231,7 @@ module pic16core ( CLK, RST, RA, RB );
 //		 9'b??_000_0111: ;                     // 07
 //		 9'b??_000_1000: ;                     // 08 EEDATA not implement
 //		 9'b??_000_1001: ;                     // 09 EEADR  not implement
-		 9'b??_000_1010: PCLATH  = WDATA[ 4:0 ]; // 0A 8A 10A 18A 
+		 9'b??_000_1010: PCLATH  = WDATA[ 8:0 ]; // 0A 8A 10A 18A 
 //		 9'b??_000_1011:`INTCON  = WDATA;      // 0B 8B 10B 18B
                endcase
 	  end
@@ -242,7 +242,7 @@ module pic16core ( CLK, RST, RA, RB );
    //
    always @( posedge CLK )
      begin
-	if(      && (      >=          ) )        <=      ;
+	if(  F_W    && (  EA [6:0]   >=   7'b001_1000        ) )  RAM[EA[6:0]]      <=  WDATA    ; //12-127 7'b001_1000-8'b1111_1111
      end
    
    //
@@ -257,14 +257,14 @@ module pic16core ( CLK, RST, RA, RB );
      casex( EA )
 //     9'b?0_000_0001: SDATA = TMR0;
 //     9'b?1_000_0001: SDATA =`OPTION;
-       9'b           : SDATA =              ; // PCL
-       9'b           : SDATA =              ; // STATUS
-       9'b           : SDATA =              ; // FSR
-       9'b           : SDATA =              ; // RA
-       9'b           : SDATA =              ; // TRISA
-       9'b           : SDATA =              ; // RB
-       9'b           : SDATA =              ; // TRISB
-       9'b           : SDATA = {    ,      }; // PCLATH
+       9'b??_000_0010: SDATA = PCL              ; // PCL
+       9'b??_000_0011: SDATA =`STATUS              ; // STATUS
+       9'b??_000_0100: SDATA = FS              ; // FSR
+       9'b00_000_0101: SDATA = PORTA              ; // RA
+       9'b01_000_0101: SDATA = TRISA              ; // TRISA
+       9'b?0_000_0110: SDATA = PORTB              ; // RB
+       9'b?1_000_0110: SDATA = TRISB              ; // TRISB
+       9'b??_000_1010: SDATA = {   3'b000 , PCLATH     }; // PCLATH
 //     9'b??_000_1011: SDATA =`INTCON;
        default:        SDATA = 8'bxxxx_xxxx;
      endcase
@@ -272,7 +272,7 @@ module pic16core ( CLK, RST, RA, RB );
    //
    // Data RAM Read
    //
-   assign DDATA =            ;
+   assign DDATA = RAM[EA[7:0]]           ;
 
    
    //
@@ -280,12 +280,16 @@ module pic16core ( CLK, RST, RA, RB );
    //
    always @( IR or EA or DDATA or SDATA )
      begin
-	if( &IR[  :  ] )    RDATA <=        ; else
+        RDATA <= 8’bxxxx_xxxx;
+	if( &IR[ 13 : 12 ] )    RDATA <= `IRK       ; else
 	  casex( EA )
-	    9'b           : RDATA <=        ;
-	    9'b           : RDATA <=        ;
-	    9'b           : RDATA <=        ;
-	    default :       RDATA <=        ;
+            9'b??_000_0010: RDATA <= SDATA              ; // PCL
+            9'b??_000_0011: RDATA <= SDATA              ; // STATUS
+            9'b??_000_0100: RDATA <= SDATA              ; // FSR
+            9'b??_000_0101: RDATA <= SDATA              ; // PORTA TRISA
+            9'b??_000_0110: RDATA <= SDATA              ; // PORTB TRISB
+            9'b??_000_1010: RDATA <= SDATA; // PCLATH
+	    default :       RDATA <= RAM[EA[7:0]];
 	  endcase
      end
   
@@ -301,7 +305,7 @@ module pic16core ( CLK, RST, RA, RB );
    // Sleep mode
      always @( posedge CLK or posedge RST )
        begin
-  	if(        ) SLEEP <=   ; else
+  	if(   slp     ) SLEEP <=   ; else
   	if(        ) SLEEP <=   ;
        end
 
