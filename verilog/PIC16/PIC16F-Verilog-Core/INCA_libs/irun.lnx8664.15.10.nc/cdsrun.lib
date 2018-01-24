@@ -1,0 +1,3 @@
+include ../../cds.lib
+define worklib ../worklib
+define vhdlspice_skeletons ../vhdlspice_skeletons

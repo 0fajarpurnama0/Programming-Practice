@@ -1,0 +1,10 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(24Jan2018:10:09:37):( ncverilog pic16test.v pic16.v pic16core.v )
+s2::(24Jan2018:10:15:35):( ncverilog pic16test.v pic16.v pic16core.v )
+s3::(24Jan2018:10:16:10):( ncverilog pic16test.v pic16.v pic16core.v )
+s4::(24Jan2018:10:16:59):( ncverilog pic16test.v pic16.v pic16core.v )
+s5::(24Jan2018:10:30:26):( ncverilog pic16test.v pic16.v pic16core.v ¥¥ )
+s6::(24Jan2018:10:30:43):( ncverilog pic16test.v pic16.v pic16core.v alu.v pic_dcm.vhd -V93 +nc64bit -gui +access+r )

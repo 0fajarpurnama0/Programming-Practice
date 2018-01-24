@@ -1,0 +1,78 @@
+ncverilog(64): 15.10-s008: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.10-s008: Started on Jan 24, 2018 at 10:30:43 JST
+ncverilog
+	pic16test.v
+	pic16.v
+	pic16core.v
+	alu.v
+	pic_dcm.vhd
+	-V93
+	+nc64bit
+	-gui
+	+access+r
+file: pic16test.v
+	module worklib.pic16test:v
+		errors: 0, warnings: 0
+	module worklib.data_alias:v
+		errors: 0, warnings: 0
+file: pic16.v
+	module worklib.pic16:v
+		errors: 0, warnings: 0
+file: pic16core.v
+	module worklib.pic16core:v
+		errors: 0, warnings: 0
+file: alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+pic_dcm.vhd:
+	errors: 0, warnings: 0
+WORKLIB.PIC_DCM (entity):
+	streams: 8, words: 344
+WORKLIB.PIC_DCM:XILINX (architecture):
+	streams: 1, words: 3029
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+ncelab: *W,RXNORX: Some design units are compiled with "-RELAX" or "-CONTROLRELAX" option, and others without it.
+	Building instance overlay tables: .................... Done
+	Using implicit TMP libraries; associated with library worklib
+	Generating native compiled code:
+		worklib.alu:v <0x06b98350>
+			streams:   6, words:  6554
+		worklib.data_alias:v <0x0505613f>
+			streams:   1, words:   124
+		worklib.pic16:v <0x52321cfe>
+			streams:   0, words:     0
+		worklib.pic16core:v <0x6540af7e>
+			streams:  22, words: 22375
+		worklib.pic16test:v <0x30fbac8f>
+			streams:   5, words:  2211
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+	VHDL Design hierarchy:
+		Components:              5       4
+		Default bindings:        4       1
+		Processes:             162     161
+		Signals:               489     489
+	Verilog Design hierarchy:
+		Modules:                 5       5
+		Resolved nets:           0       1
+		Registers:              44      44
+		Scalar wires:           26       -
+		Vectored wires:          9       -
+		Always blocks:          12      12
+		Initial blocks:          4       4
+		Cont. assignments:       7      26
+		Pseudo assignments:      4       4
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.pic16test:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /opt/CADENCE/INCISIVE151/tools/inca/files/ncsimrc
+ncsim> ^C
+ncsim> exit
+TOOL:	ncverilog	15.10-s008: Exiting on Jan 24, 2018 at 10:31:00 JST  (total: 00:00:17)

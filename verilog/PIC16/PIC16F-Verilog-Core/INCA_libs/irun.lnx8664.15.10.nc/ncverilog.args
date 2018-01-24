@@ -1,0 +1,13 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+pic16test.v
+pic16.v
+pic16core.v
+alu.v
+pic_dcm.vhd
+-V93
++nc64bit
+-gui
++access+r
