@@ -1,0 +1,7 @@
+~kuga/bin/gpasm program.asm
+~kuga/bin/hex2vmemh.py program.hex
+
+ssh –X calc1.st.cs.kumamoto-u.ac.jp
+source ~kuga/setup/creative2016
+
+ncverilog pic16test.v pic16.v pic16core.v alu.v pic_dcm.vhd -V93 +nc64bit -gui +access+r

@@ -231,7 +231,7 @@ module pic16core ( CLK, RST, RA, RB );
 //		 9'b??_000_0111: ;                     // 07
 //		 9'b??_000_1000: ;                     // 08 EEDATA not implement
 //		 9'b??_000_1001: ;                     // 09 EEADR  not implement
-		 9'b??_000_1010: PCLATH  = WDATA; // 0A 8A 10A 18A 
+		 9'b??_000_1010: PCLATH  = WDATA[4:0]; // 0A 8A 10A 18A 
 //		 9'b??_000_1011:`INTCON  = WDATA;      // 0B 8B 10B 18B
                endcase
 	  end
@@ -286,9 +286,9 @@ module pic16core ( CLK, RST, RA, RB );
      	    9'b??_000_0010: RDATA <= SDATA ; // PCL
        	    9'b??_000_0011: RDATA <= SDATA ; // STATUS
             9'b??_000_0100: RDATA <= SDATA ; // FSR
-            9'b00_000_0101: RDATA <= SDATA ; // PORTA, TRISA
-            9'b01_000_0101: RDATA <= SDATA ; // PORTB, TRISB
-            9'b?0_000_0110: RDATA <= SDATA ; // PCLATH
+            9'b0?_000_0101: RDATA <= SDATA ; // PORTA, TRISA
+            9'b0?_000_0110: RDATA <= SDATA ; // PORTB, TRISB
+            9'b??_000_1010: RDATA <= SDATA ; // PCLATH
             default: RDATA <= RAM[EA[7:0]] ; // Shared memory
 	  endcase
      end

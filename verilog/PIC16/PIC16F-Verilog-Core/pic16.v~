@@ -2,15 +2,15 @@
 // Micro Controller based on Microchip PIC16
 //  for Digilent NEXYS4 DDR  Board
 
-module pic16 ( CLK, nRST, INT, RA, RB );
+module pic16 ( CLK, nRST, RA, RB );
    input        CLK, nRST;
    inout [7:0] 	RA;
    inout [7:0] 	RB;
-
+   
    parameter PROG = "program.mem";
 
    // Reset
-   wire 	RST, INT, nPIC_RST, PIC_RST;
+   wire         RST, nPIC_RST, PIC_RST;
    assign RST = ~nRST;
 
    // Clock Module for PIC clock
@@ -29,6 +29,7 @@ module pic16 ( CLK, nRST, INT, RA, RB );
           .LOCKED  (nPIC_RST) );
    
    assign PIC_RST = ~nPIC_RST;
+
    pic16core #( .PROG(PROG) )
    i_pic16core ( .CLK(PICCLK), .RST(PIC_RST), .RA(RA), .RB(RB) );
    
