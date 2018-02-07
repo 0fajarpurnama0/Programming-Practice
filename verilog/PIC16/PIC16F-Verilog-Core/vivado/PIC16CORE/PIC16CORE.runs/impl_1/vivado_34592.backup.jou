@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Wed Feb  7 09:13:14 2018
+# Process ID: 34592
+# Current directory: /lab/hicc/fajar/Documents/Programming-Practice/verilog/PIC16/PIC16F-Verilog-Core/vivado/PIC16CORE/PIC16CORE.runs/impl_1
+# Command line: vivado -log pic16.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pic16.tcl -notrace
+# Log file: /lab/hicc/fajar/Documents/Programming-Practice/verilog/PIC16/PIC16F-Verilog-Core/vivado/PIC16CORE/PIC16CORE.runs/impl_1/pic16.vdi
+# Journal file: /lab/hicc/fajar/Documents/Programming-Practice/verilog/PIC16/PIC16F-Verilog-Core/vivado/PIC16CORE/PIC16CORE.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source pic16.tcl -notrace

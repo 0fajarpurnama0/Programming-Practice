@@ -1,5 +1,5 @@
 ncverilog(64): 15.10-s008: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.10-s008: Started on Jan 31, 2018 at 09:01:31 JST
+TOOL:	ncverilog	15.10-s008: Started on Jan 31, 2018 at 10:11:00 JST
 ncverilog
 	pic16test.v
 	pic16.v
@@ -10,6 +10,35 @@ ncverilog
 	+nc64bit
 	-gui
 	+access+r
+Recompiling... reason: file './pic16core.v' is newer than expected.
+	expected: Wed Jan 31 10:09:56 2018
+	actual:   Wed Jan 31 10:10:43 2018
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+ncelab: *W,RXNORX: Some design units are compiled with "-RELAX" or "-CONTROLRELAX" option, and others without it.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+	VHDL Design hierarchy:
+		Components:              5       4
+		Default bindings:        4       1
+		Processes:             162     161
+		Signals:               489     489
+	Verilog Design hierarchy:
+		Modules:                 5       5
+		Resolved nets:           0       1
+		Registers:              44      44
+		Scalar wires:           26       -
+		Vectored wires:          9       -
+		Always blocks:          12      12
+		Initial blocks:          4       4
+		Cont. assignments:       7      26
+		Pseudo assignments:      4       4
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.pic16test:v
 
 -------------------------------------
 Relinquished control to SimVision...
@@ -17,7 +46,7 @@ ncsim>
 ncsim> source /opt/CADENCE/INCISIVE151/tools/inca/files/ncsimrc
 ncsim> database -open waves -into waves.shm -default
 Created default SHM database waves
-ncsim> probe -create -shm pic16test.i_pic16.i_pic16core.ALU_CB pic16test.i_pic16.i_pic16core.C pic16test.i_pic16.i_pic16core.CLK pic16test.i_pic16.i_pic16core.CO pic16test.i_pic16.i_pic16core.C_W pic16test.i_pic16.i_pic16core.DC pic16test.i_pic16.i_pic16core.DCO pic16test.i_pic16.i_pic16core.DC_W pic16test.i_pic16.i_pic16core.DDATA pic16test.i_pic16.i_pic16core.EA pic16test.i_pic16.i_pic16core.FSR pic16test.i_pic16.i_pic16core.F_W pic16test.i_pic16.i_pic16core.IMEM pic16test.i_pic16.i_pic16core.IR pic16test.i_pic16.i_pic16core.IRP pic16test.i_pic16.i_pic16core.NOP_S pic16test.i_pic16.i_pic16core.PC pic16test.i_pic16.i_pic16core.PCLATH pic16test.i_pic16.i_pic16core.PC_W pic16test.i_pic16.i_pic16core.PORTA pic16test.i_pic16.i_pic16core.PORTB pic16test.i_pic16.i_pic16core.RA pic16test.i_pic16.i_pic16core.RAM pic16test.i_pic16.i_pic16core.RB pic16test.i_pic16.i_pic16core.RDATA pic16test.i_pic16.i_pic16core.RP pic16test.i_pic16.i_pic16core.RST pic16test.i_pic16.i_pic16core.SDATA pic16test.i_pic16.i_pic16core.SLEEP pic16test.i_pic16.i_pic16core.SLP_S pic16test.i_pic16.i_pic16core.STK pic16test.i_pic16.i_pic16core.STKP pic16test.i_pic16.i_pic16core.STK_PO pic16test.i_pic16.i_pic16core.STK_PU pic16test.i_pic16.i_pic16core.TRISA pic16test.i_pic16.i_pic16core.TRISB pic16test.i_pic16.i_pic16core.WDATA pic16test.i_pic16.i_pic16core.WDT_C pic16test.i_pic16.i_pic16core.W_W pic16test.i_pic16.i_pic16core.Z pic16test.i_pic16.i_pic16core.ZO pic16test.i_pic16.i_pic16core.Z_W pic16test.i_pic16.i_pic16core.nPD pic16test.i_pic16.i_pic16core.nPD_C pic16test.i_pic16.i_pic16core.nPD_S pic16test.i_pic16.i_pic16core.nTO pic16test.i_pic16.i_pic16core.nTO_C pic16test.i_pic16.i_pic16core.nTO_S
+ncsim> probe -create -shm pic16test.i_pic16.i_pic16core.ALU_CB pic16test.i_pic16.i_pic16core.C pic16test.i_pic16.i_pic16core.CLK pic16test.i_pic16.i_pic16core.CO pic16test.i_pic16.i_pic16core.C_W pic16test.i_pic16.i_pic16core.DC pic16test.i_pic16.i_pic16core.DCO pic16test.i_pic16.i_pic16core.DC_W pic16test.i_pic16.i_pic16core.DDATA pic16test.i_pic16.i_pic16core.EA pic16test.i_pic16.i_pic16core.FSR pic16test.i_pic16.i_pic16core.F_W pic16test.i_pic16.i_pic16core.IMEM pic16test.i_pic16.i_pic16core.IR pic16test.i_pic16.i_pic16core.IRP pic16test.i_pic16.i_pic16core.NOP_S pic16test.i_pic16.i_pic16core.PC pic16test.i_pic16.i_pic16core.PCLATH pic16test.i_pic16.i_pic16core.PC_W pic16test.i_pic16.i_pic16core.PORTA pic16test.i_pic16.i_pic16core.PORTB pic16test.i_pic16.i_pic16core.RA pic16test.i_pic16.i_pic16core.RAM pic16test.i_pic16.i_pic16core.RB pic16test.i_pic16.i_pic16core.RDATA pic16test.i_pic16.i_pic16core.RP pic16test.i_pic16.i_pic16core.RST pic16test.i_pic16.i_pic16core.SDATA pic16test.i_pic16.i_pic16core.SLEEP pic16test.i_pic16.i_pic16core.SLP_S pic16test.i_pic16.i_pic16core.STK pic16test.i_pic16.i_pic16core.STKP pic16test.i_pic16.i_pic16core.STK_PO pic16test.i_pic16.i_pic16core.STK_PU pic16test.i_pic16.i_pic16core.TRISA pic16test.i_pic16.i_pic16core.TRISB pic16test.i_pic16.i_pic16core.WDATA pic16test.i_pic16.i_pic16core.WDT_C pic16test.i_pic16.i_pic16core.W_W pic16test.i_pic16.i_pic16core.Z pic16test.i_pic16.i_pic16core.ZO pic16test.i_pic16.i_pic16core.Z_W pic16test.i_pic16.i_pic16core.nPD pic16test.i_pic16.i_pic16core.nPD_C pic16test.i_pic16.i_pic16core.nPD_S pic16test.i_pic16.i_pic16core.nTO pic16test.i_pic16.i_pic16core.nTO_C pic16test.i_pic16.i_pic16core.nTO_S pic16test.i_pic16.i_pic16core.i_alu.B pic16test.i_pic16.i_pic16core.i_alu.CB pic16test.i_pic16.i_pic16core.i_alu.CI pic16test.i_pic16.i_pic16core.i_alu.CLK pic16test.i_pic16.i_pic16core.i_alu.CO pic16test.i_pic16.i_pic16core.i_alu.DC pic16test.i_pic16.i_pic16core.i_alu.FI pic16test.i_pic16.i_pic16core.i_alu.FO pic16test.i_pic16.i_pic16core.i_alu.HC pic16test.i_pic16.i_pic16core.i_alu.W pic16test.i_pic16.i_pic16core.i_alu.WE pic16test.i_pic16.i_pic16core.i_alu.Z pic16test.i_pic16.i_pic16core.i_alu.bit_mask pic16test.i_pic16.i_pic16core.i_alu.sub pic16test.i_pic16.i_pic16core.i_alu.tmp
 Created probe 1
 ncsim> reset
 Loaded snapshot worklib.pic16test:v
@@ -34,8 +63,6 @@ ncsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
 
 Simulation complete via $finish(1) at time 200100 NS + 0
 ./pic16test.v:21   $finish;
-ncsim> probe -create -shm pic16test.i_pic16.i_pic16core.i_alu.B pic16test.i_pic16.i_pic16core.i_alu.CB pic16test.i_pic16.i_pic16core.i_alu.CI pic16test.i_pic16.i_pic16core.i_alu.CLK pic16test.i_pic16.i_pic16core.i_alu.CO pic16test.i_pic16.i_pic16core.i_alu.DC pic16test.i_pic16.i_pic16core.i_alu.FI pic16test.i_pic16.i_pic16core.i_alu.FO pic16test.i_pic16.i_pic16core.i_alu.HC pic16test.i_pic16.i_pic16core.i_alu.W pic16test.i_pic16.i_pic16core.i_alu.WE pic16test.i_pic16.i_pic16core.i_alu.Z pic16test.i_pic16.i_pic16core.i_alu.bit_mask pic16test.i_pic16.i_pic16core.i_alu.sub pic16test.i_pic16.i_pic16core.i_alu.tmp
-Created probe 2
 ncsim> reset
 Loaded snapshot worklib.pic16test:v
 ncsim> run
@@ -52,4 +79,5 @@ ncsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
 Simulation complete via $finish(1) at time 200100 NS + 0
 ./pic16test.v:21   $finish;
 ncsim> ^C
-ncsim> 
+ncsim> exit
+TOOL:	ncverilog	15.10-s008: Exiting on Jan 31, 2018 at 10:13:15 JST  (total: 00:02:15)

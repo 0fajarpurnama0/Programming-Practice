@@ -120,7 +120,7 @@ module pic16core ( CLK, RST, RA, RB );
 	  2'b00 :
 	    begin
                W_W = ~IR[7] && IR[11:8] != 4'b0000  ; //same with W_W = ~IR[7] && |IR[11:8] meaning bit 8 is 0 and bit 9-12 isn`t 0
-               F_W = IR[7]  && IR[11:8] != 4'b0000  ; //same with W_W = IR[7] && |IR[11:8] meaning bit 8 is 1 and bit 9-12 isn`t 0
+               F_W = IR[7]; //same with W_W = IR[7] && |IR[11:8] meaning bit 8 is 1 and bit 9-12 isn`t 0
                case( IR[  11 : 8 ] )
 		 4'b0000:
 		   case( IR[7] )
@@ -161,7 +161,7 @@ module pic16core ( CLK, RST, RA, RB );
 	    end
 	  2'b10  :
 	    begin
-              STK_PU  = 1  ;  NOP_S   = 1   ;
+              PC_W  = 1  ;  NOP_S   = 1   ;
                case( IR[ 11 ] )
 		 1'b0 : STK_PU = 1 ; // CALL
 		 1'b1 :            ; // GOTO
