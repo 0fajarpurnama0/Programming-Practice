@@ -1,0 +1,8 @@
+img, embed, object, video {
+	max-width: 100%;
+}
+
+nav a, button, a {
+	min-width: 48px;
+	min-height: 48px;
+}

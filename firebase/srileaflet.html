@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+  integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+<style>
+html, body {
+    height: 100%;
+}
+#mapid { height: 100%;}
+</style>
+</head>
+<body>
+<h1> Sri favourite destination. </h1>
+<div id="mapid"></div>
+
+<script>
+var mymap = L.map('mapid').setView([-8.701660,115.169856], 12);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiMGZhamFycHVybmFtYTAiLCJhIjoiY2pseng1ZTI2MjZ1ZTNwb2dvMHhocjU1aiJ9.JH38sQZA8zJq8P3xqbzOag'
+}).addTo(mymap);
+
+var pantai_uluwatu_marker = L.marker([-8.815988, 115.088285]).addTo(mymap);
+pantai_uluwatu_marker.bindPopup("<b>Suluban Uluwatu Beach</b><br>").openPopup();
+var pantai_uluwatu_circle = L.circle([-8.815988, 115.088285], {
+color: 'red',
+fillColor: '#f03',
+fillOpacity: 0.5,
+radius: 100
+}).addTo(mymap)
+
+var dreamland_marker = L.marker([-8.799276, 115.117717]).addTo(mymap);
+dreamland_marker.bindPopup("<b>Dreamland Beach Bali.</b><br>").openPopup();
+var dreamland_circle = L.circle([-8.799276, 115.117717], {
+color: 'red',
+fillColor: '#f03',
+fillOpacity: 0.5,
+radius: 100
+}).addTo(mymap)
+
+var padang_padang_marker = L.marker([-8.811142, 115.103610]).addTo(mymap);
+padang_padang_marker.bindPopup("<b>Padang Padang Beach.</b><br>").openPopup();
+var padang_padang_circle = L.circle([-8.811142, 115.103610], {
+color: 'red',
+fillColor: '#f03',
+fillOpacity: 0.5,
+radius: 100
+}).addTo(mymap)
+
+var pandawa_marker = L.marker([-8.845627, 115.185658]).addTo(mymap);
+pandawa_marker.bindPopup("<b>Pandawa Beach.</b><br>").openPopup();
+var pandawa_circle = L.circle([-8.845627, 115.185658], {
+color: 'red',
+fillColor: '#f03',
+fillOpacity: 0.5,
+radius: 100
+}).addTo(mymap)
+
+var gunung_payung_marker = L.marker([-8.840766, 115.199847]).addTo(mymap);
+gunung_payung_marker.bindPopup("<b>Gunung Payung Beach.</b><br>").openPopup();
+var gunung_payung_circle = L.circle([-8.840766, 115.199847], {
+color: 'red',
+fillColor: '#f03',
+fillOpacity: 0.5,
+radius: 100
+}).addTo(mymap)
+</script>
+</body>
+</html>

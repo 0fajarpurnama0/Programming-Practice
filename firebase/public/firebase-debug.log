@@ -1,0 +1,10 @@
+[debug] [2018-09-11T10:14:23.381Z] ----------------------------------------------------------------------
+[debug] [2018-09-11T10:14:23.383Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-09-11T10:14:23.383Z] CLI Version:   4.2.1
+[debug] [2018-09-11T10:14:23.383Z] Platform:      linux
+[debug] [2018-09-11T10:14:23.383Z] Node Version:  v8.11.2
+[debug] [2018-09-11T10:14:23.383Z] Time:          Tue Sep 11 2018 19:14:23 GMT+0900 (JST)
+[debug] [2018-09-11T10:14:23.383Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-11T10:14:23.394Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-11T10:14:23.394Z] > attempting to authenticate via app default credentials
