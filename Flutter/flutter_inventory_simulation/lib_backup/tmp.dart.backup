@@ -1,0 +1,24 @@
+import 'package:mysql/mysql.dart';
+
+void main() async {
+  try {
+    final MySqlConnection conn = await MySqlConnection.connect(
+      connectionSettings: ConnectionSettings(
+        host: 'localhost',
+        port: 3306,
+        user: 'root',
+        password: 'root',
+        // db: 'your_mysql_database',
+      ),
+    );
+
+    // Connection successful, print a message
+    print('Connected to MySQL successfully!');
+
+    // Close the connection
+    await conn.close();
+  } catch (e) {
+    // Handle connection errors
+    print('Failed to connect to MySQL: $e');
+  }
+}
